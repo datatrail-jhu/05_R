@@ -1,1 +1,2 @@
 # cds_R
+Course 4 in CDS curriculum. Covers what R is, what R is used for,  discusses alternatives to R, goes into detail about using R on the chromebook (using rstudio.cloud), and introduces the basics of working with data in R
