@@ -1,6 +1,6 @@
 # R packages
 
-Now that we've installed R and RStudio and have a basic understanding of how they work together, we can get at what makes R so special: packages. 
+Now that we've looked at R and RStudio and have a basic understanding of how they work together, we can get at one thing that makes R so special: packages. 
 
 ### What is an R package? 
 
