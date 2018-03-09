@@ -89,7 +89,7 @@ To update all packages, use `update.packages()`. If you only want to update a sp
 
 Within the RStudio interface, still in that Packages tab, you can click "Update," which will list all of the packages that are not up to date. It gives you the option to update all of your packages, or allows you to select specific packages. 
 
-![Using the Update menu, you can select all or some of the packages you have installed that you can update](resources/images/02_intro_to_packages/02_R_intro_to_packages-12.PNG)
+![Using the Update menu, you can select all or some of the packages you have installed that you can update](resources/images/02_intro_to_packages/02_R_intro_to_packages-12.png)
 
 You will want to periodically check in on your packages and check if you've fallen out of date - be careful though! Sometimes an update can change the functionality of certain functions, so if you re-run some old code, the command may be changed or perhaps even outright gone and you will need to update your code too! 
 
