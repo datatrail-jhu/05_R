@@ -136,7 +136,7 @@ The lesson's video can be found [here]()
 
 ### Quiz
 
-{quiz, id: quiz8}  
+{quiz, id: quiz_02_intro_to_packages}  
 ? How would you install the package ggplot2?  
 
 a) library("ggplot2")  
