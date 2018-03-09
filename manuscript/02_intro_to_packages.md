@@ -44,9 +44,9 @@ If you want to install multiple packages at once, you can do so by using a chara
 
 If you want to use RStudio's graphical interface to install packages, go to the Tools menu, and the first option should be "Install packages..." If installing from CRAN, select it as the repository and type the desired packages in the appropriate box. 
 
-![](resources/img/08_RStudio_install_packages_1.JPG)
+![You can install through the console interface using the above commands or using the Install Packages menu option](resources/images/CDS_R_02_intro_to_packages-5.png)
 
-![](resources/img/08_RStudio_install_packages_2.JPG)
+![Select the appropriate repository and type in your desired packages](resources/images/CDS_R_02_intro_to_packages-6.png)
 
 **Installing from Bioconductor**  
 The BioConductor repository uses their own method to [install packages](https://www.bioconductor.org/install/). First, to get the basic functions required to install through BioConductor, use: `source("https://bioconductor.org/biocLite.R")`
@@ -70,7 +70,7 @@ There is an order to loading packages - some packages require other packages to 
 
 If you want to load a package using the RStudio interface, in the lower right quadrant there is a tab called "Packages" that lists out all of the packages and a brief description, as well as the version number, of all of the packages you have installed. To load a package just click on the checkbox beside the package name 
 
-![](resources/img/08_RStudio_check_installed.PNG)
+![Find the package you want to load from the list of installed packages and check the box to load it](resources/images/CDS_R_02_intro_to_packages-10.png)
 
 ### Updating, removing, unloading packages
 
@@ -89,7 +89,7 @@ To update all packages, use `update.packages()`. If you only want to update a sp
 
 Within the RStudio interface, still in that Packages tab, you can click "Update," which will list all of the packages that are not up to date. It gives you the option to update all of your packages, or allows you to select specific packages. 
 
-![](resources/img/08_RStudio_updating_packages.PNG)
+![Using the Update menu, you can select all or some of the packages you have installed that you can update](resources/img/CDS_R_02_intro_to_packages-12.PNG)
 
 You will want to periodically check in on your packages and check if you've fallen out of date - be careful though! Sometimes an update can change the functionality of certain functions, so if you re-run some old code, the command may be changed or perhaps even outright gone and you will need to update your code too! 
 
@@ -131,7 +131,7 @@ If you still want to learn more about R packages, here are two great resources! 
 
 ### Slides and Video
 
-This lesson's slides can be found [here](https://docs.google.com/presentation/d/1A3xISZn91lu7f1UXAfBu39JqWnp6ZJfQ_TjjXrsbA0w/edit?usp=sharing)  
+This lesson's slides can be found [here](https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/edit?usp=sharing)  
 The lesson's video can be found [here]()  
 
 ### Quiz
