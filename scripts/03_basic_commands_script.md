@@ -1,0 +1,35 @@
+Now that we've covered what some essentials about R objects, we'll go over some basic commands that will be helpful in working with data.
+
+In working with data, we will be making substantial use of functions. Functions take various arguments as input. These inputs are often objects and other variables detailing how you wish to view, summarize, or manipulate these objects. Function outputs come in a variety of formats. They can return information about the contents of an object; they can return a manipulated version of an object; and they can create entirely new objects. In this lesson, we will cover some essential functions for exploring data. This will only consist of functions that return information about the contents of an object. As you learn more about R, you will learn about functions that can maniuplate objects or create entirely new objects.
+
+To visually understand the anatomy of a function call (a term that describes the using of a function), let's look at the example here. We have an object x that presumably contains numbers, and we want to compute the mean of these numbers with the mean function. All of the information inside the parentheses are function inputs (also called arguments), and they are separated by commas. In this command, I have supplied an additional argument trim that I set to be 0.1. The trim argument calls for a number between 0 and 0.5 and specifies the fraction of the observations in x to trim from the upper and lower ends of the data. Here I want to take the mean of the middle 80 percent of the data.
+
+In our tour of basic commands, we will look at functions that help us answer four broad questions when exploring data. What is this object? How big is this object? Are there named features of this object? What does this object look like?
+
+If someone were to write down a mystery noun for us to guess, our first question would likely be: "Is it a person, place, or thing?" When working with R objects, we will initially want similar types of information. Here we will go over some functions that can help in this regard.
+
+The class function returns the class of an R object. This is useful for determining if an object is an atomic vector, list, or some other type of object. If it is an atomic vector, this function tells you the type.
+
+The s t r function stands for structure, and it returns a description of the structure of an object. It tells you the class of an object, its size, and a preview of different components of the object. For example, when we call the s t r function on a data frame object m t cars, we see that its class is data frame, it has 32 rows and 11 columns, and a preview of each of the 11 columns, including the class of each column. In this example, all of the columns are numeric variables relating to features of different models of cars.
+
+After we determine generally what an object is, it is useful to know how much information it contains, how big it is.
+
+The dim function returns the dimensions of a rectangular object, such as a matrix or a data frame. The output is an integer vector with two components: first is the number of rows (which can also be obtained with n row), and second is the number of columns (which can also be obtained with n col). We saw previously that the s t r function provides the same information and more, so why would we use these functions instead? The s t r function provides this information by printing it to the screen for us to visually see, but it does not extract this information directly. If we need to use the dimensions later in the analysis as a variable, these functions provide a direct way to store this information.
+
+The length function returns the number of items in a vector object.
+
+Another way to explore an object in R is to see what components it has. In R, these components are designated with names.
+
+The names function can be used to get and set the names of an R object, most often an atomic vector or a list. For example, we can create an R object called prize underscore money that contains the prize money for first, second, and third places. If we want to label this vector with the prizes, we can use names combined with the left arrow assignment operator and a character vector of labels. Later in our work, if we want to remind ourselves of the labels, we can use the names function by itself. Note that in many situations, it will be better practice to encapsulate the above information in a two-column data frame instead of a named vector as below. This is more convenient for further work if you have other objects that have information on first, second, or third placing, but not prize money information. You'll learn more about these concepts when you learn about "tidy data" in a later course.
+
+The col names and row names functions act analogously to the names function but are used for the column labels and row labels of a matrix or data frame. The numbers in square brackets at the beginning of the lines of printed output indicate the index of the first observation on the line. So for the row names, we can see that "Duster 360" is the seventh element.
+
+Sometimes we may just want to see the information contained in an object. Here we will discuss functions that allow you to see parts of objects.
+
+The print function displays the entire contents of an object. Recall that in R, the Console is where commands can be typed and entered for R to run. When R is ready to accept a command a greater than sign will be displayed. An alternative to calling the print function is to simply type the name of the object in the Console and press enter. In general printing an entire object is not advisable just in case the object is quite large. In this case your screen would overflow with text!
+
+Safer alternatives to printing are the head and tail functions. The head function displays the beginning of an object. By default, it shows the first 6 items. If the object is a vector, head shows the first 6 entries. If the object is a rectangle, such as a matrix or a data frame, head shows the first 6 rows. The tail function is analogous to head but for the end of the object.
+
+The summary function computes summary statistics for numeric data and performs tabulations for categorical data, which are called factors in R.
+
+The unique function shows only the unique elements of an object. For vectors, this returns the set of unique elements. For rectangles such as matrices and data frames, this returns the unique rows. This function is useful if we want to check the coding of our data. If we have sex information, then we expect the result of unique to be two elements. If not, there is likely some data cleaning that must be done. The unique function is also useful for simply exploring the values that a variable can take. In the example below, we can see that in the m t cars data frame, there are only cars with 6, 4, and 8 cylinders. Note that to extract the column corresponding to cylinders, we used a dollar sign followed by the column name c y l. This is an example of subsetting that you will learn in later lessons.
