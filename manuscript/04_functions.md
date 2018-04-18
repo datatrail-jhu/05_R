@@ -42,19 +42,38 @@ return(paste("The entered Celsius degree in Fahrenheit is", f))
 Here are some important notes about writing functions: a function can require multiple inputs. The can also have one or more return values (the output). When writing functions, make sure that you choose a name that is not already used by R. For instance, you can't use `mean` as a function name since it's already used by R. The return statement in a function is not necessary but it's recommended if you want to access the output value outside of the function. 
 
 
-
-
-
 ### Slides and Video
 
-* [Slides]()
+![Functions in R]()
+
+* [Slides](https://docs.google.com/presentation/d/1Q7pkb4lM8M8MRQzxCCfhXx8ddEi9XeaKSKT82OJAZX8/edit?usp=sharing)
 
 
 {quiz, id: quiz_04_functions}
 
-# Functions quiz
+### Functions in R quiz
 
-?
+? Which of the following statements is True?
+
+a) A function must have an input and an output
+b) A function must have an input but an output is not necessary.
+c) A function must have an output but an input is not necessary.
+D) Both input and output are not necessary.
+
+? Given the function below, what is the output of the command `simple_calc(2,5)`?
+
+```r
+simple_calc <- function(x, y){
+a <- x + y
+d <- a^2
+return(d)
+}
+```
+
+a) 7
+B) 49
+c) 25
+d) 4
 
 {/quiz}
 
