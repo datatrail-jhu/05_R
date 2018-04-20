@@ -290,7 +290,7 @@ d) We payed for a custom domain like JaneEverydayDoe.com
 {/quiz}
 
 
-
+* [Slides](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/edit?usp=sharing)
 
 
 
