@@ -1,6 +1,6 @@
 # Writing Functions in R
 
-User Defined Functions (UDFs) are functions beyond the functions that come with R and are written by users. For instance, if you like to repeat a task over and over, instead of running a collection of code each time, you can bundle your code in a funciton and just run the function. Here is an easy example. 
+User Defined Functions (UDFs) are functions beyond the functions that come with R and are written by users. For instance, if you like to repeat a task over and over, instead of running a collection of code each time, you can bundle your code in a function and just run the function. Here is an easy example. 
 
 Imagine you need to convert Celsius degree to Fahrenheit. You want to know what 0, 20, and 100 degrees Celsius are in Fahrenheit. If you remember from your science class T(°F) = T(°C) × 9/5 + 32. So to calculate what 0, 20, and 100 degree Celsius are you can do the calculation above for each temperature. But you could also write a simple function that takes a degree Celsius as an input and returns a value in Fahrenheit. So each time you want to know a degree in Fahrenheit, you run your function instead of running the calculations. Here is your function.
 
@@ -17,9 +17,9 @@ return(f)
 cel_to_far(70)
 ```
 
-This is as simple as a function in R can get. You can write more complicated functions the run pages and pages of code but the basic idea is the same. Functions help you avoid running multiple lines of code and instead run the function name. A function has a name, some arguments that are used as input to the function within paranthesis (). The body of the function are included in curly braces {}. 
+This is as simple as a function in R can get. You can write more complicated functions the run pages and pages of code but the basic idea is the same. Functions help you avoid running multiple lines of code and instead run the function name. A function has a name, some arguments that are used as input to the function within parentheses (). The body of the function are included in curly braces {}. 
 
-Now that we know what the basice structure of the function is, let's make it a little bit fancier. For instance, when the function is called, we like it to return a sentence that is more clear. The function `paste` combines the text with the value of variable `f`.
+Now that we know what the basic structure of the function is, let's make it a little bit fancier. For instance, when the function is called, we like it to return a sentence that is more clear. The function `paste` combines the text with the value of variable `f`.
 
 ```r
 cel_to_far <- function(c){
