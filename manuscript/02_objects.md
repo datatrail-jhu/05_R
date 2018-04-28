@@ -137,7 +137,6 @@ Levels: low medium high
 Levels: medium low high
 ```
 
-
 ### Data frames
 
 Now that we've covered common basic data classes, we will now discuss data frames. Data frames are a more complex data type than the simple vectors than we've seen so far. Data frames organize data into a rectangular format where each column corresponds to a single variable and each row corresponds to an observation. So a row of a data frame contains an observation's values for all variables. An example of a data frame is shown below:
@@ -150,9 +149,39 @@ Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
 Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 
-We see along the columns different variables related to car properties, and each row gives information on those properties for a particular car model. Every column in a data frame is a simple vector of values all from the same class.
+We see along the columns different variables related to car properties, and each row gives information on those properties for a particular car model. Every column in a data frame is a simple vector of values all from the same class. Most often, the data that we work with can be represented with data frames.
 
-You will learn more about working with data frames in the next lesson and in later courses.
+You will learn more about working with data frames in subsequent lessons in this course and also in later courses.
+
+### Missing values
+
+The last topic that we should discuss in our introduction to R objects is missing values. During nearly any type of data collection, there is information missing for one or more variables. Thus, it is important to understand how R handles missing values. Most missing values that you will deal with are encoded with `NA` in R. Below are some examples of creating objects of the various basic types we discussed above that contain missing values.
+
+```text
+> char_vec <- c(NA, "two", "four")
+> char_vec
+[1] NA     "two"  "four"
+> num_vec <- c(1L, 10L, NA, 3L)
+> num_vec
+[1]  1 10 NA  3
+> num_vec <- c(1.2, 9.8, NA)
+> num_vec
+[1] 1.2 9.8  NA
+> logi_vec <- c(TRUE, NA, FALSE, FALSE)
+> logi_vec
+[1]  TRUE    NA FALSE FALSE
+> factor_vec <- as.factor(c(NA, "apple", "banana"))
+> factor_vec
+[1] <NA>   apple  banana
+Levels: apple banana
+```
+
+Another missing value that can arise in R is `NaN` which stands for "not a number." This can arise in mathematical calculations, such as 0 divided by 0.
+
+```text
+> 0/0
+[1] NaN
+```
 
 ### Slides and Video
 
