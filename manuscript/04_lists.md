@@ -10,6 +10,8 @@ Lists are also a type of vector, but they are more complex than the simple vecto
 
 Lists are a general and flexible way to store information, and it turns out that data frames, which you have learned about in previous lessons, are a special cases of lists. As you learn how to create and work with lists in the remainder of this lesson, we will also cover connections to working with data frames.
 
+![Creating a new repository](images/04_lists/04_R_lists-1.png)
+
 ### Creating a list
 
 The main way to create a list from scratch in R is with the `list` function. The `list` function takes an arbitary number of arguments and creates a list with the specified objects. For example, we may conduct a poll in a first grade classroom and ask students to name some numbers, animals, and colors that come to mind. In the example below, we have created a list with three slots to store the responses for one student. In the first slot, we have a numeric vector containing three numbers. In the second, we have a character vector containing two animal names. In the third, we have a character vector containing six colors. Within the `list` function, each of these objects is separated with a comma.
