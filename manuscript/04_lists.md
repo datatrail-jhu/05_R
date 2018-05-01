@@ -20,7 +20,7 @@ The main way to create a list from scratch in R is with the `list` function. The
 responses_student1 <- list(c(4,20,3), c("bear", "giraffe"), c("red", "orange", "yellow", "green", "blue", "purple"))
 ```
 
-When we print this object to the screen, it looks as below. The double square brackets indicate the slot number, or element number. So ``[[1]]`` indicates the first slot or first element of the list, and we see that this first element is a length-3 numeric vector. The ``[[2]]`` indicates the second element, and we see that it is a length-2 character vector. The ``[[3]]`` indicates the third slot, and we see that it is a length-6 character vector. The double bracket notation alludes to one way that we can access certain elements of a list. We will cover this in detail in the next section of this lesson.
+When we print this object to the screen, it looks as below. The double square brackets indicate the slot number, or element number. So `[[1]]` indicates the first slot or first element of the list, and we see that this first element is a length-3 numeric vector. The `[[2]]` indicates the second element, and we see that it is a length-2 character vector. The `[[3]]` indicates the third slot, and we see that it is a length-6 character vector. The double bracket notation alludes to one way that we can access certain elements of a list. We will cover this in detail in the next section of this lesson.
 
 ```text
 > responses_student1
@@ -187,7 +187,7 @@ $carb
 
 ### Subsetting lists
 
-It is often the case that we want to work with part of the information in an object, but not all of it. As alluded to in the previous section, we can subset lists using double square bracket or dollar sign notation. Because data frames are a special type of list, data frames can also be subset using double bracket or dollar sign notation.
+It is often the case that we want to work with part of the information in an object, but not all of it. As alluded to in the previous section, we can subset lists using double square bracket or dollar sign notation. Because data frames are a special type of list, data frames can also be subset using double bracket or dollar sign notation. In addition to double bracket and dollar sign notation, we will cover single bracket notation for subsetting, and we will discuss the differences between these approaches.
 
 #### Double square brackets
 
@@ -237,7 +237,7 @@ When using dollar sign notation for subsetting, the syntax is `object$name`, whe
 
 #### Single square brackets
 
-When using either double square brackets or dollar signs to extract list/data frame elements, we are performing the subsetting is **simplifying** the output. That is, the original object was a list/data frame and the extracted object is simpler than a list - it is a simple vector. The opposite of a subsetting operation that **simplifies** the class of the output is a subsetting observation that **preserves** the class of the output. For lists/data frames this means that the output of the subsetting is also a list/data frame. Class preservation is achieved using single square bracket subsetting. As with double square bracket subsetting, an integer index or a character string can be specified with the brackets.
+When using either double square brackets or dollar signs to extract list/data frame elements, the subsetting is **simplifying** the output. That is, the original object was a list/data frame and the extracted object is simpler than a list - it is a simple vector. The opposite of a subsetting operation that **simplifies** the class of the output is a subsetting observation that **preserves** the class of the output. For lists/data frames this means that the output of the subsetting is also a list/data frame. Class preservation is achieved using single square bracket subsetting. As with double square bracket subsetting, an integer index or a character string can be specified with the brackets.
 
 ```text
 > l[2]
