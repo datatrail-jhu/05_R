@@ -1,3 +1,11 @@
+{
+course-completeness: 90
+course-attempts: 2
+default-quiz-attempts: 2
+authors: Jeffrey Leek
+contributors: Aboozar Hadavand, Leah Jager, Sarah McClymont, and Leslie Myint
+}
+
 # What is R?
 
 ### Introduction to R
