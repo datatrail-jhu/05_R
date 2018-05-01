@@ -273,9 +273,11 @@ Here we can tell from the printed output that the extracted output is a list bec
 
 Here we can tell from the printed output that the extracted output is a list because we can see that it is printed in a column. We can also verify this with the `class` function.
 
-#### Subsetting summary
+### Lesson summary
 
-Sometimes when data is acquired, labels will be present, and sometimes it won't, so it is important to be comfortable with the different ways to subset lists and data frames so that you can obtain the information you need for your work. Knowing the difference between class simplifying and preserving subsetting operations is also important so that you know exactly what type of object you are working with. You will gain an appreciation for this as you move through the courses and work on projects.
+Lists are a flexible way to store complex data. We have seen how to create lists using the `list` function in this lesson. As you move through the course, you will learn about ways of getting data and information into R that create list objects automatically.
+
+Working with subsets of data will be a daily part of your work routine, so familiarity with subsetting operations will be vital. Sometimes when data is acquired, labels will be present, and sometimes it won't, so it is important to be comfortable with knowing when integer indices can be used to subset. Knowing the difference between class-simplifying and class-preserving subsetting operations is also important so that you know exactly what type of object you are working with. You will gain an appreciation for this as you move through the courses and work on projects.
 
 
 ### Slides and Video
