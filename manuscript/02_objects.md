@@ -30,6 +30,22 @@ min_age = 21
 
 Having this minimum age variable stored in an object can be useful later if we have data where we only want to keep individuals who exceed this minimum age.
 
+### Printing objects
+
+Often we will want to print the contents of an object to see the information it contains. We can do this by clicking in the Console in RStudio Cloud (bottom left corner). The **R prompt** is indicated by the `>` in the Console. This indicates that R is ready to accept a command from you. If we simply enter the number 21 at the R prompt, the 21 object will be printed, but you will not see an object come up under the Environment pane (top right corner). When we create the `min_age` object, you will see this object come up under the Environment pane. We can also print this object to the screen by entering its name at the R prompt.
+
+```text
+> 21
+[1] 21
+> min_age <- 21
+> min_age
+[1] 21
+```
+
+The 1 in square brackets that gets displayed in the printed output is simply an index that is provided for convenience of reading in case the object contains several values. It indicates that the number 21 is the first number in this object. It also happens to be the only number in this object.
+
+Throughout this course and curriculum, when we display code without the `>` indicating that we are not at the R prompt in the Console, we are emphasizing only the R command. When we display code with the `>` indicating that we are at the R prompt in the Console, we want to emphasize the commands and how the output is displayed on the screen.
+
 ### Character
 
 Character objects in R can be created by surrounding a string in either double quotes or single quotes as in the following two examples.
@@ -40,11 +56,15 @@ Character objects in R can be created by surrounding a string in either double q
 
 The example below shows how to store the above sentence character object in an object named `my_char`. `my_char` is a character vector of length 1.
 
+```r
 my_char <- "This is a character object."
+```
 
 We can create a character vector named `my_char_vec` with multiple character objects using the concatenate function, c:
 
+```r
 my_char_vec <- c("char object 1", "char object 2")
+```
 
 We'll discuss functions more in later lessons.
 
@@ -68,6 +88,14 @@ We can also create an integer vector with the colon operator. The following comm
 num_vec2 <- 2:5
 ```
 
+If we create longer vectors and print the output, we can see the use of having the square bracket indices at the beginning of the lines of the printed output. In this last example, we see that 4 is the first number in the vector, and 12 is the ninth number in the vector.
+
+```text
+> 4:16
+ [1]  4  5  6  7  8  9 10 11
+ [9] 12 13 14 15 16
+```
+
 ### Numeric
 
 Numeric objects in R represent real numbers and are created by simply entering a number.
@@ -81,6 +109,21 @@ We can create a numeric vector with multiple items using the c function.
 
 ```r
 num_vec <- c(1.2, 9.8)
+```
+
+We can also use R as calculator. At the prompt, we can enter mathematical expressions without assignment to display the results as a calculator would. The **operators** for addition, subtraction, multiplication, division, and exponentiation in R are `+`, `-`, `*`, `/`, and `^` respectively.
+
+```text
+> 1+5
+[1] 6
+> 2-3
+[1] -1
+> 4*2
+[1] 8
+> 4/5
+[1] 0.8
+> 3^2
+[1] 9
 ```
 
 ### Logical
@@ -208,6 +251,7 @@ D) `y <- c(TRUE, TRUE)`
 
 ? In the following data frame, what atomic class could be represented by the Species column?
 
+```text
  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
           5.1         3.5          1.4         0.2  setosa
           4.9         3.0          1.4         0.2  setosa
@@ -215,6 +259,7 @@ D) `y <- c(TRUE, TRUE)`
           4.6         3.1          1.5         0.2  setosa
           5.0         3.6          1.4         0.2  setosa
           5.4         3.9          1.7         0.4  setosa
+```
 
 A) character
 b) integer
@@ -224,7 +269,9 @@ E) factor
 
 ? What will be the ordering of the levels when the following character object is made into a factor object with `as.factor`?
 
-`char_vec <- c("medium", "medium", "high", "low", "low")`
+```r
+char_vec <- c("medium", "medium", "high", "low", "low")
+```
 
 a) low, medium, high
 b) low, high, medium
