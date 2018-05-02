@@ -2,8 +2,7 @@
 course-completeness: 90
 course-attempts: 2
 default-quiz-attempts: 2
-authors: Jeffrey Leek
-contributors: Aboozar Hadavand, Leah Jager, Sarah McClymont, and Leslie Myint
+default-random-choice-order: true
 }
 
 # What is R?
