@@ -5,6 +5,5 @@
 03_basic_commands.md
 04_functions.md
 05_logicals.md
-05_rmd.md
 06_website
 10_help_in_R.md
