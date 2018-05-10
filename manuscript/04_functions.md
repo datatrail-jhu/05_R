@@ -11,7 +11,7 @@ return(f)
 }
 ```
 
-`cel_to_far` is the name of the function. You can choose anything else you like. This function takes the value `c` as input, multiplies it by 9 over 5, adds 32 to it, and then return the calculated value as outpyt. The `return` command returns the final value that you are interested in. So now, each time you want to convert Celsius to Fahrenheit just "call" the function and "pass" the Celsius degree as an input to find the degree in Fahrenheit. Something like this:
+`cel_to_far` is the name of the function. You can choose anything else you like. This function takes the value `c` as input, also called an argument, multiplies it by 9 over 5, adds 32 to it, and then return the calculated value as outpyt. The `return` command returns the final value that you are interested in. So now, each time you want to convert Celsius to Fahrenheit just "call" the function and "pass" the Celsius degree as an input to find the degree in Fahrenheit. Something like this:
 
 ```r
 cel_to_far(70)
@@ -40,6 +40,35 @@ return(paste("The entered Celsius degree in Fahrenheit is", f))
 ```
 
 Here are some important notes about writing functions: a function can require multiple inputs. The can also have one or more return values (the output). When writing functions, make sure that you choose a name that is not already used by R. For instance, you can't use `mean` as a function name since it's already used by R. The return statement in a function is not necessary but it's recommended if you want to access the output value outside of the function. 
+
+Functions can be a lot more advanced. They can have multiple inputs (arguments) can be pages and pages of code. However, it's always recommended to break down a long function to multiple functions. Going back to our Celsius/Fahrenheit example, let's write a function that takes a value and whether the value is in Celsius or Fahrenheit and converts it to the other standard. That is if the user passes the values of 10 and Celsius to the function, it will convert it to Fahrenheit and return the value and if the user passes the values of 10 and Fahrenheit, it will convert it to Celsius and return the value.
+
+```r
+convertdegree <- function(x, standard){
+if (standard=="celsius"){
+    d <- x * (9/5) + 32
+} else if (standard=="fahrenheit") {
+    d <- (x - 32) * (5/9)
+} else {
+    print("Please enter a correct standard")
+}
+return(d)
+}
+```
+
+Don't get scared. This function is basically similar to before. The only addition is a conditional statement based on the argument `standard`. If the argument is equal to *celsisu* then then the function will assume the value is in Celsius and will convert the value to Fahreinheit and if the argument is equal to *fahrenheit* it will assume the value is in Fahrenheit and will convert the value to celsius. Try the code yourself for the value 10 for different `standard` argument values. 
+
+```r
+> convertdegree(10, standard = "celsius")
+[1] 50
+> convertdegree(10, standard = "fahrenheit")
+[1] -12.22222
+```
+Arguments can have default values. So when you write the function, you can assign
+
+
+
+arguments can have default values. 
 
 
 ### Slides and Video
