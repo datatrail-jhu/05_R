@@ -64,11 +64,32 @@ Don't get scared. This function is basically similar to before. The only additio
 > convertdegree(10, standard = "fahrenheit")
 [1] -12.22222
 ```
-Arguments can have default values. So when you write the function, you can assign
+Arguments can have default values. So when you write the function, you can assign a default value to the argument `standard` for instance `standard = "celsius"`. This means that if the user does not pass a value to the argument `standard`, the assumption will be that its value is `"celsius"`. This is how we modify the function.
+
+```r
+convertdegree <- function(x, standard = "celsius"){
+if (standard=="celsius"){
+    d <- x * (9/5) + 32
+} else if (standard=="fahrenheit") {
+    d <- (x - 32) * (5/9)
+} else {
+    print("Please enter a correct standard")
+}
+return(d)
+}
+```
+
+So now, if you just type in `convertdegree(10)` the function will assume that the degree is in Celsius and it needs to be converted to Fahrenheit Like this.
 
 
-
-arguments can have default values. 
+```r
+> convertdegree(10)
+[1] 50
+> convertdegree(10, standard = "celsius")
+[1] 50
+> convertdegree(10, standard = "fahrenheit")
+[1] -12.22222
+```
 
 
 ### Slides and Video
