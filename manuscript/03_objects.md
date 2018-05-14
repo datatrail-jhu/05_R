@@ -228,12 +228,14 @@ Another missing value that can arise in R is `NaN` which stands for "not a numbe
 
 ### Slides and Video
 
+![Objects in R](UPDATE LINK)
+
 * [Slides](https://docs.google.com/presentation/d/1-1oGr9-phf3fKcezvl_y573tJ_Zvc09u1bhNAnH1CO8/edit?usp=sharing)
 
 
-{quiz, id: quiz_02_objects}
+{quiz, id: quiz_03_objects}
 
-# R Objects quiz
+# Objects in R quiz
 
 ? Suppose I enter the following code in R: `x <- 2`. What is the class of the `x` object?
 

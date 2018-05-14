@@ -4,7 +4,7 @@ Now that we have RStudio installed, we should familiarize ourselves with the var
 
 ### The various quadrants
 
-Rstudio can be roughly divided into four quadrants, each with specific and varied functions, plus a main menu bar. When you first open RStudio, you should see a window that looks roughly like this: 
+RStudio can be roughly divided into four quadrants, each with specific and varied functions, plus a main menu bar. When you first open RStudio, you should see a window that looks roughly like this: 
 
 ![RStudio's main interface](images/07_DST_RStudio_tour/07_DST_RStudio_tour-02.png)
 
@@ -100,12 +100,15 @@ In this lesson we took a tour of the RStudio software. We became familiar with t
 
 ### Slides and Video
 
-This lesson's slides can be found [here](https://docs.google.com/presentation/d/1dAR3hWQZF91R-auBr0bUSgv1rYKkFjUZKQjVqMUCpYU/edit?usp=sharing)  
-This lesson's video can be found [here]()
+![RStudio Tour](UPDATE LINK)
 
-### Quiz
+* [Slides](https://docs.google.com/presentation/d/1dAR3hWQZF91R-auBr0bUSgv1rYKkFjUZKQjVqMUCpYU/edit?usp=sharing)
 
-{quiz, id: quiz#}
+
+{quiz, id: quiz_01_tour_of_RStudio}
+
+### RStudio Tour quiz
+
 ? How do you see a command you have previously run and save it to source?  
 
 a) Source > Save 

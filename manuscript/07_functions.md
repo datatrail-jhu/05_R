@@ -99,7 +99,7 @@ So now, if you just type in `convertdegree(10)` the function will assume that th
 * [Slides](https://docs.google.com/presentation/d/1Q7pkb4lM8M8MRQzxCCfhXx8ddEi9XeaKSKT82OJAZX8/edit?usp=sharing)
 
 
-{quiz, id: quiz_04_functions}
+{quiz, id: quiz_07_functions}
 
 ### Functions in R quiz
 
