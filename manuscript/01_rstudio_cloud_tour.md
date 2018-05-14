@@ -60,7 +60,7 @@ To execute your first command, at the `>` prompt, try typing `1 + 1`. Then, hit 
 
 However, often you want to write code and save it so that you can open the code again and re-run it later. This saved file with code in it is referred to as a **script**. When you want to write code and save it in a script, you'll do this in the Source panel.
 
-To get started in your script file, copy and paste the following into your Source quandrant (top-right).
+To get started in your script file, copy and paste the following into your Source quadrant (top-right).
 
 ```r
 example <- matrix(c(1, 2, 3, 4, 5, 6, 7, 8), nrow = 4, ncol = 2)
@@ -68,13 +68,13 @@ example <- matrix(c(1, 2, 3, 4, 5, 6, 7, 8), nrow = 4, ncol = 2)
 
 To run this code, you can't just hit enter (as you were able to do in the Console). Hitting enter will just bring your cursor to the next line in the script. Instead, with your cursor in the line of code you want to run, you can click on "Run" at the top right of your script file. This will execute the code in the Console. 
 
-**Note** Alternatively, to run code, with your cursor on the line of code you'd like to run, you could hit 'ctr + enter' to run that line of code. This will save you a lot of time as you start writing a lot of code and analyzing data. Practice this keyboard shortcut now!
+**Note** Alternatively, to run code, with your cursor on the line of code you'd like to run, you could hit 'ctrl + enter' to run that line of code. This will save you a lot of time as you start writing a lot of code and analyzing data. Practice this keyboard shortcut now!
 
-What this code does is create an object (we'll define what that is soon!) called 'example' that has the numbers 1 through 8 in four different rows and two different columns. To see what this object looks like, we'll take a look at the enironment quadrant of RStudio Cloud. 
+What this code does is create an object (we'll define what that is soon!) called 'example' that has the numbers 1 through 8 in four different rows and two different columns. To see what this object looks like, we'll take a look at the environment quadrant of RStudio Cloud. 
 
 #### Environment (& History)
 
-To view this oject we've just created, you'll first want to ensure that the object was created. In the Enironment quadrant, you should see that 'example' is now there. The object was created!
+To view this boject we've just created, you'll first want to ensure that the object was created. In the Environment quadrant, you should see that 'example' is now there. The object was created!
 
 ![The environment quadrant](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-12.png)
 
