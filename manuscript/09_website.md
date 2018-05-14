@@ -1,7 +1,5 @@
 # Creating Websites with R
 
-![](images/06_website/05_R_website_Page_01.png)
-
 In previous lectures you have learnt how to:
 
 * Create a GitHub repository
@@ -14,7 +12,7 @@ Now we are going to use these two skills to create a website from within R. At t
 
 GitHub has this nice property that it can automatically host websites for you in the repositories. While this can de done for any repository, there is a special case: the `yourUsername.github.com` repository. We will start here because it's the most straightforward case.
 
-![](images/06_website/05_R_website_Page_02.png)
+![](images/09_website/09_R_website-2.png)
 
 If your username is `JaneEverydayDoe`, first log in to [github.com](http://github.com). Next create a new repository (that nice green button). This new repository needs this special name `JaneEverydayDoe.github.com` which you can find [here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com).
 
@@ -22,7 +20,7 @@ Yay, we now have our repository!
 
 ### Sync files with GitHub
 
-![](images/06_website/05_R_website_Page_03.png)
+![](images/09_website/09_R_website-3.png)
 
 Now we are going to start putting your website together. We need to keep our files in sync with GitHub, and to do so we will clone (download) the repository to our computer. That is, we will clone the `username/username.github.com` repository. For `JaneEverydayDoe` that would be `JaneEverydayDoe/JaneEverydayDoe.github.com`. We will do this via the _terminal_ from RStudio. That is, from `Tools` -> `Terminal` -> `New Terminal`. Once you have opened a _terminal_ (optionally navigate to the directory where you want to clone the repo), run:
 
@@ -61,11 +59,11 @@ git commit -m "This is not a Jekyll website"
 git push
 ```
 
-![](images/06_website/05_R_website_Page_04.png)
+![](images/09_website/09_R_website-4.png)
 
 Using the `JaneEverydayDoe` example you can [see here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/a5f889e3c9749720ee0435e95f77d0b4eaeea8d9) how the repository looked at this point in time.
 
-![](images/06_website/05_R_website_Page_05.png)
+![](images/09_website/09_R_website-5.png)
 
 ### Make the website
 
@@ -75,15 +73,15 @@ We are going to take advantage of another nice property of web. If a directory (
 
 Well, lets create a `index.Rmd` file inside the `username.github.com/` directory. Here, lets take advantage of the nice RStudio menus. Go to `File` -> `New File` -> `R Markdown`.
 
-![](images/06_website/05_R_website_Page_06.png)
+![](images/09_website/09_R_website-6.png)
 
 Then select `Document` and choose the `HTML` output format.
 
-![](images/06_website/05_R_website_Page_07.png)
+![](images/09_website/09_R_website-7.png)
 
 Now lets save it as `index.Rmd`. Select the `Untitled1` tab, then go to `File` -> `Save As` then type the `index.Rmd` name and make sure that it's saved inside the `username.github.com` directory. In `JaneEverydayDoe`'s case, that would be `janeeverydaydoe.github.com/index.Rmd`.
 
-![](images/06_website/05_R_website_Page_08.png)
+![](images/09_website/09_R_website-8.png)
 
 Now click on the `knit` button and R will create the `index.html` file.
 
@@ -107,7 +105,7 @@ git push
 
 And after a few seconds or a minute or so, you can view your website at https://username.github.io. For `JaneEverydayDoe` that is https://janeeverydaydoe.github.io/ and it looks like this:
 
-![](images/06_website/05_R_website_Page_09.png)
+![](images/09_website/09_R_website-9.png)
 
 You can check `JaneEverydayDoe` [files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/6ef6468c9fb0dc93ed436b056ddd602e13658377) and compare them against yours.
 
@@ -152,7 +150,7 @@ git commit -m "Add my initial information"
 git push
 ```
 
-![](images/06_website/05_R_website_Page_10.png)
+![](images/09_website/09_R_website-10.png)
 
 Check `JaneEverydayDoe`'s files at [this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/c0b15cf33e3fe88322d46e9f35def6c485eb0fee).
 
@@ -187,7 +185,7 @@ git commit -m "Use spacelab"
 git push
 ```
 
-![](images/06_website/05_R_website_Page_11.png)
+![](images/09_website/09_R_website-11.png)
 
 [JaneEverydayDoe's files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/33db3fac9619ef32bdb032b56e0ca5836b5e28c5).
 
@@ -213,7 +211,7 @@ git commit -m "Add a floating table of contents"
 git push
 ```
 
-![](images/06_website/05_R_website_Page_12.png)
+![](images/09_website/09_R_website-12.png)
 
 [JaneEverydayDoe's files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/3caa9cc00e9ea167360b1299763ad3b01b6e9de6).
 
@@ -250,7 +248,7 @@ git commit -m "Add Jane's image"
 git push
 ```
 
-![](images/06_website/05_R_website_Page_13.png)
+![](images/09_website/09_R_website-13.png)
 
 [JaneEverydayDoe's files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/505eaf2049930084526e79a005fc9e8a75f6b143).
 
@@ -258,7 +256,7 @@ git push
 
 If you need some inspiration, check this website by Amy Peterson: [amy-peterson.github.io](https://amy-peterson.github.io/). It was made using exactly the same tools. 
 
-![](images/06_website/05_R_website_Page_14.png)
+![](images/09_website/09_R_website-14.png)
 
 The raw files for her website are available [here](https://raw.githubusercontent.com/amy-peterson/amy-peterson.github.com/bf9637d0351e1494cbd0c34528b261e340539b06/index.Rmd).
 
@@ -273,7 +271,7 @@ You might be interested in going beyond this quick website. For example, you mig
 * Emily Zabor's great tutorial http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html
 * https://bookdown.org/yihui/blogdown/ for making blogs
 
-![](images/06_website/05_R_website_Page_15.png)
+![](images/09_website/09_R_website-15.png)
 
 
 ### Slides and Video
