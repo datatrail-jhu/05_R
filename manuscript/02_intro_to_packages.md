@@ -131,12 +131,15 @@ If you still want to learn more about R packages, here are two great resources! 
 
 ### Slides and Video
 
-This lesson's slides can be found [here](https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/edit?usp=sharing)  
-The lesson's video can be found [here]()  
+![R Packages](UPDATE LINK)
 
-### Quiz
+* [Slides](https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/edit?usp=sharing)
+
 
 {quiz, id: quiz_02_intro_to_packages}  
+
+### R Packages Quiz
+
 ? How would you install the package ggplot2?  
 
 a) library("ggplot2")  

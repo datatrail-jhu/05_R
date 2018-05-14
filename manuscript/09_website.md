@@ -276,7 +276,13 @@ You might be interested in going beyond this quick website. For example, you mig
 ![](images/06_website/05_R_website_Page_15.png)
 
 
-{quiz, id: quiz_06_website}
+### Slides and Video
+
+![Creating Websites with R](UPDATE LINK)
+
+* [Slides](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/edit?usp=sharing)
+
+{quiz, id: quiz_09_website}
 
 ### Creating websites with R
 
@@ -289,8 +295,6 @@ d) We payed for a custom domain like JaneEverydayDoe.com
 
 {/quiz}
 
-
-* [Slides](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/edit?usp=sharing)
 
 
 

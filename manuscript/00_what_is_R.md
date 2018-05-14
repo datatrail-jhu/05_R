@@ -13,7 +13,7 @@ While you completed a project with Leanpub data using rstudio.cloud in the intro
 
 ### R
 
-R, most simply, is a programming language. Just like there are many different spoken languages throughout the world, there are many different programming languages. Similar to how each spoken language is used by a subset of the humans on this Earth, each programming language was created for a different group of people who code. You may have heard of other programming languages, such as C++, Java, or HMTL previously. These are all enormously popular programming languages, but each has what it does best along with its own disadvangtes. For example, if you're interested in building software that runs really quickly, you may learn C++. If you want to build and edit websites, you would maybe start by learning HTML. And, Java may be most helpful if you want to build video games. 
+R, most simply, is a programming language. Just like there are many different spoken languages throughout the world, there are many different programming languages. Similar to how each spoken language is used by a subset of the humans on this Earth, each programming language was created for a different group of people who code. You may have heard of other programming languages, such as C++, Java, or HMTL previously. These are all enormously popular programming languages, but each has what it does best along with its own disadvantages. For example, if you're interested in building software that runs really quickly, you may learn C++. If you want to build and edit websites, you would maybe start by learning HTML. And, Java may be most helpful if you want to build video games. 
 
 ![R](images/00_what_is_R/00_R_what_is_R-1.png)
 
@@ -21,7 +21,7 @@ Similarly, R has its strengths and weaknesses. R was designed to be helpful to t
 
 ![R is a calculator](images/00_what_is_R/00_R_what_is_R-2.png)
  
-However, R is much more than *just* a calculator. It also has the ability to work with data, such as the information in spreadsheets. It's able to tell you how many rows are in your column. It's able to find the average age of indivdiuals across a data set. It's able to create plots to show you how many males or females are included in your data set. And beyond data summary, you can run statistical analyses, write your own software, and carry out complicated analyses start to finish in R. So, while it is a calculator, it is much more than a calculator. It is a place where you can do all of your data analysis. RStudio makes the process of doing an analysis in R easier.
+However, R is much more than *just* a calculator. It also has the ability to work with data, such as the information in spreadsheets. It's able to tell you how many rows are in your column. It's able to find the average age of individuals across a data set. It's able to create plots to show you how many males or females are included in your data set. And beyond data summary, you can run statistical analyses, write your own software, and carry out complicated analyses start to finish in R. So, while it is a calculator, it is much more than a calculator. It is a place where you can do all of your data analysis. RStudio makes the process of doing an analysis in R easier.
 
 ### RStudio
 
@@ -41,7 +41,7 @@ RStudio Cloud is a version of RStudio that can run in the cloud. This means that
 ![RStudio Cloud](images/00_what_is_R/00_R_what_is_R-4.png)
 
 
-There are additional features that you can play around with; however, one important feature to note is that whenenver you create a plot in RStudio or Rstudio cloud, it will be visible in the plots tab at the bottom right-hand of your screen.
+There are additional features that you can play around with; however, one important feature to note is that whenever you create a plot in RStudio or Rstudio cloud, it will be visible in the plots tab at the bottom right-hand of your screen.
 
 ![RStudio Cloud plots](images/00_what_is_R/00_R_what_is_R-5.png)
 
@@ -63,19 +63,32 @@ As for RStudio, it was first released in 2011. It was founded by [J.J. Allaire](
 
 ### Welcome to the What is R? quiz
 
-? Which of the topics discussed refers to the programming language you'll use?
+```{choose-answers: 4}
+? Which of the topics discussed refers to the programming language you'll use throughout this course?
 
-a) RStudio
-B) R
-c) RStudio Cloud
-d) History
+C) R
+m) RStudio
+o) RStudio Cloud
+o) Java
+o) History
+o) HTML
+o) C++
+o) Auckland
 
-? Which of the following was developed to increase programmers efficiency?
+```
+```{choose-answers: 4}
 
-A) RStudio
-b) Gentleman 
-c) Ihaka
-d) Allaire
+? Which of the following was developed to increase programmers' efficiency using R?
+
+C) RStudio
+o) Gentleman 
+o) Ihaka
+o) Allaire
+o) Wickham
+o) Java
+o) C++
+o) HTML
+```
 
 {/quiz}
 

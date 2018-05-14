@@ -205,10 +205,12 @@ To answer, "How many units meet this condition?", we can make use of the `sum` a
 
 ### Slides and Video
 
+![Working with Logicals](ADD VIDEO)
+
 * [Slides](https://docs.google.com/presentation/d/1xsqzqb-2-RHDGO03aVm_Ky3y6rXlGIn4NdBviF29F3U/edit?usp=sharing)
 
 
-{quiz, id: quiz_05_logicals}
+{quiz, id: quiz_06_logicals}
 
 # Working with logical values quiz
 
