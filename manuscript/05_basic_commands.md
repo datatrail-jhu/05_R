@@ -198,10 +198,12 @@ The `unique` function shows only the unique elements of an object. For vectors, 
 
 ### Slides and Video
 
+![Basic commands in R](UPDATE LINK)
+
 * [Slides](https://docs.google.com/presentation/d/1CXJPvWXjuAE7R33Zctm9N7mHwWFonMzgXD3NwStjFLU/edit?usp=sharing)
 
 
-{quiz, id: quiz_03_basic_commands}
+{quiz, id: quiz_05_basic_commands}
 
 # Basic Commands quiz
 
