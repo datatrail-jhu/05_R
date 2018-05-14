@@ -8,7 +8,7 @@ To access documentation directly within RStudio, you can type a question mark fo
 
 For example, earlier in this course, you were introduced to the function `summary()` in R. If you later can't remember what this function does, but you can remember the function, you can always type `?summary` in your Console. The following will display in the Help tab:
 
-![?summary documentation](images/04_help_in_R/04_R_help_in_R-6.png)
+![?summary documentation](images/11_help_in_R/11_R_help_in_R-6.png)
 
 In this documentation we see:
 * A general description of what the summary() function can be used for
@@ -28,7 +28,7 @@ On Stack Overflow, people (who have logins on the website) can ask questions. Th
 
 Additionally, questions can be tagged with their subject area. For example, a user looking for help coding in R would tag their question with the "r" tag to help direct this question to the right community for answering.
 
-![Stack Overflow Homepage](images/04_help_in_R/04_R_help_in_R-7.png)
+![Stack Overflow Homepage](images/11_help_in_R/11_R_help_in_R-7.png)
 
 #### Getting Answers
 
@@ -36,7 +36,7 @@ Stack Overflow is a place for specific coding questions and answers. It is *not*
 
 For example, if you were trying to learn more about how to work with objects in R, you would maybe type "objects in R" into the search bar. The results would look something like this:
 
-![Stack Overflow Search Output](images/04_help_in_R/04_R_help_in_R-8.png)
+![Stack Overflow Search Output](images/11_help_in_R/11_R_help_in_R-8.png)
 
 For each search result, you will see:
 * the question posed
@@ -50,11 +50,11 @@ If, after searching questions that already exist, you still cannot find an answe
 
 Once you've created an account and logged in, you will see a blue "Ask Question" box in the top right-hand of your screen.
 
-![Ask Question](images/04_help_in_R/04_R_help_in_R-9.png)
+![Ask Question](images/11_help_in_R/11_R_help_in_R-9.png)
 
 Clicking on "Ask Question" will bring you to an additional screen reminding you of how to proceed before posting a question (search for existing answers!) and how to post a question
 
-![Posting a Question Guidelines](images/04_help_in_R/04_R_help_in_R-10.png)
+![Posting a Question Guidelines](images/11_help_in_R/11_R_help_in_R-10.png)
 
 #### Reproducible Examples (reprex)
 
@@ -78,7 +78,7 @@ That said, it's probably no surprise that sometimes people can be mean to others
 
 In addition to Stack Overflow, [RStudio Community](https://community.rstudio.com/) is an online community for questions and answers that is specifically geared toward R users.
 
-![RStudio Community](images/04_help_in_R/04_R_help_in_R-13.png)
+![RStudio Community](images/11_help_in_R/11_R_help_in_R-13.png)
 
 With this interface, in addition to the Topic, you can see the Category (similar to tags in Stack Overflow) and the number of Replies and Views for each topic. You can sort by any of these categories by clicking on the label at the top. Or, you can search specific questions or topics. Clicking on any topic will direct you to a new window where you can sort through the answers for each question. 
 

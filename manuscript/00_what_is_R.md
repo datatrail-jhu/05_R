@@ -9,7 +9,7 @@ default-random-choice-order: true
 
 ### Introduction to R
 
-While you completed a project with Leanpub data using rstudio.cloud in the intro course to this series, there wasn't a ton of detail about what R, RStudio, and rstudio.cloud actually are in those lessons. We'll discuss a few more details about R here in this introductory lesson and then will get into more and more detail about using R throughout this course. 
+While you completed a project with Leanpub data using [RStudio Cloud](rstudio.cloud) in the intro course to this series, there wasn't a ton of detail about what R, RStudio, and RStudio Cloud actually are in those lessons. We'll discuss a few more details about R here in this introductory lesson and then will get into more and more detail about using R throughout this course. 
 
 ### R
 
@@ -29,9 +29,9 @@ RStudio is a free, integrated development environment (IDE) for R. Generally, ID
 
 ![RStudio IDE](images/00_what_is_R/00_R_what_is_R-3.png)
 
-### rstudio.cloud
+### RStudio Cloud
 
-RStudio Cloud is a version of RStudio that can run in the cloud. This means that regardless of what computer you're on, you can access the analysis you were doing previously in your rstudio.cloud session. Other than that, it has many of the same features and is being developed by the same group of people. This means that in RStudio Cloud, like in RStudio you have four main components, each of which is visible in the same window. To review from the introductory lesson of this series of courses, RStudio Cloud has the following four main components:
+[RStudio Cloud](rstudio.cloud) is a version of RStudio that can run in the cloud. This means that regardless of what computer you're on, you can access the analysis you were doing previously in your RStudio Cloud session. Other than that, it has many of the same features and is being developed by the same group of people. This means that in RStudio Cloud, like in RStudio you have four main components, each of which is visible in the same window. To review from the introductory lesson of this series of courses, RStudio Cloud has the following four main components:
 
 1. Scripting - where you write your code
 2. Console - where your code runs 
@@ -41,7 +41,7 @@ RStudio Cloud is a version of RStudio that can run in the cloud. This means that
 ![RStudio Cloud](images/00_what_is_R/00_R_what_is_R-4.png)
 
 
-There are additional features that you can play around with; however, one important feature to note is that whenever you create a plot in RStudio or Rstudio cloud, it will be visible in the plots tab at the bottom right-hand of your screen.
+There are additional features that you can play around with; however, one important feature to note is that whenever you create a plot in RStudio or RStudio Cloud, it will be visible in the plots tab at the bottom right-hand of your screen.
 
 ![RStudio Cloud plots](images/00_what_is_R/00_R_what_is_R-5.png)
 
