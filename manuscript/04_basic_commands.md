@@ -4,7 +4,15 @@ Now that we've covered what some essentials about R objects, we'll go over some 
 
 ### Functions
 
-In working with data, we will be making substantial use of **functions**. Functions take various arguments as input. These inputs are often objects and other variables detailing how you wish to view, summarize, or manipulate these objects. Function outputs come in a variety of formats. They can return information about the contents of an object; they can return a manipulated version of an object; and they can create entirely new objects. In this lesson, we will cover some essential functions for exploring data. This will only consist of functions that return information about the contents of an object. As you learn more about R, you will learn about functions that can manipulate objects or create entirely new objects.
+In working with data, we will be making substantial use of **functions**. Functions in R carry out some task. They are always a word (or set of words connected by underscores or periods followed by a set of parentheses, so the general structure of a function in R would look something like this:
+
+```text
+function(input)
+
+function_name(input)
+```
+
+The input to a function in R is known as an **argument**. Functions require *at least one* argument, but can require multiple different arguments, depending on the function. These inputs are often objects and other variables detailing how you wish to view, summarize, or manipulate these objects. Function outputs come in a variety of formats. They can return information about the contents of an object; they can return a manipulated version of an object; and they can create entirely new objects. In this lesson, we will cover some essential functions for exploring data. This will only consist of functions that return information about the contents of an object. As you learn more about R, you will learn about functions that can manipulate objects or create entirely new objects.
 
 To visually understand the anatomy of a **function call** (a term that describes the using of a function), let's look at the following example:
 
@@ -12,13 +20,13 @@ To visually understand the anatomy of a **function call** (a term that describes
 mean(x, trim = 0.1)
 ```
 
-We have an object `x` that presumably contains numbers, and we want to compute the mean of these numbers with the `mean` function. All of the information inside the parentheses are function inputs (also called **arguments**), and they are separated by commas. In this command, I have supplied an additional argument `trim` that I set to be 0.1. The `trim` argument calls for a number between 0 and 0.5 and specifies the fraction of the observations in `x` to trim from the upper and lower ends of the data. Here I want to take the mean of the middle 80% of the data.
+We have an object `x` that presumably contains numbers, and we want to compute the mean of these numbers with the `mean` function. As stated above, ll of the information inside the parentheses are function inputs (also called **arguments**), and they are separated by commas. In this command, I have supplied the object x and an additional argument `trim` that I set to be 0.1. The `trim` argument calls for a number between 0 and 0.5 and specifies the fraction of the observations in `x` to trim from the upper and lower ends of the data. Here, by including the trim argument, I am specifying that I want to take the mean of the middle 80% of the data.
 
 ### What is this object?
 
 If someone were to write down a mystery noun for us to guess, our first question would likely be: "Is it a person, place, or thing?" When working with R objects, we will initially want similar types of information. Here we will go over some functions that can help in this regard.
 
-The `class` function returns the class of an R object. This is useful for determining if an object is an atomic vector, list, or some other type of object. If it is an atomic vector, this function tells you the type.
+As discussed briefly in the last lesson, the `class` function returns the class of an R object. This is useful for determining if an object is an atomic vector, list, or some other type of object. If it is an atomic vector, this function tells you the type.
 
 ```text
 > x <- 1:10
@@ -64,7 +72,7 @@ The `dim` function returns the dimensions of a rectangular object, such as a mat
 [1] 11
 ```
 
-The `length` function returns the number of items in a vector object.
+The `length` function returns the number of items in a vector object. We talked about this briefly last lesson that the number of things in your object is referred to as its length. Here, we can quickly calculate the length of an object by calling the `length` function.
 
 ```text
 > x <- c(1, 10, 3)
@@ -88,7 +96,7 @@ If we want to label this vector with the prizes, we can use `names` combined wit
 names(prize_money) <- c("first", "second", "third")
 ```
 
-Later in our work, if we want to remind ourselves of the labels, we can use the `names` function by itself.
+Later in our work, if we want to remind ourselves of the labels, we can use the `names` function by itself, which will print the names for the object.
 
 ```text
 > names(prize_money)
@@ -126,6 +134,8 @@ The `colnames` and `rownames` functions act analogously to the `names` function 
 [31] "Maserati Bora"       "Volvo 142E"
 ```
 
+![colnames and rownames functions](images/04_basic_commands/04_R_basic_commands-12.png)
+
 ### What does this object look like?
 
 Sometimes we may just want to see the information contained in an object. Here we will discuss functions that allow you to see parts of objects.
@@ -141,6 +151,8 @@ Recall that in R, the **Console** is where commands can be typed and entered for
 ```r
 mtcars
 ```
+
+[printing objects' contents to the screen](images/04_basic_commands/04_R_basic_commands-14.png)
 
 Safer alternatives to printing are the `head` and `tail` functions. The `head` function displays the beginning of an object. By default, it shows the first 6 items. If the object is a vector, `head` shows the first 6 entries. If the object is a rectangle, such as a matrix or a data frame, `head` shows the first 6 rows. The `tail` function is analogous to `head` but for the end of the object.
 
@@ -164,6 +176,9 @@ Maserati Bora  15.0   8 301.0 335 3.54 3.570 14.6  0  1    5    8
 Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2
 ```
 
+[head() and tail() can be used to see a portion of the data](images/04_basic_commands/04_R_basic_commands-15.png)
+
+
 The `summary` function computes summary statistics for numeric data and performs tabulations for categorical data, which are called **factors** in R.
 
 ```text
@@ -180,6 +195,8 @@ The `summary` function computes summary statistics for numeric data and performs
  versicolor:50  
  virginica :50  
 ```
+[The summary() function summarizes data](images/04_basic_commands/04_R_basic_commands-16.png)
+
 
 The `unique` function shows only the unique elements of an object. For vectors, this returns the set of unique elements. For rectangles such as matrices and data frames, this returns the unique rows. This function is useful if we want to check the coding of our data. If we have sex information, then we expect the result of unique to be two elements. If not, there is likely some data cleaning that must be done. The `unique` function is also useful for simply exploring the values that a variable can take. In the example below, we can see that in the `mtcars` data frame, there are only cars with 6, 4, and 8 cylinders. Note that to extract the column corresponding to cylinders, we used a dollar sign followed by the column name: `$cyl`. This is an example of subsetting that you will learn in later lessons.
 
@@ -207,34 +224,47 @@ The `unique` function shows only the unique elements of an object. For vectors, 
 
 # Basic Commands in R quiz
 
+{choose-answers: 4, points:2}
 ? Within R you should have access to an object called `airquality` that contains data on New York air quality. You can work with it in the same way that we have worked with the `mtcars` and `iris` objects in this lesson. What is the value in the "Ozone" column in the third to last row?
 
-a) 12
-B) 14
-c) 18
-d) 20
-e) NA
+C) 14
+o) 12
+o) 18
+o) 20
+o) NA
+o) 16
+o) 10
 
+{choose-answers: 4, points:2}
 ? How many rows and columns are in `airquality`?
 
-A) 153 rows, 6 columns
-b) 154 rows, 7 columns
-c) 153 rows, 7 columns
-d) 154 rows, 6 columns
-
+C) 153 rows, 6 columns
+m) 153 columns, 6 rows
+o) 154 rows, 7 columns
+o) 153 rows, 7 columns
+o) 154 rows, 6 columns
+o) 1 row, 153 columns
+o) 1 column, 153 rows
+ 
+ {choose-answers: 4, points:2}
 ? How many months of the year are represented in this dataset?
 
-a) 3
-B) 5
-c) 9
-d) 12
+C) 5
+o) 3
+o) 9
+o) 12
+o) 0
+o) 2
+o) 4
 
 ? What is the median temperature (Temp column) in this dataset?
 
-a) 56
-b) 72
 C) 79
-d) 85
+o) 56
+o) 72
+o) 85
+o) 97
+o) 77
 
 {/quiz}
 
