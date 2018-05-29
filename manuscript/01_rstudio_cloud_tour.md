@@ -182,8 +182,7 @@ In this lesson we took a tour of RStudio Cloud. We became familiar with the main
 
 ### RStudio Cloud Tour quiz
 
-```{choose-answers: 4}
-
+{choose-answers: 4}
 ? How do you see a command you have previously run and save it to source?  
 
 C) History tab > click on command to highlight > To Source  
@@ -194,11 +193,8 @@ o) Console > highlight code > To Source
 o) Source > highlight code > To Console
 o) Source > highlight code > 'cntrl + enter'
 
-```
-
+{choose-answers: 4}
 ? What is the name of the quadrant in the bottom left corner of RStudio Cloud, in the default layout? 
-
-```{choose-answers: 4}
 
 C) Console  
 o) Source  
@@ -208,10 +204,9 @@ o) Help
 o) Files  
 o) Packages  
 o) History
-```
 
-```{choose-answers: 4, points: 2}
 
+{choose-answers: 4, points: 2}
 ? Which of the following is **not** one of the options available under the Global Options menu in Tools? 
 
 C) Versions
@@ -229,6 +224,5 @@ o) Publishing
 o) Terminal  
 o) General  
 
-```
 
 {/quiz}}
