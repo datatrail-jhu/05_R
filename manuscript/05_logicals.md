@@ -2,13 +2,15 @@
 
 Earlier in this course, you learned that one of the basic classes of objects in R is the class of logical objects which contain TRUE and FALSE values. Logicals come up very frequently in data management and analysis because they form the basis of conditional operations (if a condition is met, perform a task) and are instrumental in data exploration, visualization, and analysis. In this lesson, we will cover the tools you will need to work with logical values in R.
 
+As you work through this lesson, you'll be inundated with TRUE and FALSE a lot. That is because there are only two options when it comes to logicals. *However*, these are incredibly important and helpful class of objects. So, take your time to understand each example. Copying and pasting the code into your own RStudio, running it, and spending time to understand the output will really help you understand how to work with logicals!
+
 ### Logical operators
 
 One of the most common ways to create and combine logical objects is to use **logical operators**. Broadly speaking, **operators** are symbols that indicate some action. We introduced arithmetic operators in an earlier lesson for performing routine arithmetic calculations. There was `+` for addition, `-` for subtraction, `*` for multiplication, `/` for division, and `^` for exponentiation. Logical operators in R perform actions relating to logic checking and include the following:
 
 - `!`: the "not" operator
 - `&`: the "and" operator
-- `|`: the "or" operator (Shift+backslash)
+- `|`: the "or" operator (_Shift_ + _backslash(\)_ )
 - `==`: the "equals" operator
 - `!=`: the "not equal" operator
 - `>`: the "greater than" operator
@@ -27,12 +29,14 @@ common_cutoff <- 13
 indiv_cutoffs <- c(12, 12, 14, 14, 14)
 ```
 
-Do the students' ages equal the cutoff? To answer this, we would use the "equals" operator `==`. Here, each number in the `ages` object is compared to 13. Only the fourth student meets this condition.
+Do the students' ages equal the cutoff? To answer this, we would use the "equals" operator `==`. (*Note*: the equals operator requires two equals signs (`==`). You'll recall that a single equals sign (`=`) is used for object assignment and is equivalent to `<-` . Whenever you want to ask if two things are equal be sure you have both equals signs in your code!) Here, each number in the `ages` object is compared to 13. Only the fourth student meets this condition.
 
 ```text
 > ages==common_cutoff
 [1] FALSE FALSE FALSE  TRUE FALSE
 ```
+
+The output from this code prints "TRUE" for the individual (the fourth person) who meets this condition.
 
 Do the students' ages equal the individualized cutoffs? Here, each number in the `ages` object is compared to the corresponding number in the `indiv_cutoffs` vector. Only the first and fifth students meet this condition.
 
@@ -40,6 +44,8 @@ Do the students' ages equal the individualized cutoffs? Here, each number in the
 > ages == indiv_cutoffs
 [1]  TRUE FALSE FALSE FALSE  TRUE
 ```
+
+This is obvious in the output from R, where the first and the fifth values are TRUE, while the rest are FALSE.
 
 Usually cutoffs are a bound rather than a specification of an equality, so we may instead ask if the students older than the cutoff by using the "greater than" operator `>`.
 
@@ -153,11 +159,17 @@ Although we create this factor object from integers, comparing it to the value 1
 [1] FALSE FALSE FALSE FALSE FALSE
 > as.integer(height_factor)
 [1] 2 1 2 3 1
+
+## coerce object to be an integer
 > as.integer(height_factor) == 1
 [1] FALSE  TRUE FALSE FALSE  TRUE
+
+## compare to label directly
 > height_factor == "short"
 [1] FALSE  TRUE FALSE FALSE  TRUE
 ```
+
+When we coerce the object to e an integer, we get the expected output. The second and final outputs are TRUE, corresponding to the values of "1" in the height_factor object. The output is the same for when the labels are directly compared. The output here returns TRUE for any places in the height_vector object where the factor label is (equal to) "short".
 
 ### Logical functions
 
@@ -193,15 +205,24 @@ Often we will want to combine the asking of yes/no questions with "who" and "how
 To answer, "How many units meet this condition?", we can make use of the `sum` and `mean` functions. The idea here is that logical values have a correspondence with the integer values of 0 and 1. TRUE values correspond to 1, and FALSE values correspond to 0. Thus when we create a logical object, we can use `sum` to count the number of TRUE values, and we can use `mean` to compute the fraction of TRUE values.
 
 ```text
+## assign logical to ages that are greater than
+## or equal to indiv_cutoffs
 > meets_indiv_cut <- ages >= indiv_cutoffs
 > meets_indiv_cut
 [1]  TRUE  TRUE  TRUE FALSE  TRUE
+## sum that object
 > sum(meets_indiv_cut)
 [1] 4
+## get the mean of that object
 > mean(meets_indiv_cut)
 [1] 0.8
 ```
 
+Here, the sum of the `meets_indiv_cut` is 4. When you sum a logical, R returns the number of TRUE responses. Similarly, when you take the `mean()` of an object of class logical, you get the proportion of responses that were TRUE. Here, that's 4 out of 5, or 0.8.
+
+### Summary
+
+This lesson walked you through how to work with operators and logical objects. This will be incredibly helpful as you start to manipulate and clean data. Having a thorough understanding of this class of objects and how to work with them will serve you well going forward.
 
 ### Slides and Video
 
@@ -221,25 +242,37 @@ For this quiz, you will be working with the `iris` data set available within R. 
 A) Yes
 b) No
 
+{choose-answer: 4, points: 2}
 ? How many irises of the versicolor species have a petal width of at most 1.5?
 
-a) 35
-B) 45
-c) 86
-d) 98
+C) 45
+o) 35
+o) 86
+o) 98
+o) 0
+o) 5
+o) 150 
 
+{choose-answer: 4, points: 2}
 ? What fraction of the irises have sepal or petal length greater than 5?
 
-a) 12.4%
-b) 28.0%
-c) 40.7%
-D) 78.7%
+C) 78.7%
+o) 12.4%
+o) 28.0%
+o) 40.7%
+o) 12.2%
+o) 92.5%
+o) 88.3%
 
-? Which of the commands below will give the same result?
+{choose-answer: 4, points: 3}
+? Which of the commands below will give the same result as `(iris$Sepal.Length == 5.0) | (iris$Sepal.Length == 5.1)`?
 
-A) `!(iris$Sepal.Length == 5.0 | iris$Sepal.Length == 5.1)`
-b) `!(iris$Sepal.Length == 5.0) | !(iris$Sepal.Length == 5.1)`
-C) `!(iris$Sepal.Length == 5.0) & !(iris$Sepal.Length == 5.1)`
-D) `!(iris$Sepal.Length %in% c(5,5.1))`
+*Note*: The `identical()` command, which has not been discussed yet, may help you answer this question. Feel free to look at the documentation for this function by typing ?identical into the console or by Googling how to use this function if you're struggling. 
+
+C) `(iris$Sepal.Length >= 5.0) & (iris$Sepal.Length <= 5.1)`
+o) `!(iris$Sepal.Length == 5.0 | iris$Sepal.Length == 5.1)`
+o) `!(iris$Sepal.Length == 5.0) & !(iris$Sepal.Length == 5.1)`
+o) `!(iris$Sepal.Length %in% c(5,5.1))`
+o) `(iris$Sepal.Length == 5.0 | !iris$Sepal.Length == 5.1)`
 
 {/quiz}

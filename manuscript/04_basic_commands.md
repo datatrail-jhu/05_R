@@ -213,6 +213,10 @@ The `unique` function shows only the unique elements of an object. For vectors, 
 1 1 2
 ```
 
+### Summary
+
+In this lesson, you have been introduced to a number of commonly-used commands (functions) that are available to you in R. These will help you to determine the class of objects (`class()`), figure out how big an object is (`length()`, `dim()`, `nrow()`, `ncol()`), get an idea of what the object looks like (`str()`, `head()`, `tail()`), and summarize the data contained in the object (`summary()`, `unique()`), among many others. Understanding the functions discussed in this lesson and becoming very comfortable with what each of these does is incredibly important for moving forward and programming in R. So, spend some time here and ensure that you understand what the code does in each example before moving on!
+
 ### Slides and Video
 
 ![Basic commands in R](UPDATE LINK)
@@ -225,7 +229,7 @@ The `unique` function shows only the unique elements of an object. For vectors, 
 # Basic Commands in R quiz
 
 {choose-answers: 4, points:2}
-? Within R you should have access to an object called `airquality` that contains data on New York air quality. You can work with it in the same way that we have worked with the `mtcars` and `iris` objects in this lesson. What is the value in the "Ozone" column in the third to last row?
+? Within R, you have access to an object called `airquality` that contains data on New York air quality. You can work with it in the same way that we have worked with the `mtcars` and `iris` objects in this lesson. What is the value in the "Ozone" column in the third to last row?
 
 C) 14
 o) 12
@@ -247,7 +251,7 @@ o) 1 row, 153 columns
 o) 1 column, 153 rows
  
  {choose-answers: 4, points:2}
-? How many months of the year are represented in this dataset?
+? How many months of the year are represented in this `airquality` dataset?
 
 C) 5
 o) 3
@@ -257,7 +261,7 @@ o) 0
 o) 2
 o) 4
 
-? What is the median temperature (Temp column) in this dataset?
+? What is the median temperature (Temp column) in this `airquality` dataset?
 
 C) 79
 o) 56
