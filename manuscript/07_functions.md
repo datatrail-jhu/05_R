@@ -101,7 +101,7 @@ So now, if you just type in `convertdegree(10)` the function will assume that th
 
 {quiz, id: quiz_07_functions}
 
-### Functions in R quiz
+### Writing Functions in R quiz
 
 ? Which of the following statements is True?
 
