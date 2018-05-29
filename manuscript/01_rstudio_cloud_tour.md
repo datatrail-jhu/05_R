@@ -1,10 +1,10 @@
 # RStudio Cloud Tour 
 
-At this point in the course, you've been introduced to RStudio Cloud. You know that it's where you'll be writing code, you've learned how to organize your files within RStudio Cloud for data science projects, and have worked with markdown files within RStudio. While you were introduced to the parts of RStudio previously, we'll review them in this lesson and then go into a little more depth to get you even more comfortable working in RStudio Cloud.
+At this point in the course, you've been introduced to RStudio Cloud. You know that it's where you'll be writing code, and you've been briefly introduced to RStudio and RStudio Cloud. You've learned how to organize your files within RStudio Cloud for data science projects. And, you have worked with markdown files within RStudio Cloud. While you were introduced to the parts of RStudio previously, we'll review them in this lesson and then go into a little more depth to get you even more comfortable working in RStudio Cloud.
 
 ### Getting Started in RStudio Cloud
 
-To get started working in [RStudio Cloud](rstudio.cloud), you'll want to go to rstudio.cloud and log in using your RStudio Cloud login. You'll be logged into your home screen. As discussed previously, to get started working on a new project, you would click on the "New Project" blue icon toward the top right. This will create a new project. However, all your old projects will be listed at left underneath "Spaces." You can always return to an old project or start a new one.
+To get started working in [RStudio Cloud](rstudio.cloud), you'll want to go to [rstudio.cloud](rstudio.cloud) and log in using your RStudio Cloud login. You'll be logged into your home screen. As discussed previously, to get started working on a new project, you would click on the "New Project" blue icon toward the top right. This will create a new project. However, all your old projects will be listed at left underneath "Spaces." You can always return to an old project or start a new one.
 
 ![RStudio Cloud Home Screen - New Project ](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-1.png)
 
@@ -66,7 +66,7 @@ To get started in your script file, copy and paste the following into your Sourc
 example <- matrix(c(1, 2, 3, 4, 5, 6, 7, 8), nrow = 4, ncol = 2)
 ```
 
-To run this code, you can't just hit enter (as you were able to do in the Console). Hitting enter will just bring your cursor to the next line in the script. Instead, with your cursor in the line of code you want to run, you can click on "Run" at the top right of your script file. This will execute the code in the Console. 
+To run this code, you *can't* just hit enter (as you were able to do in the Console). Hitting enter will just bring your cursor to the next line in the script. Instead, with your cursor in the line of code you want to run, you can click on "Run" at the top right of your script file. This will execute the code in the Console. 
 
 **Note** Alternatively, to run code, with your cursor on the line of code you'd like to run, you could hit 'ctrl + enter' to run that line of code. This will save you a lot of time as you start writing a lot of code and analyzing data. Practice this keyboard shortcut now!
 
@@ -74,7 +74,7 @@ What this code does is create an object (we'll define what that is soon!) called
 
 #### Environment (& History)
 
-To view this boject we've just created, you'll first want to ensure that the object was created. In the Environment quadrant, you should see that 'example' is now there. The object was created!
+To view this object we've just created, you'll first want to ensure that the object was created. In the Environment quadrant, you should see that 'example' is now there. The object was created!
 
 ![The environment quadrant](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-12.png)
 
@@ -82,7 +82,7 @@ Then, just click anywhere on the "example" line, and a new tab on the Source qua
 
 ![Your newly made object, opened in a new tab of the source panel](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-13.png)
 
-RStudio Cloud also tells you some information about the object in the environment, like whether it is a list or a dataframe or if it contains numbers, integers or characters. This is very helpful information to have as some functions only work with certain classes of data. We'll get into the details of all this later, but for now, knowing that this information is in the Environment tab is enough.
+RStudio Cloud also tells you some information about the object in the environment, like whether it is a list or a data frame or if it contains numbers, integers or characters. This is very helpful information to have as some functions only work with certain classes of data. We'll get into the details of all this later, but for now, knowing that this information is in the Environment tab is enough.
 
 The quadrant has two other tabs running across the top of it. We'll just look at the History tab now. Your history tab should look something like this: 
 
@@ -96,9 +96,11 @@ Do so now for your `View(example)` object and send it to Source.
 
 ![Sending 'View(example)' from History to Source](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-16.png)
 
+This line of code is now in your Source document. When you save this document, you'll also have this line of code saved for future use.
+
 #### Saving Script Files
 
-Now that you've created a script with code in it, you may want to save it. To do so, you'll want to click on the save icon. 
+Now that you've created a script with code in it, you likely want to save it. To do so, you'll want to click on the save icon. 
 
 ![Save Icon](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-17.png)
 
@@ -132,7 +134,6 @@ You can also see where this file is saved using the fourth and final quadrant in
 
 ![Files, Plots, Packages, Help, Viewer](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-23.png)
 
-
 In Files, you can see everything in your current working directory. You should now be able to see the code folder you just created. 
 
 ![code directory in Files tab](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-24.png)
@@ -141,7 +142,7 @@ By clicking on that folder, you should then see the raw_code folder you created.
 
 ![raw_code folder in Files tab](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-25.png)
 
-By clickin on this, you'll see the script file you just saved! 
+By clicking on this, you'll see the script file you just saved! 
 
 ![R_basics.R is saved in code/raw_code/](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-26.png)
 
@@ -182,7 +183,7 @@ In this lesson we took a tour of RStudio Cloud. We became familiar with the main
 
 ### RStudio Cloud Tour quiz
 
-{choose-answers: 4}
+{choose-answers: 4, points: 2}
 ? How do you see a command you have previously run and save it to source?  
 
 C) History tab > click on command to highlight > To Source  
