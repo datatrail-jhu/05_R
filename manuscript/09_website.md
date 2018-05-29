@@ -282,7 +282,7 @@ You might be interested in going beyond this quick website. For example, you mig
 
 {quiz, id: quiz_09_website}
 
-### Creating websites with R
+### Creating Websites with R
 
 ? Which of the following statements is True?
 

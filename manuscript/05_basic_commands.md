@@ -1,4 +1,4 @@
-# Basic commands in R
+# Basic Commands in R
 
 Now that we've covered what some essentials about R objects, we'll go over some basic commands that will be helpful in working with data.
 
@@ -205,7 +205,7 @@ The `unique` function shows only the unique elements of an object. For vectors, 
 
 {quiz, id: quiz_05_basic_commands}
 
-# Basic Commands quiz
+# Basic Commands in R quiz
 
 ? Within R you should have access to an object called `airquality` that contains data on New York air quality. You can work with it in the same way that we have worked with the `mtcars` and `iris` objects in this lesson. What is the value in the "Ozone" column in the third to last row?
 
