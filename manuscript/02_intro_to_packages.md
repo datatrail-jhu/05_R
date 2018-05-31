@@ -97,7 +97,7 @@ Like your projects in GitHub, packages are **version controlled**. As updates ar
 
 To update all packages, use `update.packages()`. If you only want to update a specific package, just use once again `install.packages("packagename")`
 
-Within the RStudio interface, still in that Packages tab, you can click "Update," which will list all of the packages that are not up to date. It gives you the option to update all of your packages, or allows you to select specific packages. 
+Within the RStudio interface, still in that Packages tab, you can click "Update," which will list all of the packages that are not up to date. It gives you the option to update all of your packages, or allows you to select specific packages.  If all of your packages are up to date you will get the message "All packages are up to date."
 
 ![Using the Update menu, you can select all or some of the packages you have installed that you can update](images/02_intro_to_packages/02_R_intro_to_packages-12.png)
 

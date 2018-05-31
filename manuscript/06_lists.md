@@ -1,4 +1,4 @@
-# Lists
+# Lists & Data Frames
 
 Now that we've covered basic object types and some commands to explore and work with them, we will cover a slightly more complex type of object: lists. Lists have similarities to data frames, which we have introduced briefly in previous lessons. In this lesson, you will learn about the structure of list objects, how to create them, and how to subset them.
 
@@ -10,15 +10,19 @@ Lists are also a type of vector, but they are more complex than the simple vecto
 
 Lists are a general and flexible way to store information, and it turns out that data frames, which you have learned about in previous lessons, are a special cases of lists. As you learn how to create and work with lists in the remainder of this lesson, we will also cover connections to working with data frames.
 
-![Creating a new repository](images/04_lists/04_R_lists-1.png)
+![Vectors and Lists](images/06_lists/06_R_lists-1.png)
 
 ### Creating a list
 
-The main way to create a list from scratch in R is with the `list` function. The `list` function takes an arbitrary number of arguments and creates a list with the specified objects. For example, we may conduct a poll in a first grade classroom and ask students to name some numbers, animals, and colors that come to mind. In the example below, we have created a list with three slots to store the responses for one student. In the first slot, we have a numeric vector containing three numbers. In the second, we have a character vector containing two animal names. In the third, we have a character vector containing six colors. Within the `list` function, each of these objects is separated with a comma.
+The main way to create a list from scratch in R is with the `list` function. The `list` function takes as many arguments as you want to give it and creates a list with each of the specified objects. For example, we could conduct a poll in a first grade classroom and ask students to name some numbers, animals, and colors that come to mind. In the example below, we have created a list with three slots to store the responses for a single student. In the first slot, we have a numeric vector containing three numbers. In the second, we have a character vector containing two animal names. In the third, we have a character vector containing six colors. This will create a list with three slots, where the responses in each slot are a different length.
+
+Within the `list` function, each of these objects is separated with a comma.
 
 ```r
 responses_student1 <- list(c(4,20,3), c("bear", "giraffe"), c("red", "orange", "yellow", "green", "blue", "purple"))
 ```
+
+This means that the `length` *of the list* is three (one for the numbers, one for the animal names, and one for the colors), but the lengths of the responses within each list differs for each slot (3 for the numbers, 2 for the animal names, and 6 for the colors). 
 
 When we print this object to the screen, it looks as below. The double square brackets indicate the slot number, or element number. So `[[1]]` indicates the first slot or first element of the list, and we see that this first element is a length-3 numeric vector. The `[[2]]` indicates the second element, and we see that it is a length-2 character vector. The `[[3]]` indicates the third slot, and we see that it is a length-6 character vector. The double bracket notation alludes to one way that we can access certain elements of a list. We will cover this in detail in the next section of this lesson.
 
@@ -54,7 +58,7 @@ $colors
 [1] "red"    "orange" "yellow" "green"  "blue"   "purple"
 ```
 
-We can also specify the names of the list elements from the start in the `list` function. Let's create another list object that contains poll responses for a second student. We can specify the names as argument names in the `list` function.
+We can also specify the names of the list elements from the start in the `list` function. Let's create another list object that contains poll responses for a *second* student. We can specify the names as argument names in the `list` function by stating the name of each slot in the list followed by an equals sign and then the values you want in that slot in the list after. Again, each slot is separated by a comma.
 
 ```r
 responses_student2 <- list(numbers = 1:5, animals = c("T-rex", "tiger", "lion"), colors = c("red", "green"))
@@ -106,6 +110,8 @@ Here we did not specify labels with argument names, so when we print this object
 [1] "red"   "green"
 ```
 
+![named list of lists](images/06_lists/06_R_lists-6.png)
+
 If we had specified argument names to label this list, the resulting object would look as follows:
 
 ```text
@@ -134,18 +140,9 @@ $st2$colors
 
 ### Lists and data frames
 
-We mentioned at the start of this lesson that data frames are a special case of lists. In particular, data frames are lists where each element is a simple vector of the same length. In the car information data frame subset below, each column from `mpg` to `carb` is a simple vector. They are all either numeric or integer vectors of length 6. The car models listed on the right hand side do not actually form a column in the data frame, but rather, they are the row names of the data frame. This is a special feature of data frames that lists do not have.
+We mentioned at the start of this lesson that data frames are a special case of lists. In particular, data frames are lists where each element (column) is a simple vector of the same length. In the car information data frame subset below, each column from `mpg` to `carb` is a simple vector. They are all either numeric or integer vectors of length 6. Each element (column) in a data frame must be the same length. The car models listed on the left-hand side do not actually form a column in the data frame, but rather, they are the row names of the data frame. This ability to have row names is a special feature of data frames that lists do not have.
 
-```text
-> head(mtcars)
-                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
-Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
-Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
-Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
-Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
-Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
-Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
-```
+![mtcars data frame](images/06_lists/06_R_lists-7.png)
 
 We can see the relationship between data frames and lists by using the coercion function `as.list`. We can see the familiar dollar sign notation indicating that the names of the list correspond to the column names of the data frame. We can also see that the simple vectors in each of these slots has length 6.
 
@@ -185,17 +182,22 @@ $carb
 [1] 4 4 1 1 2 1
 ```
 
+Here, when displayed as a list, each column from the data frame is now a different element of the list. This is meant to highlight the fact that data frames and lists are related. All data frames are lists. But, data have the special constraint that each element must contain the same number of items as all the other elements in the data frame and the special ability to have row names. Thus, data frames are less flexible than lists.
+
 ### Subsetting lists
 
 It is often the case that we want to work with part of the information in an object, but not all of it. As alluded to in the previous section, we can subset lists using double square bracket or dollar sign notation. Because data frames are a special type of list, data frames can also be subset using double bracket or dollar sign notation. In addition to double bracket and dollar sign notation, we will cover single bracket notation for subsetting, and we will discuss the differences between these approaches.
 
 #### Double square brackets
 
-When using double square brackets, either an integer of a character string is specified within the brackets. An integer specified the index, or the position, within the list to extract. A character string specifies that the extraction should be done by name. The example below shows how both of these methods can be used to extract the second element of the list `l`. Note that the extracted objects are character vectors, which we can see with the `class` function. This is in contrast to the class of `l` being a list.
+When using double square brackets, either an integer (i.e. 2) of a character string (i.e. "gear") is specified within the brackets. An integer specifies the index (also referred to as the position) within the list to extract. A character string specifies that the extraction should be done by name. The example below shows how both of these methods can be used to extract the second element of the list `l`. Note that the extracted objects are character vectors, which we can see with the `class` function. This is in contrast to the class of `l` being a list.
 
 ```text
+> ## create list
 > l <- list(a = 1:7, b = c("foo", "bar", "biz"))
+> ## extract by index
 > res1 <- l[[2]]
+> ## extract by character string
 > res2 <- l[["b"]]
 > res1
 [1] "foo" "bar" "biz"
@@ -275,7 +277,7 @@ Here we can tell from the printed output that the extracted output is a list bec
 
 Here we can tell from the printed output that the extracted output is a list because we can see that it is printed in a column. We can also verify this with the `class` function.
 
-### Lesson summary
+### Summary
 
 Lists are a flexible way to store complex data. We have seen how to create lists using the `list` function in this lesson. As you move through the course, you will learn about ways of getting data and information into R that create list objects automatically.
 
@@ -290,17 +292,21 @@ Working with subsets of data will be a daily part of your work routine, so famil
 * [Slides](https://docs.google.com/presentation/d/1aJgqSCcPC_S_hEmcGy8hQGjuk6AwzT6r4ez-9IVsiXk/edit?usp=sharing)
 
 
-{quiz, id: quiz_04_lists}
+{quiz, id: quiz_06_lists}
 
-# Lists quiz
+# Lists & Data Frames quiz
 
+{choose-answer: 4}
 ? Which of the following statement(s) about lists and data frames is/are true?
 
-a) All lists are data frames, and all data frames are lists
-B) Not all lists are data frames, and all data frames are lists
-c) All lists are data frames, and not all data frames are lists
-d) Not all lists are data frames, and not all data frames are lists
+C) Not all lists are data frames, and all data frames are lists
+o) All lists are data frames, and all data frames are lists
+o) All lists are data frames, and not all data frames are lists
+o) Not all lists are data frames, and not all data frames are lists
+o) Data frames are never lists, and lists are never data frames
+o) Data frames are sometimes lists, but lists are never data frames
 
+{choose-answer: 4}
 ? The following snapshot of the `iris` data frame shows the first six rows of the 5 column data frame. How can I extract the `Petal.Length` column as a simple vector (as opposed to a single column data frame)?
 
     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
@@ -311,17 +317,35 @@ d) Not all lists are data frames, and not all data frames are lists
 5            5.0         3.6          1.4         0.2     setosa
 6            5.4         3.9          1.7         0.4     setosa
 
-a) iris[[Petal.Length]]
-b) iris[Petal.Length]
 C) iris[["Petal.Length"]]
-d) iris["Petal.Length"]
-E) iris$Petal.Length
+C) iris$Petal.Length
+o) iris[[Petal.Length]]
+o) iris[Petal.Length]
+o) iris["Petal.Length"]
+o) iris$$Petal.Length
+o) iris&Petal.Length
+o) iris[$Petal.Length]
 
+{choose-answer: 4, points: 2}
 ? I create a list object `li` with `li <- list(a = 1:3, c("aa", "cc", "dd"))`. How can I extract the second element of the list so that the resulting object is a list?
 
-a) li[[2]]
-B) li[2]
-c) li[["aa"]]
-d) li["aa"]
+C) li[2]
+o) li[[2]]
+o) li[["aa"]]
+o) li["aa"]
+o) li["dd"]
+o) li[["dd"]]
+o) li[3]
+
+{choose-answer: 4}
+? Which of the following statements is TRUE?
+
+C) The number of slots in a list is specified in the `list` function by the number of elements included and separated by commas
+C) The length of each element in a data frame must be the same across all elements in the data frame.
+o) Within a list, the length of each list element must be consistent across the list
+o) For a list, each list element must contain the same type of object as the other elements in the list
+o) Lists can only contain one type of object
+o) Simple vectors often contain many different types of objects in a single vector
+o) Elements of a list can only be extracted using integer notation.
 
 {/quiz}
