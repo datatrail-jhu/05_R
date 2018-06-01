@@ -91,7 +91,7 @@ The R community is a welcoming and helpful community. Many people go years as R 
 * [Twitter](https://twitter.com) - Using or searching the hashtag #rstats can be incredibly helpful and can connect you to others who use R
 * [ROpenSci](https://ropensci.org/) - an online community of developers developing tools for open science
 * [R Project Help in R](https://www.r-project.org/help.html)
-
+* [Tidyverse Help Documentation](https://www.tidyverse.org/help/) - more details on creating a reprex
 
 ### Slides and Video
 
@@ -103,26 +103,44 @@ The R community is a welcoming and helpful community. Many people go years as R 
    
 ### Getting Help in R quiz
    
+{choose-answers: 4}  
 ? When you get stuck in R, what's the first thing you should do?
 
-a) Create a reprex
-B) Search for an existing answer on the Internet
-c) Ask a question on Stack Overflow
-d) Ask a question on the RStudio Community
+C) Search for an existing answer on the Internet
+o) Create a reprex
+o) Ask a question on Stack Overflow
+o) Ask a question on the RStudio Community
+o) Turn and ask the person next to you who's working
+o) Tweet at a person who may know the answer
 
+{choose-answers: 4}
 ? When answering a question on Stack Overflow, what should you avoid?
 
-A) being a jerk
-b) being kind
-c) being helpful
-d) putting yourself in the questioners shoes
-e) being considerate
+C) being a jerk
+C) being rude
+C) being condescending
+o) being kind
+o) being helpful
+o) putting yourself in the questioners shoes
+o) being considerate
 
+{choose-answers: 4}
 ? What is a reprex?
 
-a) the code from your complicated script copy and pasted onto Stack Overflow
-b) a way to pattern match used across programming languages
 C) the simplest piece of example code possible that reproduces an issue you're having 
-d) the code from your complicated script copy and pushed to GitHub
+o) the code from your complicated script copy and pasted directly onto Stack Overflow
+o) a way to pattern match used across programming languages
+o) the code from your complicated script copy and pushed to GitHub
+o) where you store all your files for a project on GitHub
+o) a way to create reproducible reports using code chunks and Markdown
+
+{choose-answers: 4}
+? What are the payoffs for taking the time to create a reprex?
+
+C) You answer your own question and/or you show in a simple example what your issue is, allowing others to help.
+o) StackOverflow & R Community are then required to answer your question and provide you help.
+o) RStudio will automatically be able to fix your issue and tell you where you went wrong
+o) You'll be an expert coder and will never make a mistake again in the future.
+o) By creating a lengthy and confusing reprex, you'll learn a lot about how to code in R.
 
 {/quiz}
