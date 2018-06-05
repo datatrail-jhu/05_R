@@ -1,6 +1,6 @@
 # Creating Websites with R
 
-In previous lectures you have learnt how to:
+In previous lectures you have learned how to:
 
 * Create a GitHub repository
 * Use R Markdown for combining R code and text
@@ -10,13 +10,13 @@ Now we are going to use these two skills to create a website from within R. At t
 
 ### Create your website repository
 
-GitHub has this nice property that it can automatically host websites for you in the repositories. While this can de done for any repository, there is a special case: the `yourUsername.github.com` repository. We will start here because it's the most straightforward case.
+GitHub has the nice property that it can automatically host websites for you from a repository. While this can de done for any repository, there is a special case: the `yourUsername.github.com` repository that makes setting up your own website a little bit simpler. We will start here because it's the most straightforward case.
 
 ![](images/11_website/11_R_website-2.png)
 
-If your username is `JaneEverydayDoe`, first log in to [github.com](http://github.com). Next create a new repository (that nice green button). This new repository needs this special name `JaneEverydayDoe.github.com` which you can find [here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com).
+We'll work through an example for someone whose GitHub username is `JaneEverydayDoe`, but you should follow along and complete each step using your own GitHub account. To get started, first log in to [github.com](http://github.com) and create a new repository (that nice green button). This new repository needs this special name `JaneEverydayDoe.github.com` which you can find [here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com).
 
-Yay, we now have our repository!
+Yay, we now have our repository to get started!
 
 ### Sync files with GitHub
 
