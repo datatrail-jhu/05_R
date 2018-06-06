@@ -261,6 +261,7 @@ o) 0
 o) 2
 o) 4
 
+ {choose-answers: 4}
 ? What is the median temperature (Temp column) in this `airquality` dataset?
 
 C) 79
