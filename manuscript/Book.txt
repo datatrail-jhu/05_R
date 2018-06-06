@@ -5,3 +5,8 @@
 04_basic_commands.md
 05_logicals.md
 06_lists.md
+07_functions.md
+08_Rmd.md
+09_website.md
+10_R_to_GitHub.md
+11_help_in_R.md

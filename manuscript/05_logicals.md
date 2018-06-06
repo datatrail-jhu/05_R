@@ -242,7 +242,7 @@ For this quiz, you will be working with the `iris` data set available within R. 
 A) Yes
 b) No
 
-{choose-answer: 4, points: 2}
+{choose-answers: 4, points: 2}
 ? How many irises of the versicolor species have a petal width of at most 1.5?
 
 C) 45
@@ -253,7 +253,7 @@ o) 0
 o) 5
 o) 150 
 
-{choose-answer: 4, points: 2}
+{choose-answers: 4, points: 2}
 ? What fraction of the irises have sepal or petal length greater than 5?
 
 C) 78.7%
@@ -264,10 +264,10 @@ o) 12.2%
 o) 92.5%
 o) 88.3%
 
-{choose-answer: 4, points: 3}
-? Which of the commands below will give the same result as `(iris$Sepal.Length == 5.0) | (iris$Sepal.Length == 5.1)`?
+{choose-answers: 4, points: 3}
+? Which of the commands below will give the same result as `(iris$Sepal.Length == 5.0) | (iris$Sepal.Length == 5.1)`? 
 
-*Note*: The `identical()` command, which has not been discussed yet, may help you answer this question. Feel free to look at the documentation for this function by typing ?identical into the console or by Googling how to use this function if you're struggling. 
+*Note*: The `identical()` command, which has not been discussed yet, may help you answer this question. Feel free to look at the documentation for this function by typing ?identical into the console or by Googling how to use this function if you're struggling.
 
 C) `(iris$Sepal.Length >= 5.0) & (iris$Sepal.Length <= 5.1)`
 o) `!(iris$Sepal.Length == 5.0 | iris$Sepal.Length == 5.1)`

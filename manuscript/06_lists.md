@@ -296,7 +296,7 @@ Working with subsets of data will be a daily part of your work routine, so famil
 
 # Lists & Data Frames quiz
 
-{choose-answer: 4}
+{choose-answers: 4}
 ? Which of the following statement(s) about lists and data frames is/are true?
 
 C) Not all lists are data frames, and all data frames are lists
@@ -306,7 +306,7 @@ o) Not all lists are data frames, and not all data frames are lists
 o) Data frames are never lists, and lists are never data frames
 o) Data frames are sometimes lists, but lists are never data frames
 
-{choose-answer: 4}
+{choose-answers: 4}
 ? The following snapshot of the `iris` data frame shows the first six rows of the 5 column data frame. How can I extract the `Petal.Length` column as a simple vector (as opposed to a single column data frame)?
 
     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
@@ -326,7 +326,7 @@ o) iris$$Petal.Length
 o) iris&Petal.Length
 o) iris[$Petal.Length]
 
-{choose-answer: 4, points: 2}
+{choose-answers: 4, points: 2}
 ? I create a list object `li` with `li <- list(a = 1:3, c("aa", "cc", "dd"))`. How can I extract the second element of the list so that the resulting object is a list?
 
 C) li[2]
@@ -337,7 +337,7 @@ o) li["dd"]
 o) li[["dd"]]
 o) li[3]
 
-{choose-answer: 4}
+{choose-answers: 4}
 ? Which of the following statements is TRUE?
 
 C) The number of slots in a list is specified in the `list` function by the number of elements included and separated by commas
