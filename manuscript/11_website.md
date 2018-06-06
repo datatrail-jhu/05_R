@@ -301,6 +301,17 @@ o) We manually wrote our index.html file using HTML code
 o) We payed for a custom domain like JaneEverydayDoe.com
 o) We wrote HTML code to generate a website
 
+{choose-answers: 4}
+? After you made edits to index.Rmd, what were the steps required to see the changes on your website?
+
+C) Knit -> add -> commit -> push
+o) Knit -> clone -> push
+o) commit -> push -> Knit -> add
+o) pull -> commit -> push
+o) Knit -> pull -> commit
+o) pull -> Knit -> commit
+o) push -> pull -> commit -> add
+
 {/quiz}
 
 
