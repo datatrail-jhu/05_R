@@ -22,11 +22,11 @@ These classes are the building blocks for creating all sorts of objects in R.
 
 We store these different classes of objects in different ways. The ways this information is stored is referred to as the *type** of object. 
 
-When talking about objects in R, it may be helpful to think of *actual* objects in every day life for comparison. For example, think of three objects: a bucket, a pot you would cook with, and a backpack. These three objects are clearly designed for and carry out different purposes. The bucket may be used to carry water to clean your floor, the pot to cook pasta, and the backpack to carry notebooks, but, we can agree that they are all objects, just different *types* of objects. The water, pasta, and notebooks would be the information contained in the object. In this real-life example, the "class" of the information may be "liquid", "food", and "paper". 
+When talking about objects in R, it may be helpful to think of *actual* objects in every day life for comparison. For example, think of three objects: a bucket, a pot you would cook with, and a backpack. These three objects are clearly designed for and carry out different purposes. The bucket may be used to carry water to clean your floor, the pot to cook pasta, and the backpack to carry notebooks, but, we can agree that they are all objects, just different **types* of objects. The water, pasta, and notebooks would be the information contained in the object. In this real-life example, the "class" of the information may be "liquid", "food", and "paper". 
 
 ![Objects in real-life analogy](images/03_objects/03_R_objects-2.png)
 
-That said, each object in this example *could* hold any of the different classes of information. A pot of water could hold liquid to clean your floor, it just not make much sense to do so. In R, as you get more comfortable, you'll see that each type of object can hold  any of the classes of information in the object, but there are times where each class makes the most sense. 
+That said, each object in this example *could* hold any of the different classes of information. A pot of water could hold liquid to clean your floor, it just not make much sense to do so. In R, as you get more comfortable, you'll see that each type of object can hold any of the classes of information in the object, but there are times where each class makes the most sense. 
 
 Thus, in R,  like in this real-life object example, there are not only different classes of objects, but different types of objects (different ways to store these classes of objects). Each type is used to store information in a slightly different way. 
 
