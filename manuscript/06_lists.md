@@ -286,7 +286,7 @@ Working with subsets of data will be a daily part of your work routine, so famil
 
 ### Slides and Video
 
-![Lists](UPDATE LINK)
+![Lists](https://www.youtube.com/watch?v=OOmtBVpcVEQ)
 
 
 * [Slides](https://docs.google.com/presentation/d/1aJgqSCcPC_S_hEmcGy8hQGjuk6AwzT6r4ez-9IVsiXk/edit?usp=sharing)

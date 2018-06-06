@@ -219,7 +219,7 @@ In this lesson, you have been introduced to a number of commonly-used commands (
 
 ### Slides and Video
 
-![Basic commands in R](UPDATE LINK)
+![Basic commands in R](https://www.youtube.com/watch?v=kalH8evNMIs)
 
 * [Slides](https://docs.google.com/presentation/d/1CXJPvWXjuAE7R33Zctm9N7mHwWFonMzgXD3NwStjFLU/edit?usp=sharing)
 
@@ -228,7 +228,7 @@ In this lesson, you have been introduced to a number of commonly-used commands (
 
 # Basic Commands in R quiz
 
-{choose-answers: 4, points:2}
+{choose-answers: 4, points: 2}
 ? Within R, you have access to an object called `airquality` that contains data on New York air quality. You can work with it in the same way that we have worked with the `mtcars` and `iris` objects in this lesson. What is the value in the "Ozone" column in the third to last row?
 
 C) 14
@@ -239,7 +239,7 @@ o) NA
 o) 16
 o) 10
 
-{choose-answers: 4, points:2}
+{choose-answers: 4, points: 2}
 ? How many rows and columns are in `airquality`?
 
 C) 153 rows, 6 columns
@@ -250,7 +250,7 @@ o) 154 rows, 6 columns
 o) 1 row, 153 columns
 o) 1 column, 153 rows
  
- {choose-answers: 4, points:2}
+ {choose-answers: 4, points: 2}
 ? How many months of the year are represented in this `airquality` dataset?
 
 C) 5
