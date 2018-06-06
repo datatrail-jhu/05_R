@@ -154,7 +154,7 @@ If you still want to learn more about R packages, here are two great resources! 
 
 ### Slides and Video
 
-![R Packages](UPDATE LINK)
+![R Packages](https://www.youtube.com/watch?v=Gvu8c0_47vI)
 
 * [Slides](https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/edit?usp=sharing)
 
@@ -173,7 +173,7 @@ o) install.package("ggplot2")
 o) library(ggplot2)
 o) install_github("ggplot2")  
 
-{points: 2, choose-answers:4}
+{points: 2, choose-answers: 4}
 ? Using the help files, what is NOT a function included in the devtools package?  
 
 C) aes()  

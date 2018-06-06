@@ -273,7 +273,7 @@ In this lesson, we've discussed that within R information can be assigned to obj
 
 ### Slides and Video
 
-![Objects in R](UPDATE LINK)
+![Objects in R](https://www.youtube.com/watch?v=YVbevokgqzA)
 
 * [Slides](https://docs.google.com/presentation/d/1-1oGr9-phf3fKcezvl_y573tJ_Zvc09u1bhNAnH1CO8/edit?usp=sharing)
 
@@ -293,12 +293,15 @@ o) factor
 o) list
 o) data frame
 
+{choose-answers: 4}
 ? What command can be used to create a logical object `y` containing two `TRUE` values?
 
-A) `y = c(TRUE, TRUE)`
-b) `y = c("TRUE", "TRUE")`
-c) `y = c(1, 1)`
-D) `y <- c(TRUE, TRUE)`
+C) `y = c(TRUE, TRUE)`
+C) `y <- c(TRUE, TRUE)`
+o) `y = c("TRUE", "TRUE")`
+o) `y = c(1, 1)`
+o) `y is c("TRUE", "TRUE")`
+o) `set y to == "TRUE", "TRUE"`
 
 {choose-answers: 4}
 ? In the following data frame, what **class** could be represented by the Species column?

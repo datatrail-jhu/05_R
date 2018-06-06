@@ -12,7 +12,7 @@ Now we are going to use these two skills to create a website from within R. At t
 
 GitHub has the nice property that it can automatically host websites for you from a repository. While this can de done for any repository, there is a special case: the `yourUsername.github.com` repository that makes setting up your own website a little bit simpler. We will start here because it's the most straightforward case.
 
-![](images/11_website/11_R_website-2.png)
+![Create Repository](images/11_website/11_R_website-2.png)
 
 We'll work through an example for someone whose GitHub username is `JaneEverydayDoe`, but you should follow along and complete each step using your own GitHub account. To get started, first log in to [github.com](http://github.com) and create a new repository (that nice green button). This new repository needs this special name `JaneEverydayDoe.github.com` which you can find [here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com).
 
@@ -20,13 +20,14 @@ Yay, we now have our repository to get started!
 
 ### Sync files with GitHub
 
-![](images/11_website/11_R_website-3.png)
 
-Now we are going to start putting your website together. We need to keep our files in sync with GitHub, and to do so we will clone (download) the repository to our computer. That is, we will clone the `username/username.github.com` repository. For `JaneEverydayDoe` that would be `JaneEverydayDoe/JaneEverydayDoe.github.com`. We will do this via the _terminal_ from RStudio. That is, from `Tools` -> `Terminal` -> `New Terminal`. Once you have opened a _terminal_ (optionally navigate to the directory where you want to clone the repo), run:
+Now we are going to start putting your website together. We need to keep our files in sync with GitHub, and to do so we will clone the repository RStudio Cloud. That is, we will clone the `username/username.github.com` repository. For `JaneEverydayDoe` that would be `JaneEverydayDoe/JaneEverydayDoe.github.com`. We will do this via the _terminal_ from RStudio Cloud. Once you are in the terminal run the following (but change the username 'JaneEverydayDoe' to your GitHub username:
 
 ```
 git clone https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com.git
 ```
+
+![git clone](images/11_website/11_R_website-3.png)
 
 We now have completed the necessary GitHub setup!
 
@@ -38,20 +39,25 @@ It's time to start working on our website! In the terminal access the `username.
 cd janeeverydaydoe.github.com/
 ```
 
-The directory is empty and we can almost start our website. There is one more piece we need to do that is rather obscure. Something we haven't talked about is that GitHub was initially setup for hosting _Jekyll_ static websites and that is still the default at this time. But we are not using Jekyll and we need to tell that to GitHub. To do so we need to create the hidden file `.nojekyll` and version control it. You can create the file using the `touch` command in the terminal or from RStudio (`New File` -> `Save as` -> choose `.nojekyll` and save it inside `janeeverydaydoe.github.com`).
+![cd into directory](images/11_website/11_R_website-4.png)
+
+
+The directory is empty currently. At this point, we can almost start our website. There is one more thing we need to do that is rather obscure. Something we haven't talked about is that GitHub was initially set up for hosting _Jekyll_ static websites and this is still the default. But, we are not using Jekyll and we need to tell GitHub that. To do so we need to create the hidden file `.nojekyll` and version control it. You can create the file using the `touch` command in the terminal or from RStudio Cloud using the following command:
 
 ```
 touch .nojekyll
 ```
+We haven't discussed the command `touch` or hidden files yet, so now is a great time to explain briefly that touch simply creates an empty file and hidden files are files that start with a period in the file name. 
 
-If we check the files including the hidden files using the `ls -a` (`ls` stands for _list_ and the `-a` options displays hidden files) command in the terminal we should see it.
+However, despite being hidden, we *can* check to make sure this file was created by using the command `ls -a` (`ls`, as discussed previously, stands for _list_ and the `-a` option states that we also want to display hidden files). When we run this command, we see the ".nojekyll" file has been created.
 
 ```
-$ ls -a
-.  ..  .git  .nojekyll
+ls -a
 ```
 
-Cool, we now have the required `.nojekyll` file but it's not on GitHub yet. So we need to version control it. You can do so with the RStudio git interface or using the following commands in the terminal window:
+![touch and ls](images/11_website/11_R_website-5.png)
+
+Cool, we now have the required `.nojekyll` file! But, it's not on GitHub yet. So, we need to version control it. You can do so in the RStudio Cloud terminal window using the following commands:
 
 ```
 git add .nojekyll
@@ -59,44 +65,45 @@ git commit -m "This is not a Jekyll website"
 git push
 ```
 
-![](images/11_website/11_R_website-4.png)
+*Note*: If prompted to set your global configuration on GitHub, provide your email address or GitHub username and password, do so. 
 
-Using the `JaneEverydayDoe` example you can [see here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/a5f889e3c9749720ee0435e95f77d0b4eaeea8d9) how the repository looked at this point in time.
+![touch and ls](images/11_website/11_R_website-6.png)
 
-![](images/11_website/11_R_website-5.png)
+Using the `JaneEverydayDoe` example, you can [see here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/a5f889e3c9749720ee0435e95f77d0b4eaeea8d9) how the repository looked at this point in time.
+
+![](images/11_website/11_R_website-7.png)
 
 ### Make the website
 
 Ok, now we can make the website!
 
-We are going to take advantage of another nice property of web. If a directory (say `hello`) contains a `index.html` file, then that file is displayed on the web browser when someone accesses `hello/`. In other words, `index.html` is the default HTML file that is displayed. Meaning that we need to create an `index.html` file. How can we do that from R?
+First, web pages display HTML code. With that knowledge, we are going to take advantage of another nice property of the web. If a directory (say that directory is named `hello`) contains an `index.html` file, then that file is displayed on the web browser when someone accesses the website's home page`. In other words, `index.html` is the default HTML file that is displayed. This means that we need to create an `index.html` file. How can we do that from R?
 
-Well, lets create a `index.Rmd` file inside the `username.github.com/` directory. Here, lets take advantage of the nice RStudio menus. Go to `File` -> `New File` -> `R Markdown`.
+Well, let's create a `index.Rmd` file inside the `username.github.com/` directory. Here, lets take advantage of the nice RStudio menus. Go to `File` -> `New File` -> `R Markdown`. (*Note*: If prompted to install packages, click yes to install them)
 
-![](images/11_website/11_R_website-6.png)
+![New Rmd document](images/11_website/11_R_website-8.png)
 
-Then select `Document` and choose the `HTML` output format.
+Then ensure `Document` is selected along the left and `HTML` is selected for the output format. Click OK.
 
-![](images/11_website/11_R_website-7.png)
+![](images/11_website/11_R_website-9.png)
 
-Now lets save it as `index.Rmd`. Select the `Untitled1` tab, then go to `File` -> `Save As` then type the `index.Rmd` name and make sure that it's saved inside the `username.github.com` directory. In `JaneEverydayDoe`'s case, that would be `janeeverydaydoe.github.com/index.Rmd`.
+Now let's save it as `index.Rmd`. go to `File` -> `Save As` then type `index.Rmd` in the file name box, **making sure that it's saved inside the `username.github.com` directory**. In `JaneEverydayDoe`'s case, the relative file path would be `janeeverydaydoe.github.com/index.Rmd`.
 
 ![](images/11_website/11_R_website-8.png)
 
-Now click on the `knit` button and R will create the `index.html` file.
+Now click on the `knit` button and R to create the `index.html` file!
 
 ### Publish the website
 
-Just so we can see the website in action, lets publish it. What does that mean? Well, we have the `index.html` file in our computer but it's not on GitHub's computers. So we need to version control the `index.html` file (lets also version control the `index.Rmd` source file) and upload (`git push`) to GitHub.
+Just so we can see the website in action, let's publish it. What does that mean? Well, we have the `index.html` file in our computer but it's not on GitHub's computers. So, we need to version control the `index.html` file (let's also version control the `index.Rmd` source file) and upload (`git push`) to GitHub.
 
-In the terminal window or with RStudio's git tools, run the following commands.
+In the terminal window of RStudio Cloud, run the following commands:
 
 ```
 ## Tell git to version control the index.* files
-git add index.html
-git add index.Rmd
+git add index.*
 
-## Make a save point in Git
+## Provide a good commit message
 git commit -m "First version of the website"
 
 ## Upload the files to GitHub
@@ -105,13 +112,13 @@ git push
 
 And after a few seconds or a minute or so, you can view your website at https://username.github.io. For `JaneEverydayDoe` that is https://janeeverydaydoe.github.io/ and it looks like this:
 
-![](images/11_website/11_R_website-9.png)
+![First website!](images/11_website/11_R_website-12.png)
 
-You can check `JaneEverydayDoe` [files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/6ef6468c9fb0dc93ed436b056ddd602e13658377) and compare them against yours.
+You can check `JaneEverydayDoe` [files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/6ef6468c9fb0dc93ed436b056ddd602e13658377) and compare it against yours.
 
 ### Customize the website
 
-Ok, so now we have a website that is publicly available and that we made with R. Isn't that awesome!? Next lets work on customizing our website. This part is super flexible and it really depends on what you want to show. In this example, `JaneEverydayDoe` is going to describe a little about her, her interests, projects, internet work-related profiles, her contact information (her email) and a nice little image that shows her GitHub activity. Take the template below and edit your `index.Rmd` file. 
+Ok, so now we have a website that is publicly available and that we made with R. Isn't that awesome!? Next lets work on customizing our website. This part is super flexible and it really depends on what you want to show. In this example, `JaneEverydayDoe` is going to describe a little about her, her interests, projects, internet work-related profiles, her contact information (her email) and a nice little image that shows her GitHub activity. Take the template below and edit your `index.Rmd` file. Note that everything here is written using Markdown formatting. 
 
 ```
 ## About
@@ -150,18 +157,19 @@ git commit -m "Add my initial information"
 git push
 ```
 
-![](images/11_website/11_R_website-10.png)
+![Updated website](images/11_website/11_R_website-15.png)
 
 Check `JaneEverydayDoe`'s files at [this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/c0b15cf33e3fe88322d46e9f35def6c485eb0fee).
 
 
 ### Change the theme
 
-R Markdown has several _themes_ which are presets of fonts and colors for HTML pages. You can find them all listed at [rmarkdown.rstudio.com/html_document_format.html#appearance_and_style](https://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style). Let's try the `spacelab` theme by editing the YAML front matter (the top section) of the `index.Rmd` file from:
+R Markdown has several _themes_ that are available to you. These themes include preset fonts and colors for HTML pages that you can use. You can find them all listed at [rmarkdown.rstudio.com/html_document_format.html#appearance_and_style](https://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style). Let's try the `spacelab` theme by editing the YAML front matter (the top section) of the `index.Rmd` file from:
+
 
 ```
 ---
-title: "JaneEverydayDoe’s website"
+title: "JaneEverydayDoe's website"
 output: html_document
 ---
 ```
@@ -170,7 +178,7 @@ to
 
 ```
 ---
-title: "JaneEverydayDoe’s website"
+title: "JaneEverydayDoe's website"
 output:
   html_document:
     theme: spacelab
@@ -185,15 +193,16 @@ git commit -m "Use spacelab"
 git push
 ```
 
-![](images/11_website/11_R_website-11.png)
+![Website with spacelab theme](images/11_website/11_R_website-18.png)
 
 [JaneEverydayDoe's files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/33db3fac9619ef32bdb032b56e0ca5836b5e28c5).
 
 ### Adding a table of contents
 
+A similar process could be used to add a table of contents. Update your YAML using the code you see here. 
 ```
 ---
-title: "JaneEverydayDoe’s website"
+title: "JaneEverydayDoe's website"
 output:
   html_document:
     theme: spacelab
@@ -210,15 +219,16 @@ git add index.*
 git commit -m "Add a floating table of contents"
 git push
 ```
+Your website should now reflect these changes!
 
-![](images/11_website/11_R_website-12.png)
+![](images/11_website/11_R_website-20.png)
 
 [JaneEverydayDoe's files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/3caa9cc00e9ea167360b1299763ad3b01b6e9de6).
 
 
 ### Adding an image
 
-Now lets add an image to our website. To keep our files organized, lets make a `img` directory inside our repository using `mkdir` (make directory).
+Now let's add an image to our website. To keep our files organized, lets make a `img` directory inside our repository using `mkdir` (make directory).
 
 ```
 mkdir img
@@ -248,15 +258,15 @@ git commit -m "Add Jane's image"
 git push
 ```
 
-![](images/11_website/11_R_website-13.png)
+![Website with image added](images/11_website/11_R_website-23.png)
 
 [JaneEverydayDoe's files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/505eaf2049930084526e79a005fc9e8a75f6b143).
 
 ### A similar website
 
-If you need some inspiration, check this website by Amy Peterson: [amy-peterson.github.io](https://amy-peterson.github.io/). It was made using exactly the same tools. 
+If you need some inspiration, check out Amy Peterson's website: [amy-peterson.github.io](https://amy-peterson.github.io/). It was made using exactly the same tools. 
 
-![](images/11_website/11_R_website-14.png)
+![Amy's website](images/11_website/11_R_website-14.png)
 
 The raw files for her website are available [here](https://raw.githubusercontent.com/amy-peterson/amy-peterson.github.com/bf9637d0351e1494cbd0c34528b261e340539b06/index.Rmd).
 
@@ -271,25 +281,25 @@ You might be interested in going beyond this quick website. For example, you mig
 * Emily Zabor's great tutorial http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html
 * https://bookdown.org/yihui/blogdown/ for making blogs
 
-![](images/11_website/11_R_website-15.png)
-
 
 ### Slides and Video
 
-![Creating Websites with R](UPDATE LINK)
+![Creating Websites with R](https://www.youtube.com/watch?v=1lR7JUbFUTo)
 
 * [Slides](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/edit?usp=sharing)
 
 {quiz, id: quiz_11_website}
 
-### Creating Websites with R
+### Creating Websites with R quiz
 
-? Which of the following statements is True?
+{choose-answers: 4}
+? Which of the following statements is TRUE?
 
-a) We created a Jekyll website
-b) We manually wrote our index.html file using HTML code
 C) We created the index.html file from knitting an R Markdown file
-d) We payed for a custom domain like JaneEverydayDoe.com
+o) We created a Jekyll website
+o) We manually wrote our index.html file using HTML code
+o) We payed for a custom domain like JaneEverydayDoe.com
+o) We wrote HTML code to generate a website
 
 {/quiz}
 

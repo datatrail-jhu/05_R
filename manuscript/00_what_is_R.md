@@ -54,7 +54,7 @@ As for RStudio, it was first released in 2011. It was founded by [J.J. Allaire](
 
 ### Slides and Video
 
-![What is R?](ADD VIDEO)
+![What is R?](https://www.youtube.com/watch?v=1Vq6qHVjE5c)
 
 [Slides](https://docs.google.com/presentation/d/1-GwpqNvTqNtobrgF-o0SCD0SvUwlv1b_MYF8QnyMHJk/edit?usp=sharing)
 

@@ -115,7 +115,7 @@ Now that we've covered the basics components to writing a function in R, we can 
 
 Specifically, imagine you need to convert Celsius degree to Fahrenheit. You want to know what 0, 20, and 100 degrees Celsius are in Fahrenheit. We can write a function to accomplish this!
 
-If you were to Google how to convert Celsius to Fahrenheit, you'd find that the conversion formula is: T(°F) =  (9/5) * T(°C)  + 32. So to calculate what 0, 20, and 100 degree Celsius are you can do the calculation above for each temperature by hand. You could take zero degrees celsius, multiply it by (9/5) and then add 32 to it. Then, you could repeat this for 20°C and then again for 100°C. The more temperatures you need to convert, the longer this will take you. But, as you're repeating a task (a calculation) multiple times and just changing the input for each calculation, it is the perfect time to write a function. Instead of doing something over and over by hand (or by copy and pasting code), you can just write a function in R to do the work for you!
+If you were to Google how to convert Celsius to Fahrenheit, you'd find that the conversion formula is: T(F) =  (9/5) * T(C)  + 32. So to calculate what 0, 20, and 100 degree Celsius are you can do the calculation above for each temperature by hand. You could take zero degrees celsius, multiply it by (9/5) and then add 32 to it. Then, you could repeat this for 20 C and then again for 100 C. The more temperatures you need to convert, the longer this will take you. But, as you're repeating a task (a calculation) multiple times and just changing the input for each calculation, it is the perfect time to write a function. Instead of doing something over and over by hand (or by copy and pasting code), you can just write a function in R to do the work for you!
 
 Take for example this function:
 
@@ -175,7 +175,7 @@ Now if we were to call this updated function, the output would provide a sentenc
 [1] "The entered Celsius temperature is 158 degrees Fahrenheit."
 ```
 
-Just as we wanted, we have a clear sentence output with the conversion of 70 °C  to 158 °F!
+Just as we wanted, we have a clear sentence output with the conversion of 70 C  to 158 F!
 
 #### Required arguments
 
@@ -303,7 +303,7 @@ In this lesson, we've covered the components of a function in R (name, argument(
 
 ### Slides and Video
 
-![Writing Functions in R]()
+![Writing Functions in R](https://www.youtube.com/watch?v=oUMxwGML4ao)
 
 * [Slides](https://docs.google.com/presentation/d/1Q7pkb4lM8M8MRQzxCCfhXx8ddEi9XeaKSKT82OJAZX8/edit?usp=sharing)
 
