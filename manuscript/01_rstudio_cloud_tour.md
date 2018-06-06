@@ -226,4 +226,4 @@ o) Terminal
 o) General  
 
 
-{/quiz}}
+{/quiz}

@@ -197,4 +197,4 @@ o) devtools
 o) CRAN
 o) mirror
 
-{/quiz}}
+{/quiz}
