@@ -1,10 +1,7 @@
 00_what_is_R.md
 01_rstudio_cloud_tour.md
 02_intro_to_packages.md
-03_objects.md
 04_basic_commands.md
-05_logicals.md
-06_lists.md
 07_functions.md
 08_Rmd.md
 09_website.md
