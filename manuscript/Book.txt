@@ -1,1 +1,4 @@
 00_what_is_R.md
+01_rstudio_cloud_tour.md
+02_intro_to_packages.md
+03_objects.md
