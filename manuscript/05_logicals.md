@@ -184,7 +184,7 @@ For the first question, "Do all units meet the condition?", we can use the `all`
 [1] TRUE
 ```
 
-For the second question, "Do any units meet the condition?", we can use the `any` function. The `any` function takes a logical object as input and returns TRUE if at least one of the values in the logical object is TRUE, and it returns FALSE otherwise. Are any of the student ages equal to the individual cutoffs? Are any ages greater than 100?
+For the second question, "Do any units meet the condition?", we can use the `any` function. The `any` function takes a logical object as input and returns TRUE if at least one of the values in the logical object is TRUE, and it returns FALSE otherwise. Are any of the student ages equal to the common cutoff? Are any ages greater than 100?
 
 ```text
 > any(ages == common_cutoff)
@@ -226,7 +226,7 @@ This lesson walked you through how to work with operators and logical objects. T
 
 ### Slides and Video
 
-![Working with Logicals](ADD VIDEO)
+![Working with Logicals](https://www.youtube.com/watch?v=rsywhOyYKiA)
 
 * [Slides](https://docs.google.com/presentation/d/1xsqzqb-2-RHDGO03aVm_Ky3y6rXlGIn4NdBviF29F3U/edit?usp=sharing)
 

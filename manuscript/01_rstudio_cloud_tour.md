@@ -25,7 +25,7 @@ This will open up a new R Script, which is currently called "Untitled1," which y
 
 Now that RStudio Cloud is opened and you have access to each of four quadrants, we can discuss and review each quadrant's purpose. We will go through each of the regions and describe some of their main functions, so follow along with each step and make sure you understand the function and how to access each part of RStudio Cloud on your own. But, it would be impossible to cover everything that RStudio can do, so we urge you to explore RStudio Cloud further on your own too! 
 
-![RStudio's quadrants](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-05.png)
+![RStudio's quadrants](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-5.png)
 
 
 #### The menu bar
@@ -174,7 +174,7 @@ In this lesson we took a tour of RStudio Cloud. We became familiar with the main
 
 ### Slides and Video
 
-![RStudio Cloud Tour](UPDATE LINK)
+![RStudio Cloud Tour](https://www.youtube.com/watch?v=1SP67j7GWF8)
 
 * [Slides](https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/edit?usp=sharing)
 
