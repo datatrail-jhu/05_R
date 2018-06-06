@@ -83,7 +83,7 @@ In addition to Stack Overflow, [RStudio Community](https://community.rstudio.com
 
 With this interface, in addition to the Topic, you can see the Category (similar to tags in Stack Overflow) and the number of Replies and Views for each topic. You can sort by any of these categories by clicking on the label at the top. Or, you can search specific questions or topics. Clicking on any topic will direct you to a new window where you can sort through the answers for each question. 
 
-## Summary
+### Summary
 
 In this lesson we discussed documentation and help pages available directly in R that can be accessed using a question mark followed by the function or package name in question. We discussed two incredibly helpful online forums: Stack Overflow and RStudio community. And, finally, we highlighted the importance of creating a reprex when asking a question on any of these forums. Knowing where to find help and how to best ask for it is an important skill as you're learning a new programing language! 
 
