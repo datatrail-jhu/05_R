@@ -7,6 +7,6 @@
 06_lists.md
 07_functions.md
 08_Rmd.md
-09_website.md
+09_help_in_R.md
 10_R_to_GitHub.md
-11_help_in_R.md
+11_website.md
