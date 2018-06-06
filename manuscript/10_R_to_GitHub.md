@@ -139,7 +139,7 @@ When you then go to run `git push`, you may be asked for your Username and GitHu
 
 You can now go to your repository on GitHub. You'll see the commit message you just specified and will find the files you pushed within code/raw_code on your GitHub repository!
 
-![code has been pushed to GitHub repository]((images/10_R_to_GitHub/10_R_R_to_GitHub-19.png)
+![code has been pushed to GitHub repository](images/10_R_to_GitHub/10_R_R_to_GitHub-19.png)
 
 ### Summary
 
