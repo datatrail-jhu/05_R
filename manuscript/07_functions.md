@@ -314,6 +314,7 @@ In this lesson, we've covered the components of a function in R (name, argument(
 
 {choose-answers: 4}
 ? If not defined explicitly within the function, what does a function return?
+
 C) The last statement evaluated
 o) The first value calculated
 o) Nothing
@@ -323,6 +324,7 @@ o) An error message
 
 {choose-answers:4}
 ? Which of the following statements is TRUE?
+
 C) Function names may not contain spaces
 o) UDFs can only take one input argument
 o) Functions require comments (#) in the body to run
@@ -353,6 +355,7 @@ o) function_square_sum(5, 10)
 
 {choose-answers: 4, points: 2}
 ? Which of these is the BEST name for a function that predicts someone's birthday?
+
 C) `predict_birthday`
 o) `pb`
 o) `predictbirthday`
