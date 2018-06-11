@@ -169,6 +169,6 @@ o) warning
 
 *Reminder*: Videos in DataCamp are essential to understanding the material. It's best not to skip over these videos!
 
-! Completed ; completed
+! completed
 
 {/exercise}
