@@ -391,7 +391,9 @@ o) 3.5
 
 {/quiz}
 
-{exercise, id:  exercise_07_functions}
+{exercise, id: exercise_07_functions}
+
+### DataCamp: Writing Functions in R 
 
 {case-sensitive: false}
 ? To get more practice with writing functions in R, go to the course [Writing Functions in R](https://www.datacamp.com/courses/writing-functions-in-r) on DataCamp. Login and complete *the first two chapters of this course*. Once you've completed these portions of the course, type "completed" in the box below.
