@@ -150,3 +150,29 @@ In this lesson we went through all the steps of making changes to a project in R
 ![Pushing Code from R to GitHub](https://www.youtube.com/watch?v=o9UYI7nJcQE)
 
 * [Slides](https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/edit?usp=sharing)
+
+{quiz, id: quiz_10_R_to_GitHub}
+   
+### Pushing Code from R to GitHub quiz
+   
+{choose-answers: 4}  
+? When working on a data science project, when you should you push to GitHub?
+
+C) Often (regularly, as you make changes to code)
+o) When you have a final version
+o) Once at the beginning and once at the end of the project
+o) Only when you make a really big change to the project
+o) Only when you find a typo in your work
+
+{choose-answers: 4}  
+? When you're ready to send your edited work to GitHub, what git commands do you run and in what order?
+
+C) add > commit > push
+o) commit > add > push
+o) push > pull > add
+o) pull > push > commit
+o) commit > push > add
+o) pull > clone > push
+o) clone > push > add
+
+{/quiz}
