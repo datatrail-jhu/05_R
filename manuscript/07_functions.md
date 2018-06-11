@@ -303,7 +303,7 @@ In this lesson, we've covered the components of a function in R (name, argument(
 
 ### Slides and Video
 
-![Writing Functions in R](https://www.youtube.com/watch?v=oUMxwGML4ao)
+![Writing Functions in R](https://www.youtube.com/watch?v=Tdz2JD-1CCA)
 
 * [Slides](https://docs.google.com/presentation/d/1Q7pkb4lM8M8MRQzxCCfhXx8ddEi9XeaKSKT82OJAZX8/edit?usp=sharing)
 
