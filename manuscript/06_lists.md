@@ -1,4 +1,4 @@
-# Lists & Data Frames
+# Lists \& Data Frames
 
 Now that we've covered basic object types and some commands to explore and work with them, we will cover a slightly more complex type of object: lists. Lists have similarities to data frames, which we have introduced briefly in previous lessons. In this lesson, you will learn about the structure of list objects, how to create them, and how to subset them.
 
@@ -286,7 +286,7 @@ Working with subsets of data will be a daily part of your work routine, so famil
 
 ### Slides and Video
 
-![Lists](https://www.youtube.com/watch?v=OOmtBVpcVEQ)
+![Lists](https://www.youtube.com/watch?v=fXZxlG3eEnA)
 
 
 * [Slides](https://docs.google.com/presentation/d/1aJgqSCcPC_S_hEmcGy8hQGjuk6AwzT6r4ez-9IVsiXk/edit?usp=sharing)
