@@ -219,7 +219,7 @@ In this lesson, you have been introduced to a number of commonly-used commands (
 
 ### Slides and Video
 
-![Basic commands in R](https://www.youtube.com/watch?v=kalH8evNMIs)
+![Basic commands in R](https://www.youtube.com/watch?v=9tcoT-5CQHg)
 
 * [Slides](https://docs.google.com/presentation/d/1CXJPvWXjuAE7R33Zctm9N7mHwWFonMzgXD3NwStjFLU/edit?usp=sharing)
 
