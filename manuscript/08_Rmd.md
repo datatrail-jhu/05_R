@@ -160,7 +160,9 @@ o) warning
 
 {/quiz}
 
-{exercise, id:  exercise_08_Rmd}
+{exercise, id: exercise_08_Rmd}
+
+### DataCamp: Reporting with R Markdown 
 
 {case-sensitive: false}
 ? To get more practice with Markdown syntax and creating R Markdown documents, go to the course [Reporting with R Markdown](https://campus.datacamp.com/courses/reporting-with-r-markdown) on DataCamp. Login and complete this course. Once you've completed this course, type "completed" in the box below.
