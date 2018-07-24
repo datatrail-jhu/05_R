@@ -55,9 +55,9 @@ If you want to use RStudio's graphical interface (meaning you would point-and-cl
  
 The BioConductor repository uses their own method to [install packages](https://www.bioconductor.org/install/). While you get started and learn to code in R, you will likely not be installing packages from Bioconductor; however, if you later on work in biology-focused fields, you'll want to know about Bioconductor. So, we'll cover this now so you know about Bioconductor, even if you don't install most of your packages from this repository right now. 
 
-First, to get the basic functions required to install through BioConductor, use: `source("https://bioconductor.org/biocLite.R")`
+First, to get the basic functions required to install through BioConductor, use: `install.packages("BiocManager")`
 
-This makes the main install function of BioConductor, `biocLite()`, available to you. Following this, you call the package you want to install in quotes, between the parentheses of the `biocLite` command, like so: `biocLite("GenomicFeatures")`
+This makes the main install function of BioConductor, `BiocManager::install()`, available to you. Following this, you call the package you want to install in quotes, between the parentheses of the `BiocManager::install` command, like so: `BiocManager::install("GenomicFeatures")`
 
 #### Installing from GitHub
 
