@@ -276,10 +276,10 @@ In this lesson you learnt how to create websites from R and publishing them in G
 
 You might be interested in going beyond this quick website. For example, you might want to add a visitor's map using clustrmaps.com or track visitor using Google Analytics. You could also be interested in buying your own domain, setting up a multi-page website or even make a blog. All those things are possible but beyond the scope of this lesson. If you want to spend the time learning how to do some of those things, check:
 
-* Recent changes to `JaneEverydayDoe` website at https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/commits/master
-* https://pages.github.com/
-* Emily Zabor's great tutorial http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html
-* https://bookdown.org/yihui/blogdown/ for making blogs
+* Recent changes to `JaneEverydayDoe` website at [https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/commits/master](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/commits/master)
+* [https://pages.github.com/](https://pages.github.com/)
+* Emily Zabor's great tutorial [http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html)
+* [https://bookdown.org/yihui/blogdown/](https://bookdown.org/yihui/blogdown/) for making blogs
 
 
 ### Slides and Video
