@@ -309,7 +309,7 @@ o) Data frames are never lists, and lists are never data frames
 o) Data frames are sometimes lists, but lists are never data frames
 
 {choose-answers: 4}
-? 2The following snapshot of the `iris` data frame shows the first six rows of the 5 column data frame. How can I extract the `Petal.Length` column as a simple vector (as opposed to a single column data frame)?
+?2 The following snapshot of the `iris` data frame shows the first six rows of the 5 column data frame. How can I extract the `Petal.Length` column as a simple vector (as opposed to a single column data frame)?
 
 ![iris dataframe snapshot](images/iris.png)
 
