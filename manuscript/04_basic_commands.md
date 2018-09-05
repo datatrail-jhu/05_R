@@ -229,9 +229,10 @@ In this lesson, you have been introduced to a number of commonly-used commands (
 # Basic Commands in R quiz
 
 {choose-answers: 4, points: 2}
-? Within R, you have access to an object called `airquality` that contains data on New York air quality. You can work with it in the same way that we have worked with the `mtcars` and `iris` objects in this lesson. What is the value in the "Ozone" column in the third to last row?
+?1 Within R, you have access to an object called `airquality` that contains data on New York air quality. You can work with it in the same way that we have worked with the `mtcars` and `iris` objects in this lesson. What is the value in the "Ozone" column in the third to last row?
 
 C) 14
+m) 14.3
 o) 12
 o) 18
 o) 20
@@ -240,7 +241,31 @@ o) 16
 o) 10
 
 {choose-answers: 4, points: 2}
-? How many rows and columns are in `airquality`?
+?1 Within R, you have access to an object called `airquality` that contains data on New York air quality. You can work with it in the same way that we have worked with the `mtcars` and `iris` objects in this lesson. What is the value in the "Wind" column in the third to last row?
+
+C) 14.3
+m) 14
+o) 12
+o) 18
+o) 20
+o) NA
+o) 16
+o) 10
+
+
+{choose-answers: 4, points: 2}
+?2 How many rows and columns are in `airquality`?
+
+C) 153 rows, 6 columns
+m) 153 columns, 6 rows
+o) 154 rows, 7 columns
+o) 153 rows, 7 columns
+o) 154 rows, 6 columns
+o) 1 row, 153 columns
+o) 1 column, 153 rows
+
+{choose-answers: 4, points: 2}
+?2 What are the dimensions of the `airquality` dataframe?
 
 C) 153 rows, 6 columns
 m) 153 columns, 6 rows
@@ -250,26 +275,60 @@ o) 154 rows, 6 columns
 o) 1 row, 153 columns
 o) 1 column, 153 rows
  
- {choose-answers: 4, points: 2}
-? How many months of the year are represented in this `airquality` dataset?
+{choose-answers: 4, points: 2}
+?3 How many months of the year are represented in this `airquality` dataset?
 
 C) 5
+m) 31
+o) 7
 o) 3
 o) 9
 o) 12
 o) 0
 o) 2
 o) 4
+o) 5
 
- {choose-answers: 4}
-? What is the median temperature (Temp column) in this `airquality` dataset?
+{choose-answers: 4, points: 2}
+?3 How many different days are represented in this `airquality` dataset?
+
+C) 31
+m) 7
+m) 5
+o) 2
+o) 9
+o) 12
+o) 0
+o) 2
+o) 4
+
+{choose-answers: 4, points: 2}
+?4 What is the median temperature (Temp column) in this `airquality` dataset?
 
 C) 79
+m) 9.7
 o) 56
 o) 72
 o) 85
 o) 97
 o) 77
+o) 5.6
+o) 10
+o) 15
+
+{choose-answers: 4, points: 2}
+?4 What is the median mph of Wind (Wind column) in this `airquality` dataset?
+
+C) 9.7
+m) 79
+o) 56
+o) 72
+o) 85
+o) 97
+o) 77
+o) 5.6
+o) 10
+o) 15
 
 {/quiz}
 

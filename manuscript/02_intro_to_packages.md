@@ -164,7 +164,7 @@ If you still want to learn more about R packages, here are two great resources! 
 ### R Packages Quiz
 
 {choose-answers: 4}
-? How would you install the package ggplot2?  
+? How would you install the package ggplot2 (You can try this code on RStudio Cloud to verify!)?  
 
 C) install.packages("ggplot2")  
 o) library("ggplot2")  
@@ -176,7 +176,10 @@ o) install_github("ggplot2")
 {points: 2, choose-answers: 4}
 ? Using the help files, what is NOT a function included in the devtools package?  
 
-C) aes()  
+C) aes()
+C) plot()
+C) library()
+C) install.packages()
 o) check()  
 o) install_github()  
 o) package_deps() 

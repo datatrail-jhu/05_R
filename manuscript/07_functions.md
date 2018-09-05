@@ -313,17 +313,31 @@ In this lesson, we've covered the components of a function in R (name, argument(
 ### Writing Functions in R quiz
 
 {choose-answers: 4}
-? If not defined explicitly within the function, what does a function return?
+?1 If not defined explicitly within the function, what does a function return?
 
 C) The last statement evaluated
+m) `return()`
 o) The first value calculated
 o) Nothing
 o) NA
 o) The length of the function
 o) An error message
 
+{choose-answers: 4}
+?1 To define what a function should return, what function do you use?
+
+C) `return()`
+m) The last statement evaluated
+o) `pass()`
+o) `output()`
+o) `error()`
+o) `help()`
+o) `function()`
+o) `returns()`
+o) `user()`
+
 {choose-answers:4}
-? Which of the following statements is TRUE?
+?2 Which of the following statements is TRUE?
 
 C) Function names may not contain spaces
 o) UDFs can only take one input argument
@@ -333,7 +347,7 @@ o) Default values for arguments cannot be specified
 o) To run a function, the value provided for an argument must be numeric
  
 {choose-answers: 4}
-? To use the following function to determine the squared sum of the values 5 and 10, what would the function call look like?
+?3 To use the following function to determine the squared sum of the values 5 and 10, what would the function call look like?
 
 ```r
 square_sum <- function(x,y) {
@@ -352,9 +366,27 @@ o) function_square_sum(5, 10)
 o) function_square_sum(5, 10)
 
 
+{choose-answers: 4}
+?3 To use the following function to determine the squared sum of the values 6 and 4, what would the function call look like?
+
+```r
+square_sum <- function(x,y) {
+  (x + y)^2
+}
+```
+C) square_sum(6,4)
+C) square_sum(x = 6,y = 4)
+o) square_sum(x,y)
+o) square_sum(x y)
+o) square_sum(6 4)
+o) function(square_sum(6,4)
+o) function(square_sum(6 4)
+o) function_square_sum(6, 4)
+o) function_square_sum(6, 4)
+
 
 {choose-answers: 4, points: 2}
-? Which of these is the BEST name for a function that predicts someone's birthday?
+?4 Which of these is the BEST name for a function that predicts someone's birthday?
 
 C) `predict_birthday`
 o) `pb`
@@ -365,12 +397,27 @@ o) `birthday`
 o) `Predict`
 o) `Birthday`
 o) `predbir`
-o) pred_bir
-o) Predict_Birthday
+o) `pred_bir`
+o) `Predict_Birthday`
+
+{choose-answers: 4, points: 2}
+?4 Which of these is the BEST name for a function that predicts someone's age?
+
+C) `predict_age`
+o) `pb`
+o) `predictage`
+o) `PredictAge`
+o) `predict`
+o) `age`
+o) `Predict`
+o) `Age`
+o) `preda`
+o) `pred_a`
+o) `Predict_Age`
 
 
 {choose-answers: 4, points 3}
-? Given the function below, what is the output of the command `simple_calc(2,5)`?
+?5 Given the function below, what is the output of the command `simple_calc(2,5)`?
 
 ```r
 simple_calc <- function(x, y){
@@ -381,6 +428,8 @@ return(d)
 ```
 
 C) 49
+m) 16
+m) 64
 o) 7
 o) 25
 o) 4
@@ -388,6 +437,49 @@ o) 1
 o) 98
 o) 3.5
 
+
+{choose-answers: 4, points 3}
+?5 Given the function below, what is the output of the command `simple_calc(3,5)`?
+
+```r
+simple_calc <- function(x, y){
+a <- x + y
+d <- a^2
+return(d)
+}
+```
+
+C) 64
+m) 49
+m) 16
+o) 7
+o) 25
+o) 4
+o) 1
+o) 98
+o) 3.5
+
+
+{choose-answers: 4, points 3}
+?5 Given the function below, what is the output of the command `simple_calc(1,3)`?
+
+```r
+simple_calc <- function(x, y){
+a <- x + y
+d <- a^2
+return(d)
+}
+```
+
+C) 16
+m) 64
+m) 49
+o) 7
+o) 25
+o) 4
+o) 1
+o) 98
+o) 3.5
 
 {/quiz}
 

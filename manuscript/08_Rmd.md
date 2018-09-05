@@ -108,24 +108,42 @@ In this lesson we introduced you to R Markdown documents, discussing what they a
 ### R Markdown quiz
 
 {choose-answers: 4}
-? When should you use R Markdown documents? 
+?1 When should you use R Markdown documents? 
 
 C) Whenever you're working through a data science project, because R Markdown documents generate fully reproducible reports.
 m) Whenever you're just working with code but not text, because R Markdown can easily display code chunks. 
 m) Whenever you're working with plain text but not code because R Markdown handles Markdown formatting.
 o) Using R Markdown documents should generally be avoided and Markdown should be used instead. 
 o) Whenever you're not working with code or plain text.
+o) When you don't care about reproducibility
 
-
-? How would you strike through some text?  
+?2 How would you strike through some text?  
 
 A) `~~strikethrough~~`   
 b) `--strikethrough--`  
 c) `\strikethrough\`  
 d) None of the above 
 
+{choose-answers:4}
+?2 How would you italicize some text?  
+
+C) `_italicize_`   
+C) `*italicize*`
+o) `--italicize--`  
+o) `\italicize\`  
+o) None of the above 
+
+{choose-answers:4}
+?2 How would you bold some text?  
+
+C) `__bold__`   
+C) `**bold**`
+o) `--bold--`  
+o) `\bold\`  
+o) None of the above 
+
 {choose-answers: 4}
-? How do you produce your final document?  
+?3 How do you produce your final document?  
 
 C) Knit  
 o) Crochet   
@@ -135,27 +153,48 @@ o) Glue
 o) Paste
 o) Combine
 
-{choose-answers: 4}
-? Click on this link to open the ["R Markdown Cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf), take a look at the "Dynamic Documents" section. Which type of file is NOT a possible output from an R Markdown document?
+{choose-answers: 4, points:2}
+?4 Click on this link to open the ["R Markdown Cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf), take a look at the "Dynamic Documents" section. Which type of file is NOT a possible output from an R Markdown document?
 
 C) txt
 o) html
-o) pdf,
+o) pdf
 o) MS Word
 o) ODT
 o) RTF
 o) markdown document
 o) a html or pdf based slide show
 
-{choose-answers: 4}
-? Click on this link to open the ["R Markdown Cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf), take a look at the "Embed code with knitr syntax" section. What option would you use to display code in the output document?
+{choose-answers: 4, points:2}
+?4 Click on this link to open the ["R Markdown Cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf), take a look at the ".Rmd structure" section. Which type of file is NOT a part of the typical Rmd structure?
+
+C) html
+C) pdf
+o) YAML header
+o) text 
+o) code chunks
+
+
+{choose-answers: 4, points:2}
+?5 Click on this link to open the ["R Markdown Cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf), take a look at the "Embed code with knitr syntax" section. What option would you use to display code in the output document?
 
 C) echo
 o) message
 o) display
 o) highlight
 o) error
-o) eval
+m) eval
+o) warning
+
+{choose-answers: 4, points:2}
+?5 Click on this link to open the ["R Markdown Cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf), take a look at the "Embed code with knitr syntax" section. What option would you use to run code in a code chunk?
+
+C) eval
+o) message
+o) display
+o) highlight
+o) error
+m) echo
 o) warning
 
 {/quiz}

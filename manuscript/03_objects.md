@@ -243,6 +243,7 @@ Another missing value that can arise in R is `NaN` which stands for "not a numbe
 > 0/0
 [1] NaN
 ```
+
 ### Determining the class of an object
 
 In this lesson so far we have discussed how to create the five main classes of objects in R; however, we haven't yet described how to determine the class of an object once its been stored. To do so, you would use the function class() and specify the class of the object within the parentheses:
@@ -282,6 +283,8 @@ In this lesson, we've discussed that within R information can be assigned to obj
 
 # Objects in R quiz
 
+Running the code in R for each of the questions will help you arrive at the correct answer.
+
 {choose-answers: 4}
 ? Suppose I enter the following code in R: `x <- 2`. What is the class of the `x` object?
 
@@ -293,7 +296,7 @@ o) factor
 o) list
 o) data frame
 
-{choose-answers: 4}
+{choose-answers: 4, points: 2}
 ? What command can be used to create a logical object `y` containing two `TRUE` values?
 
 C) `y = c(TRUE, TRUE)`
@@ -325,7 +328,7 @@ o) list
 o) data frame
 
 {choose-answers: 4, points: 2}
-? What will be the ordering of the levels when the following character object is made into a factor object with `as.factor`?
+? What will be the ordering of the levels when the following character object is made into a factor object with `as.factor`? 
 
 ```r
 char_vec <- c("medium", "medium", "high", "low", "low")
@@ -353,6 +356,9 @@ o) function()
 ? Which of the following would NOT generate an object in R of class "numeric"?
 
 C) x <- "9.4"
+C) x <- "6"
+C) x <- "5"
+C) x <- "2L"
 o) x <- c(2L, 5, 6)
 o) x <- c(2, 5, 6)
 o) x <- 9.4
