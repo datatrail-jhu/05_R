@@ -237,15 +237,31 @@ This lesson walked you through how to work with operators and logical objects. T
 
 For this quiz, you will be working with the `iris` data set available within R. You can look at this data frame by entering `iris` at the R prompt. This dataset has information on sepal and petal length and with for three iris species. Each row contains information on one iris flower.
 
-? Are there any irises with a sepal length greater than 5.5?
+?1 Are there any irises with a sepal length greater than 5.5?
+
+A) Yes
+b) No
+
+?1 Are there any irises with a sepal length less than 4.1?
+
+a) Yes
+B) No
+
+?1 Are there any irises with a sepal width less than 1.3?
+
+a) Yes
+B) No
+
+?1 Are there any irises with a sepal width greater than 3.3?
 
 A) Yes
 b) No
 
 {choose-answers: 4, points: 2}
-? How many irises of the versicolor species have a petal width of at most 1.5?
+?2 How many irises of the versicolor species have a petal width of at most 1.5?
 
 C) 45
+m) 50
 o) 35
 o) 86
 o) 98
@@ -254,18 +270,45 @@ o) 5
 o) 150 
 
 {choose-answers: 4, points: 2}
-? What fraction of the irises have sepal or petal length greater than 5?
+?2 How many irises of the setosa species have a petal width of at most 1.5?
+
+C) 50
+m) 45
+o) 35
+o) 86
+o) 98
+o) 0
+o) 5
+o) 150 
+
+{choose-answers: 4, points: 2}
+?3 What fraction of the irises have sepal or petal length greater than 5?
 
 C) 78.7%
+m) 15.3%
 o) 12.4%
 o) 28.0%
 o) 40.7%
 o) 12.2%
 o) 92.5%
 o) 88.3%
+o) 18.2%
+
+{choose-answers: 4, points: 2}
+?3 What fraction of the irises have sepal or petal width greater than 2?
+
+C) 15.3%
+m) 78.7%
+o) 12.4%
+o) 28.0%
+o) 40.7%
+o) 12.2%
+o) 92.5%
+o) 88.3%
+o) 18.2%
 
 {choose-answers: 4, points: 3}
-? Which of the commands below will give the same result as `(iris$Sepal.Length == 5.0) | (iris$Sepal.Length == 5.1)`? 
+?4 Which of the commands below will give the same result as `(iris$Sepal.Length == 5.0) | (iris$Sepal.Length == 5.1)`? 
 
 *Note*: The `identical()` command, which has not been discussed yet, may help you answer this question. Feel free to look at the documentation for this function by typing ?identical into the console or by Googling how to use this function if you're struggling.
 

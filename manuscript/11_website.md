@@ -300,11 +300,14 @@ o) We created a Jekyll website
 o) We manually wrote our index.html file using HTML code
 o) We payed for a custom domain like JaneEverydayDoe.com
 o) We wrote HTML code to generate a website
+o) We learned the basics of HTML
+o) We wrote the CSS code for our website 
 
 {choose-answers: 4}
 ? After you made edits to index.Rmd, what were the steps required to see the changes on your website?
 
 C) Knit -> add -> commit -> push
+C) Knit to HTML -> git add -> git commit -> git push
 o) Knit -> clone -> push
 o) commit -> push -> Knit -> add
 o) pull -> commit -> push

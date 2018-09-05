@@ -67,6 +67,7 @@ As for RStudio, it was first released in 2011. It was founded by [J.J. Allaire](
 ? Which of the topics discussed refers to the programming language you'll use throughout this course?
 
 C) R
+C) R Programming Language
 m) RStudio
 o) RStudio Cloud
 o) Java
@@ -79,6 +80,7 @@ o) Auckland
 ? Which of the following was developed to increase programmers' efficiency using R?
 
 C) RStudio
+C) RStudio IDE
 o) Gentleman 
 o) Ihaka
 o) Allaire
@@ -91,6 +93,7 @@ o) HTML
 ? What does it mean if a piece of software is open source?
 
 C) The source code are available to the public, and use of the software is free.
+C) The software is free and the source code are available to the public.
 o) The source code are proprietary, but the software is free.
 o) The source code are available to the public, but the software costs money to use.
 o) The source code are proprietary, and the software costs money to use.
