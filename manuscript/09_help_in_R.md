@@ -111,6 +111,8 @@ The R community is a welcoming and helpful community. Many people go years as R 
 ? When you get stuck in R, what's the first thing you should do?
 
 C) Search for an existing answer on the Internet
+C) Google the error message
+C) Turn to the Internet for help
 o) Create a reprex
 o) Ask a question on Stack Overflow
 o) Ask a question on the RStudio Community
@@ -132,6 +134,7 @@ o) being considerate
 ? What is a reprex?
 
 C) the simplest piece of example code possible that reproduces an issue you're having 
+C) the simplest reproducible example 
 o) the code from your complicated script copy and pasted directly onto Stack Overflow
 o) a way to pattern match used across programming languages
 o) the code from your complicated script copy and pushed to GitHub
@@ -142,6 +145,7 @@ o) a way to create reproducible reports using code chunks and Markdown
 ? What are the payoffs for taking the time to create a reprex?
 
 C) You answer your own question and/or you show in a simple example what your issue is, allowing others to help.
+C) You make it easier for others to help you solve your problem
 o) StackOverflow & R Community are then required to answer your question and provide you help.
 o) RStudio will automatically be able to fix your issue and tell you where you went wrong
 o) You'll be an expert coder and will never make a mistake again in the future.

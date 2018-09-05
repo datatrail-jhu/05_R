@@ -159,10 +159,13 @@ In this lesson we went through all the steps of making changes to a project in R
 ? When working on a data science project, when you should you push to GitHub?
 
 C) Often (regularly, as you make changes to code)
+C) Whenever you make a substantial change to the repo
 o) When you have a final version
 o) Once at the beginning and once at the end of the project
 o) Only when you make a really big change to the project
 o) Only when you find a typo in your work
+o) Once at the beginning of your project
+o) Once at the end of your project
 
 {choose-answers: 4}  
 ? When you're ready to send your edited work to GitHub, what git commands do you run and in what order?

@@ -186,7 +186,8 @@ In this lesson we took a tour of RStudio Cloud. We became familiar with the main
 {choose-answers: 4, points: 2}
 ? How do you see a command you have previously run and save it to source?  
 
-C) History tab > click on command to highlight > To Source  
+C) History tab > click on command to highlight > To Source
+C) History tab > highlight command > To Source
 o) Source > Save 
 o) Console > Save as...
 o) History tab > Save as...
