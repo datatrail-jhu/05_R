@@ -331,22 +331,22 @@ o) 10
 o) 15
 
 {points:3}
-? Within the swirl project in the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L04 Basic Commands Q01 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
+?5 Within the swirl project in the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L04 Basic Commands Q01 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
 
 !/.*[zutG||CQC8||H467||KO7p||J8by||08OT||IAbH||dJjN||jwQT||RxS9].*/i
 
 {points:3}
-? Within the same project: `CBDS Introduction to R`, navigate to the lesson `L04 Basic Commands Q02 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
+?6 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L04 Basic Commands Q02 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
 
 !/.*[6A7Z||bIaG||MuaD||xk3L||SVXU||RzDM||sfP7||0nIs||KyeU||pCpw].*/i
 
 {points:3}
-? Within the same project: `CBDS Introduction to R`, navigate to the lesson `L04 Basic Commands Q03 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
+?7 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L04 Basic Commands Q03 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
 
 !/.*[4yjG||p2aM||KSwb||ahe2||63PT||TtNj||aLmk||g9h2||ZDj7||mCKC].*/i
 
 {points:3}
-? Within the same project: `CBDS Introduction to R`, navigate to the lesson `L04 Basic Commands Q04 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
+?8 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L04 Basic Commands Q04 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
 
 !/.*[dgAT||rK8S||W1S4||6yO4||aXLV||CtpE||nTqg||NCt7||vYI0||PtJc].*/i
 
