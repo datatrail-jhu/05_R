@@ -185,7 +185,15 @@ This project contains *all* of the swirl modules you'll be completing throughout
 
 But for now, let's just get comfortable with how swirl works.
 
-Any time you are within this space and supposed to complete a swirl module you'll start by running the command `swirl()`.
+Any time you are within this space and supposed to complete a swirl module you'll start by first loading the swirl package (it has already been installed in that space for you) and running the command `swirl()`:
+
+```
+## load package
+library(swirl)
+
+## start swirl
+swirl()
+```
 
 This will bring up a prompt asking you what swirl should call you. Type your first name as a response here and hit "enter."
 
@@ -215,7 +223,7 @@ In this lesson we took a tour of RStudio Cloud. We became familiar with the main
 
 ### Slides and Video
 
-![RStudio Cloud Tour](https://www.youtube.com/watch?v=ZhCwa0uPVHU)
+![RStudio Cloud Tour](https://www.youtube.com/watch?v=YpVUzFZK18Q)
 
 * [Slides](https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/edit?usp=sharing)
 
