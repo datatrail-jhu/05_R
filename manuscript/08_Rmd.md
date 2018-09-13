@@ -100,7 +100,7 @@ In this lesson we introduced you to R Markdown documents, discussing what they a
 
 ![R Markdown](https://www.youtube.com/watch?v=_VIiUElGuE0)
 
-*[Slides](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/edit?usp=sharing)  
+* [Slides](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/edit?usp=sharing)  
 
 
 {quiz, id: quiz_08_Rmd}
