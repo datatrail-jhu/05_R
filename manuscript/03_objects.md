@@ -366,22 +366,22 @@ o) x <- c(2L, 5L, 6)
 o) x <- -9.4
 
 {points:3}
-? Within the swirl project in the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L03 Objects in R Q01 Swirl`. Complete this swirl module on object assignment. Once complete, paste the code at the end of the lesson here.
+? Within the swirl project in the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L03 Objects in R Q01 Swirl`. Complete this swirl module on object assignment. Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[AiTd||Kylo||TxUT||YXoJ||ud0v||nHCq||I8bc||ck2Q||cZOY||B6km].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q02 Swirl`. Complete this swirl module on character type variables. Once complete, paste the code at the end of the lesson here.
+? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q02 Swirl`. Complete this swirl module on character type variables. Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[9cFc||EqWt||PbY6||6HWu||8Hut||pXrW||becm||66Cu||6EM3||pJEd].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q03 Swirl`. Complete this swirl module on numeric variables. Once complete, paste the code at the end of the lesson here.
+? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q03 Swirl`. Complete this swirl module on numeric variables. Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[5tYw||UTjp||PvJr||x3JA||1ygs||rTZG||BZmn||Dfcn||k7ge||06Ce].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q04 Swirl`. Complete this swirl module on factors. Once complete, paste the code at the end of the lesson here.
+? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q04 Swirl`. Complete this swirl module on factors. Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[SKx6||UjXI||P4Uf||MeTS||TbNz||9ZM7||rKXz||TpJJ||9WAS||Rf8a].*/i
 
