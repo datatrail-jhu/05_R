@@ -294,7 +294,7 @@ Working with subsets of data will be a daily part of your work routine, so famil
 
 {quiz, id: quiz_06_lists}
 
-# Lists & Data Frames quiz
+# Lists and Data Frames quiz
 
 {choose-answers: 4}
 ?1 Which of the following statement(s) about lists and data frames is/are true?
@@ -389,5 +389,25 @@ o) For a list, each list element must contain the same type of object as the oth
 o) Lists can only contain one type of object
 o) Simple vectors often contain many different types of objects in a single vector
 o) Elements of a list can only be extracted using integer notation.
+
+{points:3}
+?5 Within the swirl project in the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L06 Lists and Data Frames Q01 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
+
+! /.*[UYTq||CLoD||lO4J||jR3W||NeYh||jFVp||0P0r||lHHy||CGi9||inXC].*/i
+
+{points:3}
+?6 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L06 Lists and Data Frames Q02 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
+
+!/.*[VKCF||W62H||P5FS||jGWo||cefv||vBRg||jAG1||lGF3||HG7z||dB29].*/i
+
+{points:3}
+?7 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L06 Lists and Data Frames Q03 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
+
+!/.*[oIF5||T0jN||YtNM||V2tv||VnqG||wkUI||R0JA||noh9||BbvR||sYdQ].*/i
+
+{points:3}
+?8 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L06 Lists and Data Frames Q04 Swirl`. Complete this swirl module. Once complete, paste the code at the end of the lesson here.
+
+!/.*[qXNa||OBuA||BzUq||VsY5||Fwis||6HEz||sWLy||QNAv||S3oh||SZzG].*/i
 
 {/quiz}

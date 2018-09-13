@@ -385,11 +385,5 @@ o) x <- -9.4
 
 ! /.*[SKx6||UjXI||P4Uf||MeTS||TbNz||9ZM7||rKXz||TpJJ||9WAS||Rf8a].*/i
 
-{points:3}
-? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q05 Swirl`. Complete this swirl module on factors. Once complete, paste the code at the end of the lesson here.
-
-! /.*[FR9O||hgUS||rxgA||wxbX||Rty7||sl6E||ofUn||IH4T||gVRZ||viZT].*/i
-
-
 
 {/quiz}
