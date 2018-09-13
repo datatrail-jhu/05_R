@@ -207,7 +207,7 @@ o) mirror
 
 
 {points:3}
-? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L02 R Packages Q02 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
+? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L02 R Packages Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[rowr||MtU6||hk7f||3hXL||2QPe||ag9o||F5eL||trwZ||tEyT||0Rdw].*/i
 
