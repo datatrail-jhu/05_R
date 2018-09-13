@@ -168,9 +168,50 @@ The Help tab is where you find the documentation for your R packages and various
 
 ![The help tab](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-30.png)
 
+### Swirl
+
+Throughout the courses in this Course Set, we'll be using something called [Swirl modules](https://swirlstats.com/) to practice the R code learned in many of the lessons. These modules will all be run within RStudio Cloud. To make sure that you're comfortable using Swirl, we'll go through the steps on where to go to run Swirl and how to work through a module. This will be important as many of the quizzes accompanying these lessons will require you to use Swirl. Follow the steps in this section of the lesson to get started with your first Swirl module!
+
+Throughout this Course Set, whenever you're asked to complete a Swirl module, you'll always start in the same place: the [RStudio Cloud Chromebook Data Science Space](http://bit.ly/cbds_projects). Click on [this link now](http://bit.ly/cbds_projects). If prompted, log into your RStudio Cloud account.
+
+
+![Chromebook Data Science on RStudio Cloud](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-31.png)
+
+Among the projects listed you'll see one called "swirl" (You may have to scroll down on the list to see it.). To the right of swirl, you'll want to click on "Copy".
+
+![make a copy of "swirl" project](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-32.png)
+
+This project contains *all* of the swirl modules you'll be completing throughout the quizzes in this course set. For each module you're supposed to complete, there will be a quiz question specifying which you're supposed to complete. 
+
+But for now, let's just get comfortable with how swirl works.
+
+Any time you are within this space and supposed to complete a swirl module you'll start by running the command `swirl()`.
+
+This will bring up a prompt asking you what swirl should call you. Type your first name as a response here and hit "enter."
+
+![starting `swirl`](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-33.png)
+
+Swirl will often send you some text to read. *Always read the text* as this text will help explain the background information you need *or* will provide you with information you need to answer the question. At this point, swirl is explaining that when you see `...`, that's when you should press "enter" to continue.
+
+When you see `>` or a list of options (like `1:`, `2:`, `3`), that let's you know swirl is looking for something from you! When you see `>` that's a prompt letting you know swirl is expecting you to write some code. When you see a list of options, those are the possible answers to a question you're being asked. In these cases, you'll want to select the number corresponding to the right answer. For this practice in swirl, select 1, 2, or 3 and press enter.
+
+![Getting started in `swirl`](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-34.png)
+
+You'll then be given a number of options that you can use within `swirl` whenever you see the `>` prompt. Read the list here, but know that `info()` gives you this list of options again, `main()` returns you to swirl's main menu, and `bye()` saves your progress bug exits swirl.
+
+![`swirl` menu options](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-35.png)
+
+After this, you will be shown a list of courses. The list will be longer than what you see here, but we're showing this simple example to demonstrate that if you wanted to start on the course "CBDS Introduction to R", you would type 1. You'll be told which course to select throughout the course set.
+
+![Selecting a course](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-36.png)
+
+Note that for each quiz question you complete in `swirl`, upon completion, you'll receive a code. This code is to be entered as the answer to the quiz question on Leanpub.
+
+That's a basic introduction to using `swirl`. You'll have lots of quiz questions that require you to use swirl in this Course Set, so be sure to walk through this introduction on RStudio Cloud now and get comfortable navigating within swirl.
+
 ### Summary
 
-In this lesson we took a tour of RStudio Cloud. We became familiar with the main menu and its various menus. We looked at the Console, where R code is input and run. We then moved on to the Environment panel that lists all of the objects that have been created within an R session and allows you to view these objects in a new tab in Source. In this same quadrant, there is a History tab, that keeps a record of all commands that have been run. It also presents the option to either rerun the command in the Console, or send the command to Source, to be saved. Source is where you save your R commands. And the bottom right quadrant contains a listing of all the files in your working directory, displays generated plots, lists your installed packages, and supplies help files for when you need some assistance! Take some time to explore RStudio Cloud on your own!
+In this lesson we took a tour of RStudio Cloud. We became familiar with the main menu and its various menus. We looked at the Console, where R code is input and run. We then moved on to the Environment panel that lists all of the objects that have been created within an R session and allows you to view these objects in a new tab in Source. In this same quadrant, there is a History tab, that keeps a record of all commands that have been run. It also presents the option to either rerun the command in the Console, or send the command to Source, to be saved. Source is where you save your R commands. And the bottom right quadrant contains a listing of all the files in your working directory, displays generated plots, lists your installed packages, and supplies help files for when you need some assistance! Take some time to explore RStudio Cloud and get more comfortable navigating swirl on your own!
 
 ### Slides and Video
 
