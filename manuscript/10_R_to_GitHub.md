@@ -139,7 +139,7 @@ When you then go to run `git push`, you may be asked for your Username and GitHu
 
 You can now go to your repository on GitHub. You'll see the commit message you just specified and will find the files you pushed within code/raw_code on your GitHub repository!
 
-![code has been pushed to GitHub repository](images/10_R_to_GitHub/10_R_R_to_GitHub-19.png)
+![code has been pushed to GitHub repository](images/10_R_to_GitHub/10_R_R_to_GitHub-20.png)
 
 ### Summary
 
@@ -147,7 +147,7 @@ In this lesson we went through all the steps of making changes to a project in R
 
 ### Slides and Video
 
-![Pushing Code from R to GitHub](https://www.youtube.com/watch?v=o9UYI7nJcQE)
+![Pushing Code from R to GitHub](https://www.youtube.com/watch?v=6iFEa-L40pM)
 
 * [Slides](https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/edit?usp=sharing)
 
