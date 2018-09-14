@@ -52,9 +52,25 @@ As for RStudio, it was first released in 2011. It was founded by [J.J. Allaire](
 
 ![R Basic History](images/00_what_is_R/00_R_what_is_R-6.png)
 
+### Learning R
+
+In the [first course](https://leanpub.com/universities/courses/jhu/cbds-intro) in this Course Set, we discussed that learning how to learn is part of the process of learning data science. Here, we want to remind you that everything in that lesson applies here. As a refresher, learning R can be difficult and frustrating. Know that if you get stuck, you're not alone! The Internet and conversations with others more experienced than yourself (even if those conversation are on the Internet!) can be very helpful to you!
+
+![frustration is normal](images/00_what_is_R/00_R_what_is_R-7.png)
+
+
+We just wanted to take a second to remind you that getting frustrated is normal and failure is expected. The goal here is to *learn* how to use R, *not* to just *memorize* functions. 
+
+![failure is inevitable](images/00_what_is_R/00_R_what_is_R-8.png)
+
+So, try things out on your own. Try to work through error messages when you're stuck. But, if you can't figure it out, ask questions of others who have more experience than you!
+
+![try first; then ask questions](images/00_what_is_R/00_R_what_is_R-9.png)
+
+
 ### Slides and Video
 
-![What is R?](https://www.youtube.com/watch?v=1Vq6qHVjE5c)
+![What is R?](https://www.youtube.com/watch?v=Es7z9_ywFFk)
 
 [Slides](https://docs.google.com/presentation/d/1-GwpqNvTqNtobrgF-o0SCD0SvUwlv1b_MYF8QnyMHJk/edit?usp=sharing)
 
