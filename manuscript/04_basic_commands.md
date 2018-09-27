@@ -61,7 +61,7 @@ The `str` function stands for "structure", and it returns a description of the s
 
 After we determine generally what an object is, it is useful to know how much information it contains, how big it is.
 
-The `dim` function returns the dimensions of a rectangular object, such as a matrix or a data frame. The output is an integer vector with two components: first is the number of rows (which can also be obtained with `nrow`), and second is the number of columns (which can also be obtained with `ncol`). We saw previously that the `str` function provides the same information and more, so why would we use these functions instead? The `str` function provides this information by printing it to the screen for us to visually see, but it does not extract this information directly. If we need to use the dimensions later in the analysis as a variable, these functions provide a direct way to store this information.
+The `dim` function returns the dimensions of a rectangular object, such as a matrix or a data frame. The output is an integer vector with two components: first is the number of rows (which can also be obtained with `nrow()`), and second is the number of columns (which can also be obtained with `ncol()`). We saw previously that the `str` function provides the same information and more, so why would we use these functions instead? The `str` function provides this information by printing it to the screen for us to visually see, but it does not extract this information directly. If we need to use the dimensions later in the analysis as a variable, these functions provide a direct way to store this information.
 
 ```text
 > dim(mtcars)
@@ -114,7 +114,7 @@ prize_info <- data.frame(
 
 This is more convenient for further work if you have other objects that have information on first, second, or third placing, but not prize money information. You'll learn more about these concepts when you learn about "tidy data" in a later course.
 
-The `colnames` and `rownames` functions act analogously to the `names` function but are used for the column labels and row labels of a matrix or data frame. The numbers in square brackets at the beginning of the lines of printed output indicate the index of the first observation on the line. So for the row names, we can see that "Duster 360" is the seventh element.
+The `colnames()` and `rownames()` functions act analogously to the `names` function but are used for the column labels and row labels of a matrix or data frame. The numbers in square brackets at the beginning of the lines of printed output indicate the index of the first observation on the line. So for the row names, we can see that "Duster 360" is the seventh element.
 
 ```text
 > colnames(mtcars)
@@ -134,7 +134,7 @@ The `colnames` and `rownames` functions act analogously to the `names` function 
 [31] "Maserati Bora"       "Volvo 142E"
 ```
 
-![colnames and rownames functions](images/04_basic_commands/04_R_basic_commands-12.png)
+![`colnames()` and `rownames()` functions](images/04_basic_commands/04_R_basic_commands-12.png)
 
 ### What does this object look like?
 
@@ -219,7 +219,7 @@ In this lesson, you have been introduced to a number of commonly-used commands (
 
 ### Slides and Video
 
-![Basic commands in R](https://www.youtube.com/watch?v=9tcoT-5CQHg)
+![Basic commands in R](https://www.youtube.com/watch?v=CCuilNQpS-Y)
 
 * [Slides](https://docs.google.com/presentation/d/1CXJPvWXjuAE7R33Zctm9N7mHwWFonMzgXD3NwStjFLU/edit?usp=sharing)
 
@@ -327,7 +327,7 @@ o) 85
 o) 97
 o) 77
 o) 5.6
-o) 10
+o) 10ß
 o) 15
 
 {points:3}

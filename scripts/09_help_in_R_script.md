@@ -2,7 +2,7 @@ In a lesson in an earlier course, we discussed some basic guidelines for carryin
 
 Now that you've been introduced to the basics of R, we wanted to guide you to some incredibly helpful resources that can help you work through issues when you're trying to write your own R code.
 
-To access documentation directly within RStudio, you can type a question mark followed by the function, dataset, or object within the R Console directly. The output for this documentation will display in the Help window at the bottom-right hand of RStudio. For example, earlier in this course, you were introduced to the function summary in R. If you later can't remember what this function does, but you can remember the function, you can always type question mark summary in your Console. This will display in the Help tab.
+To access documentation directly within R Studio, you can type a question mark followed by the function, dataset, or object within the R Console directly. The output for this documentation will display in the Help window at the bottom-right hand of R Studio. For example, earlier in this course, you were introduced to the function summary in R. If you later can't remember what this function does, but you can remember the function, you can always type question mark summary in your Console. This will display in the Help tab.
 
 In this documentation we see a general description of what the summary function can be used for
 
@@ -22,6 +22,6 @@ When posting a question on Stack Overflow, or anywhere really, it's always best 
 
 Stack Overflow allows users with a login to ask and answer questions on Stack Overflow. While in the beginning you'll likely just be searching for (and getting) answers to questions, as you become more of an expert, answering others' questions is a great way to help the community! That said, it's probably no surprise that sometimes people can be mean to others on the Internet. The R community does its best to be a welcoming community. Hopefully, you will never run into people who are mean on Stack Overflow, and even more importantly, when you become an expert in R and answer others' questions online, it's important to remember that everyone starts as a beginner. If someone's question isn't perfectly asked or their reprex isn't perfect, let it pass. Be as helpful and kind as you can as you interact with others online.
 
-In addition to Stack Overflow, the RStudio Community is an online community for questions and answers that is specifically geared toward R users.
+In addition to Stack Overflow, the R Studio Community is an online community for questions and answers that is specifically geared toward R users.
 
 With this interface, in addition to the Topic, you can see the Category (similar to tags in Stack Overflow) and the number of Replies and Views for each topic. You can sort by any of these categories by clicking on the label at the top. Or, you can search specific questions or topics. Clicking on any topic will direct you to a new window where you can sort through the answers for each question. 
