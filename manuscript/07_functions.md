@@ -1,6 +1,6 @@
 # Writing Functions in R
 
-Up to this point, you've come across a number of functions. `length` will tell you the length of an object. `names` will allow you assign names to your object. And, `nrow` will tell you the number of rows in your data frame. These are all functions within R. Very generally, all of these functions take some input (often, an object in R), do something using that input when the function runs, and then provide the user (you!) some output. 
+Up to this point, you've come across a number of functions. `length()` will tell you the length of an object. `names()` will allow you assign names to your object. And, `nrow()` will tell you the number of rows in your data frame. These are all functions within R. Very generally, all of these functions take some input (often, an object in R), do something using that input when the function runs, and then provide the user (you!) some output. 
 
 In addition to built-in functions, R allows for users to write code and develop additional functions that will work in addition to these included functions. We talked about these types of functions when we talked about packages in an earlier lesson. In these cases, developers wrote code to accomplish a task that was not included the base functions that come with R.
 
@@ -303,7 +303,7 @@ In this lesson, we've covered the components of a function in R (name, argument(
 
 ### Slides and Video
 
-![Writing Functions in R](https://www.youtube.com/watch?v=Tdz2JD-1CCA)
+![Writing Functions in R](https://www.youtube.com/watch?v=uPeWe16VyMA)
 
 * [Slides](https://docs.google.com/presentation/d/1Q7pkb4lM8M8MRQzxCCfhXx8ddEi9XeaKSKT82OJAZX8/edit?usp=sharing)
 

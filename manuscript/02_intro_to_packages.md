@@ -29,7 +29,7 @@ So, you know where to find packages... but there are so many of them, how can yo
 
 First, CRAN groups all of its packages by their functionality/topic into 35 "themes." It calls this its ["Task view."](https://cran.r-project.org/web/views/) This at least allows you to narrow the packages you can look through to a topic relevant to your interests. 
 
-Second, there is a great website, [**RDocumentation,**](https://www.rdocumentation.org) which is a search engine for packages and functions from CRAN, BioConductor, and GitHub (ie: the big three repositories). If you have a task in mind, this is a great way to search for specific packages to help you accomplish that task! It also has a ["task" view](https://www.rdocumentation.org/taskviews) like CRAN, that allows you to browse themes. 
+Second, there is a great website, [**R Documentation,**](https://www.rdocumentation.org) which is a search engine for packages and functions from CRAN, BioConductor, and GitHub (ie: the big three repositories). If you have a task in mind, this is a great way to search for specific packages to help you accomplish that task! It also has a ["task" view](https://www.rdocumentation.org/taskviews) like CRAN, that allows you to browse themes. 
    
 More often, if you have a specific task in mind, Googling that task followed by "R package" is a great place to start! From there, looking at tutorials, vignettes, and forums for people already doing what you want to do is a great way to find relevant packages. 
 
@@ -39,9 +39,9 @@ Great! You've found a package you want... How do you install it?
 
 #### Installing from CRAN
  
-If you are installing from the CRAN repository, use the `install.packages()` function, with the name of the package you want to install in quotes between the parentheses (note: you can use either single or double quotes). For example, if you want to install the package "ggplot2", you would use: `install.packages("ggplot2")`  
+If you are installing from the CRAN repository, use the `install.packages()` function, with the name of the package you want to install in quotes between the parentheses (note: you can use either single or double quotes). For example, if you want to install the package `ggplot2`, you would use: `install.packages("ggplot2")`  
 
-Try doing so in your R console! This command downloads the "ggplot2" package from CRAN and installs it onto your computer. 
+Try doing so in your R console! This command downloads the `ggplot2` package from CRAN and installs it onto your computer. 
 
 If you want to install multiple packages at once, you can do so by using a character vector (we'll get back to exactly what that means in a later lesson in this course!), like: `install.packages(c("ggplot2", "devtools", "lme4"))`
 
@@ -65,7 +65,7 @@ This is a more specific case that you probably won't run into too often as you j
 
 In the event you want to do this, you first must find the package you want on GitHub and take note of both the package name *AND* the author of the package. Check out [this guide](http://kbroman.org/pkg_primer/pages/github.html) for installing from GitHub, but the general workflow is:   
 
-1. `install.packages("devtools")` - only run this if you don't already have devtools installed. If you've been following along with this lesson, you may have installed it when we were practicing installations using the R console  
+1. `install.packages("devtools")` - only run this if you don't already have `devtools installed. If you've been following along with this lesson, you may have installed it when we were practicing installations usin`g the R console  
 2. `library(devtools)` - more on what this command is doing immediately below this  
 3. `install_github("author/package")` replacing "author" and "package" with their GitHub username and the name of the package. 
 
@@ -113,17 +113,17 @@ To unload a given package you can use the `detach()` function. For example, `det
 
 If you no longer want to have a package installed, you can simply uninstall it using the function `remove.packages()`. For example, `remove.packages("ggplot2")` 
 
-(Try that, but then actually re-install the ggplot2 package - it's a super useful plotting package!)
+(Try that, but then actually re-install the `ggplot2 `package - it's a super useful plotting package!)
 
 Within RStudio, in the Packages tab, clicking on the "X" at the end of a package's row will uninstall that package. 
 
-#### Sidenote How do you know what version of R you have?
+#### Sidenote: How do you know what version of R you have?
 
 Sometimes, when you are looking at a package that you might want to install, you will see that it requires a certain version of R to run. To know if you can use that package, you need to know what version of R you are running! 
 
 One way to know your R version is to check when you first open R/RStudio - the first thing it outputs in the console tells you what version of R is currently running. If you didn't pay attention at the beginning, you can type `version` into the console and it will output information on the R version you are running. Another helpful command is `sessionInfo()` - it will tell you what version of R you are running along with a listing of all of the packages you have loaded. The output of this command is a great detail to include when posting a question to forums - it tells potential helpers a lot of information about your OS, R, and the packages (plus their version numbers!) that you are using. 
 
-In the output from `sessionInfo()`, you'll note that the end of each package's name has an underscore followed by a series of numbers. Those numbers indicate the packages version. For example, the version of ggplot2 installed in this session is version 2.2.1 (read version two point two point 1). This number will change (increase) every time developers make changes to this package.
+In the output from `sessionInfo()`, you'll note that the end of each package's name has an underscore followed by a series of numbers. Those numbers indicate the packages version. For example, the version of `ggplot2` installed in this session is version 2.2.1 (read version two point two point 1). This number will change (increase) every time developers make changes to this package.
 
 ![sessionInfo() shows you packages and versions](images/02_intro_to_packages/02_R_intro_to_packages-16.png)
 
@@ -131,7 +131,7 @@ In the output from `sessionInfo()`, you'll note that the end of each package's n
 
 In all of this information about packages, we haven't actually discussed how to *use* a package's functions! While functions are discussed in greater detail in a later lesson in this course, for now, know that to use the contents of a package, you'll use **functions**.
 
-First, you need to know what functions are included within a package. To do this, you can look at the man/help pages included in all (well-made) packages. In the console, you can use the `help()` function to access a package's help files. Try `help(package = "ggplot2")` and you will see all of the *many* functions that ggplot2 provides. Within the RStudio interface, you can access the help files through the Packages tab (again) - clicking on any package name should open up the associated help files in the "Help" tab, found in that same quadrant, beside the Packages tab. Clicking on any one of these help pages will take you to that functions help page, that tells you what that function is for and how to use it. 
+First, you need to know what functions are included within a package. To do this, you can look at the man/help pages included in all (well-made) packages. In the console, you can use the `help()` function to access a package's help files. Try `help(package = "ggplot2")` and you will see all of the *many* functions that `ggplot2`å provides. Within the RStudio interface, you can access the help files through the Packages tab (again) - clicking on any package name should open up the associated help files in the "Help" tab, found in that same quadrant, beside the Packages tab. Clicking on any one of these help pages will take you to that functions help page, that tells you what that function is for and how to use it. 
 
 Once you know what function within a package you want to use, you simply call it in the console like any other function we've been using throughout this lesson. Once a package has been loaded, it is as if it were a part of the base R functionality. 
 
@@ -154,7 +154,7 @@ If you still want to learn more about R packages, here are two great resources! 
 
 ### Slides and Video
 
-![R Packages](https://www.youtube.com/watch?v=Gvu8c0_47vI)
+![R Packages](https://www.youtube.com/watch?v=mPg8PD0wM6s)
 
 * [Slides](https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/edit?usp=sharing)
 

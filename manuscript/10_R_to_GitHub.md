@@ -147,7 +147,7 @@ In this lesson we went through all the steps of making changes to a project in R
 
 ### Slides and Video
 
-![Pushing Code from R to GitHub](https://www.youtube.com/watch?v=6iFEa-L40pM)
+![Pushing Code from R to GitHub](https://www.youtube.com/watch?v=c6x-RxISWKQ)
 
 * [Slides](https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/edit?usp=sharing)
 

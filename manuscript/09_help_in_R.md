@@ -17,6 +17,7 @@ In this documentation we see:
 * the syntax you should use to carry out this function
 * some sample code
 
+
 As you work in R, you'll find that some documentation is more helpful than others. Some packages and functions have incredibly helpful documentation pages. Others are less helpful. A thing to remember is that humans are responsible for writing this documentation. It's great when someone who's really great at documenting software or who has the time to do so write great documentation pages. However, for those times when the documentation proves less than helpful, there are other places you can look to for help.
 
 ### Stack Overflow
@@ -99,7 +100,7 @@ The R community is a welcoming and helpful community. Many people go years as R 
 
 ### Slides and Video
 
-![Getting Help in R](https://www.youtube.com/watch?v=O3Z4dJgXQ38)
+![Getting Help in R](https://www.youtube.com/watch?v=0sT3oLaoXX8)
 
 * [Slides](https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/edit?usp=sharing)
    

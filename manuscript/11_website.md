@@ -284,7 +284,7 @@ You might be interested in going beyond this quick website. For example, you mig
 
 ### Slides and Video
 
-![Creating Websites with R](https://www.youtube.com/watch?v=4s7_NYXUF74)
+![Creating Websites with R](https://www.youtube.com/watch?v=TIWQf9Te9pE)
 
 * [Slides](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/edit?usp=sharing)
 
