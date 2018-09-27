@@ -226,7 +226,7 @@ This lesson walked you through how to work with operators and logical objects. T
 
 ### Slides and Video
 
-![Working with Logicals](https://www.youtube.com/watch?v=g_PNXI-VMUc)
+![Working with Logicals](https://www.youtube.com/watch?v=pVkvHKjlKsk)
 
 * [Slides](https://docs.google.com/presentation/d/1xsqzqb-2-RHDGO03aVm_Ky3y6rXlGIn4NdBviF29F3U/edit?usp=sharing)
 
