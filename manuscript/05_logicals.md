@@ -319,7 +319,7 @@ o) `!(iris$Sepal.Length %in% c(5,5.1))`
 o) `(iris$Sepal.Length == 5.0 | !iris$Sepal.Length == 5.1)`
 
 {points:3}
-?5 Within the swirl project in the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L05 Working With Logicals Q01 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
+?5 Within the swirl project in the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC){target="_blank"} use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L05 Working With Logicals Q01 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[xLkM||tFEk||URwF||INGX||ao4u||usgN||7eFS||8G27||Sw1Y||x8o6].*/i
 
