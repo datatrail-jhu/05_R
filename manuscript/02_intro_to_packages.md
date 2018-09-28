@@ -4,11 +4,11 @@ Now that we've looked at R and RStudio and have a basic understanding of how the
 
 ### What is an R package? 
 
-So far, anything we've played around with in R uses the "base" R system. Base R, or everything included in R when you download it, has rather basic functionality for statistics and plotting but it can sometimes be limiting. To expand upon R's basic functionality, people have developed **packages.** A package is a collection of functions, data, and code conveniently provided in a nice, complete format for you. At the time of writing, there are just over 14,300 packages available to download - each with their own specialized functions and code, all developed for a specific but different purpose. For a really in depth look at R Packages (what they are, how to develop them), check out Hadley Wickham's book from O'Reilly, ["R Packages"](http://r-pkgs.had.co.nz/)
+So far, anything we've played around with in R uses the "base" R system. Base R, or everything included in R when you download it, has rather basic functionality for statistics and plotting but it can sometimes be limiting. To expand upon R's basic functionality, people have developed **packages.+* A package is a collection of functions, data, and code conveniently provided in a nice, complete format for you. At the time of writing, there are just over 14,300 packages available to download - each with their own specialized functions and code, all developed for a specific but different purpose. For a really in depth look at R Packages (what they are, how to develop them), check out Hadley Wickham's book from O'Reilly, ["R Packages"](http://r-pkgs.had.co.nz/)
 
 *Side note:* A package is not to be confused with a **library** (these two terms are often conflated in colloquial speech about R). A library is the place where the package is located on your computer. To think of an analogy, a library is, well, a library... and a package is a book within the library. The library is where the books/packages are located. 
 
-Packages are what make R so unique. Not only does base R have some great functionality but these packages greatly expand its functionality. And perhaps most special of all, each package is developed and published by the R community at large and deposited in **repositories.**
+Packages are what make R so unique. Not only does base R have some great functionality but these packages greatly expand its functionality. And perhaps most special of all, each package is developed and published by the R community at large and deposited in **repositories.+*
 
 ### What are repositories? 
 
@@ -131,7 +131,7 @@ In the output from `sessionInfo()`, you'll note that the end of each package's n
 
 In all of this information about packages, we haven't actually discussed how to *use* a package's functions! While functions are discussed in greater detail in a later lesson in this course, for now, know that to use the contents of a package, you'll use **functions**.
 
-First, you need to know what functions are included within a package. To do this, you can look at the man/help pages included in all (well-made) packages. In the console, you can use the `help()` function to access a package's help files. Try `help(package = "ggplot2")` and you will see all of the *many* functions that `ggplot2`å provides. Within the RStudio interface, you can access the help files through the Packages tab (again) - clicking on any package name should open up the associated help files in the "Help" tab, found in that same quadrant, beside the Packages tab. Clicking on any one of these help pages will take you to that functions help page, that tells you what that function is for and how to use it. 
+First, you need to know what functions are included within a package. To do this, you can look at the man/help pages included in all (well-made) packages. In the console, you can use the `help()` function to access a package's help files. Try `help(package = "ggplot2")` and you will see all of the *many* functions that `ggplot2`? provides. Within the RStudio interface, you can access the help files through the Packages tab (again) - clicking on any package name should open up the associated help files in the "Help" tab, found in that same quadrant, beside the Packages tab. Clicking on any one of these help pages will take you to that functions help page, that tells you what that function is for and how to use it. 
 
 Once you know what function within a package you want to use, you simply call it in the console like any other function we've been using throughout this lesson. Once a package has been loaded, it is as if it were a part of the base R functionality. 
 
@@ -201,14 +201,14 @@ o) CRAN
 o) mirror
 
 {points:3}
-? Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Introduction to R`. Type the number that corresponds to the lesson `L02 R Packages Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
+? Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) {target="_blank"} and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Introduction to R`. Type the number that corresponds to the lesson `L02 R Packages Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
 
-! /.*[5oBN||3n1p||kKFu||p7DE||TWib||Ynuj||FwKL||jhr7||TY19||oMab].*/i
+! /.+[5oBN||3n1p||kKFu||p7DE||TWib||Ynuj||FwKL||jhr7||TY19||oMab].+/i
 
 
 {points:3}
 ? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L02 R Packages Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.*[rowr||MtU6||hk7f||3hXL||2QPe||ag9o||F5eL||trwZ||tEyT||0Rdw].*/i
+! /.+[rowr||MtU6||hk7f||3hXL||2QPe||ag9o||F5eL||trwZ||tEyT||0Rdw].+/i
 
 {/quiz}
