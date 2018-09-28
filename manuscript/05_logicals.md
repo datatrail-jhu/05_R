@@ -321,12 +321,12 @@ o) `(iris$Sepal.Length == 5.0 | !iris$Sepal.Length == 5.1)`
 {points:3}
 ?5 Within the swirl project in the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC){target="_blank"} use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L05 Working With Logicals Q01 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+[xLkM||tFEk||URwF||INGX||ao4u||usgN||7eFS||8G27||Sw1Y||x8o6].+/i
+! /.+(xLkM|tFEk|URwF|INGX|ao4u|usgN|7eFS|8G27|Sw1Y|x8o6).+/i
 
 {points:3}
 ?6 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L05 Working With Logicals Q02 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+[WRg8||TEBb||poxc||MYfT||PcH6||3C0S||JICo||GJYk||3AeE||Gk2u].+/i
+! /.+(WRg8|TEBb|poxc|MYfT|PcH6|3C0S|JICo|GJYk|3AeE|Gk2u).+/i
 
 
 {/quiz}
