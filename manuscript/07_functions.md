@@ -182,11 +182,11 @@ Just as we wanted, we have a clear sentence output with the conversion of 70 C  
 Earlier we stated that functions require at least one argument. That wasn't *quite* true. You *can* write a function that does not have an argument explicitly stated, but that instead requires input from the user. While we'll include an example here, we won't go into explicit detail as these types of functions are not frequently used in R code. For instance, we can write a function that can only be called by `celsius_to_fahrenheit()` and no input is passed in the function. When this function is run, a prompt appears asking the user to enter a value.
 
 ```r
-celsius_to_fahrenheit <- function(){
+celsius_to_fahrenheit <- function()\{
 C <- readline(prompt="Enter a value in Celsius: ")
 F <- as.integer(C) * (9/5) + 32
 return(paste("The entered Celsius temperature is", F, "degrees Fahrenheit."))
-}
+\}
 ```
 When this is run, the output would look as follows:
 
