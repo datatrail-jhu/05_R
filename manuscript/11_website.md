@@ -69,7 +69,7 @@ git push
 
 ![touch and ls](images/11_website/11_R_website-6.png)
 
-Using the `JaneEverydayDoe` example, you can [see here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/a5f889e3c9749720ee0435e95f77d0b4eaeea8d9) how the repository looked at this point in time.
+Using the `JaneEverydayDoe` example, you can [see here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/a5f889e3c9749720ee0435e95f77d0b4eaeea8d9) how the repository should look at this point in the process.
 
 ![](images/11_website/11_R_website-7.png)
 
@@ -260,7 +260,7 @@ git push
 
 ![Website with image added](images/11_website/11_R_website-23.png)
 
-[JaneEverydayDoe's files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/505eaf2049930084526e79a005fc9e8a75f6b143).
+[JaneEverydayDoe's files at this point in the process](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/505eaf2049930084526e79a005fc9e8a75f6b143).
 
 ### A similar website
 
