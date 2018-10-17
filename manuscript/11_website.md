@@ -85,11 +85,11 @@ Well, let's create a `index.Rmd` file inside the `username.github.com/` director
 
 Then ensure `Document` is selected along the left and `HTML` is selected for the output format. Click OK.
 
-![](images/11_website/11_R_website-9.png)
+![New R Markdown](images/11_website/11_R_website-9.png)
 
 Now let's save it as `index.Rmd`. go to `File` -> `Save As` then type `index.Rmd` in the file name box, **making sure that it's saved inside the `username.github.com` directory**. In `JaneEverydayDoe`'s case, the relative file path would be `janeeverydaydoe.github.com/index.Rmd`.
 
-![](images/11_website/11_R_website-8.png)
+![How to Knit](images/11_website/11_R_website-10.png)
 
 Now click on the `knit` button and R to create the `index.html` file!
 
