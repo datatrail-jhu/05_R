@@ -152,7 +152,7 @@ Recall that in R, the **Console** is where commands can be typed and entered for
 mtcars
 ```
 
-[printing objects' contents to the screen](images/04_basic_commands/04_R_basic_commands-14.png)
+![printing objects' contents to the screen](images/04_basic_commands/04_R_basic_commands-14.png)
 
 Safer alternatives to printing are the `head` and `tail` functions. The `head` function displays the beginning of an object. By default, it shows the first 6 items. If the object is a vector, `head` shows the first 6 entries. If the object is a rectangle, such as a matrix or a data frame, `head` shows the first 6 rows. The `tail` function is analogous to `head` but for the end of the object.
 
@@ -176,7 +176,7 @@ Maserati Bora  15.0   8 301.0 335 3.54 3.570 14.6  0  1    5    8
 Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2
 ```
 
-[head() and tail() can be used to see a portion of the data](images/04_basic_commands/04_R_basic_commands-15.png)
+![head() and tail() can be used to see a portion of the data](images/04_basic_commands/04_R_basic_commands-15.png)
 
 
 The `summary` function computes summary statistics for numeric data and performs tabulations for categorical data, which are called **factors** in R.
@@ -195,7 +195,8 @@ The `summary` function computes summary statistics for numeric data and performs
  versicolor:50  
  virginica :50  
 ```
-[The summary() function summarizes data](images/04_basic_commands/04_R_basic_commands-16.png)
+
+![The summary() function summarizes data](images/04_basic_commands/04_R_basic_commands-16.png)
 
 
 The `unique` function shows only the unique elements of an object. For vectors, this returns the set of unique elements. For rectangles such as matrices and data frames, this returns the unique rows. This function is useful if we want to check the coding of our data. If we have sex information, then we expect the result of unique to be two elements. If not, there is likely some data cleaning that must be done. The `unique` function is also useful for simply exploring the values that a variable can take. In the example below, we can see that in the `mtcars` data frame, there are only cars with 6, 4, and 8 cylinders. Note that to extract the column corresponding to cylinders, we used a dollar sign followed by the column name: `$cyl`. This is an example of subsetting that you will learn in later lessons.
@@ -213,13 +214,43 @@ The `unique` function shows only the unique elements of an object. For vectors, 
 1 1 2
 ```
 
+### Errors, Warnings, and Messages
+
+In R, there are three types information that R may return to you to your screen to provide you with additional information. These come in the form of **errors, warnings, and messages**. While they will often *look* similar to one another, it's important to understand the difference between them.
+
+The most serious of these messages is an error message. **Errors** indicate that the code you tried to run **did not run successfully**. If you receive an error message, you should carefully look back at your code to see what went wrong. Error messages cannot be ignored as they indicate that there was no way for the code to run. Something has to be fixed before moving forward. For example, the code here produces an error, since `mtca` is *not* a data frame or object in R.
+
+```r
+unique(mtca$cyl)
+```
+
+![errors](images/04_basic_commands/04_R_basic_commands-17.png)
+
+
+**Warnings** are generally less serious than error messages. They are generated when the code executes (meaning, it runs without producing an error and stopping), but produces something unexpected. Warning messages should always be read, and then you, the person writing the code, has the option to decide whether or not the code that has generated the warning needs to be re-written. For example, the log function is only defined for numbers greater than zero. If, in R, you try to take the log of a negative number, you get an output (`NaN`):
+
+```r
+log(-1)
+```
+
+This output means the code executed (there was no error), but you also get a warning letting you know that NaNs were produced. If you meant to take the log of a negative number, you would leave the code as is. However, if you did not intend to do this, the warning message helps clue you into the fact that you may want to revisit your code.
+
+![warnings](images/04_basic_commands/04_R_basic_commands-18.png)
+
+
+Last but not least, **messages**, in general, are simply there to **provide you with more information**. They do not indicate that you have done anything wrong. For example, if you were to run a function that creates a directory if it does not yet exist, the function may provide you a message informing you whenever a new directory has been created. This message would just be there to provide you with more information. No further action is generally necessary when a message is provided.
+
+![messages](images/04_basic_commands/04_R_basic_commands-19.png)
+
+Note that all three are in the same font and same color, so they'll look similar in your RStudio Cloud console. Over time, you'll get more comfortable dealing with and understanding the difference between the three. For now, be sure that to remember if you get an error, your code did not execute successfully. Go back and find what caused the error.
+
 ### Summary
 
 In this lesson, you have been introduced to a number of commonly-used commands (functions) that are available to you in R. These will help you to determine the class of objects (`class()`), figure out how big an object is (`length()`, `dim()`, `nrow()`, `ncol()`), get an idea of what the object looks like (`str()`, `head()`, `tail()`), and summarize the data contained in the object (`summary()`, `unique()`), among many others. Understanding the functions discussed in this lesson and becoming very comfortable with what each of these does is incredibly important for moving forward and programming in R. So, spend some time here and ensure that you understand what the code does in each example before moving on!
 
 ### Slides and Video
 
-![Basic commands in R](https://www.youtube.com/watch?v=CCuilNQpS-Y)
+![Basic commands in R](https://www.youtube.com/watch?v=25YpoM_I5bQ)
 
 * [Slides](https://docs.google.com/presentation/d/1CXJPvWXjuAE7R33Zctm9N7mHwWFonMzgXD3NwStjFLU/edit?usp=sharing)
 

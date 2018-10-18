@@ -14,7 +14,9 @@ GitHub has the nice property that it can automatically host websites for you fro
 
 ![Create Repository](images/11_website/11_R_website-2.png)
 
-We'll work through an example for someone whose GitHub username is `JaneEverydayDoe`, but you should follow along and complete each step using your own GitHub account. To get started, first log in to [github.com](http://github.com) and create a new repository (that nice green button). This new repository needs this special name `JaneEverydayDoe.github.com` which you can find [here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com).
+We'll work through an example for someone whose GitHub username is `JaneEverydayDoe`, but you should follow along and complete each step using your own GitHub account. To get started, first log in to [github.com](http://github.com) and create a new repository (that nice green button). While normally for projects you'll be able to name your repository whatever you want, *this* new repository for your website **must have a specific name**. The repository *must* be named either `username.github.io` *or* `username.github.com`, where *your* GitHub username would replace `username`. So, in our case, the repo would be named: `JaneEverydayDoe.github.io`.
+
+**Remember, this repository must be named: `username.github.io` or `usernmae.github.com`, with *your* GitHub username in the place of `username`.**
 
 Yay, we now have our repository to get started!
 
@@ -284,7 +286,7 @@ You might be interested in going beyond this quick website. For example, you mig
 
 ### Slides and Video
 
-![Creating Websites with R](https://www.youtube.com/watch?v=TIWQf9Te9pE)
+![Creating Websites with R](https://www.youtube.com/watch?v=l1bFLAj84Vw)
 
 * [Slides](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/edit?usp=sharing)
 
