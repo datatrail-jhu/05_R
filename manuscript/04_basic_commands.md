@@ -214,6 +214,9 @@ The `unique` function shows only the unique elements of an object. For vectors, 
 1 1 2
 ```
 
+![The unique() shows unique elements of an object](images/04_basic_commands/04_R_basic_commands-17.png)
+
+
 ### Errors, Warnings, and Messages
 
 In R, there are three types information that R may return to you to your screen to provide you with additional information. These come in the form of **errors, warnings, and messages**. While they will often *look* similar to one another, it's important to understand the difference between them.
@@ -224,7 +227,7 @@ The most serious of these messages is an error message. **Errors** indicate that
 unique(mtca$cyl)
 ```
 
-![errors](images/04_basic_commands/04_R_basic_commands-17.png)
+![errors](images/04_basic_commands/04_R_basic_commands-18.png)
 
 
 **Warnings** are generally less serious than error messages. They are generated when the code executes (meaning, it runs without producing an error and stopping), but produces something unexpected. Warning messages should always be read, and then you, the person writing the code, has the option to decide whether or not the code that has generated the warning needs to be re-written. For example, the log function is only defined for numbers greater than zero. If, in R, you try to take the log of a negative number, you get an output (`NaN`):
@@ -235,12 +238,12 @@ log(-1)
 
 This output means the code executed (there was no error), but you also get a warning letting you know that NaNs were produced. If you meant to take the log of a negative number, you would leave the code as is. However, if you did not intend to do this, the warning message helps clue you into the fact that you may want to revisit your code.
 
-![warnings](images/04_basic_commands/04_R_basic_commands-18.png)
+![warnings](images/04_basic_commands/04_R_basic_commands-19.png)
 
 
 Last but not least, **messages**, in general, are simply there to **provide you with more information**. They do not indicate that you have done anything wrong. For example, if you were to run a function that creates a directory if it does not yet exist, the function may provide you a message informing you whenever a new directory has been created. This message would just be there to provide you with more information. No further action is generally necessary when a message is provided.
 
-![messages](images/04_basic_commands/04_R_basic_commands-19.png)
+![messages](images/04_basic_commands/04_R_basic_commands-20.png)
 
 Note that all three are in the same font and same color, so they'll look similar in your RStudio Cloud console. Over time, you'll get more comfortable dealing with and understanding the difference between the three. For now, be sure that to remember if you get an error, your code did not execute successfully. Go back and find what caused the error.
 
