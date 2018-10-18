@@ -66,9 +66,9 @@ To get started in your script file, copy and paste the following into your Sourc
 example <- matrix(c(1, 2, 3, 4, 5, 6, 7, 8), nrow = 4, ncol = 2)
 ```
 
-To run this code, you *can't* just hit enter (as you were able to do in the Console). Hitting enter will just bring your cursor to the next line in the script. Instead, with your cursor in the line of code you want to run, you can click on "Run" at the top right of your script file. This will execute the code in the Console. 
+To run this code, you *can't* just hit enter (as you were able to do in the Console). Hitting enter will just bring your cursor to the next line in the script. Instead, with your cursor in the line of code you want to run, you can click on "Run" at the top right of your script file. This will execute the code in the Console.
 
-**Note** Alternatively, to run code, with your cursor on the line of code you'd like to run, you could hit 'ctrl + enter' to run that line of code. This will save you a lot of time as you start writing a lot of code and analyzing data. Practice this keyboard shortcut now!
+**Note** Alternatively, to run code, with your cursor on the line of code you'd like to run, you could **hit 'ctrl + enter' to run that line of code**. This will save you *a lot* of time as you start writing a lot of code and analyzing data. Practice this keyboard shortcut now!
 
 What this code does is create an object (we'll define what that is soon!) called 'example' that has the numbers 1 through 8 in four different rows and two different columns. To see what this object looks like, we'll take a look at the environment quadrant of RStudio Cloud. 
 
@@ -195,6 +195,8 @@ library(swirl)
 swirl()
 ```
 
+As a reminder, to run code, with your cursor on the line of code you'd like to run, you can **hit 'ctrl + enter' to run that line of code**. Similarly, if there are multiple lines you want to run, you can highlight the lines you want to run and again hit 'ctrl + enter' to run those lines of code.
+
 This will bring up a prompt asking you what swirl should call you. Type your first name as a response here and hit "enter."
 
 ![starting `swirl`](images/01_rstudio_cloud_tour/01_R_rstudio_cloud_tour-33.png)
@@ -223,7 +225,7 @@ In this lesson we took a tour of RStudio Cloud. We became familiar with the main
 
 ### Slides and Video
 
-![RStudio Cloud Tour](https://www.youtube.com/watch?v=qocF7yIHVxo)
+![RStudio Cloud Tour](https://www.youtube.com/watch?v=j9PcRpc8Tqc)
 
 * [Slides](https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/edit?usp=sharing)
 
@@ -243,7 +245,7 @@ o) History tab > Save as...
 o) Console > highlight code > To Source
 o) Source > highlight code > To Console
 o) Source > highlight code > 'cntrl + enter'
-å
+?
 {choose-answers: 4}
 ? What is the name of the quadrant in the bottom left corner of RStudio Cloud, in the default layout? 
 
