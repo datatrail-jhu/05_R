@@ -230,7 +230,7 @@ unique(mtca$cyl)
 ![errors](images/04_basic_commands/04_R_basic_commands-18.png)
 
 
-**Warnings** are generally less serious than error messages. They are generated when the code executes (meaning, it runs without producing an error and stopping), but produces something unexpected. Warning messages should always be read, and then you, the person writing the code, has the option to decide whether or not the code that has generated the warning needs to be re-written. For example, the log function is only defined for numbers greater than zero. If, in R, you try to take the log of a negative number, you get an output (`NaN`):
+**Warnings** are generally less serious than error messages. They are generated when the **code executes** (meaning, it runs without producing an error and stopping), **but produces something unexpected**. Warning messages should always be read, and then you, the person writing the code, has the option to decide whether or not the code that has generated the warning needs to be re-written. For example, the log function is only defined for numbers greater than zero. If, in R, you try to take the log of a negative number, you get an output (`NaN`):
 
 ```r
 log(-1)
@@ -249,7 +249,7 @@ Note that all three are in the same font and same color, so they'll look similar
 
 ### Summary
 
-In this lesson, you have been introduced to a number of commonly-used commands (functions) that are available to you in R. These will help you to determine the class of objects (`class()`), figure out how big an object is (`length()`, `dim()`, `nrow()`, `ncol()`), get an idea of what the object looks like (`str()`, `head()`, `tail()`), and summarize the data contained in the object (`summary()`, `unique()`), among many others. Understanding the functions discussed in this lesson and becoming very comfortable with what each of these does is incredibly important for moving forward and programming in R. So, spend some time here and ensure that you understand what the code does in each example before moving on!
+In this lesson, you have been introduced to a number of commonly-used commands (functions) that are available to you in R. These will help you to determine the class of objects (`class()`), figure out how big an object is (`length()`, `dim()`, `nrow()`, `ncol()`), get an idea of what the object looks like (`str()`, `head()`, `tail()`), and summarize the data contained in the object (`summary()`, `unique()`), among many others. Understanding the functions discussed in this lesson and becoming very comfortable with what each of these does is incredibly important for moving forward and programming in R. Finally, we discussed errors, warnings, and messages in R. This is the foundation of what we'll use throughout the rest of the course, so spend some time here and ensure that you understand what the code does in each example before moving on!
 
 ### Slides and Video
 
