@@ -170,7 +170,7 @@ Note that the text we want `paste` to display is in quotes while the object `F` 
  
 Now if we were to call this updated function, the output would provide a sentence that makes explicitly clear what the output of the function means:
  
- ```r
+```r
 > celsius_to_fahrenheit(70)
 [1] "The entered Celsius temperature is 158 degrees Fahrenheit."
 ```
