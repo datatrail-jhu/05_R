@@ -24,7 +24,7 @@ We store these different classes of objects in different ways. The ways this inf
 
 When talking about objects in R, it may be helpful to think of *actual* objects in every day life for comparison. For example, think of three objects: a bucket, a pot you would cook with, and a backpack. These three objects are clearly designed for and carry out different purposes. The bucket may be used to carry water to clean your floor, the pot to cook pasta, and the backpack to carry notebooks, but, we can agree that they are all objects, just different **types* of objects. The water, pasta, and notebooks would be the information contained in the object. In this real-life example, the "class" of the information may be "liquid", "food", and "paper". 
 
-![Objects in real-life analogy](images/03_objects/03_R_objects-2.png)
+![Objects in real-life analogy](https://docs.google.com/presentation/d/1-1oGr9-phf3fKcezvl_y573tJ_Zvc09u1bhNAnH1CO8/export/png?id=1-1oGr9-phf3fKcezvl_y573tJ_Zvc09u1bhNAnH1CO8&pageid=g3b0072ef38_0_0)
 
 That said, each object in this example *could* hold any of the different classes of information. A pot of water could hold liquid to clean your floor, it just not make much sense to do so. In R, as you get more comfortable, you'll see that each type of object can hold any of the classes of information in the object, but there are times where each class makes the most sense. 
 
@@ -208,7 +208,7 @@ Levels: medium low high
 
 Now that we've covered common basic data classes, we will now discuss data frames. Data frames are a more complex data type than the simple vectors than we've seen so far. Data frames organize data into a rectangular format where each column corresponds to a single variable and each row corresponds to an observation. So a row of a data frame contains an observation's values for all variables. An example of a data frame is shown below:
 
-![Data frame example](images/03_objects/03_R_objects-12.png)
+![Data frame example](https://docs.google.com/presentation/d/1-1oGr9-phf3fKcezvl_y573tJ_Zvc09u1bhNAnH1CO8/export/png?id=1-1oGr9-phf3fKcezvl_y573tJ_Zvc09u1bhNAnH1CO8&pageid=g313d649efe_0_38)
 
 We see along the columns different variables related to car properties, and each row gives information on those properties for a particular car model. Every column in a data frame is a simple vector of values all from the same class. Most often, the data that we work with can be represented with data frames.
 

@@ -10,7 +10,7 @@ Lists are also a type of vector, but they are more complex than the simple vecto
 
 Lists are a general and flexible way to store information, and it turns out that data frames, which you have learned about in previous lessons, are a special cases of lists. As you learn how to create and work with lists in the remainder of this lesson, we will also cover connections to working with data frames.
 
-![Vectors and Lists](images/06_lists/06_R_lists-1.png)
+![Vectors and Lists](https://docs.google.com/presentation/d/1aJgqSCcPC_S_hEmcGy8hQGjuk6AwzT6r4ez-9IVsiXk/export/png?id=1aJgqSCcPC_S_hEmcGy8hQGjuk6AwzT6r4ez-9IVsiXk&pageid=g3929a325eb_0_0)
 
 ### Creating a list
 
@@ -110,7 +110,7 @@ Here we did not specify labels with argument names, so when we print this object
 [1] "red"   "green"
 ```
 
-![named list of lists](images/06_lists/06_R_lists-6.png)
+![named list of lists](https://docs.google.com/presentation/d/1aJgqSCcPC_S_hEmcGy8hQGjuk6AwzT6r4ez-9IVsiXk/export/png?id=1aJgqSCcPC_S_hEmcGy8hQGjuk6AwzT6r4ez-9IVsiXk&pageid=g3929a325eb_0_89)
 
 If we had specified argument names to label this list, the resulting object would look as follows:
 
@@ -142,7 +142,7 @@ $st2$colors
 
 We mentioned at the start of this lesson that data frames are a special case of lists. In particular, data frames are lists where each element (column) is a simple vector of the same length. In the car information data frame subset below, each column from `mpg` to `carb` is a simple vector. They are all either numeric or integer vectors of length 6. Each element (column) in a data frame must be the same length. The car models listed on the left-hand side do not actually form a column in the data frame, but rather, they are the row names of the data frame. This ability to have row names is a special feature of data frames that lists do not have.
 
-![mtcars data frame](images/06_lists/06_R_lists-7.png)
+![mtcars data frame](https://docs.google.com/presentation/d/1aJgqSCcPC_S_hEmcGy8hQGjuk6AwzT6r4ez-9IVsiXk/export/png?id=1aJgqSCcPC_S_hEmcGy8hQGjuk6AwzT6r4ez-9IVsiXk&pageid=g3929a325eb_0_100)
 
 We can see the relationship between data frames and lists by using the coercion function `as.list`. We can see the familiar dollar sign notation indicating that the names of the list correspond to the column names of the data frame. We can also see that the simple vectors in each of these slots has length 6.
 
