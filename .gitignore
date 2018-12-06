@@ -2,3 +2,4 @@
 *.gslides
 .Rproj.user
 manuscript/resources/videos/*
+manuscript/resources/images/*
