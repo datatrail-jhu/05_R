@@ -12,7 +12,7 @@ Now we are going to use these two skills to create a website from within R. At t
 
 GitHub has the nice property that it can automatically host websites for you from a repository. While this can de done for any repository, there is a special case: the `yourUsername.github.com` repository that makes setting up your own website a little bit simpler. We will start here because it's the most straightforward case.
 
-![Create Repository](images/11_website/11_R_website-2.png)
+![Create Repository](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g38bb68a320_0_1)
 
 We'll work through an example for someone whose GitHub username is `JaneEverydayDoe`, but you should follow along and complete each step using your own GitHub account. To get started, first log in to [github.com](http://github.com) and create a new repository (that nice green button). While normally for projects you'll be able to name your repository whatever you want, *this* new repository for your website **must have a specific name**. The repository *must* be named either `username.github.io` *or* `username.github.com`, where *your* GitHub username would replace `username`. So, in our case, the repo would be named: `JaneEverydayDoe.github.io`.
 
@@ -29,7 +29,7 @@ Now we are going to start putting your website together. We need to keep our fil
 git clone https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com.git
 ```
 
-![git clone](images/11_website/11_R_website-3.png)
+![git clone](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g3c1a412a3a_0_0)
 
 We now have completed the necessary GitHub setup!
 
@@ -41,7 +41,7 @@ It's time to start working on our website! In the terminal access the `username.
 cd janeeverydaydoe.github.com/
 ```
 
-![cd into directory](images/11_website/11_R_website-4.png)
+![cd into directory](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g3c1a412a3a_0_6)
 
 
 The directory is empty currently. At this point, we can almost start our website. There is one more thing we need to do that is rather obscure. Something we haven't talked about is that GitHub was initially set up for hosting _Jekyll_ static websites and this is still the default. But, we are not using Jekyll and we need to tell GitHub that. To do so we need to create the hidden file `.nojekyll` and version control it. You can create the file using the `touch` command in the terminal or from RStudio Cloud using the following command:
@@ -57,7 +57,7 @@ However, despite being hidden, we *can* check to make sure this file was created
 ls -a
 ```
 
-![touch and ls](images/11_website/11_R_website-5.png)
+![touch and ls](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g3c1a412a3a_0_12)
 
 Cool, we now have the required `.nojekyll` file! But, it's not on GitHub yet. So, we need to version control it. You can do so in the RStudio Cloud terminal window using the following commands:
 
@@ -69,11 +69,11 @@ git push
 
 *Note*: If prompted to set your global configuration on GitHub, provide your email address or GitHub username and password, do so. 
 
-![touch and ls](images/11_website/11_R_website-6.png)
+![touch and ls](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g3c1a412a3a_0_20)
 
 Using the `JaneEverydayDoe` example, you can [see here](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/a5f889e3c9749720ee0435e95f77d0b4eaeea8d9) how the repository should look at this point in the process.
 
-![](images/11_website/11_R_website-7.png)
+![](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g38bb68a320_0_9)
 
 ### Make the website
 
@@ -83,15 +83,15 @@ First, web pages display HTML code. With that knowledge, we are going to take ad
 
 Well, let's create a `index.Rmd` file inside the `username.github.com/` directory. Here, lets take advantage of the nice RStudio menus. Go to `File` -> `New File` -> `R Markdown`. (*Note*: If prompted to install packages, click yes to install them)
 
-![New Rmd document](images/11_website/11_R_website-8.png)
+![New Rmd document](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g38bb68a320_0_13)
 
 Then ensure `Document` is selected along the left and `HTML` is selected for the output format. Click OK.
 
-![New R Markdown](images/11_website/11_R_website-9.png)
+![New R Markdown](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g38bb68a320_0_17)
 
 Now let's save it as `index.Rmd`. go to `File` -> `Save As` then type `index.Rmd` in the file name box, **making sure that it's saved inside the `username.github.com` directory**. In `JaneEverydayDoe`'s case, the relative file path would be `janeeverydaydoe.github.com/index.Rmd`.
 
-![How to Knit](images/11_website/11_R_website-10.png)
+![How to Knit](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g38bb68a320_0_21)
 
 Now click on the `knit` button and R to create the `index.html` file!
 
@@ -114,7 +114,7 @@ git push
 
 And after a few seconds or a minute or so, you can view your website at https://username.github.io. For `JaneEverydayDoe` that is https://janeeverydaydoe.github.io/ and it looks like this:
 
-![First website!](images/11_website/11_R_website-12.png)
+![First website!](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g38bb68a320_0_25)
 
 You can check `JaneEverydayDoe` [files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/6ef6468c9fb0dc93ed436b056ddd602e13658377) and compare it against yours.
 
@@ -159,7 +159,7 @@ git commit -m "Add my initial information"
 git push
 ```
 
-![Updated website](images/11_website/11_R_website-15.png)
+![Updated website](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g38bb68a320_0_37)
 
 Check `JaneEverydayDoe`'s files at [this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/c0b15cf33e3fe88322d46e9f35def6c485eb0fee).
 
@@ -195,7 +195,7 @@ git commit -m "Use spacelab"
 git push
 ```
 
-![Website with spacelab theme](images/11_website/11_R_website-18.png)
+![Website with spacelab theme](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g38bb68a320_0_41)
 
 [JaneEverydayDoe's files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/33db3fac9619ef32bdb032b56e0ca5836b5e28c5).
 
@@ -223,7 +223,7 @@ git push
 ```
 Your website should now reflect these changes!
 
-![](images/11_website/11_R_website-20.png)
+![](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g38bb68a320_0_45)
 
 [JaneEverydayDoe's files at this point in time](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/3caa9cc00e9ea167360b1299763ad3b01b6e9de6).
 
@@ -260,7 +260,7 @@ git commit -m "Add Jane's image"
 git push
 ```
 
-![Website with image added](images/11_website/11_R_website-23.png)
+![Website with image added](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g38bb68a320_0_49)
 
 [JaneEverydayDoe's files at this point in the process](https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/505eaf2049930084526e79a005fc9e8a75f6b143).
 
@@ -268,7 +268,7 @@ git push
 
 If you need some inspiration, check out Amy Peterson's website: [amy-peterson.github.io](https://amy-peterson.github.io/). It was made using exactly the same tools. 
 
-![Amy's website](images/11_website/11_R_website-14.png)
+![Amy's website](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g3c1a412a3a_0_49)
 
 The raw files for her website are available [here](https://raw.githubusercontent.com/amy-peterson/amy-peterson.github.com/bf9637d0351e1494cbd0c34528b261e340539b06/index.Rmd).
 
