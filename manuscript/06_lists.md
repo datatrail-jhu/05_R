@@ -38,7 +38,9 @@ When we print this object to the screen, it looks as below. The double square br
 [1] "red"    "orange" "yellow" "green"  "blue"   "purple"
 ```
 
-The information contained in this object would be improved with labels for the three list elements. This is achieved by adding **names** to the list. As we learned about in the Basic Commands lesson, we can do this with the `names` function.
+Note that to access a _single_ value within a list you can use the following notation: `list[[element]][index]`. For example, using the list above, `responses_student1[[3]][1]` would print "red" to the screen, as this is the _first_ value of the _third_ element in the list `responses_student1`.
+
+All that said, the information contained in this list would be improved with labels for the three list elements. This is achieved by adding **names** to the list. As we learned about in the Basic Commands lesson, we can do this with the `names` function.
 
 ```r
 names(responses_student1) <- c("numbers", "animals", "colors")
