@@ -172,10 +172,10 @@ The Help tab is where you find the documentation for your R packages and various
 
 Throughout the courses in this Course Set, we'll be using something called [Swirl modules](https://swirlstats.com/) to practice the R code learned in many of the lessons. These modules will all be run within RStudio Cloud. To make sure that you're comfortable using Swirl, we'll go through the steps on where to go to run Swirl and how to work through a module. This will be important as many of the quizzes accompanying these lessons will require you to use Swirl. Follow the steps in this section of the lesson to get started with your first Swirl module!
 
-Throughout this Course Set, whenever you're asked to complete a Swirl module, you'll always start in the same place: the [RStudio Cloud Chromebook Data Science Space](http://bit.ly/cbds_projects). Click on [this link now](http://bit.ly/cbds_projects). If prompted, log into your RStudio Cloud account.
+Throughout this Course Set, whenever you're asked to complete a Swirl module, you'll always start in the same place: the [RStudio Cloud Cloud-based Data Science Space](http://bit.ly/cbds_projects). Click on [this link now](http://bit.ly/cbds_projects). If prompted, log into your RStudio Cloud account.
 
 
-![Chromebook Data Science on RStudio Cloud](https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&pageid=g3f1d06ac70_0_0)
+![Cloud-based Data Science on RStudio Cloud](https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&pageid=g3f1d06ac70_0_0)
 
 Among the projects listed you'll see one called "swirl" (You may have to scroll down on the list to see it.). To the right of swirl, you'll want to click on "Copy".
 

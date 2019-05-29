@@ -366,7 +366,7 @@ o) x <- c(2L, 5L, 6)
 o) x <- -9.4
 
 {points:3}
-? Within the swirl project in the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L03 Objects in R Q01 Swirl`. Complete this swirl module on object assignment. Once complete, paste the code provided at the end of the swirl module here.
+? Within the swirl project in the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L03 Objects in R Q01 Swirl`. Complete this swirl module on object assignment. Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.+(AiTd|Kylo|TxUT|YXoJ|ud0v|nHCq|I8bc|ck2Q|cZOY|B6km).+/i
 

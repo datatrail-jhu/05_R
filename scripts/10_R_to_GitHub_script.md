@@ -1,4 +1,4 @@
-In the previous course in this series, you learned the basics of version control using git commands and git hub. Through the lessons in this course you learned the basics of coding in R. Throughout the rest of the courses in the Chromebook Data Science series we will continue to use R and git hub extensively, so we figure it's best to get some practice with this workflow now, before any projects are due.
+In the previous course in this series, you learned the basics of version control using git commands and git hub. Through the lessons in this course you learned the basics of coding in R. Throughout the rest of the courses in the Cloud-based Data Science series we will continue to use R and git hub extensively, so we figure it's best to get some practice with this workflow now, before any projects are due.
 
 In the Version Control course you set up a git hub repository called my underscore first underscore project where there were a number of directories with the following file structure. 
 
