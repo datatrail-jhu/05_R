@@ -60,7 +60,7 @@ To execute your first command, at the `>` prompt, try typing `1 + 1`. Then, hit 
 
 However, often you want to write code and save it so that you can open the code again and re-run it later. This saved file with code in it is referred to as a **script**. When you want to write code and save it in a script, you'll do this in the Source panel.
 
-To get started in your script file, copy and paste the following into your Source quadrant (top-right).
+To get started in your script file, copy and paste the following into your Source quadrant (top-left).
 
 ```r
 example <- matrix(c(1, 2, 3, 4, 5, 6, 7, 8), nrow = 4, ncol = 2)
@@ -203,11 +203,11 @@ This will bring up a prompt asking you what swirl should call you. Type your fir
 
 Swirl will often send you some text to read. *Always read the text* as this text will help explain the background information you need *or* will provide you with information you need to answer the question. At this point, swirl is explaining that when you see `...`, that's when you should press "enter" to continue.
 
-When you see `>` or a list of options (like `1:`, `2:`, `3`), that let's you know swirl is looking for something from you! When you see `>` that's a prompt letting you know swirl is expecting you to write some code. When you see a list of options, those are the possible answers to a question you're being asked. In these cases, you'll want to select the number corresponding to the right answer. For this practice in swirl, select 1, 2, or 3 and press enter.
+When you see `>` or a list of options (like `1:`, `2:`, `3`), that lets you know swirl is looking for something from you! When you see `>` that's a prompt letting you know swirl is expecting you to write some code. When you see a list of options, those are the possible answers to a question you're being asked. In these cases, you'll want to select the number corresponding to the right answer. For this practice in swirl, select 1, 2, or 3 and press enter.
 
 ![Getting started in `swirl`](https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&pageid=g3f1d06ac70_0_19)
 
-You'll then be given a number of options that you can use within `swirl` whenever you see the `>` prompt. Read the list here, but know that `info()` gives you this list of options again, `main()` returns you to swirl's main menu, and `bye()` saves your progress bug exits swirl.
+You'll then be given a number of options that you can use within `swirl` whenever you see the `>` prompt. Read the list here, but know that `info()` gives you this list of options again, `main()` returns you to swirl's main menu, and `bye()` saves your progress but exits swirl.
 
 ![`swirl` menu options](https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&pageid=g3f1d06ac70_0_24)
 
@@ -245,7 +245,7 @@ o) History tab > Save as...
 o) Console > highlight code > To Source
 o) Source > highlight code > To Console
 o) Source > highlight code > 'cntrl + enter'
-?
+
 {choose-answers: 4}
 ? What is the name of the quadrant in the bottom left corner of RStudio Cloud, in the default layout? 
 
