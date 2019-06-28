@@ -141,7 +141,7 @@ If you still have questions about what functions within a package are right for 
 
 In this lesson, we've explored R packages in depth. We examined what a packages is (and how it differs from a library), what repositories are, and how to find a package relevant to your interests. We investigated all aspects of how packages work: how to install them (from the various repositories), how to load them, how to check which packages are installed, and how to update, uninstall, and unload packages. We took a small detour and looked at how to check what version of R you have, which is often an important detail to know when installing packages. And finally, we spent some time learning how to explore help files and vignettes, which often give you a good idea of how to use a package and all of its functions. 
 
-If you still want to learn more about R packages, here are two great resources! [R Packages: A Beginner's Guide](https://www.datacamp.com/community/tutorials/r-packages-guide) from Adolfo Alvarez on DataCamp and a lesson from the University of Washington, on an [Introduction to R Packages](http://faculty.washington.edu/kenrice/rintro/sess08.pdf) from Ken Rice and Timothy Thornton. 
+If you still want to learn more about R packages, here is a great resource: [Introduction to R Packages](http://faculty.washington.edu/kenrice/rintro/sess08.pdf) from Ken Rice and Timothy Thornton. 
 
 ### Additional Resources
 
@@ -149,7 +149,6 @@ If you still want to learn more about R packages, here are two great resources! 
 * [**CRAN (Comprehensive R Archive Network):**](https://cran.r-project.org/web/packages/)
 * [**BioConductor:**](https://bioconductor.org/packages/release/BiocViews.html#___Software)
 * [**GitHub:**](https://github.com/collections) 
-* [R Packages: A Beginner's Guide](https://www.datacamp.com/community/tutorials/r-packages-guide), by Adolfo Alvarez
 * [Introduction to R Packages](http://faculty.washington.edu/kenrice/rintro/sess08.pdf), from Ken Rice and Timothy Thornton
 
 ### Slides and Video
