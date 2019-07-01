@@ -370,22 +370,22 @@ o) x <- -9.4
 {points:3}
 ? Within the swirl project in the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L03 Objects in R Q01 Swirl`. Complete this swirl module on object assignment. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(AiTd|Kylo|TxUT|YXoJ|ud0v|nHCq|I8bc|ck2Q|cZOY|B6km).+/i
+! /.+(HNvv|XHJ6|N4dr|V0pb|Qjtj|HwTp|K150|gGdd|sSuA|zjSz).+/i
 
 {points:3}
 ? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q02 Swirl`. Complete this swirl module on character type variables. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(9cFc|EqWt|PbY6|6HWu|8Hut|pXrW|becm|66Cu|6EM3|pJEd).+/i
+! /.+(BKDA|B9sK|FeoP|RQLq|uTKJ|VRjq|z7rT|MxP9|ueZA|bGi5).+/i
 
 {points:3}
 ? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q03 Swirl`. Complete this swirl module on numeric variables. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(5tYw|UTjp|PvJr|x3JA|1ygs|rTZG|BZmn|Dfcn|k7ge|06Ce).+/i
+! /.+(0PJ4|YoLj|6SgV|Tahh|QrNb|PSqV|mIoZ|za5x|REbS|uMxo).+/i
 
 {points:3}
 ? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q04 Swirl`. Complete this swirl module on factors. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(SKx6|UjXI|P4Uf|MeTS|TbNz|9ZM7|rKXz|TpJJ|9WAS|Rf8a).+/i
+! /.+(lLH8|yYGA|dMTC|YmDF|oSLf|DiCz|I6LO|6wrW|gqw6|goTU).+/i
 
 
 {/quiz}

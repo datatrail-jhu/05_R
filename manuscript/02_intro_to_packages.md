@@ -207,12 +207,12 @@ o) mirror
 {points:3}
 ? Go to the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Introduction to R`. Type the number that corresponds to the lesson `L02 R Packages Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
 
-! /.+(5oBN|3n1p|kKFu|p7DE|TWib|Ynuj|FwKL|jhr7|TY19|oMab).+/i
+! /.+(HYR6|4y3L|JbYg|4bX1|gMug|ityr|1YcE|r4mF|Rd0E|UwWB).+/i
 
 
 {points:3}
 ? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L02 R Packages Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(rowr|MtU6|hk7f|3hXL|2QPe|ag9o|F5eL|trwZ|tEyT|0Rdw).+/i
+! /.+(VRBy|L06V|gXVv|8PXz|9FMg|mN8d|31Zw|qWMJ|cppb|fBi8).+/i
 
 {/quiz}

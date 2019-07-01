@@ -399,21 +399,21 @@ o) Elements of a list can only be extracted using integer notation.
 {points:3}
 ?5 Within the swirl project in the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L06 Lists and Data Frames Q01 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(UYTq|CLoD|lO4J|jR3W|NeYh|jFVp|0P0r|lHHy|CGi9|inXC).+/i
+! /.+(Yj8z|F7bU|PFkR|UyN8|viyA|vlAQ|uOUr|3WSR|Vl1v|UI5Q).+/i
 
 {points:3}
 ?6 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L06 Lists and Data Frames Q02 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(VKCF|W62H|P5FS|jGWo|cefv|vBRg|jAG1|lGF3|HG7z|dB29).+/i
+! /.+(IDQ0|4VR6|9drJ|xWPx|8N7j|nJ2a|eAUG|8dna|OTEg|50r6).+/i
 
 {points:3}
 ?7 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L06 Lists and Data Frames Q03 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(oIF5|T0jN|YtNM|V2tv|VnqG|wkUI|R0JA|noh9|BbvR|sYdQ).+/i
+! /.+(7miY|6S67|ryQA|N2jz|l8Ad|HVUH|aauv|tCLp|Leha|NXVe).+/i
 
 {points:3}
 ?8 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L06 Lists and Data Frames Q04 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(qXNa|OBuA|BzUq|VsY5|Fwis|6HEz|sWLy|QNAv|S3oh|SZzG).+/i
+! /.+(sPZ9|tAdd|c9lQ|dHu6|5cbK|3juq|FT9R|vnMI|dIC5|yNU7).+/i
 
 {/quiz}

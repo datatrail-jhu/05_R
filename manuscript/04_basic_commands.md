@@ -375,22 +375,22 @@ o) 15
 {points:3}
 ?5 Within the swirl project in the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L04 Basic Commands Q01 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(zutG|CQC8|H467|KO7p|J8by|08OT|IAbH|dJjN|jwQT|RxS9).+/i
+! /.+(vDw3|1PL2|AsAn|5hmz|vSfW|HlrI|BfuF|z3AD|J6lF|XvlN).+/i
 
 {points:3}
 ?6 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L04 Basic Commands Q02 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(6A7Z|bIaG|MuaD|xk3L|SVXU|RzDM|sfP7|0nIs|KyeU|pCpw).+/i
+! /.+(RPJS|MURb|GTxZ|j9H6|Zv3E|3rbq|UuDU|5Lxd|rJZh|Txkt).+/i
 
 {points:3}
 ?7 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L04 Basic Commands Q03 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(4yjG|p2aM|KSwb|ahe2|63PT|TtNj|aLmk|g9h2|ZDj7|mCKC).+/i
+! /.+(miVw|9Dmv|n3dE|eSO7|WUDZ|LpE6|VObz|uuV6|jMcj|RGIU).+/i
 
 {points:3}
 ?8 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L04 Basic Commands Q04 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(dgAT|rK8S|W1S4|6yO4|aXLV|CtpE|nTqg|NCt7|vYI0|PtJc).+/i
+! /.+(jN5M|RHCY|0rQl|DR0K|0abr|509O|KzAH|nWBh|IEm0|khcd).+/i
 
 
 {/quiz}
