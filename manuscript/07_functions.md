@@ -12,7 +12,7 @@ UDFs are incredibly helpful as you code. While they may seem intimidating now, t
 
 Writing functions can be a daunting task as you learn to code. As you get more comfortable coding, you'll naturally get more comfortable writing functions. However, you will always learn better and more efficient ways to write functions. This means that the learning never stops, which can be a lot of fun! But, if this is a difficult lesson, you're not alone. Functions take a while to get the hang of but are incredibly helpful once you do!
 
-That said, when you're new to coding, it often *seems* easier to avoid writing functions and just copy and paste code over and over again each time you have to carry out the task that that chunk of code carries out. However, a really important rule of thumb is that you should **write a function whenever you've copy and pasted code more than twice**. So, if you've written a chunk of code and then used it in at least two more places, write a function. It will save you time in the long run!
+That said, when you're new to coding, it often *seems* easier to avoid writing functions and just copy and paste code over and over again each time you have to carry out the task that that chunk of code carries out. However, a really important rule of thumb is that you should **write a function whenever you've copy and pasted code more than once**. So, if you've written a chunk of code and then used it in at least two more places, write a function. It will save you time in the long run!
 
 ### How will writing functions help me? 
 
