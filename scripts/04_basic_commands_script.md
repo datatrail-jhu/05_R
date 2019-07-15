@@ -1,4 +1,4 @@
-Now that we've covered what some essentials about R objects, we'll go over some basic commands that will be helpful in working with data.
+Now that we've covered some essentials about R objects, we'll go over some basic commands that will be helpful in working with data.
 
 In working with data, we will be making substantial use of functions. Functions take various arguments as input. These inputs are often objects and other variables detailing how you wish to view, summarize, or manipulate these objects. Function outputs come in a variety of formats. They can return information about the contents of an object; they can return a manipulated version of an object; and they can create entirely new objects. In this lesson, we will cover some essential functions for exploring data. This will only consist of functions that return information about the contents of an object. As you learn more about R, you will learn about functions that can manipulate objects or create entirely new objects.
 

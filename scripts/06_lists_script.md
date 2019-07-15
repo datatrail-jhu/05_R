@@ -18,7 +18,7 @@ We can see the relationship between data frames and lists by using the coercion 
 
 It is often the case that we want to work with part of the information in an object, but not all of it. As alluded to in the previous section, we can subset lists using double square bracket or dollar sign notation. Because data frames are a special type of list, data frames can also be subset using double bracket or dollar sign notation. In addition to double bracket and dollar sign notation, we will cover single bracket notation for subsetting, and we will discuss the differences between these approaches.
 
-When using double square brackets, either an integer of a character string is specified within the brackets. An integer specified the index, or the position, within the list to extract. A character string specifies that the extraction should be done by name. The example here shows how both of these methods can be used to extract the second element of the list l. Note that the extracted objects are character vectors, which we can see with the class function. This is in contrast to the class of l being a list.
+When using double square brackets, either an integer or a character string is specified within the brackets. An integer specified the index, or the position, within the list to extract. A character string specifies that the extraction should be done by name. The example here shows how both of these methods can be used to extract the second element of the list l. Note that the extracted objects are character vectors, which we can see with the class function. This is in contrast to the class of l being a list.
 
 This works similarly for data frames. The example here uses the same idea for a subset of the iris data frame object.
 

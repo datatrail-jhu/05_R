@@ -16,7 +16,7 @@ Now that there is some code in that R Script file, let's save it by going to Fil
 
 We'll save this file in the raw underscore code directory within the code directory.  Navigate to this directory. Then save the file as "m t cars underscore code dot r" by typing this in the "File name" box at the top of the save File window. Click "Save". The new file name will show up along the tab at the top in the scripting are of R Studio Cloud.
 
-In this course we also learned how to generate R Markdown files. So, we mine as well generate one of them now before pushing our changes to git hub. To get started go to File, New File, R Markdown.
+In this course we also learned how to generate R Markdown files. So, we might as well generate one of them now before pushing our changes to git hub. To get started go to File, New File, R Markdown.
 
 In the window that pops up, add the title "m t cars" and your name in the Author box. Click 'OK'.
 

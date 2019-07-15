@@ -71,7 +71,7 @@ We'll save this file in the code/raw_code directory.  Navigate to this directory
 
 #### Adding an .Rmd file
 
-In this course we also learned how to generate R Markdown files (.Rmd). So, we mine as well generate one of them now before pushing our changes to GitHub. 
+In this course we also learned how to generate R Markdown files (.Rmd). So, we might as well generate one of them now before pushing our changes to GitHub. 
 
 To get started go to File > New File > R Markdown...
 

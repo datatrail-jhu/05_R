@@ -194,7 +194,7 @@ It is often the case that we want to work with part of the information in an obj
 
 #### Double square brackets
 
-When using double square brackets, either an integer (i.e. 2) of a character string (i.e. "gear") is specified within the brackets. An integer specifies the index (also referred to as the position) within the list to extract. A character string specifies that the extraction should be done by name. The example below shows how both of these methods can be used to extract the second element of the list `l`. Note that the extracted objects are character vectors, which we can see with the `class` function. This is in contrast to the class of `l` being a list.
+When using double square brackets, either an integer (i.e. 2) or a character string (i.e. "gear") is specified within the brackets. An integer specifies the index (also referred to as the position) within the list to extract. A character string specifies that the extraction should be done by name. The example below shows how both of these methods can be used to extract the second element of the list `l`. Note that the extracted objects are character vectors, which we can see with the `class` function. This is in contrast to the class of `l` being a list.
 
 ```text
 > ## create list

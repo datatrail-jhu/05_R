@@ -1,6 +1,6 @@
 # Basic Commands in R
 
-Now that we've covered what some essentials about R objects, we'll go over some basic commands that will be helpful in working with data.
+Now that we've covered some essentials about R objects, we'll go over some basic commands that will be helpful in working with data.
 
 ### Functions
 
@@ -20,7 +20,7 @@ To visually understand the anatomy of a **function call** (a term that describes
 mean(x, trim = 0.1)
 ```
 
-We have an object `x` that presumably contains numbers, and we want to compute the mean of these numbers with the `mean` function. As stated above, ll of the information inside the parentheses are function inputs (also called **arguments**), and they are separated by commas. In this command, I have supplied the object x and an additional argument `trim` that I set to be 0.1. The `trim` argument calls for a number between 0 and 0.5 and specifies the fraction of the observations in `x` to trim from the upper and lower ends of the data. Here, by including the trim argument, I am specifying that I want to take the mean of the middle 80% of the data.
+We have an object `x` that presumably contains numbers, and we want to compute the mean of these numbers with the `mean` function. As stated above, all of the information inside the parentheses are function inputs (also called **arguments**), and they are separated by commas. In this command, I have supplied the object x and an additional argument `trim` that I set to be 0.1. The `trim` argument calls for a number between 0 and 0.5 and specifies the fraction of the observations in `x` to trim from the upper and lower ends of the data. Here, by including the trim argument, I am specifying that I want to take the mean of the middle 80% of the data.
 
 ### What is this object?
 
