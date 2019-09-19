@@ -158,7 +158,7 @@ If you still want to learn more about R packages, here is a great resource: [Int
 
 ### Slides and Video
 
-![R Packages](https://www.youtube.com/watch?v=mPg8PD0wM6s)
+![R Packages]( https://youtu.be/2vtK6pbPBJU)
 
 * [Slides](https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/edit?usp=sharing)
 

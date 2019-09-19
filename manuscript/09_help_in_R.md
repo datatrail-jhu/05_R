@@ -106,7 +106,7 @@ The R community is a welcoming and helpful community. Many people go years as R 
 
 ### Slides and Video
 
-![Getting Help in R](https://www.youtube.com/watch?v=0sT3oLaoXX8)
+![Getting Help in R](https://youtu.be/xOww087Vp9g)
 
 * [Slides](https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/edit?usp=sharing)
    

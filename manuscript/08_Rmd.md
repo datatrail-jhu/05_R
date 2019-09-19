@@ -109,7 +109,7 @@ In this lesson we introduced you to R Markdown documents, discussing what they a
 
 ### Slides and Video
 
-![R Markdown](https://www.youtube.com/watch?v=gJmCHPC2_eo)
+![R Markdown](https://youtu.be/3jO4uRqR6PA)
 
 * [Slides](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/edit?usp=sharing)  
 

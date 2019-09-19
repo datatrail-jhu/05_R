@@ -300,7 +300,7 @@ You might be interested in going beyond this quick website. For example, you mig
 
 ### Slides and Video
 
-![Creating Websites with R](https://www.youtube.com/watch?v=l1bFLAj84Vw)
+![Creating Websites with R](https://youtu.be/phEJ5oI37bs)
 
 * [Slides](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/edit?usp=sharing)
 

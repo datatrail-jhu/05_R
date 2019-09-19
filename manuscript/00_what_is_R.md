@@ -80,7 +80,7 @@ So, try things out on your own. Try to work through error messages when you're s
 
 ### Slides and Video
 
-![What is R?](https://www.youtube.com/watch?v=vlF0-50KoIE)
+![What is R?](https://youtu.be/zdS-7wfGRso)
 
 [Slides](https://docs.google.com/presentation/d/1-GwpqNvTqNtobrgF-o0SCD0SvUwlv1b_MYF8QnyMHJk/edit?usp=sharing)
 

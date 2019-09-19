@@ -278,7 +278,7 @@ In this lesson, we've discussed that within R information can be assigned to obj
 
 ### Slides and Video
 
-![Objects in R](https://www.youtube.com/watch?v=TMcJscn6KNE)
+![Objects in R](https://youtu.be/w_R66uXAY4I)
 
 * [Slides](https://docs.google.com/presentation/d/1Q47qnIkVzE-JzCEE5Lm54P6yqReg09QJdr7kiFyCbGc/edit?usp=sharing)
 

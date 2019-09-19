@@ -261,7 +261,7 @@ In this lesson, you have been introduced to a number of commonly-used commands (
 
 ### Slides and Video
 
-![Basic commands in R](https://www.youtube.com/watch?v=25YpoM_I5bQ)
+![Basic commands in R](https://youtu.be/OfsyXMY2sAw)
 
 * [Slides](https://docs.google.com/presentation/d/1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM/edit?usp=sharing)
 
