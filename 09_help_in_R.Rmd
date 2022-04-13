@@ -101,7 +101,7 @@ With this interface, in addition to the Topic, you can see the Category (similar
 
 ### Summary
 
-In this lesson we discussed documentation and help pages available directly in R that can be accessed using a question mark followed by the function or package name in question. We discussed two incredibly helpful online forums: Stack Overflow and RStudio community. And, finally, we highlighted the importance of creating a reprex when asking a question on any of these forums. Knowing where to find help and how to best ask for it is an important skill as you're learning a new programing language! 
+In this lesson we discussed documentation and help pages available directly in R that can be accessed using a question mark followed by the function or package name in question. We discussed two incredibly helpful online forums: Stack Overflow and RStudio community. And, finally, we highlighted the importance of creating a reprex when asking a question on any of these forums. Knowing where to find help and how to best ask for it is an important skill as you're learning a new programming language! 
 
 ### Additional Community Resources
 

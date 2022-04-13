@@ -288,7 +288,7 @@ The raw files for her website are available [here](https://raw.githubusercontent
 
 ### Beyond this lesson
 
-In this lesson you learnt how to create websites from R and publishing them in GitHub. You also made your own personal website that you can put in your business cards, Twitter profile, share with friends and anywhere you want. Plus it was all free!
+In this lesson you learned how to create websites from R and publishing them in GitHub. You also made your own personal website that you can put in your business cards, Twitter profile, share with friends and anywhere you want. Plus it was all free!
 
 You might be interested in going beyond this quick website. For example, you might want to add a visitor's map using clustrmaps.com or track visitor using Google Analytics. You could also be interested in buying your own domain, setting up a multi-page website or even make a blog. All those things are possible but beyond the scope of this lesson. If you want to spend the time learning how to do some of those things, check:
 
