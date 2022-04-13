@@ -17,6 +17,7 @@ Basecamp
 Barba
 BioConductor
 bioinformatics
+bioinformatic
 BIPOC
 BigDaddy
 blockchain
@@ -40,6 +41,12 @@ clustrmaps
 config
 cppb
 ctrl
+dMTC
+Dmv
+dna
+dr
+drJ
+ds
 Datatrail
 DataTrail
 DataCamp
