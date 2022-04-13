@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 12 Writing Functions in R | Untitled</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 12 Writing Functions in R | Untitled" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 12 Writing Functions in R | Untitled" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+<meta name="date" content="2022-04-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="lists-and-data-frames-quiz.html"/>
+<link rel="next" href="r-markdown.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>1</b> What is R?</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="what-is-r.html"><a href="what-is-r.html#introduction-to-r"><i class="fa fa-check"></i><b>1.0.1</b> Introduction to R</a></li>
+<li class="chapter" data-level="1.0.2" data-path="what-is-r.html"><a href="what-is-r.html#the-r-programming-language"><i class="fa fa-check"></i><b>1.0.2</b> The R programming language</a></li>
+<li class="chapter" data-level="1.0.3" data-path="what-is-r.html"><a href="what-is-r.html#rstudio"><i class="fa fa-check"></i><b>1.0.3</b> RStudio</a></li>
+<li class="chapter" data-level="1.0.4" data-path="what-is-r.html"><a href="what-is-r.html#rstudio-cloud"><i class="fa fa-check"></i><b>1.0.4</b> RStudio Cloud</a></li>
+<li class="chapter" data-level="1.0.5" data-path="what-is-r.html"><a href="what-is-r.html#basic-history"><i class="fa fa-check"></i><b>1.0.5</b> Basic History</a></li>
+<li class="chapter" data-level="1.0.6" data-path="what-is-r.html"><a href="what-is-r.html#learning-r"><i class="fa fa-check"></i><b>1.0.6</b> Learning R</a></li>
+<li class="chapter" data-level="1.0.7" data-path="what-is-r.html"><a href="what-is-r.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="1.0.8" data-path="what-is-r.html"><a href="what-is-r.html#welcome-to-the-what-is-r-quiz"><i class="fa fa-check"></i><b>1.0.8</b> Welcome to the What is R? quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html"><i class="fa fa-check"></i><b>2</b> RStudio Cloud Tour</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#getting-started-in-rstudio-cloud"><i class="fa fa-check"></i><b>2.0.1</b> Getting Started in RStudio Cloud</a></li>
+<li class="chapter" data-level="2.0.2" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#the-tour"><i class="fa fa-check"></i><b>2.0.2</b> The Tour</a></li>
+<li class="chapter" data-level="2.0.3" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#source-script-editor-panel"><i class="fa fa-check"></i><b>2.0.3</b> Source: script editor panel</a></li>
+<li class="chapter" data-level="2.0.4" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#fileshelpplotspackagesviewer"><i class="fa fa-check"></i><b>2.0.4</b> Files/Help/Plots/Packages/Viewer</a></li>
+<li class="chapter" data-level="2.0.5" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#swirl"><i class="fa fa-check"></i><b>2.0.5</b> Swirl</a></li>
+<li class="chapter" data-level="2.0.6" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#summary"><i class="fa fa-check"></i><b>2.0.6</b> Summary</a></li>
+<li class="chapter" data-level="2.0.7" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="2.0.8" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#rstudio-cloud-tour-quiz"><i class="fa fa-check"></i><b>2.0.8</b> RStudio Cloud Tour quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>3</b> R Packages</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="r-packages.html"><a href="r-packages.html#what-is-an-r-package"><i class="fa fa-check"></i><b>3.0.1</b> What is an R package?</a></li>
+<li class="chapter" data-level="3.0.2" data-path="r-packages.html"><a href="r-packages.html#what-are-repositories"><i class="fa fa-check"></i><b>3.0.2</b> What are repositories?</a></li>
+<li class="chapter" data-level="3.0.3" data-path="r-packages.html"><a href="r-packages.html#how-do-you-know-what-package-is-right-for-you"><i class="fa fa-check"></i><b>3.0.3</b> How do you know what package is right for you?</a></li>
+<li class="chapter" data-level="3.0.4" data-path="r-packages.html"><a href="r-packages.html#how-do-you-install-packages"><i class="fa fa-check"></i><b>3.0.4</b> How do you install packages?</a></li>
+<li class="chapter" data-level="3.0.5" data-path="r-packages.html"><a href="r-packages.html#loading-packages"><i class="fa fa-check"></i><b>3.0.5</b> Loading packages</a></li>
+<li class="chapter" data-level="3.0.6" data-path="r-packages.html"><a href="r-packages.html#updating-removing-unloading-packages"><i class="fa fa-check"></i><b>3.0.6</b> Updating, removing, unloading packages</a></li>
+<li class="chapter" data-level="3.0.7" data-path="r-packages.html"><a href="r-packages.html#using-the-commands-in-a-function"><i class="fa fa-check"></i><b>3.0.7</b> Using the commands in a function</a></li>
+<li class="chapter" data-level="3.0.8" data-path="r-packages.html"><a href="r-packages.html#summary-1"><i class="fa fa-check"></i><b>3.0.8</b> Summary</a></li>
+<li class="chapter" data-level="3.0.9" data-path="r-packages.html"><a href="r-packages.html#additional-resources"><i class="fa fa-check"></i><b>3.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.0.10" data-path="r-packages.html"><a href="r-packages.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.10</b> Slides and Video</a></li>
+<li class="chapter" data-level="3.0.11" data-path="r-packages.html"><a href="r-packages.html#r-packages-quiz"><i class="fa fa-check"></i><b>3.0.11</b> R Packages Quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>4</b> Objects in R</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="objects-in-r.html"><a href="objects-in-r.html#what-is-an-object"><i class="fa fa-check"></i><b>4.0.1</b> What is an object?</a></li>
+<li class="chapter" data-level="4.0.2" data-path="objects-in-r.html"><a href="objects-in-r.html#storing-objects"><i class="fa fa-check"></i><b>4.0.2</b> Storing objects</a></li>
+<li class="chapter" data-level="4.0.3" data-path="objects-in-r.html"><a href="objects-in-r.html#printing-objects"><i class="fa fa-check"></i><b>4.0.3</b> Printing objects</a></li>
+<li class="chapter" data-level="4.0.4" data-path="objects-in-r.html"><a href="objects-in-r.html#character"><i class="fa fa-check"></i><b>4.0.4</b> Character</a></li>
+<li class="chapter" data-level="4.0.5" data-path="objects-in-r.html"><a href="objects-in-r.html#integer"><i class="fa fa-check"></i><b>4.0.5</b> Integer</a></li>
+<li class="chapter" data-level="4.0.6" data-path="objects-in-r.html"><a href="objects-in-r.html#numeric"><i class="fa fa-check"></i><b>4.0.6</b> Numeric</a></li>
+<li class="chapter" data-level="4.0.7" data-path="objects-in-r.html"><a href="objects-in-r.html#logical"><i class="fa fa-check"></i><b>4.0.7</b> Logical</a></li>
+<li class="chapter" data-level="4.0.8" data-path="objects-in-r.html"><a href="objects-in-r.html#factor"><i class="fa fa-check"></i><b>4.0.8</b> Factor</a></li>
+<li class="chapter" data-level="4.0.9" data-path="objects-in-r.html"><a href="objects-in-r.html#data-frames"><i class="fa fa-check"></i><b>4.0.9</b> Data frames</a></li>
+<li class="chapter" data-level="4.0.10" data-path="objects-in-r.html"><a href="objects-in-r.html#missing-values"><i class="fa fa-check"></i><b>4.0.10</b> Missing values</a></li>
+<li class="chapter" data-level="4.0.11" data-path="objects-in-r.html"><a href="objects-in-r.html#determining-the-class-of-an-object"><i class="fa fa-check"></i><b>4.0.11</b> Determining the class of an object</a></li>
+<li class="chapter" data-level="4.0.12" data-path="objects-in-r.html"><a href="objects-in-r.html#summary-2"><i class="fa fa-check"></i><b>4.0.12</b> Summary</a></li>
+<li class="chapter" data-level="4.0.13" data-path="objects-in-r.html"><a href="objects-in-r.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.13</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="objects-in-r-quiz.html"><a href="objects-in-r-quiz.html"><i class="fa fa-check"></i><b>5</b> Objects in R quiz</a></li>
+<li class="chapter" data-level="6" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html"><i class="fa fa-check"></i><b>6</b> Basic Commands in R</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#functions"><i class="fa fa-check"></i><b>6.0.1</b> Functions</a></li>
+<li class="chapter" data-level="6.0.2" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#what-is-this-object"><i class="fa fa-check"></i><b>6.0.2</b> What is this object?</a></li>
+<li class="chapter" data-level="6.0.3" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#how-big-is-this-object"><i class="fa fa-check"></i><b>6.0.3</b> How big is this object?</a></li>
+<li class="chapter" data-level="6.0.4" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#are-there-named-features-of-this-object"><i class="fa fa-check"></i><b>6.0.4</b> Are there named features of this object?</a></li>
+<li class="chapter" data-level="6.0.5" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#what-does-this-object-look-like"><i class="fa fa-check"></i><b>6.0.5</b> What does this object look like?</a></li>
+<li class="chapter" data-level="6.0.6" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#errors-warnings-and-messages"><i class="fa fa-check"></i><b>6.0.6</b> Errors, Warnings, and Messages</a></li>
+<li class="chapter" data-level="6.0.7" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#summary-3"><i class="fa fa-check"></i><b>6.0.7</b> Summary</a></li>
+<li class="chapter" data-level="6.0.8" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#slides-and-video-4"><i class="fa fa-check"></i><b>6.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="basic-commands-in-r-quiz.html"><a href="basic-commands-in-r-quiz.html"><i class="fa fa-check"></i><b>7</b> Basic Commands in R quiz</a></li>
+<li class="chapter" data-level="8" data-path="working-with-logicals.html"><a href="working-with-logicals.html"><i class="fa fa-check"></i><b>8</b> Working with Logicals</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="working-with-logicals.html"><a href="working-with-logicals.html#logical-operators"><i class="fa fa-check"></i><b>8.0.1</b> Logical operators</a></li>
+<li class="chapter" data-level="8.0.2" data-path="working-with-logicals.html"><a href="working-with-logicals.html#logical-functions"><i class="fa fa-check"></i><b>8.0.2</b> Logical functions</a></li>
+<li class="chapter" data-level="8.0.3" data-path="working-with-logicals.html"><a href="working-with-logicals.html#summary-4"><i class="fa fa-check"></i><b>8.0.3</b> Summary</a></li>
+<li class="chapter" data-level="8.0.4" data-path="working-with-logicals.html"><a href="working-with-logicals.html#slides-and-video-5"><i class="fa fa-check"></i><b>8.0.4</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="working-with-logicals-quiz.html"><a href="working-with-logicals-quiz.html"><i class="fa fa-check"></i><b>9</b> Working with Logicals quiz</a></li>
+<li class="chapter" data-level="10" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html"><i class="fa fa-check"></i><b>10</b> Lists and Data Frames</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#what-are-lists-in-r"><i class="fa fa-check"></i><b>10.0.1</b> What are lists in R?</a></li>
+<li class="chapter" data-level="10.0.2" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#creating-a-list"><i class="fa fa-check"></i><b>10.0.2</b> Creating a list</a></li>
+<li class="chapter" data-level="10.0.3" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#lists-and-data-frames-1"><i class="fa fa-check"></i><b>10.0.3</b> Lists and data frames</a></li>
+<li class="chapter" data-level="10.0.4" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#subsetting-lists"><i class="fa fa-check"></i><b>10.0.4</b> Subsetting lists</a></li>
+<li class="chapter" data-level="10.0.5" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#summary-5"><i class="fa fa-check"></i><b>10.0.5</b> Summary</a></li>
+<li class="chapter" data-level="10.0.6" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#slides-and-video-6"><i class="fa fa-check"></i><b>10.0.6</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lists-and-data-frames-quiz.html"><a href="lists-and-data-frames-quiz.html"><i class="fa fa-check"></i><b>11</b> Lists and Data Frames quiz</a></li>
+<li class="chapter" data-level="12" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html"><i class="fa fa-check"></i><b>12</b> Writing Functions in R</a>
+<ul>
+<li class="chapter" data-level="12.0.1" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#when-to-write-a-function"><i class="fa fa-check"></i><b>12.0.1</b> When to write a function</a></li>
+<li class="chapter" data-level="12.0.2" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#how-will-writing-functions-help-me"><i class="fa fa-check"></i><b>12.0.2</b> How will writing functions help me?</a></li>
+<li class="chapter" data-level="12.0.3" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#how-to-write-a-function"><i class="fa fa-check"></i><b>12.0.3</b> How to write a function</a></li>
+<li class="chapter" data-level="12.0.4" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#commenting-your-function"><i class="fa fa-check"></i><b>12.0.4</b> Commenting your function</a></li>
+<li class="chapter" data-level="12.0.5" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#function-output"><i class="fa fa-check"></i><b>12.0.5</b> Function Output</a></li>
+<li class="chapter" data-level="12.0.6" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#an-example-function-converting-from-celsius-to-fahrenheit"><i class="fa fa-check"></i><b>12.0.6</b> An example function: Converting from Celsius to Fahrenheit</a></li>
+<li class="chapter" data-level="12.0.7" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#functions-with-default-arguments"><i class="fa fa-check"></i><b>12.0.7</b> Functions with default arguments</a></li>
+<li class="chapter" data-level="12.0.8" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#summary-6"><i class="fa fa-check"></i><b>12.0.8</b> Summary</a></li>
+<li class="chapter" data-level="12.0.9" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#additional-resources-1"><i class="fa fa-check"></i><b>12.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="12.0.10" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#slides-and-video-7"><i class="fa fa-check"></i><b>12.0.10</b> Slides and Video</a></li>
+<li class="chapter" data-level="12.0.11" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#writing-functions-in-r-quiz"><i class="fa fa-check"></i><b>12.0.11</b> Writing Functions in R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>13</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="r-markdown.html"><a href="r-markdown.html#what-is-r-markdown"><i class="fa fa-check"></i><b>13.0.1</b> What is R Markdown?</a></li>
+<li class="chapter" data-level="13.0.2" data-path="r-markdown.html"><a href="r-markdown.html#why-use-r-markdown"><i class="fa fa-check"></i><b>13.0.2</b> Why use R Markdown?</a></li>
+<li class="chapter" data-level="13.0.3" data-path="r-markdown.html"><a href="r-markdown.html#getting-started-with-r-markdown"><i class="fa fa-check"></i><b>13.0.3</b> Getting started with R Markdown</a></li>
+<li class="chapter" data-level="13.0.4" data-path="r-markdown.html"><a href="r-markdown.html#knitting-documents"><i class="fa fa-check"></i><b>13.0.4</b> “Knitting” documents</a></li>
+<li class="chapter" data-level="13.0.5" data-path="r-markdown.html"><a href="r-markdown.html#summary-7"><i class="fa fa-check"></i><b>13.0.5</b> Summary</a></li>
+<li class="chapter" data-level="13.0.6" data-path="r-markdown.html"><a href="r-markdown.html#additional-resources-2"><i class="fa fa-check"></i><b>13.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="13.0.7" data-path="r-markdown.html"><a href="r-markdown.html#slides-and-video-8"><i class="fa fa-check"></i><b>13.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="13.0.8" data-path="r-markdown.html"><a href="r-markdown.html#r-markdown-quiz"><i class="fa fa-check"></i><b>13.0.8</b> R Markdown quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html"><i class="fa fa-check"></i><b>14</b> Getting Help in R</a>
+<ul>
+<li class="chapter" data-level="14.0.1" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#r-help"><i class="fa fa-check"></i><b>14.0.1</b> R Help: <code>?</code></a></li>
+<li class="chapter" data-level="14.0.2" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#stack-overflow"><i class="fa fa-check"></i><b>14.0.2</b> Stack Overflow</a></li>
+<li class="chapter" data-level="14.0.3" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#rstudio-community"><i class="fa fa-check"></i><b>14.0.3</b> RStudio Community</a></li>
+<li class="chapter" data-level="14.0.4" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#summary-8"><i class="fa fa-check"></i><b>14.0.4</b> Summary</a></li>
+<li class="chapter" data-level="14.0.5" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#additional-community-resources"><i class="fa fa-check"></i><b>14.0.5</b> Additional Community Resources</a></li>
+<li class="chapter" data-level="14.0.6" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#slides-and-video-9"><i class="fa fa-check"></i><b>14.0.6</b> Slides and Video</a></li>
+<li class="chapter" data-level="14.0.7" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#getting-help-in-r-quiz"><i class="fa fa-check"></i><b>14.0.7</b> Getting Help in R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html"><i class="fa fa-check"></i><b>15</b> Pushing Code from R to GitHub</a>
+<ul>
+<li class="chapter" data-level="15.0.1" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#github-repository-my_first_project"><i class="fa fa-check"></i><b>15.0.1</b> GitHub repository: <code>my_first_project</code></a></li>
+<li class="chapter" data-level="15.0.2" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#adding-code-to-your-github-project"><i class="fa fa-check"></i><b>15.0.2</b> Adding code to your GitHub project</a></li>
+<li class="chapter" data-level="15.0.3" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#summary-9"><i class="fa fa-check"></i><b>15.0.3</b> Summary</a></li>
+<li class="chapter" data-level="15.0.4" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#slides-and-video-10"><i class="fa fa-check"></i><b>15.0.4</b> Slides and Video</a></li>
+<li class="chapter" data-level="15.0.5" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#pushing-code-from-r-to-github-quiz"><i class="fa fa-check"></i><b>15.0.5</b> Pushing Code from R to GitHub quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html"><i class="fa fa-check"></i><b>16</b> Creating Websites with R</a>
+<ul>
+<li class="chapter" data-level="16.0.1" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#create-your-website-repository"><i class="fa fa-check"></i><b>16.0.1</b> Create your website repository</a></li>
+<li class="chapter" data-level="16.0.2" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#sync-files-with-github"><i class="fa fa-check"></i><b>16.0.2</b> Sync files with GitHub</a></li>
+<li class="chapter" data-level="16.0.3" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#one-last-setup-step"><i class="fa fa-check"></i><b>16.0.3</b> One last setup step</a></li>
+<li class="chapter" data-level="16.0.4" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#make-the-website"><i class="fa fa-check"></i><b>16.0.4</b> Make the website</a></li>
+<li class="chapter" data-level="16.0.5" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#publish-the-website"><i class="fa fa-check"></i><b>16.0.5</b> Publish the website</a></li>
+<li class="chapter" data-level="16.0.6" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#customize-the-website"><i class="fa fa-check"></i><b>16.0.6</b> Customize the website</a></li>
+<li class="chapter" data-level="16.0.7" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#change-the-theme"><i class="fa fa-check"></i><b>16.0.7</b> Change the theme</a></li>
+<li class="chapter" data-level="16.0.8" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#adding-a-table-of-contents"><i class="fa fa-check"></i><b>16.0.8</b> Adding a table of contents</a></li>
+<li class="chapter" data-level="16.0.9" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#adding-an-image"><i class="fa fa-check"></i><b>16.0.9</b> Adding an image</a></li>
+<li class="chapter" data-level="16.0.10" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#a-similar-website"><i class="fa fa-check"></i><b>16.0.10</b> A similar website</a></li>
+<li class="chapter" data-level="16.0.11" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#beyond-this-lesson"><i class="fa fa-check"></i><b>16.0.11</b> Beyond this lesson</a></li>
+<li class="chapter" data-level="16.0.12" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#slides-and-video-11"><i class="fa fa-check"></i><b>16.0.12</b> Slides and Video</a></li>
+<li class="chapter" data-level="16.0.13" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#creating-websites-with-r-quiz"><i class="fa fa-check"></i><b>16.0.13</b> Creating Websites with R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="17" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>17</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Untitled</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="writing-functions-in-r" class="section level1" number="12">
+<h1><span class="header-section-number">Chapter 12</span> Writing Functions in R</h1>
+<p>Up to this point, you’ve come across a number of functions. <code>length()</code> will tell you the length of an object. <code>names()</code> will allow you assign names to your object. And, <code>nrow()</code> will tell you the number of rows in your data frame. These are all functions within R. Very generally, all of these functions take some input (often, an object in R), do something using that input when the function runs, and then provide the user (you!) some output.</p>
+<p>In addition to built-in functions, R allows for users to write code and develop additional functions that will work in addition to these included functions. We talked about these types of functions when we talked about packages in an earlier lesson. In these cases, developers wrote code to accomplish a task that was not included the base functions that come with R.</p>
+<p>While R packages are a great way to add functionality to your work in R, functions can be written outside of packages. You can write your own functions at any point in time in R. When you write code to carry out a function, you generate a <strong>User-Defined Function</strong> (UDF). UDFs are functions beyond the set of functions that come built-in to R, and are written by users.</p>
+<p>UDFs are incredibly helpful as you code. While they may seem intimidating now, take your time working through this lesson. It’s worth the time investment now to really understand how to write a function</p>
+<div id="when-to-write-a-function" class="section level3" number="12.0.1">
+<h3><span class="header-section-number">12.0.1</span> When to write a function</h3>
+<p>Writing functions can be a daunting task as you learn to code. As you get more comfortable coding, you’ll naturally get more comfortable writing functions. However, you will always learn better and more efficient ways to write functions. This means that the learning never stops, which can be a lot of fun! But, if this is a difficult lesson, you’re not alone. Functions take a while to get the hang of but are incredibly helpful once you do!</p>
+<p>That said, when you’re new to coding, it often <em>seems</em> easier to avoid writing functions and just copy and paste code over and over again each time you have to carry out the task that that chunk of code carries out. However, a really important rule of thumb is that you should <strong>write a function whenever you’ve copy and pasted code more than once</strong>. So, if you’ve written a chunk of code and then used it in at least two more places, write a function. It will save you time in the long run!</p>
+</div>
+<div id="how-will-writing-functions-help-me" class="section level3" number="12.0.2">
+<h3><span class="header-section-number">12.0.2</span> How will writing functions help me?</h3>
+<p>Writing functions for tasks that you carry out multiple times is helpful because:</p>
+<ol style="list-style-type: decimal">
+<li><strong>It makes your code more readable.</strong> - By having a single function such as, for example, <code>summarize_samples( samples )</code>, instead of requiring some twenty lines of code to summarize your samples in the middle of your script file, readers (and you later on when you come back to this code!) will quickly and easily be able to determine what that part of your code accomplishes by that single function call.</li>
+<li><strong>You only have to update code in one place.</strong> - After writing a function, to update this code in the future (and trust me, you always end up editing code), you only have to update the function code once. Alternatively, if you had copy and pasted this code all over your script files, you’d have to find each instance, and edit the code in each individual case. From personal experience, save yourself the hassle, and write a function!</li>
+<li><strong>You’ll avoid accidental errors.</strong> Inevitably, as you copy and paste you’ll decide you want to change an object name here or there. However, if you do this in one place, but forget to do this in another place where you’ve copy and pasted the code, you’ll run into errors. By writing functions, this issue is avoided!</li>
+</ol>
+</div>
+<div id="how-to-write-a-function" class="section level3" number="12.0.3">
+<h3><span class="header-section-number">12.0.3</span> How to write a function</h3>
+<p>There are three main components to a function. Each function has a:
+1. name
+2. argument(s)
+3. body</p>
+<p>We’ll break down each of these three parts in this section, but know that generally every function in R will use this format:</p>
+<pre class="text"><code>name &lt;- function(arguments){
+    body
+}</code></pre>
+<p>You will assign a name to each function you write. This will go to the left of the assignment operator: <code>&lt;-</code>. Note that to create a function you will then call the built-in R function <code>function</code> (what a perfect function name!). The arguments of the function you’re writing will go inside the parentheses after you call <code>function</code>. This will be followed by curly braces. All the code you want your function to execute will go within these curly braces. Now that you have an idea of what the basic components of a function in R are, we’ll discuss each in greater detail.</p>
+<div id="naming-your-function" class="section level4" number="12.0.3.1">
+<h4><span class="header-section-number">12.0.3.1</span> Naming your function</h4>
+<p>Naming your function may seem trivial but is an important step in writing a function. To be clear, R doesn’t <em>really</em> care what you name your function. You could name your function “asdfklj,” and as long as the code in the body of the function is correct, R will know what to do and run your function correctly. So, if R doesn’t care about the name, why should you? Well, honestly, you aren’t naming your function well for R, you’re naming it well for humans (including your future self!).</p>
+<p>Good function names in R explain what the function does <strong>clearly and succinctly</strong>. Thus, you’ll want to choose function names that are the shortest possible names but still clearly describe what the function does. Additionally, function names are <em>generally</em> verbs, or action words. This is because functions are usually <em>doing something</em>, so it makes sense to have the function name reflect that. Above I mentioned you may often want to summarize some details about the samples in your dataset. Thus, you would likely want to write a function called <code>summarize_samples</code>. This is a reasonable function name. It clearly describes <em>what the function does</em>. It may be a <em>tad</em> long, but it’s better than the alternatives. <code>ss</code> is way too short for a function name, and <code>summarize</code> doesn’t do the trick here because it’s not specific enough. So, <code>summarize_samples</code> is a reasonably good function name.</p>
+<p>You may have noticed that the two words summarize and samples is joined by an underscore. Function names, like objects in R, cannot contain spaces. So, I could have chosen <code>summarizesamples</code>, but that’s hard to read quickly. Or, I could have chosen <code>SummarizeSamples</code>, but that’s harder to type, having to capitalize two letters. Thus, it’s generally best to use what is known as <strong>snake case</strong> for functions. Snake case means that all words include only lowercase letters and that separate words are connected by an underscore (_). No spaces are allowed in snake case.</p>
+<p>Lastly, you’ll want to choose a name that is not already a function that exists in R. For instance, you would want to avoid naming a function <code>mean</code>, as a function name since it’s already used by R.</p>
+<p>To recap, the best function names are:
+* short
+* clear
+* descriptive
+* verbs (action words)
+* “snake case”
+* not already R functions</p>
+</div>
+<div id="function-arguments" class="section level4" number="12.0.3.2">
+<h4><span class="header-section-number">12.0.3.2</span> Function arguments</h4>
+<p>Now that we’ve discussed how to name the functions you write, we have to discuss the <strong>arguments</strong>, or <strong>inputs</strong> to your functions. Arguments go within the parentheses after <code>function</code>. A function can have multiple arguments, but every function must have <strong>at least one argument</strong>. Arguments tell the function on what input values the function should act.</p>
+<p>For example, let’s return now to a function you’re already familiar with: the <code>length</code> function. This function tells you the length of an object. Thus, the argument to this function is the object for which you want to get the length.</p>
+<p>Take the following code into consideration:</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="writing-functions-in-r.html#cb79-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">19</span>)</span>
+<span id="cb79-2"><a href="writing-functions-in-r.html#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x)</span></code></pre></div>
+<p>The object <code>x</code> contains four numbers. When you want to run the <code>length</code> function, you have to tell R what you want the length of. Thus, the argument required is the object, which in this case is the object <code>x</code>.</p>
+<p>For functions you write, you will have to tell the function what the inputs are for the function by defining at least one argument within the parentheses after you call <code>function</code>. We’ll work through an example of this later in the lesson, but for now it’s important to note that unlike functions (which are verbs), arguments tend to be nouns. Generally, arguments describe on what object the function (verb) should be carried out. Nouns are good words to accomplish this.</p>
+</div>
+<div id="body-of-your-function" class="section level4" number="12.0.3.3">
+<h4><span class="header-section-number">12.0.3.3</span> Body of your function</h4>
+<p>Finally, the code you want to run using the input you’ve defined as an argument is included in the body of the function. While the name of the function was for the humans using the function or reading your code, this section is primarily for the computer. This section will only run properly if the R code is correctly written.</p>
+</div>
+</div>
+<div id="commenting-your-function" class="section level3" number="12.0.4">
+<h3><span class="header-section-number">12.0.4</span> Commenting your function</h3>
+<p>So, it was just mentioned that the body of your function is for the computer. While that’s true (the computer will know what to do if your R code is correct!), to make your function <em>even better</em> the code within your function should include comments that make sense to humans.</p>
+<p>By including lines in your code that start with a pound sign (#) and are followed by human-readable text, you make your function easily understandable to anyone trying to figure out what your code does. See examples of this as we work through an example function below.</p>
+<p>Additionally, for long functions with a lot of steps, it’s helpful to break up the sections of your code with dashes (<code>-</code>) that visually separate the sections for others when reading the function. For example, below, <YOUR CODE HERE> represents lines of code that carry out the task explained in the comment above. The comment lines (#) with dashes (-) help visually separate out the sections for anyone looking at this code. Note, the computer will skip over any line of code that starts with a pound sign (#), so these comments are <em>only helpful to humans</em>. <em>But</em> they are incredibly helpful to humans. <strong>Always take the time to comment your code</strong>, especially in functions.</p>
+<pre class="text"><code># Read in sample --------------------------------------------------------
+
+&lt;YOUR CODE HERE&gt;
+
+# Calculate sample information --------------------------------------
+
+&lt;YOUR CODE HERE&gt;
+
+# Generate summary table --------------------------------------------
+
+&lt;YOUR CODE HERE&gt;</code></pre>
+</div>
+<div id="function-output" class="section level3" number="12.0.5">
+<h3><span class="header-section-number">12.0.5</span> Function Output</h3>
+<p>In R, the default for any function is to <strong>return the last statement evaluated</strong>. If the last bit of code computes a value, the function will return the last value that was computed. So, if you write code and the last value calculated in the body of your function is what you want, then you’re all set.</p>
+<p>If, however, you want the function to return <em>something else</em> as its output (such as an object you created earlier in the function or multiple values as the functions’ output), you’ll need to specify that using the <code>return</code> function. The argument of the return function is the object you want the function to return. So generally, you would include something like the following at the end of the body of your function (still within the curly braces):</p>
+<pre><code>return(object_you_want_to_return)</code></pre>
+</div>
+<div id="an-example-function-converting-from-celsius-to-fahrenheit" class="section level3" number="12.0.6">
+<h3><span class="header-section-number">12.0.6</span> An example function: Converting from Celsius to Fahrenheit</h3>
+<p>Now that we’ve covered the basics components to writing a function in R, we can walk through this using an example function.</p>
+<p>Specifically, imagine you need to convert Celsius degree to Fahrenheit. You want to know what 0, 20, and 100 degrees Celsius are in Fahrenheit. We can write a function to accomplish this!</p>
+<p>If you were to Google how to convert Celsius to Fahrenheit, you’d find that the conversion formula is: T(F) = (9/5) * T(C) + 32. So to calculate what 0, 20, and 100 degree Celsius are you can do the calculation above for each temperature by hand. You could take zero degrees celsius, multiply it by (9/5) and then add 32 to it. Then, you could repeat this for 20 C and then again for 100 C. The more temperatures you need to convert, the longer this will take you. But, as you’re repeating a task (a calculation) multiple times and just changing the input for each calculation, it is the perfect time to write a function. Instead of doing something over and over by hand (or by copy and pasting code), you can just write a function in R to do the work for you!</p>
+<p>Take for example this function:</p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="writing-functions-in-r.html#cb82-1" aria-hidden="true" tabindex="-1"></a>celsius_to_fahrenheit <span class="ot">&lt;-</span> <span class="cf">function</span>(C){</span>
+<span id="cb82-2"><a href="writing-functions-in-r.html#cb82-2" aria-hidden="true" tabindex="-1"></a>    C <span class="sc">*</span> (<span class="dv">9</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">+</span> <span class="dv">32</span></span>
+<span id="cb82-3"><a href="writing-functions-in-r.html#cb82-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>To recap:
+* <code>celsius_to_fahrenheit</code> is the name of the function.
+* <code>C</code> is the argument (or input)
+* <code>C * (9/5) + 32</code> is the body, and tells R what to do to the input</p>
+<p>Specifically, this code says, take whatever input C is, multiply it by (9/5) and then add 32 to that number. This is exactly what we want to do to convert from Celsius to Fahrenheit! So, just copy and paste this code into R, and then try running the following code!</p>
+<div id="running-a-function" class="section level4" number="12.0.6.1">
+<h4><span class="header-section-number">12.0.6.1</span> Running a Function</h4>
+<p>To run a function, you take the function name (here, our function name is <code>celsius_to_fahrenheit</code> and then put the values for the input arguments within the parentheses. Here, our input is a temperature in degrees Celsius, and specifically, we’ll use 70 degrees Celsius as our input for this example.</p>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="writing-functions-in-r.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">celsius_to_fahrenheit</span>(<span class="dv">70</span>)</span>
+<span id="cb83-2"><a href="writing-functions-in-r.html#cb83-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">158</span></span></code></pre></div>
+<p>Here, the output lets us know that 70 degrees Celsius (our input argument) is 158 degrees Fahrenheit (the output from running the function).</p>
+<p>Additionally, this example demonstrates that sometimes a function can carry out a necessary and important task with only a single line of code. But, what about our initial question? What about calculating what 0, 20, and 100 degree Celsius is in Fahrenheit?</p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="writing-functions-in-r.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">celsius_to_fahrenheit</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">20</span>, <span class="dv">100</span>))</span>
+<span id="cb84-2"><a href="writing-functions-in-r.html#cb84-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>]  <span class="dv">32</span>  <span class="dv">68</span> <span class="dv">212</span></span></code></pre></div>
+<p>By including these three values into our functions arguments, we quickly and easily calculate the three temperatures values in Fahrenheit! And, we didn’t have to do each by hand!</p>
+<p>While the goal of this function is pretty straightforward and only accomplishes one task, functions can and do get a lot more complicated and include a lot more code. However, even when this is the case, the overall structure of the function in R will not change. The function will still have a name, at least one argument, and code in the body of the function. Let’s take a look at how functions can get a little more complicated.</p>
+</div>
+<div id="customizing-the-functions-output-return" class="section level4" number="12.0.6.2">
+<h4><span class="header-section-number">12.0.6.2</span> Customizing the function’s output: <code>return()</code></h4>
+<p>Now that we know what the basic structure of the function is, let’s make it a little bit fancier. We mentioned it briefly above, but the <code>return</code> function can help customize what your function returns. In the example above, we took advantage of the fact that R will automatically return the last statement evaluated (which in this case is the last value calculated). For instance, when the function is called, we like it to return a sentence that is more clear.</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="writing-functions-in-r.html#cb85-1" aria-hidden="true" tabindex="-1"></a>celsius_to_fahrenheit <span class="ot">&lt;-</span> <span class="cf">function</span>(C){</span>
+<span id="cb85-2"><a href="writing-functions-in-r.html#cb85-2" aria-hidden="true" tabindex="-1"></a>F <span class="ot">&lt;-</span> C <span class="sc">*</span> (<span class="dv">9</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">+</span> <span class="dv">32</span></span>
+<span id="cb85-3"><a href="writing-functions-in-r.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(<span class="fu">paste</span>(<span class="st">&quot;The entered Celsius temperature is&quot;</span>, F, <span class="st">&quot;degrees Fahrenheit.&quot;</span>))</span>
+<span id="cb85-4"><a href="writing-functions-in-r.html#cb85-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Here, the first line of code takes the input argument, the degrees celsius (<code>C</code>) and converts it to degrees Fahrenheit, as the function did above. However, this time, that line of code is assigned to an object <code>F</code>. The additional line of code uses the <code>return</code> function to explicitly state what the function should return. Here, the function <code>paste</code> is used within return to combine the text “The entered Celsius temperature is” with the value of variable <code>F</code> followed by “degrees Fahrenheit”, where each is separated by a comma.</p>
+<p>Note that the text we want <code>paste</code> to display is in quotes while the object <code>F</code> is <em>not</em> in quotes. This is how R knows that the text is supposed to be displayed as text while F is supposed to be the value of that object.</p>
+<p>Now if we were to call this updated function, the output would provide a sentence that makes explicitly clear what the output of the function means:</p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="writing-functions-in-r.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">celsius_to_fahrenheit</span>(<span class="dv">70</span>)</span>
+<span id="cb86-2"><a href="writing-functions-in-r.html#cb86-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;The entered Celsius temperature is 158 degrees Fahrenheit.&quot;</span></span></code></pre></div>
+<p>Just as we wanted, we have a clear sentence output with the conversion of 70 C to 158 F!</p>
+</div>
+<div id="required-arguments" class="section level4" number="12.0.6.3">
+<h4><span class="header-section-number">12.0.6.3</span> Required arguments</h4>
+<p>Earlier we stated that functions require at least one argument. That wasn’t <em>quite</em> true. You <em>can</em> write a function that does not have an argument explicitly stated, but that instead requires input from the user. While we’ll include an example here, we won’t go into explicit detail as these types of functions are not frequently used in R code. For instance, we can write a function that can only be called by <code>celsius_to_fahrenheit()</code> and no input is passed in the function. When this function is run, a prompt appears asking the user to enter a value.</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="writing-functions-in-r.html#cb87-1" aria-hidden="true" tabindex="-1"></a>celsius_to_fahrenheit <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb87-2"><a href="writing-functions-in-r.html#cb87-2" aria-hidden="true" tabindex="-1"></a>  C <span class="ot">&lt;-</span> <span class="fu">readline</span>(<span class="at">prompt=</span><span class="st">&quot;Enter a value in Celsius: &quot;</span>)</span>
+<span id="cb87-3"><a href="writing-functions-in-r.html#cb87-3" aria-hidden="true" tabindex="-1"></a>  F <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(C) <span class="sc">*</span> (<span class="dv">9</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">+</span> <span class="dv">32</span></span>
+<span id="cb87-4"><a href="writing-functions-in-r.html#cb87-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">paste</span>(<span class="st">&quot;The entered Celsius temperature is&quot;</span>, F, <span class="st">&quot;degrees Fahrenheit.&quot;</span>))</span>
+<span id="cb87-5"><a href="writing-functions-in-r.html#cb87-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>When this is run, the output would look as follows:</p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="writing-functions-in-r.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">celsius_to_fahrenheit</span>()</span>
+<span id="cb88-2"><a href="writing-functions-in-r.html#cb88-2" aria-hidden="true" tabindex="-1"></a>Enter a value <span class="cf">in</span> Celsius<span class="sc">:</span> <span class="dv">70</span></span>
+<span id="cb88-3"><a href="writing-functions-in-r.html#cb88-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;The entered Celsius temperature is 158 degrees Fahrenheit.&quot;</span></span></code></pre></div>
+</div>
+<div id="functions-with-multiple-arguments" class="section level4" number="12.0.6.4">
+<h4><span class="header-section-number">12.0.6.4</span> Functions with multiple arguments</h4>
+<p>Functions can be a lot more advanced. For example, while we stated earlier that functions can have multiple inputs, we haven’t exactly shown what that would look like. So, going back to our Celsius/Fahrenheit example, let’s write a function that takes a temperature and can convert it both from Celsius to Fahrenheit (as it did above) <em>and</em> can go the other direction, taking a temperature from Fahrenheit to Celsius. To use this function, you’ll not only have to provide the temperature you want to convert as an argument (as above), but you’ll have to tell the function whether or not that temperature you’re inputting is in Fahrenheit or Celsius. Specifically, is if the user passes the values of 10 and C (for Celsius) to the function, it will convert it to Fahrenheit and return the value and if the user passes the values of 10 and F (for Fahrenheit), it will convert it to Celsius and return the value.</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="writing-functions-in-r.html#cb89-1" aria-hidden="true" tabindex="-1"></a>convert_temp <span class="ot">&lt;-</span> <span class="cf">function</span>(temp, unit){</span>
+<span id="cb89-2"><a href="writing-functions-in-r.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (unit<span class="sc">==</span><span class="st">&quot;C&quot;</span>){</span>
+<span id="cb89-3"><a href="writing-functions-in-r.html#cb89-3" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> temp <span class="sc">*</span> (<span class="dv">9</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">+</span> <span class="dv">32</span></span>
+<span id="cb89-4"><a href="writing-functions-in-r.html#cb89-4" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (unit<span class="sc">==</span><span class="st">&quot;F&quot;</span>) {</span>
+<span id="cb89-5"><a href="writing-functions-in-r.html#cb89-5" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> (temp <span class="sc">-</span> <span class="dv">32</span>) <span class="sc">*</span> (<span class="dv">5</span><span class="sc">/</span><span class="dv">9</span>)</span>
+<span id="cb89-6"><a href="writing-functions-in-r.html#cb89-6" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb89-7"><a href="writing-functions-in-r.html#cb89-7" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> <span class="fu">message</span>(<span class="st">&quot;Please enter a correct unit -- either F or C&quot;</span>)</span>
+<span id="cb89-8"><a href="writing-functions-in-r.html#cb89-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb89-9"><a href="writing-functions-in-r.html#cb89-9" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(D)</span>
+<span id="cb89-10"><a href="writing-functions-in-r.html#cb89-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Ok, admittedly, this function has a lot going on! No need to worry we’ll break it down now.</p>
+<p>Let’s first identify the three parts of the function that we know will always be there for every function.</p>
+<ul>
+<li>name: <code>convert_temp</code></li>
+<li>argument(s) <code>temp</code> <em>and</em> <code>unit</code></li>
+<li>body: all that code in there!</li>
+</ul>
+<p>This function is similar to the previous function, but has a few extra bells and whistles.</p>
+<p>First, instead of having the argument <code>C</code>, for a temperature in degrees Celsius, we’ve now changed that argument to <code>temp</code>, as the input temperature can be in either degrees Celsius <em>or</em> degrees Fahrenheit. There’s also that additional argument <code>unit</code>, which, as discussed above, will specify what temperature our <code>temp</code> input is.</p>
+<p>Additionally, the function now has a conditional statement based on the argument <code>unit</code>. What those <code>if</code>s and <code>else if</code> statements say is <em>if</em> the argument <code>unit</code> is “C” (meaning the temperature is in Celsius”), then convert the value to Fahrenheit. <em>But</em>, if the argument <code>unit</code> is “F” (stating the input temp is in Fahrenheit), well, in that case convert the value to Celsius. Finally, if the argument unit is neither “F” nor “C” tell the user that they haven’t entered that unit correctly by displaying the message “Please enter a correct unit – either F or C”.</p>
+<p>When we run this new function <code>convert_temp</code>, the output looks as follows! Feel free to copy that function above and then test it out yourself! Go ahead and convert a few temperatures!</p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="writing-functions-in-r.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">convert_temp</span>(<span class="dv">70</span>, <span class="st">&quot;C&quot;</span>)</span>
+<span id="cb90-2"><a href="writing-functions-in-r.html#cb90-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">158</span></span>
+<span id="cb90-3"><a href="writing-functions-in-r.html#cb90-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">convert_temp</span>(<span class="dv">158</span>, <span class="st">&quot;F&quot;</span>)</span>
+<span id="cb90-4"><a href="writing-functions-in-r.html#cb90-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">70</span></span>
+<span id="cb90-5"><a href="writing-functions-in-r.html#cb90-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">convert_temp</span>(<span class="dv">158</span>, <span class="st">&quot;degrees&quot;</span>)</span>
+<span id="cb90-6"><a href="writing-functions-in-r.html#cb90-6" aria-hidden="true" tabindex="-1"></a>Please enter a correct unit <span class="sc">--</span> either F or C</span>
+<span id="cb90-7"><a href="writing-functions-in-r.html#cb90-7" aria-hidden="true" tabindex="-1"></a><span class="cn">NULL</span></span></code></pre></div>
+</div>
+</div>
+<div id="functions-with-default-arguments" class="section level3" number="12.0.7">
+<h3><span class="header-section-number">12.0.7</span> Functions with default arguments</h3>
+<p>So far, we have required the user to state what each argument is every time they run one of the functions. However, arguments can have default values. This is helpful when most of the time an argument will take one value (the default) but you want to make the other input value available.</p>
+<p>For example, the author of this lesson <em>happens</em> to live in the US, where we mostly think in degrees Fahrenheit. But, working with someone from pretty much <em>anywhere else in the world</em> requires understanding temperatures in degrees Celsius. Thus, if I were writing this function for myself or co-workers in the states who like to cook, I would likely set the default in the function to Celsius, as we’re much more likely to be looking at a temperature on a recipe that’s in Celsius but that we need in Fahrenheit to set our ovens to the correct temperature.</p>
+<p>To accomplish this, when you write the function, you can assign a default value to the argument <code>unit</code> for instance <code>unit = "C"</code>. This means that if the user does not have to explicitly state what the value of the argument <code>unit</code> is. Instead, the function will assume will be that its value is <code>"C"</code>, unless the user states otherwise. This is how we modify the function:</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="writing-functions-in-r.html#cb91-1" aria-hidden="true" tabindex="-1"></a>convert_temp <span class="ot">&lt;-</span> <span class="cf">function</span>(temp, <span class="at">unit =</span> <span class="st">&quot;C&quot;</span>){</span>
+<span id="cb91-2"><a href="writing-functions-in-r.html#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (unit<span class="sc">==</span><span class="st">&quot;C&quot;</span>){</span>
+<span id="cb91-3"><a href="writing-functions-in-r.html#cb91-3" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> temp <span class="sc">*</span> (<span class="dv">9</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">+</span> <span class="dv">32</span></span>
+<span id="cb91-4"><a href="writing-functions-in-r.html#cb91-4" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (unit<span class="sc">==</span><span class="st">&quot;F&quot;</span>) {</span>
+<span id="cb91-5"><a href="writing-functions-in-r.html#cb91-5" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> (temp <span class="sc">-</span> <span class="dv">32</span>) <span class="sc">*</span> (<span class="dv">5</span><span class="sc">/</span><span class="dv">9</span>)</span>
+<span id="cb91-6"><a href="writing-functions-in-r.html#cb91-6" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb91-7"><a href="writing-functions-in-r.html#cb91-7" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> <span class="fu">message</span>(<span class="st">&quot;Please enter a correct unit -- either F or C&quot;</span>)</span>
+<span id="cb91-8"><a href="writing-functions-in-r.html#cb91-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb91-9"><a href="writing-functions-in-r.html#cb91-9" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(D)</span>
+<span id="cb91-10"><a href="writing-functions-in-r.html#cb91-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Now, if we run that function without the specified unit, the function assumes the input is in degrees Celsius. Note, if you specify <code>unit="C"</code>, the output doesn’t change. Additionally, the function can still go in the other direction ( F -&gt; C), but to do so, it must be specified in the arguments:</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="writing-functions-in-r.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">convert_temp</span>(<span class="dv">70</span>)</span>
+<span id="cb92-2"><a href="writing-functions-in-r.html#cb92-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">158</span></span>
+<span id="cb92-3"><a href="writing-functions-in-r.html#cb92-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">convert_temp</span>(<span class="dv">70</span>, <span class="at">unit =</span> <span class="st">&quot;C&quot;</span>)</span>
+<span id="cb92-4"><a href="writing-functions-in-r.html#cb92-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">158</span></span>
+<span id="cb92-5"><a href="writing-functions-in-r.html#cb92-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">convert_temp</span>(<span class="dv">158</span>, <span class="at">unit =</span> <span class="st">&quot;F&quot;</span>)</span>
+<span id="cb92-6"><a href="writing-functions-in-r.html#cb92-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">70</span></span>
+<span id="cb92-7"><a href="writing-functions-in-r.html#cb92-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">convert_temp</span>(<span class="dv">158</span>, <span class="st">&quot;degrees&quot;</span>)</span>
+<span id="cb92-8"><a href="writing-functions-in-r.html#cb92-8" aria-hidden="true" tabindex="-1"></a>Please enter a correct unit <span class="sc">--</span> either F or C</span>
+<span id="cb92-9"><a href="writing-functions-in-r.html#cb92-9" aria-hidden="true" tabindex="-1"></a><span class="cn">NULL</span></span></code></pre></div>
+<div id="commenting-your-function-1" class="section level4" number="12.0.7.1">
+<h4><span class="header-section-number">12.0.7.1</span> Commenting your function</h4>
+<p>Earlier in this lesson we discussed the importance of commenting your function for others’ who read your code. So, let’s practice that now with the function we just worked with:</p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="writing-functions-in-r.html#cb93-1" aria-hidden="true" tabindex="-1"></a>convert_temp <span class="ot">&lt;-</span> <span class="cf">function</span>(temp, <span class="at">unit =</span> <span class="st">&quot;C&quot;</span>){</span>
+<span id="cb93-2"><a href="writing-functions-in-r.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (unit<span class="sc">==</span><span class="st">&quot;C&quot;</span>){</span>
+<span id="cb93-3"><a href="writing-functions-in-r.html#cb93-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if temp in C, convert to F</span></span>
+<span id="cb93-4"><a href="writing-functions-in-r.html#cb93-4" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> temp <span class="sc">*</span> (<span class="dv">9</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">+</span> <span class="dv">32</span></span>
+<span id="cb93-5"><a href="writing-functions-in-r.html#cb93-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (unit<span class="sc">==</span><span class="st">&quot;F&quot;</span>) {</span>
+<span id="cb93-6"><a href="writing-functions-in-r.html#cb93-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if temp in F, convert to C</span></span>
+<span id="cb93-7"><a href="writing-functions-in-r.html#cb93-7" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> (temp <span class="sc">-</span> <span class="dv">32</span>) <span class="sc">*</span> (<span class="dv">5</span><span class="sc">/</span><span class="dv">9</span>)</span>
+<span id="cb93-8"><a href="writing-functions-in-r.html#cb93-8" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb93-9"><a href="writing-functions-in-r.html#cb93-9" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> <span class="fu">message</span>(<span class="st">&quot;Please enter a correct unit -- either F or C&quot;</span>)</span>
+<span id="cb93-10"><a href="writing-functions-in-r.html#cb93-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb93-11"><a href="writing-functions-in-r.html#cb93-11" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(D)</span>
+<span id="cb93-12"><a href="writing-functions-in-r.html#cb93-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Here, to make clear to anyone looking at the code, we’ve added two lines of comments to make explicitly clear what the code is doing. The longer your functions get, the more critical commenting your code will become.</p>
+</div>
+</div>
+<div id="summary-6" class="section level3" number="12.0.8">
+<h3><span class="header-section-number">12.0.8</span> Summary</h3>
+<p>In this lesson, we’ve covered the components of a function in R (name, argument(s), and body) and broken down each of them using an example of converting temperatures between Celsius and Fahrenheit. We’ve discussed when to write a function, best practices for naming functions, how to run a function, and how to appropriately comment a function. The more you practice with functions early on as you learn R, the better you’ll be as you start to write longer and longer pieces of code and analyze data.</p>
+</div>
+<div id="additional-resources-1" class="section level3" number="12.0.9">
+<h3><span class="header-section-number">12.0.9</span> Additional Resources</h3>
+<ul>
+<li><a href="http://r4ds.had.co.nz/functions.html">Chapter 19: Functions in r4ds</a>, by Hadley Wickham</li>
+</ul>
+</div>
+<div id="slides-and-video-7" class="section level3" number="12.0.10">
+<h3><span class="header-section-number">12.0.10</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://youtu.be/Iqm6Q0W8hzA" alt="" />
+<p class="caption">Writing Functions in R</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1Q7pkb4lM8M8MRQzxCCfhXx8ddEi9XeaKSKT82OJAZX8/edit?usp=sharing">Slides</a></li>
+</ul>
+<p>{quiz, id: quiz_07_functions}</p>
+</div>
+<div id="writing-functions-in-r-quiz" class="section level3" number="12.0.11">
+<h3><span class="header-section-number">12.0.11</span> Writing Functions in R quiz</h3>
+<p>{choose-answers: 4}
+?1 If not defined explicitly within the function, what does a function return?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>The last statement evaluated</li>
+</ol>
+<ol start="13" style="list-style-type: lower-alpha">
+<li><code>return()</code></li>
+<li>The first value calculated</li>
+<li>Nothing</li>
+<li>NA</li>
+<li>The length of the function</li>
+<li>An error message</li>
+</ol>
+<p>{choose-answers: 4}
+?1 To define what a function should return, what function do you use?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li><code>return()</code></li>
+</ol>
+<ol start="13" style="list-style-type: lower-alpha">
+<li>The last statement evaluated</li>
+<li><code>pass()</code></li>
+<li><code>output()</code></li>
+<li><code>error()</code></li>
+<li><code>help()</code></li>
+<li><code>function()</code></li>
+<li><code>returns()</code></li>
+<li><code>user()</code></li>
+</ol>
+<p>{choose-answers:4}
+?2 Which of the following statements is TRUE?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>Function names may not contain spaces</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>UDFs can only take one input argument</li>
+<li>Functions require comments (#) in the body to run</li>
+<li>It’s best to name functions with the name of existing functions</li>
+<li>Default values for arguments cannot be specified</li>
+<li>To run a function, the value provided for an argument must be numeric</li>
+</ol>
+<p>{choose-answers: 4}
+?3 To use the following function to determine the squared sum of the values 5 and 10, what would the function call look like?</p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="writing-functions-in-r.html#cb94-1" aria-hidden="true" tabindex="-1"></a>square_sum <span class="ot">&lt;-</span> <span class="cf">function</span>(x,y) {</span>
+<span id="cb94-2"><a href="writing-functions-in-r.html#cb94-2" aria-hidden="true" tabindex="-1"></a>  (x <span class="sc">+</span> y)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb94-3"><a href="writing-functions-in-r.html#cb94-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>square_sum(5,10)</li>
+<li>square_sum(x = 5, y=10)</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>square_sum(x,y)</li>
+<li>square_sum(x y)</li>
+<li>square_sum(5 10)</li>
+<li>function(square_sum(5,10)</li>
+<li>function(square_sum(5 10)</li>
+<li>function_square_sum(5, 10)</li>
+<li>function_square_sum(5, 10)</li>
+</ol>
+<p>{choose-answers: 4}
+?3 To use the following function to determine the squared sum of the values 6 and 4, what would the function call look like?</p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="writing-functions-in-r.html#cb95-1" aria-hidden="true" tabindex="-1"></a>square_sum <span class="ot">&lt;-</span> <span class="cf">function</span>(x,y) {</span>
+<span id="cb95-2"><a href="writing-functions-in-r.html#cb95-2" aria-hidden="true" tabindex="-1"></a>  (x <span class="sc">+</span> y)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb95-3"><a href="writing-functions-in-r.html#cb95-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>square_sum(6,4)</li>
+<li>square_sum(x = 6,y = 4)</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>square_sum(x,y)</li>
+<li>square_sum(x y)</li>
+<li>square_sum(6 4)</li>
+<li>function(square_sum(6,4)</li>
+<li>function(square_sum(6 4)</li>
+<li>function_square_sum(6, 4)</li>
+<li>function_square_sum(6, 4)</li>
+</ol>
+<p>{choose-answers: 4, points: 2}
+?4 Which of these is the BEST name for a function that predicts someone’s birthday?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li><code>predict_birthday</code></li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li><code>pb</code></li>
+<li><code>predictbirthday</code></li>
+<li><code>PredictBirthday</code></li>
+<li><code>predict</code></li>
+<li><code>birthday</code></li>
+<li><code>Predict</code></li>
+<li><code>Birthday</code></li>
+<li><code>predbir</code></li>
+<li><code>pred_bir</code></li>
+<li><code>Predict_Birthday</code></li>
+</ol>
+<p>{choose-answers: 4, points: 2}
+?4 Which of these is the BEST name for a function that predicts someone’s age?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li><code>predict_age</code></li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li><code>pb</code></li>
+<li><code>predictage</code></li>
+<li><code>PredictAge</code></li>
+<li><code>predict</code></li>
+<li><code>age</code></li>
+<li><code>Predict</code></li>
+<li><code>Age</code></li>
+<li><code>preda</code></li>
+<li><code>pred_a</code></li>
+<li><code>Predict_Age</code></li>
+</ol>
+<p>{choose-answers: 4, points 3}
+?5 Given the function below, what is the output of the command <code>simple_calc(2,5)</code>?</p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="writing-functions-in-r.html#cb96-1" aria-hidden="true" tabindex="-1"></a>simple_calc <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb96-2"><a href="writing-functions-in-r.html#cb96-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
+<span id="cb96-3"><a href="writing-functions-in-r.html#cb96-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> a<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb96-4"><a href="writing-functions-in-r.html#cb96-4" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(d)</span>
+<span id="cb96-5"><a href="writing-functions-in-r.html#cb96-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>49</li>
+</ol>
+<ol start="13" style="list-style-type: lower-alpha">
+<li>16</li>
+<li>64</li>
+<li>7</li>
+<li>25</li>
+<li>4</li>
+<li>1</li>
+<li>98</li>
+<li>3.5</li>
+</ol>
+<p>{choose-answers: 4, points 3}
+?5 Given the function below, what is the output of the command <code>simple_calc(3,5)</code>?</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="writing-functions-in-r.html#cb97-1" aria-hidden="true" tabindex="-1"></a>simple_calc <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb97-2"><a href="writing-functions-in-r.html#cb97-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
+<span id="cb97-3"><a href="writing-functions-in-r.html#cb97-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> a<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb97-4"><a href="writing-functions-in-r.html#cb97-4" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(d)</span>
+<span id="cb97-5"><a href="writing-functions-in-r.html#cb97-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>64</li>
+</ol>
+<ol start="13" style="list-style-type: lower-alpha">
+<li>49</li>
+<li>16</li>
+<li>7</li>
+<li>25</li>
+<li>4</li>
+<li>1</li>
+<li>98</li>
+<li>3.5</li>
+</ol>
+<p>{choose-answers: 4, points 3}
+?5 Given the function below, what is the output of the command <code>simple_calc(1,3)</code>?</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="writing-functions-in-r.html#cb98-1" aria-hidden="true" tabindex="-1"></a>simple_calc <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb98-2"><a href="writing-functions-in-r.html#cb98-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
+<span id="cb98-3"><a href="writing-functions-in-r.html#cb98-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> a<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb98-4"><a href="writing-functions-in-r.html#cb98-4" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(d)</span>
+<span id="cb98-5"><a href="writing-functions-in-r.html#cb98-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>16</li>
+</ol>
+<ol start="13" style="list-style-type: lower-alpha">
+<li>64</li>
+<li>49</li>
+<li>7</li>
+<li>25</li>
+<li>4</li>
+<li>1</li>
+<li>98</li>
+<li>3.5</li>
+</ol>
+<p>{/quiz}</p>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lists-and-data-frames-quiz.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-markdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

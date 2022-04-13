@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 14 Getting Help in R | Untitled</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 14 Getting Help in R | Untitled" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 14 Getting Help in R | Untitled" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+<meta name="date" content="2022-04-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="r-markdown.html"/>
+<link rel="next" href="pushing-code-from-r-to-github.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>1</b> What is R?</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="what-is-r.html"><a href="what-is-r.html#introduction-to-r"><i class="fa fa-check"></i><b>1.0.1</b> Introduction to R</a></li>
+<li class="chapter" data-level="1.0.2" data-path="what-is-r.html"><a href="what-is-r.html#the-r-programming-language"><i class="fa fa-check"></i><b>1.0.2</b> The R programming language</a></li>
+<li class="chapter" data-level="1.0.3" data-path="what-is-r.html"><a href="what-is-r.html#rstudio"><i class="fa fa-check"></i><b>1.0.3</b> RStudio</a></li>
+<li class="chapter" data-level="1.0.4" data-path="what-is-r.html"><a href="what-is-r.html#rstudio-cloud"><i class="fa fa-check"></i><b>1.0.4</b> RStudio Cloud</a></li>
+<li class="chapter" data-level="1.0.5" data-path="what-is-r.html"><a href="what-is-r.html#basic-history"><i class="fa fa-check"></i><b>1.0.5</b> Basic History</a></li>
+<li class="chapter" data-level="1.0.6" data-path="what-is-r.html"><a href="what-is-r.html#learning-r"><i class="fa fa-check"></i><b>1.0.6</b> Learning R</a></li>
+<li class="chapter" data-level="1.0.7" data-path="what-is-r.html"><a href="what-is-r.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="1.0.8" data-path="what-is-r.html"><a href="what-is-r.html#welcome-to-the-what-is-r-quiz"><i class="fa fa-check"></i><b>1.0.8</b> Welcome to the What is R? quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html"><i class="fa fa-check"></i><b>2</b> RStudio Cloud Tour</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#getting-started-in-rstudio-cloud"><i class="fa fa-check"></i><b>2.0.1</b> Getting Started in RStudio Cloud</a></li>
+<li class="chapter" data-level="2.0.2" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#the-tour"><i class="fa fa-check"></i><b>2.0.2</b> The Tour</a></li>
+<li class="chapter" data-level="2.0.3" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#source-script-editor-panel"><i class="fa fa-check"></i><b>2.0.3</b> Source: script editor panel</a></li>
+<li class="chapter" data-level="2.0.4" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#fileshelpplotspackagesviewer"><i class="fa fa-check"></i><b>2.0.4</b> Files/Help/Plots/Packages/Viewer</a></li>
+<li class="chapter" data-level="2.0.5" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#swirl"><i class="fa fa-check"></i><b>2.0.5</b> Swirl</a></li>
+<li class="chapter" data-level="2.0.6" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#summary"><i class="fa fa-check"></i><b>2.0.6</b> Summary</a></li>
+<li class="chapter" data-level="2.0.7" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="2.0.8" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#rstudio-cloud-tour-quiz"><i class="fa fa-check"></i><b>2.0.8</b> RStudio Cloud Tour quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>3</b> R Packages</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="r-packages.html"><a href="r-packages.html#what-is-an-r-package"><i class="fa fa-check"></i><b>3.0.1</b> What is an R package?</a></li>
+<li class="chapter" data-level="3.0.2" data-path="r-packages.html"><a href="r-packages.html#what-are-repositories"><i class="fa fa-check"></i><b>3.0.2</b> What are repositories?</a></li>
+<li class="chapter" data-level="3.0.3" data-path="r-packages.html"><a href="r-packages.html#how-do-you-know-what-package-is-right-for-you"><i class="fa fa-check"></i><b>3.0.3</b> How do you know what package is right for you?</a></li>
+<li class="chapter" data-level="3.0.4" data-path="r-packages.html"><a href="r-packages.html#how-do-you-install-packages"><i class="fa fa-check"></i><b>3.0.4</b> How do you install packages?</a></li>
+<li class="chapter" data-level="3.0.5" data-path="r-packages.html"><a href="r-packages.html#loading-packages"><i class="fa fa-check"></i><b>3.0.5</b> Loading packages</a></li>
+<li class="chapter" data-level="3.0.6" data-path="r-packages.html"><a href="r-packages.html#updating-removing-unloading-packages"><i class="fa fa-check"></i><b>3.0.6</b> Updating, removing, unloading packages</a></li>
+<li class="chapter" data-level="3.0.7" data-path="r-packages.html"><a href="r-packages.html#using-the-commands-in-a-function"><i class="fa fa-check"></i><b>3.0.7</b> Using the commands in a function</a></li>
+<li class="chapter" data-level="3.0.8" data-path="r-packages.html"><a href="r-packages.html#summary-1"><i class="fa fa-check"></i><b>3.0.8</b> Summary</a></li>
+<li class="chapter" data-level="3.0.9" data-path="r-packages.html"><a href="r-packages.html#additional-resources"><i class="fa fa-check"></i><b>3.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.0.10" data-path="r-packages.html"><a href="r-packages.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.10</b> Slides and Video</a></li>
+<li class="chapter" data-level="3.0.11" data-path="r-packages.html"><a href="r-packages.html#r-packages-quiz"><i class="fa fa-check"></i><b>3.0.11</b> R Packages Quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>4</b> Objects in R</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="objects-in-r.html"><a href="objects-in-r.html#what-is-an-object"><i class="fa fa-check"></i><b>4.0.1</b> What is an object?</a></li>
+<li class="chapter" data-level="4.0.2" data-path="objects-in-r.html"><a href="objects-in-r.html#storing-objects"><i class="fa fa-check"></i><b>4.0.2</b> Storing objects</a></li>
+<li class="chapter" data-level="4.0.3" data-path="objects-in-r.html"><a href="objects-in-r.html#printing-objects"><i class="fa fa-check"></i><b>4.0.3</b> Printing objects</a></li>
+<li class="chapter" data-level="4.0.4" data-path="objects-in-r.html"><a href="objects-in-r.html#character"><i class="fa fa-check"></i><b>4.0.4</b> Character</a></li>
+<li class="chapter" data-level="4.0.5" data-path="objects-in-r.html"><a href="objects-in-r.html#integer"><i class="fa fa-check"></i><b>4.0.5</b> Integer</a></li>
+<li class="chapter" data-level="4.0.6" data-path="objects-in-r.html"><a href="objects-in-r.html#numeric"><i class="fa fa-check"></i><b>4.0.6</b> Numeric</a></li>
+<li class="chapter" data-level="4.0.7" data-path="objects-in-r.html"><a href="objects-in-r.html#logical"><i class="fa fa-check"></i><b>4.0.7</b> Logical</a></li>
+<li class="chapter" data-level="4.0.8" data-path="objects-in-r.html"><a href="objects-in-r.html#factor"><i class="fa fa-check"></i><b>4.0.8</b> Factor</a></li>
+<li class="chapter" data-level="4.0.9" data-path="objects-in-r.html"><a href="objects-in-r.html#data-frames"><i class="fa fa-check"></i><b>4.0.9</b> Data frames</a></li>
+<li class="chapter" data-level="4.0.10" data-path="objects-in-r.html"><a href="objects-in-r.html#missing-values"><i class="fa fa-check"></i><b>4.0.10</b> Missing values</a></li>
+<li class="chapter" data-level="4.0.11" data-path="objects-in-r.html"><a href="objects-in-r.html#determining-the-class-of-an-object"><i class="fa fa-check"></i><b>4.0.11</b> Determining the class of an object</a></li>
+<li class="chapter" data-level="4.0.12" data-path="objects-in-r.html"><a href="objects-in-r.html#summary-2"><i class="fa fa-check"></i><b>4.0.12</b> Summary</a></li>
+<li class="chapter" data-level="4.0.13" data-path="objects-in-r.html"><a href="objects-in-r.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.13</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="objects-in-r-quiz.html"><a href="objects-in-r-quiz.html"><i class="fa fa-check"></i><b>5</b> Objects in R quiz</a></li>
+<li class="chapter" data-level="6" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html"><i class="fa fa-check"></i><b>6</b> Basic Commands in R</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#functions"><i class="fa fa-check"></i><b>6.0.1</b> Functions</a></li>
+<li class="chapter" data-level="6.0.2" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#what-is-this-object"><i class="fa fa-check"></i><b>6.0.2</b> What is this object?</a></li>
+<li class="chapter" data-level="6.0.3" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#how-big-is-this-object"><i class="fa fa-check"></i><b>6.0.3</b> How big is this object?</a></li>
+<li class="chapter" data-level="6.0.4" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#are-there-named-features-of-this-object"><i class="fa fa-check"></i><b>6.0.4</b> Are there named features of this object?</a></li>
+<li class="chapter" data-level="6.0.5" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#what-does-this-object-look-like"><i class="fa fa-check"></i><b>6.0.5</b> What does this object look like?</a></li>
+<li class="chapter" data-level="6.0.6" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#errors-warnings-and-messages"><i class="fa fa-check"></i><b>6.0.6</b> Errors, Warnings, and Messages</a></li>
+<li class="chapter" data-level="6.0.7" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#summary-3"><i class="fa fa-check"></i><b>6.0.7</b> Summary</a></li>
+<li class="chapter" data-level="6.0.8" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#slides-and-video-4"><i class="fa fa-check"></i><b>6.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="basic-commands-in-r-quiz.html"><a href="basic-commands-in-r-quiz.html"><i class="fa fa-check"></i><b>7</b> Basic Commands in R quiz</a></li>
+<li class="chapter" data-level="8" data-path="working-with-logicals.html"><a href="working-with-logicals.html"><i class="fa fa-check"></i><b>8</b> Working with Logicals</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="working-with-logicals.html"><a href="working-with-logicals.html#logical-operators"><i class="fa fa-check"></i><b>8.0.1</b> Logical operators</a></li>
+<li class="chapter" data-level="8.0.2" data-path="working-with-logicals.html"><a href="working-with-logicals.html#logical-functions"><i class="fa fa-check"></i><b>8.0.2</b> Logical functions</a></li>
+<li class="chapter" data-level="8.0.3" data-path="working-with-logicals.html"><a href="working-with-logicals.html#summary-4"><i class="fa fa-check"></i><b>8.0.3</b> Summary</a></li>
+<li class="chapter" data-level="8.0.4" data-path="working-with-logicals.html"><a href="working-with-logicals.html#slides-and-video-5"><i class="fa fa-check"></i><b>8.0.4</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="working-with-logicals-quiz.html"><a href="working-with-logicals-quiz.html"><i class="fa fa-check"></i><b>9</b> Working with Logicals quiz</a></li>
+<li class="chapter" data-level="10" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html"><i class="fa fa-check"></i><b>10</b> Lists and Data Frames</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#what-are-lists-in-r"><i class="fa fa-check"></i><b>10.0.1</b> What are lists in R?</a></li>
+<li class="chapter" data-level="10.0.2" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#creating-a-list"><i class="fa fa-check"></i><b>10.0.2</b> Creating a list</a></li>
+<li class="chapter" data-level="10.0.3" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#lists-and-data-frames-1"><i class="fa fa-check"></i><b>10.0.3</b> Lists and data frames</a></li>
+<li class="chapter" data-level="10.0.4" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#subsetting-lists"><i class="fa fa-check"></i><b>10.0.4</b> Subsetting lists</a></li>
+<li class="chapter" data-level="10.0.5" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#summary-5"><i class="fa fa-check"></i><b>10.0.5</b> Summary</a></li>
+<li class="chapter" data-level="10.0.6" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#slides-and-video-6"><i class="fa fa-check"></i><b>10.0.6</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lists-and-data-frames-quiz.html"><a href="lists-and-data-frames-quiz.html"><i class="fa fa-check"></i><b>11</b> Lists and Data Frames quiz</a></li>
+<li class="chapter" data-level="12" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html"><i class="fa fa-check"></i><b>12</b> Writing Functions in R</a>
+<ul>
+<li class="chapter" data-level="12.0.1" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#when-to-write-a-function"><i class="fa fa-check"></i><b>12.0.1</b> When to write a function</a></li>
+<li class="chapter" data-level="12.0.2" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#how-will-writing-functions-help-me"><i class="fa fa-check"></i><b>12.0.2</b> How will writing functions help me?</a></li>
+<li class="chapter" data-level="12.0.3" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#how-to-write-a-function"><i class="fa fa-check"></i><b>12.0.3</b> How to write a function</a></li>
+<li class="chapter" data-level="12.0.4" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#commenting-your-function"><i class="fa fa-check"></i><b>12.0.4</b> Commenting your function</a></li>
+<li class="chapter" data-level="12.0.5" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#function-output"><i class="fa fa-check"></i><b>12.0.5</b> Function Output</a></li>
+<li class="chapter" data-level="12.0.6" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#an-example-function-converting-from-celsius-to-fahrenheit"><i class="fa fa-check"></i><b>12.0.6</b> An example function: Converting from Celsius to Fahrenheit</a></li>
+<li class="chapter" data-level="12.0.7" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#functions-with-default-arguments"><i class="fa fa-check"></i><b>12.0.7</b> Functions with default arguments</a></li>
+<li class="chapter" data-level="12.0.8" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#summary-6"><i class="fa fa-check"></i><b>12.0.8</b> Summary</a></li>
+<li class="chapter" data-level="12.0.9" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#additional-resources-1"><i class="fa fa-check"></i><b>12.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="12.0.10" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#slides-and-video-7"><i class="fa fa-check"></i><b>12.0.10</b> Slides and Video</a></li>
+<li class="chapter" data-level="12.0.11" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#writing-functions-in-r-quiz"><i class="fa fa-check"></i><b>12.0.11</b> Writing Functions in R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>13</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="r-markdown.html"><a href="r-markdown.html#what-is-r-markdown"><i class="fa fa-check"></i><b>13.0.1</b> What is R Markdown?</a></li>
+<li class="chapter" data-level="13.0.2" data-path="r-markdown.html"><a href="r-markdown.html#why-use-r-markdown"><i class="fa fa-check"></i><b>13.0.2</b> Why use R Markdown?</a></li>
+<li class="chapter" data-level="13.0.3" data-path="r-markdown.html"><a href="r-markdown.html#getting-started-with-r-markdown"><i class="fa fa-check"></i><b>13.0.3</b> Getting started with R Markdown</a></li>
+<li class="chapter" data-level="13.0.4" data-path="r-markdown.html"><a href="r-markdown.html#knitting-documents"><i class="fa fa-check"></i><b>13.0.4</b> “Knitting” documents</a></li>
+<li class="chapter" data-level="13.0.5" data-path="r-markdown.html"><a href="r-markdown.html#summary-7"><i class="fa fa-check"></i><b>13.0.5</b> Summary</a></li>
+<li class="chapter" data-level="13.0.6" data-path="r-markdown.html"><a href="r-markdown.html#additional-resources-2"><i class="fa fa-check"></i><b>13.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="13.0.7" data-path="r-markdown.html"><a href="r-markdown.html#slides-and-video-8"><i class="fa fa-check"></i><b>13.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="13.0.8" data-path="r-markdown.html"><a href="r-markdown.html#r-markdown-quiz"><i class="fa fa-check"></i><b>13.0.8</b> R Markdown quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html"><i class="fa fa-check"></i><b>14</b> Getting Help in R</a>
+<ul>
+<li class="chapter" data-level="14.0.1" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#r-help"><i class="fa fa-check"></i><b>14.0.1</b> R Help: <code>?</code></a></li>
+<li class="chapter" data-level="14.0.2" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#stack-overflow"><i class="fa fa-check"></i><b>14.0.2</b> Stack Overflow</a></li>
+<li class="chapter" data-level="14.0.3" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#rstudio-community"><i class="fa fa-check"></i><b>14.0.3</b> RStudio Community</a></li>
+<li class="chapter" data-level="14.0.4" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#summary-8"><i class="fa fa-check"></i><b>14.0.4</b> Summary</a></li>
+<li class="chapter" data-level="14.0.5" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#additional-community-resources"><i class="fa fa-check"></i><b>14.0.5</b> Additional Community Resources</a></li>
+<li class="chapter" data-level="14.0.6" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#slides-and-video-9"><i class="fa fa-check"></i><b>14.0.6</b> Slides and Video</a></li>
+<li class="chapter" data-level="14.0.7" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#getting-help-in-r-quiz"><i class="fa fa-check"></i><b>14.0.7</b> Getting Help in R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html"><i class="fa fa-check"></i><b>15</b> Pushing Code from R to GitHub</a>
+<ul>
+<li class="chapter" data-level="15.0.1" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#github-repository-my_first_project"><i class="fa fa-check"></i><b>15.0.1</b> GitHub repository: <code>my_first_project</code></a></li>
+<li class="chapter" data-level="15.0.2" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#adding-code-to-your-github-project"><i class="fa fa-check"></i><b>15.0.2</b> Adding code to your GitHub project</a></li>
+<li class="chapter" data-level="15.0.3" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#summary-9"><i class="fa fa-check"></i><b>15.0.3</b> Summary</a></li>
+<li class="chapter" data-level="15.0.4" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#slides-and-video-10"><i class="fa fa-check"></i><b>15.0.4</b> Slides and Video</a></li>
+<li class="chapter" data-level="15.0.5" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#pushing-code-from-r-to-github-quiz"><i class="fa fa-check"></i><b>15.0.5</b> Pushing Code from R to GitHub quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html"><i class="fa fa-check"></i><b>16</b> Creating Websites with R</a>
+<ul>
+<li class="chapter" data-level="16.0.1" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#create-your-website-repository"><i class="fa fa-check"></i><b>16.0.1</b> Create your website repository</a></li>
+<li class="chapter" data-level="16.0.2" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#sync-files-with-github"><i class="fa fa-check"></i><b>16.0.2</b> Sync files with GitHub</a></li>
+<li class="chapter" data-level="16.0.3" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#one-last-setup-step"><i class="fa fa-check"></i><b>16.0.3</b> One last setup step</a></li>
+<li class="chapter" data-level="16.0.4" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#make-the-website"><i class="fa fa-check"></i><b>16.0.4</b> Make the website</a></li>
+<li class="chapter" data-level="16.0.5" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#publish-the-website"><i class="fa fa-check"></i><b>16.0.5</b> Publish the website</a></li>
+<li class="chapter" data-level="16.0.6" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#customize-the-website"><i class="fa fa-check"></i><b>16.0.6</b> Customize the website</a></li>
+<li class="chapter" data-level="16.0.7" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#change-the-theme"><i class="fa fa-check"></i><b>16.0.7</b> Change the theme</a></li>
+<li class="chapter" data-level="16.0.8" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#adding-a-table-of-contents"><i class="fa fa-check"></i><b>16.0.8</b> Adding a table of contents</a></li>
+<li class="chapter" data-level="16.0.9" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#adding-an-image"><i class="fa fa-check"></i><b>16.0.9</b> Adding an image</a></li>
+<li class="chapter" data-level="16.0.10" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#a-similar-website"><i class="fa fa-check"></i><b>16.0.10</b> A similar website</a></li>
+<li class="chapter" data-level="16.0.11" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#beyond-this-lesson"><i class="fa fa-check"></i><b>16.0.11</b> Beyond this lesson</a></li>
+<li class="chapter" data-level="16.0.12" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#slides-and-video-11"><i class="fa fa-check"></i><b>16.0.12</b> Slides and Video</a></li>
+<li class="chapter" data-level="16.0.13" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#creating-websites-with-r-quiz"><i class="fa fa-check"></i><b>16.0.13</b> Creating Websites with R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="17" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>17</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Untitled</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="getting-help-in-r" class="section level1" number="14">
+<h1><span class="header-section-number">Chapter 14</span> Getting Help in R</h1>
+<p>In a lesson in an earlier course, we discussed some basic guidelines for carrying out an effective Google Search. Now that you’ve been introduced to the basics of R, we wanted to guide you to some <em>incredibly</em> helpful resources that can help you work through issues when you’re trying to write your own R code.</p>
+<div id="r-help" class="section level3" number="14.0.1">
+<h3><span class="header-section-number">14.0.1</span> R Help: <code>?</code></h3>
+<p>To access documentation directly within RStudio, you can type a question mark followed by the function, dataset, or object within the R Console directly. The output for this documentation will display in the Help window at the bottom-right hand of RStudio.</p>
+<p>For example, earlier in this course, you were introduced to the function <code>summary()</code> in R. If you later can’t remember what this function does, but you can remember the function, you can always type <code>?summary</code> in your Console. The following will display in the Help tab:</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/export/png?id=1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk&amp;pageid=g37af3c0ac8_0_49" alt="?summary documentation" /></p>
+<p>In this documentation we see:</p>
+<ul>
+<li>A general description of what the summary() function can be used for</li>
+<li>what package the function is from – “base” means it’s part of the base installation in R, rather than from a specific package</li>
+<li>the syntax you should use to carry out this function</li>
+<li>some sample code</li>
+</ul>
+<p>As you work in R, you’ll find that some documentation is more helpful than others. Some packages and functions have incredibly helpful documentation pages. Others are less helpful. A thing to remember is that humans are responsible for writing this documentation. It’s great when someone who’s really great at documenting software or who has the time to do so write great documentation pages. However, for those times when the documentation proves less than helpful, there are other places you can look to for help.</p>
+</div>
+<div id="stack-overflow" class="section level3" number="14.0.2">
+<h3><span class="header-section-number">14.0.2</span> Stack Overflow</h3>
+<p><a href="stackoverflow.com">Stack Overflow</a> is an “online community for programmers.” Stack Overflow is not just a place for R programmers, but rather, is a place to ask and answer questions about any programming language. That said, Stack Overflow has hundreds of thousands of questions and and answers from R users.</p>
+<div id="how-stack-overflow-works" class="section level4" number="14.0.2.1">
+<h4><span class="header-section-number">14.0.2.1</span> How Stack Overflow works</h4>
+<p>On Stack Overflow, people (who have logins on the website) can ask questions. Then, others on the site can provide answers. The user who originally posed the question can mark one answer as the “accepted” answer. Any user, however, can up-vote an answer, helping it rise to the top of the answer section. This means that when someone else comes across this question, they come across the best answers first.</p>
+<p>Additionally, questions can be tagged with their subject area. For example, a user looking for help coding in R would tag their question with the “r” tag to help direct this question to the right community for answering.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/export/png?id=1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk&amp;pageid=g37af3c0ac8_0_81" alt="Stack Overflow Homepage" /></p>
+</div>
+<div id="getting-answers" class="section level4" number="14.0.2.2">
+<h4><span class="header-section-number">14.0.2.2</span> Getting Answers</h4>
+<p>Stack Overflow is a place for specific coding questions and answers. It is <em>not</em> a discussion board nor is it a place for polling. This design is intended to help you quickly get an answer. In that spirit, anyone can search questions and answers, regardless of whether they have an account on the site. All that said, before asking a question on Stack Overflow, it’s best to check to see if someone else has already asked a similar question.</p>
+<p>For example, if you were trying to learn more about how to work with objects in R, you would maybe type “objects in R” into the search bar. The results would look something like this:</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/export/png?id=1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk&amp;pageid=g37af3c0ac8_0_85" alt="Stack Overflow Search Output" /></p>
+<p>For each search result, you will see:
+* the question posed
+* the tags accompanying that post
+* the number of responses for the question
+* when the question was posted and by whom.</p>
+<p>Clicking on the link will provide you with the full question and the posted answers. You’ll most often find that the question you have has already been answered on Stack Overflow, which is great. This way you get an answer immediately and don’t have to wait!</p>
+<p>If, after searching questions that already exist, you still cannot find an answer to your question, you can post a question on Stack Overflow. this will require you to Sign Up for an account.</p>
+<p>Once you’ve created an account and logged in, you will see a blue “Ask Question” box in the top right-hand of your screen.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/export/png?id=1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk&amp;pageid=g37af3c0ac8_0_91" alt="Ask Question" /></p>
+<p>Clicking on “Ask Question” will bring you to an additional screen reminding you of how to proceed before posting a question (search for existing answers!) and how to post a question</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/export/png?id=1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk&amp;pageid=g37af3c0ac8_0_105" alt="Posting a Question Guidelines" /></p>
+</div>
+<div id="reproducible-examples-reprex" class="section level4" number="14.0.2.3">
+<h4><span class="header-section-number">14.0.2.3</span> Reproducible Examples (reprex)</h4>
+<p>When posting a question on Stack Overflow, or anywhere really, it’s always best to post what is known as a reproducible example, or <strong>reprex</strong>.</p>
+<p>A reprex is the simplest bit of code possible needed to ask your question from start to finish. By including this code in your question on Stack Overflow, others can see what issue you have run into and hopefully help you find a solution!</p>
+<p>By simplest bit of code possible, this means that the code:
+1. Must be <strong>reproducible</strong> – it must run start to finish, up until the part where you’re running into trouble (This includes any packages you’ve loaded and all necessary objects)
+2. Should be <strong>minimal</strong> – Remove any code that is in your script but that is not directly related to the problem at hand. Often this requires making a smaller dataset than the one you’re working with.</p>
+<p>By generating a reprex, you’ll often figure out the answer to your question in the process, which is great! The rest of the time, by creating the reprex and including it in your question, others are able to help you as quickly as possible, which is also great!</p>
+</div>
+<div id="providing-help-to-others" class="section level4" number="14.0.2.4">
+<h4><span class="header-section-number">14.0.2.4</span> Providing Help to Others</h4>
+<p>Stack Overflow allows users with a login to ask <strong>and answer</strong> questions on Stack Overflow. While in the beginning you’ll likely just be searching for (and getting) answers to questions, as you become more of an expert, answering others’ questions is a great way to help the community!</p>
+<p>That said, it’s probably no surprise that sometimes people can be mean to others on the Internet. The R community does its best to be a welcoming community. Hopefully, you will never run into people who are mean on Stack Overflow, and even more importantly, when you become an expert in R and answer others’ questions online, it’s important to remember that everyone starts as a beginner. If someone’s question isn’t perfectly asked or their reprex isn’t perfect, let it pass. Be as helpful and kind as you can as you interact with others online.</p>
+</div>
+</div>
+<div id="rstudio-community" class="section level3" number="14.0.3">
+<h3><span class="header-section-number">14.0.3</span> RStudio Community</h3>
+<p>In addition to Stack Overflow, <a href="https://community.rstudio.com/">RStudio Community</a> is an online community for questions and answers that is specifically geared toward R users.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/export/png?id=1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk&amp;pageid=g37af3c0ac8_0_123" alt="RStudio Community" /></p>
+<p>With this interface, in addition to the Topic, you can see the Category (similar to tags in Stack Overflow) and the number of Replies and Views for each topic. You can sort by any of these categories by clicking on the label at the top. Or, you can search specific questions or topics. Clicking on any topic will direct you to a new window where you can sort through the answers for each question.</p>
+</div>
+<div id="summary-8" class="section level3" number="14.0.4">
+<h3><span class="header-section-number">14.0.4</span> Summary</h3>
+<p>In this lesson we discussed documentation and help pages available directly in R that can be accessed using a question mark followed by the function or package name in question. We discussed two incredibly helpful online forums: Stack Overflow and RStudio community. And, finally, we highlighted the importance of creating a reprex when asking a question on any of these forums. Knowing where to find help and how to best ask for it is an important skill as you’re learning a new programming language!</p>
+</div>
+<div id="additional-community-resources" class="section level3" number="14.0.5">
+<h3><span class="header-section-number">14.0.5</span> Additional Community Resources</h3>
+<p>The R community is a welcoming and helpful community. Many people go years as R users before they learn what a rich community there is out there. We’re hoping to change that by introducing new users to a number of resources that will help them feel more welcome to the large community of individuals using R! Below is a short list of ways to connect with the R community:</p>
+<ul>
+<li><a href="https://medium.com/@kierisi/r4ds-the-next-iteration-d51e0a1b0b82">R for Data Science Learning Community</a> - a welcoming and helpful community for those new to R and data science</li>
+<li><a href="https://twitter.com">Twitter</a> - Using or searching the hashtag #rstats can be incredibly helpful and can connect you to others who use R</li>
+<li><a href="https://ropensci.org/">ROpenSci</a> - an online community of developers developing tools for open science</li>
+<li><a href="https://www.r-project.org/help.html">R Project Help in R</a></li>
+<li><a href="https://www.tidyverse.org/help/">Tidyverse Help Documentation</a> - more details on creating a reprex</li>
+</ul>
+</div>
+<div id="slides-and-video-9" class="section level3" number="14.0.6">
+<h3><span class="header-section-number">14.0.6</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://youtu.be/xOww087Vp9g" alt="" />
+<p class="caption">Getting Help in R</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/edit?usp=sharing">Slides</a></li>
+</ul>
+<p>{quiz, id: quiz_09_help_in_R}</p>
+</div>
+<div id="getting-help-in-r-quiz" class="section level3" number="14.0.7">
+<h3><span class="header-section-number">14.0.7</span> Getting Help in R quiz</h3>
+<p>{choose-answers: 4}<br />
+? When you get stuck in R, what’s the first thing you should do?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>Search for an existing answer on the Internet</li>
+<li>Google the error message</li>
+<li>Turn to the Internet for help</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>Create a reprex</li>
+<li>Ask a question on Stack Overflow</li>
+<li>Ask a question on the RStudio Community</li>
+<li>Turn and ask the person next to you who’s working</li>
+<li>Tweet at a person who may know the answer</li>
+</ol>
+<p>{choose-answers: 4}
+? When answering a question on Stack Overflow, what should you avoid?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>being a jerk</li>
+<li>being rude</li>
+<li>being condescending</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>being kind</li>
+<li>being helpful</li>
+<li>putting yourself in the questioners shoes</li>
+<li>being considerate</li>
+</ol>
+<p>{choose-answers: 4}
+? What is a reprex?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>the simplest piece of example code possible that reproduces an issue you’re having</li>
+<li>the simplest reproducible example</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>the code from your complicated script copy and pasted directly onto Stack Overflow</li>
+<li>a way to pattern match used across programming languages</li>
+<li>the code from your complicated script copy and pushed to GitHub</li>
+<li>where you store all your files for a project on GitHub</li>
+<li>a way to create reproducible reports using code chunks and Markdown</li>
+</ol>
+<p>{choose-answers: 4}
+? What are the payoffs for taking the time to create a reprex?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>You answer your own question and/or you show in a simple example what your issue is, allowing others to help.</li>
+<li>You make it easier for others to help you solve your problem</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>StackOverflow &amp; R Community are then required to answer your question and provide you help.</li>
+<li>RStudio will automatically be able to fix your issue and tell you where you went wrong</li>
+<li>You’ll be an expert coder and will never make a mistake again in the future.</li>
+<li>By creating a lengthy and confusing reprex, you’ll learn a lot about how to code in R.</li>
+</ol>
+<p>{/quiz}</p>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="r-markdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pushing-code-from-r-to-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 16 Creating Websites with R | Untitled</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 16 Creating Websites with R | Untitled" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 16 Creating Websites with R | Untitled" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+<meta name="date" content="2022-04-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="pushing-code-from-r-to-github.html"/>
+<link rel="next" href="about-the-authors.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>1</b> What is R?</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="what-is-r.html"><a href="what-is-r.html#introduction-to-r"><i class="fa fa-check"></i><b>1.0.1</b> Introduction to R</a></li>
+<li class="chapter" data-level="1.0.2" data-path="what-is-r.html"><a href="what-is-r.html#the-r-programming-language"><i class="fa fa-check"></i><b>1.0.2</b> The R programming language</a></li>
+<li class="chapter" data-level="1.0.3" data-path="what-is-r.html"><a href="what-is-r.html#rstudio"><i class="fa fa-check"></i><b>1.0.3</b> RStudio</a></li>
+<li class="chapter" data-level="1.0.4" data-path="what-is-r.html"><a href="what-is-r.html#rstudio-cloud"><i class="fa fa-check"></i><b>1.0.4</b> RStudio Cloud</a></li>
+<li class="chapter" data-level="1.0.5" data-path="what-is-r.html"><a href="what-is-r.html#basic-history"><i class="fa fa-check"></i><b>1.0.5</b> Basic History</a></li>
+<li class="chapter" data-level="1.0.6" data-path="what-is-r.html"><a href="what-is-r.html#learning-r"><i class="fa fa-check"></i><b>1.0.6</b> Learning R</a></li>
+<li class="chapter" data-level="1.0.7" data-path="what-is-r.html"><a href="what-is-r.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="1.0.8" data-path="what-is-r.html"><a href="what-is-r.html#welcome-to-the-what-is-r-quiz"><i class="fa fa-check"></i><b>1.0.8</b> Welcome to the What is R? quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html"><i class="fa fa-check"></i><b>2</b> RStudio Cloud Tour</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#getting-started-in-rstudio-cloud"><i class="fa fa-check"></i><b>2.0.1</b> Getting Started in RStudio Cloud</a></li>
+<li class="chapter" data-level="2.0.2" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#the-tour"><i class="fa fa-check"></i><b>2.0.2</b> The Tour</a></li>
+<li class="chapter" data-level="2.0.3" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#source-script-editor-panel"><i class="fa fa-check"></i><b>2.0.3</b> Source: script editor panel</a></li>
+<li class="chapter" data-level="2.0.4" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#fileshelpplotspackagesviewer"><i class="fa fa-check"></i><b>2.0.4</b> Files/Help/Plots/Packages/Viewer</a></li>
+<li class="chapter" data-level="2.0.5" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#swirl"><i class="fa fa-check"></i><b>2.0.5</b> Swirl</a></li>
+<li class="chapter" data-level="2.0.6" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#summary"><i class="fa fa-check"></i><b>2.0.6</b> Summary</a></li>
+<li class="chapter" data-level="2.0.7" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="2.0.8" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#rstudio-cloud-tour-quiz"><i class="fa fa-check"></i><b>2.0.8</b> RStudio Cloud Tour quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>3</b> R Packages</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="r-packages.html"><a href="r-packages.html#what-is-an-r-package"><i class="fa fa-check"></i><b>3.0.1</b> What is an R package?</a></li>
+<li class="chapter" data-level="3.0.2" data-path="r-packages.html"><a href="r-packages.html#what-are-repositories"><i class="fa fa-check"></i><b>3.0.2</b> What are repositories?</a></li>
+<li class="chapter" data-level="3.0.3" data-path="r-packages.html"><a href="r-packages.html#how-do-you-know-what-package-is-right-for-you"><i class="fa fa-check"></i><b>3.0.3</b> How do you know what package is right for you?</a></li>
+<li class="chapter" data-level="3.0.4" data-path="r-packages.html"><a href="r-packages.html#how-do-you-install-packages"><i class="fa fa-check"></i><b>3.0.4</b> How do you install packages?</a></li>
+<li class="chapter" data-level="3.0.5" data-path="r-packages.html"><a href="r-packages.html#loading-packages"><i class="fa fa-check"></i><b>3.0.5</b> Loading packages</a></li>
+<li class="chapter" data-level="3.0.6" data-path="r-packages.html"><a href="r-packages.html#updating-removing-unloading-packages"><i class="fa fa-check"></i><b>3.0.6</b> Updating, removing, unloading packages</a></li>
+<li class="chapter" data-level="3.0.7" data-path="r-packages.html"><a href="r-packages.html#using-the-commands-in-a-function"><i class="fa fa-check"></i><b>3.0.7</b> Using the commands in a function</a></li>
+<li class="chapter" data-level="3.0.8" data-path="r-packages.html"><a href="r-packages.html#summary-1"><i class="fa fa-check"></i><b>3.0.8</b> Summary</a></li>
+<li class="chapter" data-level="3.0.9" data-path="r-packages.html"><a href="r-packages.html#additional-resources"><i class="fa fa-check"></i><b>3.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.0.10" data-path="r-packages.html"><a href="r-packages.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.10</b> Slides and Video</a></li>
+<li class="chapter" data-level="3.0.11" data-path="r-packages.html"><a href="r-packages.html#r-packages-quiz"><i class="fa fa-check"></i><b>3.0.11</b> R Packages Quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>4</b> Objects in R</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="objects-in-r.html"><a href="objects-in-r.html#what-is-an-object"><i class="fa fa-check"></i><b>4.0.1</b> What is an object?</a></li>
+<li class="chapter" data-level="4.0.2" data-path="objects-in-r.html"><a href="objects-in-r.html#storing-objects"><i class="fa fa-check"></i><b>4.0.2</b> Storing objects</a></li>
+<li class="chapter" data-level="4.0.3" data-path="objects-in-r.html"><a href="objects-in-r.html#printing-objects"><i class="fa fa-check"></i><b>4.0.3</b> Printing objects</a></li>
+<li class="chapter" data-level="4.0.4" data-path="objects-in-r.html"><a href="objects-in-r.html#character"><i class="fa fa-check"></i><b>4.0.4</b> Character</a></li>
+<li class="chapter" data-level="4.0.5" data-path="objects-in-r.html"><a href="objects-in-r.html#integer"><i class="fa fa-check"></i><b>4.0.5</b> Integer</a></li>
+<li class="chapter" data-level="4.0.6" data-path="objects-in-r.html"><a href="objects-in-r.html#numeric"><i class="fa fa-check"></i><b>4.0.6</b> Numeric</a></li>
+<li class="chapter" data-level="4.0.7" data-path="objects-in-r.html"><a href="objects-in-r.html#logical"><i class="fa fa-check"></i><b>4.0.7</b> Logical</a></li>
+<li class="chapter" data-level="4.0.8" data-path="objects-in-r.html"><a href="objects-in-r.html#factor"><i class="fa fa-check"></i><b>4.0.8</b> Factor</a></li>
+<li class="chapter" data-level="4.0.9" data-path="objects-in-r.html"><a href="objects-in-r.html#data-frames"><i class="fa fa-check"></i><b>4.0.9</b> Data frames</a></li>
+<li class="chapter" data-level="4.0.10" data-path="objects-in-r.html"><a href="objects-in-r.html#missing-values"><i class="fa fa-check"></i><b>4.0.10</b> Missing values</a></li>
+<li class="chapter" data-level="4.0.11" data-path="objects-in-r.html"><a href="objects-in-r.html#determining-the-class-of-an-object"><i class="fa fa-check"></i><b>4.0.11</b> Determining the class of an object</a></li>
+<li class="chapter" data-level="4.0.12" data-path="objects-in-r.html"><a href="objects-in-r.html#summary-2"><i class="fa fa-check"></i><b>4.0.12</b> Summary</a></li>
+<li class="chapter" data-level="4.0.13" data-path="objects-in-r.html"><a href="objects-in-r.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.13</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="objects-in-r-quiz.html"><a href="objects-in-r-quiz.html"><i class="fa fa-check"></i><b>5</b> Objects in R quiz</a></li>
+<li class="chapter" data-level="6" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html"><i class="fa fa-check"></i><b>6</b> Basic Commands in R</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#functions"><i class="fa fa-check"></i><b>6.0.1</b> Functions</a></li>
+<li class="chapter" data-level="6.0.2" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#what-is-this-object"><i class="fa fa-check"></i><b>6.0.2</b> What is this object?</a></li>
+<li class="chapter" data-level="6.0.3" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#how-big-is-this-object"><i class="fa fa-check"></i><b>6.0.3</b> How big is this object?</a></li>
+<li class="chapter" data-level="6.0.4" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#are-there-named-features-of-this-object"><i class="fa fa-check"></i><b>6.0.4</b> Are there named features of this object?</a></li>
+<li class="chapter" data-level="6.0.5" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#what-does-this-object-look-like"><i class="fa fa-check"></i><b>6.0.5</b> What does this object look like?</a></li>
+<li class="chapter" data-level="6.0.6" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#errors-warnings-and-messages"><i class="fa fa-check"></i><b>6.0.6</b> Errors, Warnings, and Messages</a></li>
+<li class="chapter" data-level="6.0.7" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#summary-3"><i class="fa fa-check"></i><b>6.0.7</b> Summary</a></li>
+<li class="chapter" data-level="6.0.8" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#slides-and-video-4"><i class="fa fa-check"></i><b>6.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="basic-commands-in-r-quiz.html"><a href="basic-commands-in-r-quiz.html"><i class="fa fa-check"></i><b>7</b> Basic Commands in R quiz</a></li>
+<li class="chapter" data-level="8" data-path="working-with-logicals.html"><a href="working-with-logicals.html"><i class="fa fa-check"></i><b>8</b> Working with Logicals</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="working-with-logicals.html"><a href="working-with-logicals.html#logical-operators"><i class="fa fa-check"></i><b>8.0.1</b> Logical operators</a></li>
+<li class="chapter" data-level="8.0.2" data-path="working-with-logicals.html"><a href="working-with-logicals.html#logical-functions"><i class="fa fa-check"></i><b>8.0.2</b> Logical functions</a></li>
+<li class="chapter" data-level="8.0.3" data-path="working-with-logicals.html"><a href="working-with-logicals.html#summary-4"><i class="fa fa-check"></i><b>8.0.3</b> Summary</a></li>
+<li class="chapter" data-level="8.0.4" data-path="working-with-logicals.html"><a href="working-with-logicals.html#slides-and-video-5"><i class="fa fa-check"></i><b>8.0.4</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="working-with-logicals-quiz.html"><a href="working-with-logicals-quiz.html"><i class="fa fa-check"></i><b>9</b> Working with Logicals quiz</a></li>
+<li class="chapter" data-level="10" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html"><i class="fa fa-check"></i><b>10</b> Lists and Data Frames</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#what-are-lists-in-r"><i class="fa fa-check"></i><b>10.0.1</b> What are lists in R?</a></li>
+<li class="chapter" data-level="10.0.2" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#creating-a-list"><i class="fa fa-check"></i><b>10.0.2</b> Creating a list</a></li>
+<li class="chapter" data-level="10.0.3" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#lists-and-data-frames-1"><i class="fa fa-check"></i><b>10.0.3</b> Lists and data frames</a></li>
+<li class="chapter" data-level="10.0.4" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#subsetting-lists"><i class="fa fa-check"></i><b>10.0.4</b> Subsetting lists</a></li>
+<li class="chapter" data-level="10.0.5" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#summary-5"><i class="fa fa-check"></i><b>10.0.5</b> Summary</a></li>
+<li class="chapter" data-level="10.0.6" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#slides-and-video-6"><i class="fa fa-check"></i><b>10.0.6</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lists-and-data-frames-quiz.html"><a href="lists-and-data-frames-quiz.html"><i class="fa fa-check"></i><b>11</b> Lists and Data Frames quiz</a></li>
+<li class="chapter" data-level="12" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html"><i class="fa fa-check"></i><b>12</b> Writing Functions in R</a>
+<ul>
+<li class="chapter" data-level="12.0.1" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#when-to-write-a-function"><i class="fa fa-check"></i><b>12.0.1</b> When to write a function</a></li>
+<li class="chapter" data-level="12.0.2" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#how-will-writing-functions-help-me"><i class="fa fa-check"></i><b>12.0.2</b> How will writing functions help me?</a></li>
+<li class="chapter" data-level="12.0.3" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#how-to-write-a-function"><i class="fa fa-check"></i><b>12.0.3</b> How to write a function</a></li>
+<li class="chapter" data-level="12.0.4" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#commenting-your-function"><i class="fa fa-check"></i><b>12.0.4</b> Commenting your function</a></li>
+<li class="chapter" data-level="12.0.5" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#function-output"><i class="fa fa-check"></i><b>12.0.5</b> Function Output</a></li>
+<li class="chapter" data-level="12.0.6" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#an-example-function-converting-from-celsius-to-fahrenheit"><i class="fa fa-check"></i><b>12.0.6</b> An example function: Converting from Celsius to Fahrenheit</a></li>
+<li class="chapter" data-level="12.0.7" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#functions-with-default-arguments"><i class="fa fa-check"></i><b>12.0.7</b> Functions with default arguments</a></li>
+<li class="chapter" data-level="12.0.8" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#summary-6"><i class="fa fa-check"></i><b>12.0.8</b> Summary</a></li>
+<li class="chapter" data-level="12.0.9" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#additional-resources-1"><i class="fa fa-check"></i><b>12.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="12.0.10" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#slides-and-video-7"><i class="fa fa-check"></i><b>12.0.10</b> Slides and Video</a></li>
+<li class="chapter" data-level="12.0.11" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#writing-functions-in-r-quiz"><i class="fa fa-check"></i><b>12.0.11</b> Writing Functions in R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>13</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="r-markdown.html"><a href="r-markdown.html#what-is-r-markdown"><i class="fa fa-check"></i><b>13.0.1</b> What is R Markdown?</a></li>
+<li class="chapter" data-level="13.0.2" data-path="r-markdown.html"><a href="r-markdown.html#why-use-r-markdown"><i class="fa fa-check"></i><b>13.0.2</b> Why use R Markdown?</a></li>
+<li class="chapter" data-level="13.0.3" data-path="r-markdown.html"><a href="r-markdown.html#getting-started-with-r-markdown"><i class="fa fa-check"></i><b>13.0.3</b> Getting started with R Markdown</a></li>
+<li class="chapter" data-level="13.0.4" data-path="r-markdown.html"><a href="r-markdown.html#knitting-documents"><i class="fa fa-check"></i><b>13.0.4</b> “Knitting” documents</a></li>
+<li class="chapter" data-level="13.0.5" data-path="r-markdown.html"><a href="r-markdown.html#summary-7"><i class="fa fa-check"></i><b>13.0.5</b> Summary</a></li>
+<li class="chapter" data-level="13.0.6" data-path="r-markdown.html"><a href="r-markdown.html#additional-resources-2"><i class="fa fa-check"></i><b>13.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="13.0.7" data-path="r-markdown.html"><a href="r-markdown.html#slides-and-video-8"><i class="fa fa-check"></i><b>13.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="13.0.8" data-path="r-markdown.html"><a href="r-markdown.html#r-markdown-quiz"><i class="fa fa-check"></i><b>13.0.8</b> R Markdown quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html"><i class="fa fa-check"></i><b>14</b> Getting Help in R</a>
+<ul>
+<li class="chapter" data-level="14.0.1" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#r-help"><i class="fa fa-check"></i><b>14.0.1</b> R Help: <code>?</code></a></li>
+<li class="chapter" data-level="14.0.2" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#stack-overflow"><i class="fa fa-check"></i><b>14.0.2</b> Stack Overflow</a></li>
+<li class="chapter" data-level="14.0.3" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#rstudio-community"><i class="fa fa-check"></i><b>14.0.3</b> RStudio Community</a></li>
+<li class="chapter" data-level="14.0.4" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#summary-8"><i class="fa fa-check"></i><b>14.0.4</b> Summary</a></li>
+<li class="chapter" data-level="14.0.5" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#additional-community-resources"><i class="fa fa-check"></i><b>14.0.5</b> Additional Community Resources</a></li>
+<li class="chapter" data-level="14.0.6" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#slides-and-video-9"><i class="fa fa-check"></i><b>14.0.6</b> Slides and Video</a></li>
+<li class="chapter" data-level="14.0.7" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#getting-help-in-r-quiz"><i class="fa fa-check"></i><b>14.0.7</b> Getting Help in R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html"><i class="fa fa-check"></i><b>15</b> Pushing Code from R to GitHub</a>
+<ul>
+<li class="chapter" data-level="15.0.1" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#github-repository-my_first_project"><i class="fa fa-check"></i><b>15.0.1</b> GitHub repository: <code>my_first_project</code></a></li>
+<li class="chapter" data-level="15.0.2" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#adding-code-to-your-github-project"><i class="fa fa-check"></i><b>15.0.2</b> Adding code to your GitHub project</a></li>
+<li class="chapter" data-level="15.0.3" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#summary-9"><i class="fa fa-check"></i><b>15.0.3</b> Summary</a></li>
+<li class="chapter" data-level="15.0.4" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#slides-and-video-10"><i class="fa fa-check"></i><b>15.0.4</b> Slides and Video</a></li>
+<li class="chapter" data-level="15.0.5" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#pushing-code-from-r-to-github-quiz"><i class="fa fa-check"></i><b>15.0.5</b> Pushing Code from R to GitHub quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html"><i class="fa fa-check"></i><b>16</b> Creating Websites with R</a>
+<ul>
+<li class="chapter" data-level="16.0.1" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#create-your-website-repository"><i class="fa fa-check"></i><b>16.0.1</b> Create your website repository</a></li>
+<li class="chapter" data-level="16.0.2" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#sync-files-with-github"><i class="fa fa-check"></i><b>16.0.2</b> Sync files with GitHub</a></li>
+<li class="chapter" data-level="16.0.3" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#one-last-setup-step"><i class="fa fa-check"></i><b>16.0.3</b> One last setup step</a></li>
+<li class="chapter" data-level="16.0.4" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#make-the-website"><i class="fa fa-check"></i><b>16.0.4</b> Make the website</a></li>
+<li class="chapter" data-level="16.0.5" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#publish-the-website"><i class="fa fa-check"></i><b>16.0.5</b> Publish the website</a></li>
+<li class="chapter" data-level="16.0.6" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#customize-the-website"><i class="fa fa-check"></i><b>16.0.6</b> Customize the website</a></li>
+<li class="chapter" data-level="16.0.7" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#change-the-theme"><i class="fa fa-check"></i><b>16.0.7</b> Change the theme</a></li>
+<li class="chapter" data-level="16.0.8" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#adding-a-table-of-contents"><i class="fa fa-check"></i><b>16.0.8</b> Adding a table of contents</a></li>
+<li class="chapter" data-level="16.0.9" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#adding-an-image"><i class="fa fa-check"></i><b>16.0.9</b> Adding an image</a></li>
+<li class="chapter" data-level="16.0.10" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#a-similar-website"><i class="fa fa-check"></i><b>16.0.10</b> A similar website</a></li>
+<li class="chapter" data-level="16.0.11" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#beyond-this-lesson"><i class="fa fa-check"></i><b>16.0.11</b> Beyond this lesson</a></li>
+<li class="chapter" data-level="16.0.12" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#slides-and-video-11"><i class="fa fa-check"></i><b>16.0.12</b> Slides and Video</a></li>
+<li class="chapter" data-level="16.0.13" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#creating-websites-with-r-quiz"><i class="fa fa-check"></i><b>16.0.13</b> Creating Websites with R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="17" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>17</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Untitled</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="creating-websites-with-r" class="section level1" number="16">
+<h1><span class="header-section-number">Chapter 16</span> Creating Websites with R</h1>
+<p>In previous lectures you have learned how to:</p>
+<ul>
+<li>Create a GitHub repository</li>
+<li>Use R Markdown for combining R code and text</li>
+</ul>
+<p>Now we are going to use these two skills to create a website from within R. At the end of this lecture you will have your own personal website made with R!</p>
+<div id="create-your-website-repository" class="section level3" number="16.0.1">
+<h3><span class="header-section-number">16.0.1</span> Create your website repository</h3>
+<p>GitHub has the nice property that it can automatically host websites for you from a repository. While this can de done for any repository, there is a special case: the <code>yourUsername.github.com</code> repository that makes setting up your own website a little bit simpler. We will start here because it’s the most straightforward case.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_1" alt="Create Repository" /></p>
+<p>We’ll work through an example for someone whose GitHub username is <code>JaneEverydayDoe</code>, but you should follow along and complete each step using your own GitHub account. To get started, first log in to <a href="http://github.com">github.com</a> and create a new repository (that nice green button). While normally for projects you’ll be able to name your repository whatever you want, <em>this</em> new repository for your website <strong>must have a specific name</strong>. The repository <em>must</em> be named either <code>username.github.io</code> <em>or</em> <code>username.github.com</code>, where <em>your</em> GitHub username would replace <code>username</code>. So, in our case, the repo would be named: <code>JaneEverydayDoe.github.io</code>.</p>
+<p><strong>Remember, this repository must be named: <code>username.github.io</code> or <code>usernmae.github.com</code>, with <em>your</em> GitHub username in the place of <code>username</code>.</strong></p>
+<p>Yay, we now have our repository to get started!</p>
+</div>
+<div id="sync-files-with-github" class="section level3" number="16.0.2">
+<h3><span class="header-section-number">16.0.2</span> Sync files with GitHub</h3>
+<p>Now we are going to start putting your website together. We need to keep our files in sync with GitHub, and to do so we will clone the repository RStudio Cloud. That is, we will clone the <code>username/username.github.com</code> repository. For <code>JaneEverydayDoe</code> that would be <code>JaneEverydayDoe/JaneEverydayDoe.github.com</code>. We will do this via the <em>terminal</em> from RStudio Cloud. Once you are in the terminal run the following (but change the username ‘JaneEverydayDoe’ to your GitHub username:</p>
+<pre><code>git clone https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com.git</code></pre>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g3c1a412a3a_0_0" alt="git clone" /></p>
+<p>We now have completed the necessary GitHub setup!</p>
+</div>
+<div id="one-last-setup-step" class="section level3" number="16.0.3">
+<h3><span class="header-section-number">16.0.3</span> One last setup step</h3>
+<p>It’s time to start working on our website! In the terminal access the <code>username.github.com</code> repository using the <code>cd</code> (change directory) command. For <code>JaneEverydayDoe</code> that would be:</p>
+<pre><code>cd janeeverydaydoe.github.com/</code></pre>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g3c1a412a3a_0_6" alt="cd into directory" /></p>
+<p>The directory is empty currently. At this point, we can almost start our website. There is one more thing we need to do that is rather obscure. Something we haven’t talked about is that GitHub was initially set up for hosting <em>Jekyll</em> static websites and this is still the default. But, we are not using Jekyll and we need to tell GitHub that. To do so we need to create the hidden file <code>.nojekyll</code> and version control it. You can create the file using the <code>touch</code> command in the terminal or from RStudio Cloud using the following command:</p>
+<pre><code>touch .nojekyll</code></pre>
+<p>We haven’t discussed the command <code>touch</code> or hidden files yet, so now is a great time to explain briefly that touch simply creates an empty file and hidden files are files that start with a period in the file name.</p>
+<p>However, despite being hidden, we <em>can</em> check to make sure this file was created by using the command <code>ls -a</code> (<code>ls</code>, as discussed previously, stands for <em>list</em> and the <code>-a</code> option states that we also want to display hidden files). When we run this command, we see the “.nojekyll” file has been created.</p>
+<pre><code>ls -a</code></pre>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g3c1a412a3a_0_12" alt="touch and ls" /></p>
+<p>Cool, we now have the required <code>.nojekyll</code> file! But, it’s not on GitHub yet. So, we need to version control it. You can do so in the RStudio Cloud terminal window using the following commands:</p>
+<pre><code>git add .nojekyll
+git commit -m &quot;This is not a Jekyll website&quot;
+git push</code></pre>
+<p><em>Note</em>: If prompted to set your global configuration on GitHub, provide your email address or GitHub username and password, do so.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g3c1a412a3a_0_20" alt="touch and ls" /></p>
+<p>Using the <code>JaneEverydayDoe</code> example, you can <a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/a5f889e3c9749720ee0435e95f77d0b4eaeea8d9">see here</a> how the repository should look at this point in the process.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_9" alt="Repo at this point in the process" /></p>
+</div>
+<div id="make-the-website" class="section level3" number="16.0.4">
+<h3><span class="header-section-number">16.0.4</span> Make the website</h3>
+<p>Ok, now we can make the website!</p>
+<p>First, web pages display HTML code. With that knowledge, we are going to take advantage of another nice property of the web. If a directory (say that directory is named <code>hello</code>) contains an <code>index.html</code> file, then that file is displayed on the web browser when someone accesses the website’s home page<code>. In other words,</code>index.html<code>is the default HTML file that is displayed. This means that we need to create an</code>index.html` file. How can we do that from R?</p>
+<p>Well, let’s create a <code>index.Rmd</code> file inside the <code>username.github.com/</code> directory. Here, lets take advantage of the nice RStudio menus. Go to <code>File</code> -&gt; <code>New File</code> -&gt; <code>R Markdown</code>. (<em>Note</em>: If prompted to install packages, click yes to install them)</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_13" alt="New Rmd document" /></p>
+<p>Then ensure <code>Document</code> is selected along the left and <code>HTML</code> is selected for the output format. Click OK.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_17" alt="New R Markdown" /></p>
+<p>Now let’s save it as <code>index.Rmd</code>. go to <code>File</code> -&gt; <code>Save As</code> then type <code>index.Rmd</code> in the file name box, <strong>making sure that it’s saved inside the <code>username.github.com</code> directory</strong>. In <code>JaneEverydayDoe</code>’s case, the relative file path would be <code>janeeverydaydoe.github.com/index.Rmd</code>.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_21" alt="How to Knit" /></p>
+<p>Now click on the <code>knit</code> button and R to create the <code>index.html</code> file!</p>
+</div>
+<div id="publish-the-website" class="section level3" number="16.0.5">
+<h3><span class="header-section-number">16.0.5</span> Publish the website</h3>
+<p>Just so we can see the website in action, let’s publish it. What does that mean? Well, we have the <code>index.html</code> file in our computer but it’s not on GitHub’s computers. So, we need to version control the <code>index.html</code> file (let’s also version control the <code>index.Rmd</code> source file) and upload (<code>git push</code>) to GitHub.</p>
+<p>In the terminal window of RStudio Cloud, run the following commands:</p>
+<pre><code>## Tell git to version control the index.* files
+git add index.*
+
+## Provide a good commit message
+git commit -m &quot;First version of the website&quot;
+
+## Upload the files to GitHub
+git push</code></pre>
+<p>And after a few seconds or a minute or so, you can view your website at <a href="https://username.github.io" class="uri">https://username.github.io</a>. For <code>JaneEverydayDoe</code> that is <a href="https://janeeverydaydoe.github.io/" class="uri">https://janeeverydaydoe.github.io/</a> and it looks like this:</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_25" alt="First website!" /></p>
+<p>You can check <code>JaneEverydayDoe</code> <a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/6ef6468c9fb0dc93ed436b056ddd602e13658377">files at this point in time</a> and compare it against yours.</p>
+</div>
+<div id="customize-the-website" class="section level3" number="16.0.6">
+<h3><span class="header-section-number">16.0.6</span> Customize the website</h3>
+<p>Ok, so now we have a website that is publicly available and that we made with R. Isn’t that awesome!? Next lets work on customizing our website. This part is super flexible and it really depends on what you want to show. In this example, <code>JaneEverydayDoe</code> is going to describe a little about her, her interests, projects, internet work-related profiles, her contact information (her email) and a nice little image that shows her GitHub activity. Take the template below and edit your <code>index.Rmd</code> file. Note that everything here is written using Markdown formatting.</p>
+<pre><code>## About
+
+Describe who you are. For example, what you are currently studying.
+
+Summarize your trajectory. You could mention what you&#39;ve done. Like what you&#39;ve studied or where you&#39;ve worked.
+
+## Interests
+
+* Interest 1
+* Interest 2
+* etc
+
+## Projects
+
+* List some of your recent projects
+* You could include this website as a project!
+
+## Profiles 
+
+* [LinkedIn](https://www.linkedin.com/in/yourprofile/)
+* ...
+* [GitHub](http://github.com/username)
+
+## Contact
+
+* [youremail@email](mailto:youremail@email)</code></pre>
+<p>Once you are done editing, click on the <code>knit</code> button to update the <code>index.html</code> file in your computer. Next, update your files on GitHub using the following commands.</p>
+<pre><code>git add index.*
+git commit -m &quot;Add my initial information&quot;
+git push</code></pre>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_37" alt="Updated website" /></p>
+<p>Check <code>JaneEverydayDoe</code>’s files at <a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/c0b15cf33e3fe88322d46e9f35def6c485eb0fee">this point in time</a>.</p>
+</div>
+<div id="change-the-theme" class="section level3" number="16.0.7">
+<h3><span class="header-section-number">16.0.7</span> Change the theme</h3>
+<p>R Markdown has several <em>themes</em> that are available to you. These themes include preset fonts and colors for HTML pages that you can use. You can find them all listed at <a href="https://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style">rmarkdown.rstudio.com/html_document_format.html#appearance_and_style</a>. Let’s try the <code>spacelab</code> theme by editing the YAML front matter (the top section) of the <code>index.Rmd</code> file from:</p>
+<pre><code>---
+title: &quot;JaneEverydayDoe&#39;s website&quot;
+output: html_document
+---</code></pre>
+<p>to</p>
+<pre><code>---
+title: &quot;JaneEverydayDoe&#39;s website&quot;
+output:
+  html_document:
+    theme: spacelab
+---</code></pre>
+<p>Again, <code>knit</code> then update the files on GitHub.</p>
+<pre><code>git add index.*
+git commit -m &quot;Use spacelab&quot;
+git push</code></pre>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_41" alt="" />
+<p class="caption">Website with spacelab theme</p>
+</div>
+<p><a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/33db3fac9619ef32bdb032b56e0ca5836b5e28c5">JaneEverydayDoe’s files at this point in time</a>.</p>
+</div>
+<div id="adding-a-table-of-contents" class="section level3" number="16.0.8">
+<h3><span class="header-section-number">16.0.8</span> Adding a table of contents</h3>
+<p>A similar process could be used to add a table of contents. Update your YAML using the code you see here.</p>
+<pre><code>---
+title: &quot;JaneEverydayDoe&#39;s website&quot;
+output:
+  html_document:
+    theme: spacelab
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---</code></pre>
+<p>Again, <code>knit</code> then update the files on GitHub.</p>
+<pre><code>git add index.*
+git commit -m &quot;Add a floating table of contents&quot;
+git push</code></pre>
+<p>Your website should now reflect these changes!</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_45" alt="Website at this point in the process" /></p>
+<p><a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/3caa9cc00e9ea167360b1299763ad3b01b6e9de6">JaneEverydayDoe’s files at this point in time</a>.</p>
+</div>
+<div id="adding-an-image" class="section level3" number="16.0.9">
+<h3><span class="header-section-number">16.0.9</span> Adding an image</h3>
+<p>Now let’s add an image to our website. To keep our files organized, lets make a <code>img</code> directory inside our repository using <code>mkdir</code> (make directory).</p>
+<pre><code>mkdir img</code></pre>
+<p>In that directory, we’ll upload a picture file (any format). In this case, we are uploading a file called <code>Jane.png</code>. If you don’t have an image, take a screenshot of your GitHub profile and rename it accordingly. You can verify your upload worked using <code>ls</code>.</p>
+<pre><code>$ ls img
+Jane.png</code></pre>
+<p>Now that we have the image, lets add the following code to our <code>index.Rmd</code> file:</p>
+<pre><code>![](img/Jane.png){width=100px}</code></pre>
+<p>This code introduces the image and specifies the width of the image in pixels. We want a small image, so we are setting it to 100 pixels (<code>100px</code>).</p>
+<p>After knitting and uploading to GitHub, we now have a website with an image!</p>
+<pre><code>git add img/Jane.png
+git add index.*
+git commit -m &quot;Add Jane&#39;s image&quot;
+git push</code></pre>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_49" alt="Website with image added" /></p>
+<p>{format: png}
+<a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/505eaf2049930084526e79a005fc9e8a75f6b143">JaneEverydayDoe’s files at this point in the process</a>.</p>
+</div>
+<div id="a-similar-website" class="section level3" number="16.0.10">
+<h3><span class="header-section-number">16.0.10</span> A similar website</h3>
+<p>If you need some inspiration, check out Amy Peterson’s website: <a href="https://amy-peterson.github.io/">amy-peterson.github.io</a>. It was made using exactly the same tools.</p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g3c1a412a3a_0_49" alt="" />
+<p class="caption">Amy’s website</p>
+</div>
+<p>The raw files for her website are available <a href="https://raw.githubusercontent.com/amy-peterson/amy-peterson.github.com/bf9637d0351e1494cbd0c34528b261e340539b06/index.Rmd">here</a>.</p>
+</div>
+<div id="beyond-this-lesson" class="section level3" number="16.0.11">
+<h3><span class="header-section-number">16.0.11</span> Beyond this lesson</h3>
+<p>In this lesson you learned how to create websites from R and publishing them in GitHub. You also made your own personal website that you can put in your business cards, Twitter profile, share with friends and anywhere you want. Plus it was all free!</p>
+<p>You might be interested in going beyond this quick website. For example, you might want to add a visitor’s map using clustrmaps.com or track visitor using Google Analytics. You could also be interested in buying your own domain, setting up a multi-page website or even make a blog. All those things are possible but beyond the scope of this lesson. If you want to spend the time learning how to do some of those things, check:</p>
+<ul>
+<li>Recent changes to <code>JaneEverydayDoe</code> website at <a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/commits/master">https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/commits/master</a></li>
+<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li>Emily Zabor’s great tutorial <a href="http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html">http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html</a></li>
+<li><a href="https://bookdown.org/yihui/blogdown/">https://bookdown.org/yihui/blogdown/</a> for making blogs</li>
+</ul>
+</div>
+<div id="slides-and-video-11" class="section level3" number="16.0.12">
+<h3><span class="header-section-number">16.0.12</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://youtu.be/phEJ5oI37bs" alt="" />
+<p class="caption">Creating Websites with R</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/edit?usp=sharing">Slides</a></li>
+</ul>
+<p>{quiz, id: quiz_11_website}</p>
+</div>
+<div id="creating-websites-with-r-quiz" class="section level3" number="16.0.13">
+<h3><span class="header-section-number">16.0.13</span> Creating Websites with R quiz</h3>
+<p>{choose-answers: 4}
+? Which of the following statements is TRUE?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>We created the index.html file from knitting an R Markdown file</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>We created a Jekyll website</li>
+<li>We manually wrote our index.html file using HTML code</li>
+<li>We payed for a custom domain like JaneEverydayDoe.com</li>
+<li>We wrote HTML code to generate a website</li>
+<li>We learned the basics of HTML</li>
+<li>We wrote the CSS code for our website</li>
+</ol>
+<p>{choose-answers: 4}
+? After you made edits to index.Rmd, what were the steps required to see the changes on your website?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>Knit -&gt; add -&gt; commit -&gt; push</li>
+<li>Knit to HTML -&gt; git add -&gt; git commit -&gt; git push</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>Knit -&gt; clone -&gt; push</li>
+<li>commit -&gt; push -&gt; Knit -&gt; add</li>
+<li>pull -&gt; commit -&gt; push</li>
+<li>Knit -&gt; pull -&gt; commit</li>
+<li>pull -&gt; Knit -&gt; commit</li>
+<li>push -&gt; pull -&gt; commit -&gt; add</li>
+</ol>
+<p>{/quiz}</p>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="pushing-code-from-r-to-github.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="about-the-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

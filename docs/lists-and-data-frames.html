@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Lists and Data Frames | Untitled</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Lists and Data Frames | Untitled" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Lists and Data Frames | Untitled" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+<meta name="date" content="2022-04-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="working-with-logicals-quiz.html"/>
+<link rel="next" href="lists-and-data-frames-quiz.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>1</b> What is R?</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="what-is-r.html"><a href="what-is-r.html#introduction-to-r"><i class="fa fa-check"></i><b>1.0.1</b> Introduction to R</a></li>
+<li class="chapter" data-level="1.0.2" data-path="what-is-r.html"><a href="what-is-r.html#the-r-programming-language"><i class="fa fa-check"></i><b>1.0.2</b> The R programming language</a></li>
+<li class="chapter" data-level="1.0.3" data-path="what-is-r.html"><a href="what-is-r.html#rstudio"><i class="fa fa-check"></i><b>1.0.3</b> RStudio</a></li>
+<li class="chapter" data-level="1.0.4" data-path="what-is-r.html"><a href="what-is-r.html#rstudio-cloud"><i class="fa fa-check"></i><b>1.0.4</b> RStudio Cloud</a></li>
+<li class="chapter" data-level="1.0.5" data-path="what-is-r.html"><a href="what-is-r.html#basic-history"><i class="fa fa-check"></i><b>1.0.5</b> Basic History</a></li>
+<li class="chapter" data-level="1.0.6" data-path="what-is-r.html"><a href="what-is-r.html#learning-r"><i class="fa fa-check"></i><b>1.0.6</b> Learning R</a></li>
+<li class="chapter" data-level="1.0.7" data-path="what-is-r.html"><a href="what-is-r.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="1.0.8" data-path="what-is-r.html"><a href="what-is-r.html#welcome-to-the-what-is-r-quiz"><i class="fa fa-check"></i><b>1.0.8</b> Welcome to the What is R? quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html"><i class="fa fa-check"></i><b>2</b> RStudio Cloud Tour</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#getting-started-in-rstudio-cloud"><i class="fa fa-check"></i><b>2.0.1</b> Getting Started in RStudio Cloud</a></li>
+<li class="chapter" data-level="2.0.2" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#the-tour"><i class="fa fa-check"></i><b>2.0.2</b> The Tour</a></li>
+<li class="chapter" data-level="2.0.3" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#source-script-editor-panel"><i class="fa fa-check"></i><b>2.0.3</b> Source: script editor panel</a></li>
+<li class="chapter" data-level="2.0.4" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#fileshelpplotspackagesviewer"><i class="fa fa-check"></i><b>2.0.4</b> Files/Help/Plots/Packages/Viewer</a></li>
+<li class="chapter" data-level="2.0.5" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#swirl"><i class="fa fa-check"></i><b>2.0.5</b> Swirl</a></li>
+<li class="chapter" data-level="2.0.6" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#summary"><i class="fa fa-check"></i><b>2.0.6</b> Summary</a></li>
+<li class="chapter" data-level="2.0.7" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="2.0.8" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#rstudio-cloud-tour-quiz"><i class="fa fa-check"></i><b>2.0.8</b> RStudio Cloud Tour quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>3</b> R Packages</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="r-packages.html"><a href="r-packages.html#what-is-an-r-package"><i class="fa fa-check"></i><b>3.0.1</b> What is an R package?</a></li>
+<li class="chapter" data-level="3.0.2" data-path="r-packages.html"><a href="r-packages.html#what-are-repositories"><i class="fa fa-check"></i><b>3.0.2</b> What are repositories?</a></li>
+<li class="chapter" data-level="3.0.3" data-path="r-packages.html"><a href="r-packages.html#how-do-you-know-what-package-is-right-for-you"><i class="fa fa-check"></i><b>3.0.3</b> How do you know what package is right for you?</a></li>
+<li class="chapter" data-level="3.0.4" data-path="r-packages.html"><a href="r-packages.html#how-do-you-install-packages"><i class="fa fa-check"></i><b>3.0.4</b> How do you install packages?</a></li>
+<li class="chapter" data-level="3.0.5" data-path="r-packages.html"><a href="r-packages.html#loading-packages"><i class="fa fa-check"></i><b>3.0.5</b> Loading packages</a></li>
+<li class="chapter" data-level="3.0.6" data-path="r-packages.html"><a href="r-packages.html#updating-removing-unloading-packages"><i class="fa fa-check"></i><b>3.0.6</b> Updating, removing, unloading packages</a></li>
+<li class="chapter" data-level="3.0.7" data-path="r-packages.html"><a href="r-packages.html#using-the-commands-in-a-function"><i class="fa fa-check"></i><b>3.0.7</b> Using the commands in a function</a></li>
+<li class="chapter" data-level="3.0.8" data-path="r-packages.html"><a href="r-packages.html#summary-1"><i class="fa fa-check"></i><b>3.0.8</b> Summary</a></li>
+<li class="chapter" data-level="3.0.9" data-path="r-packages.html"><a href="r-packages.html#additional-resources"><i class="fa fa-check"></i><b>3.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.0.10" data-path="r-packages.html"><a href="r-packages.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.10</b> Slides and Video</a></li>
+<li class="chapter" data-level="3.0.11" data-path="r-packages.html"><a href="r-packages.html#r-packages-quiz"><i class="fa fa-check"></i><b>3.0.11</b> R Packages Quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>4</b> Objects in R</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="objects-in-r.html"><a href="objects-in-r.html#what-is-an-object"><i class="fa fa-check"></i><b>4.0.1</b> What is an object?</a></li>
+<li class="chapter" data-level="4.0.2" data-path="objects-in-r.html"><a href="objects-in-r.html#storing-objects"><i class="fa fa-check"></i><b>4.0.2</b> Storing objects</a></li>
+<li class="chapter" data-level="4.0.3" data-path="objects-in-r.html"><a href="objects-in-r.html#printing-objects"><i class="fa fa-check"></i><b>4.0.3</b> Printing objects</a></li>
+<li class="chapter" data-level="4.0.4" data-path="objects-in-r.html"><a href="objects-in-r.html#character"><i class="fa fa-check"></i><b>4.0.4</b> Character</a></li>
+<li class="chapter" data-level="4.0.5" data-path="objects-in-r.html"><a href="objects-in-r.html#integer"><i class="fa fa-check"></i><b>4.0.5</b> Integer</a></li>
+<li class="chapter" data-level="4.0.6" data-path="objects-in-r.html"><a href="objects-in-r.html#numeric"><i class="fa fa-check"></i><b>4.0.6</b> Numeric</a></li>
+<li class="chapter" data-level="4.0.7" data-path="objects-in-r.html"><a href="objects-in-r.html#logical"><i class="fa fa-check"></i><b>4.0.7</b> Logical</a></li>
+<li class="chapter" data-level="4.0.8" data-path="objects-in-r.html"><a href="objects-in-r.html#factor"><i class="fa fa-check"></i><b>4.0.8</b> Factor</a></li>
+<li class="chapter" data-level="4.0.9" data-path="objects-in-r.html"><a href="objects-in-r.html#data-frames"><i class="fa fa-check"></i><b>4.0.9</b> Data frames</a></li>
+<li class="chapter" data-level="4.0.10" data-path="objects-in-r.html"><a href="objects-in-r.html#missing-values"><i class="fa fa-check"></i><b>4.0.10</b> Missing values</a></li>
+<li class="chapter" data-level="4.0.11" data-path="objects-in-r.html"><a href="objects-in-r.html#determining-the-class-of-an-object"><i class="fa fa-check"></i><b>4.0.11</b> Determining the class of an object</a></li>
+<li class="chapter" data-level="4.0.12" data-path="objects-in-r.html"><a href="objects-in-r.html#summary-2"><i class="fa fa-check"></i><b>4.0.12</b> Summary</a></li>
+<li class="chapter" data-level="4.0.13" data-path="objects-in-r.html"><a href="objects-in-r.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.13</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="objects-in-r-quiz.html"><a href="objects-in-r-quiz.html"><i class="fa fa-check"></i><b>5</b> Objects in R quiz</a></li>
+<li class="chapter" data-level="6" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html"><i class="fa fa-check"></i><b>6</b> Basic Commands in R</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#functions"><i class="fa fa-check"></i><b>6.0.1</b> Functions</a></li>
+<li class="chapter" data-level="6.0.2" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#what-is-this-object"><i class="fa fa-check"></i><b>6.0.2</b> What is this object?</a></li>
+<li class="chapter" data-level="6.0.3" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#how-big-is-this-object"><i class="fa fa-check"></i><b>6.0.3</b> How big is this object?</a></li>
+<li class="chapter" data-level="6.0.4" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#are-there-named-features-of-this-object"><i class="fa fa-check"></i><b>6.0.4</b> Are there named features of this object?</a></li>
+<li class="chapter" data-level="6.0.5" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#what-does-this-object-look-like"><i class="fa fa-check"></i><b>6.0.5</b> What does this object look like?</a></li>
+<li class="chapter" data-level="6.0.6" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#errors-warnings-and-messages"><i class="fa fa-check"></i><b>6.0.6</b> Errors, Warnings, and Messages</a></li>
+<li class="chapter" data-level="6.0.7" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#summary-3"><i class="fa fa-check"></i><b>6.0.7</b> Summary</a></li>
+<li class="chapter" data-level="6.0.8" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#slides-and-video-4"><i class="fa fa-check"></i><b>6.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="basic-commands-in-r-quiz.html"><a href="basic-commands-in-r-quiz.html"><i class="fa fa-check"></i><b>7</b> Basic Commands in R quiz</a></li>
+<li class="chapter" data-level="8" data-path="working-with-logicals.html"><a href="working-with-logicals.html"><i class="fa fa-check"></i><b>8</b> Working with Logicals</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="working-with-logicals.html"><a href="working-with-logicals.html#logical-operators"><i class="fa fa-check"></i><b>8.0.1</b> Logical operators</a></li>
+<li class="chapter" data-level="8.0.2" data-path="working-with-logicals.html"><a href="working-with-logicals.html#logical-functions"><i class="fa fa-check"></i><b>8.0.2</b> Logical functions</a></li>
+<li class="chapter" data-level="8.0.3" data-path="working-with-logicals.html"><a href="working-with-logicals.html#summary-4"><i class="fa fa-check"></i><b>8.0.3</b> Summary</a></li>
+<li class="chapter" data-level="8.0.4" data-path="working-with-logicals.html"><a href="working-with-logicals.html#slides-and-video-5"><i class="fa fa-check"></i><b>8.0.4</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="working-with-logicals-quiz.html"><a href="working-with-logicals-quiz.html"><i class="fa fa-check"></i><b>9</b> Working with Logicals quiz</a></li>
+<li class="chapter" data-level="10" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html"><i class="fa fa-check"></i><b>10</b> Lists and Data Frames</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#what-are-lists-in-r"><i class="fa fa-check"></i><b>10.0.1</b> What are lists in R?</a></li>
+<li class="chapter" data-level="10.0.2" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#creating-a-list"><i class="fa fa-check"></i><b>10.0.2</b> Creating a list</a></li>
+<li class="chapter" data-level="10.0.3" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#lists-and-data-frames-1"><i class="fa fa-check"></i><b>10.0.3</b> Lists and data frames</a></li>
+<li class="chapter" data-level="10.0.4" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#subsetting-lists"><i class="fa fa-check"></i><b>10.0.4</b> Subsetting lists</a></li>
+<li class="chapter" data-level="10.0.5" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#summary-5"><i class="fa fa-check"></i><b>10.0.5</b> Summary</a></li>
+<li class="chapter" data-level="10.0.6" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#slides-and-video-6"><i class="fa fa-check"></i><b>10.0.6</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lists-and-data-frames-quiz.html"><a href="lists-and-data-frames-quiz.html"><i class="fa fa-check"></i><b>11</b> Lists and Data Frames quiz</a></li>
+<li class="chapter" data-level="12" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html"><i class="fa fa-check"></i><b>12</b> Writing Functions in R</a>
+<ul>
+<li class="chapter" data-level="12.0.1" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#when-to-write-a-function"><i class="fa fa-check"></i><b>12.0.1</b> When to write a function</a></li>
+<li class="chapter" data-level="12.0.2" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#how-will-writing-functions-help-me"><i class="fa fa-check"></i><b>12.0.2</b> How will writing functions help me?</a></li>
+<li class="chapter" data-level="12.0.3" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#how-to-write-a-function"><i class="fa fa-check"></i><b>12.0.3</b> How to write a function</a></li>
+<li class="chapter" data-level="12.0.4" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#commenting-your-function"><i class="fa fa-check"></i><b>12.0.4</b> Commenting your function</a></li>
+<li class="chapter" data-level="12.0.5" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#function-output"><i class="fa fa-check"></i><b>12.0.5</b> Function Output</a></li>
+<li class="chapter" data-level="12.0.6" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#an-example-function-converting-from-celsius-to-fahrenheit"><i class="fa fa-check"></i><b>12.0.6</b> An example function: Converting from Celsius to Fahrenheit</a></li>
+<li class="chapter" data-level="12.0.7" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#functions-with-default-arguments"><i class="fa fa-check"></i><b>12.0.7</b> Functions with default arguments</a></li>
+<li class="chapter" data-level="12.0.8" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#summary-6"><i class="fa fa-check"></i><b>12.0.8</b> Summary</a></li>
+<li class="chapter" data-level="12.0.9" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#additional-resources-1"><i class="fa fa-check"></i><b>12.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="12.0.10" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#slides-and-video-7"><i class="fa fa-check"></i><b>12.0.10</b> Slides and Video</a></li>
+<li class="chapter" data-level="12.0.11" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#writing-functions-in-r-quiz"><i class="fa fa-check"></i><b>12.0.11</b> Writing Functions in R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>13</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="r-markdown.html"><a href="r-markdown.html#what-is-r-markdown"><i class="fa fa-check"></i><b>13.0.1</b> What is R Markdown?</a></li>
+<li class="chapter" data-level="13.0.2" data-path="r-markdown.html"><a href="r-markdown.html#why-use-r-markdown"><i class="fa fa-check"></i><b>13.0.2</b> Why use R Markdown?</a></li>
+<li class="chapter" data-level="13.0.3" data-path="r-markdown.html"><a href="r-markdown.html#getting-started-with-r-markdown"><i class="fa fa-check"></i><b>13.0.3</b> Getting started with R Markdown</a></li>
+<li class="chapter" data-level="13.0.4" data-path="r-markdown.html"><a href="r-markdown.html#knitting-documents"><i class="fa fa-check"></i><b>13.0.4</b> “Knitting” documents</a></li>
+<li class="chapter" data-level="13.0.5" data-path="r-markdown.html"><a href="r-markdown.html#summary-7"><i class="fa fa-check"></i><b>13.0.5</b> Summary</a></li>
+<li class="chapter" data-level="13.0.6" data-path="r-markdown.html"><a href="r-markdown.html#additional-resources-2"><i class="fa fa-check"></i><b>13.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="13.0.7" data-path="r-markdown.html"><a href="r-markdown.html#slides-and-video-8"><i class="fa fa-check"></i><b>13.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="13.0.8" data-path="r-markdown.html"><a href="r-markdown.html#r-markdown-quiz"><i class="fa fa-check"></i><b>13.0.8</b> R Markdown quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html"><i class="fa fa-check"></i><b>14</b> Getting Help in R</a>
+<ul>
+<li class="chapter" data-level="14.0.1" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#r-help"><i class="fa fa-check"></i><b>14.0.1</b> R Help: <code>?</code></a></li>
+<li class="chapter" data-level="14.0.2" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#stack-overflow"><i class="fa fa-check"></i><b>14.0.2</b> Stack Overflow</a></li>
+<li class="chapter" data-level="14.0.3" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#rstudio-community"><i class="fa fa-check"></i><b>14.0.3</b> RStudio Community</a></li>
+<li class="chapter" data-level="14.0.4" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#summary-8"><i class="fa fa-check"></i><b>14.0.4</b> Summary</a></li>
+<li class="chapter" data-level="14.0.5" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#additional-community-resources"><i class="fa fa-check"></i><b>14.0.5</b> Additional Community Resources</a></li>
+<li class="chapter" data-level="14.0.6" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#slides-and-video-9"><i class="fa fa-check"></i><b>14.0.6</b> Slides and Video</a></li>
+<li class="chapter" data-level="14.0.7" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#getting-help-in-r-quiz"><i class="fa fa-check"></i><b>14.0.7</b> Getting Help in R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html"><i class="fa fa-check"></i><b>15</b> Pushing Code from R to GitHub</a>
+<ul>
+<li class="chapter" data-level="15.0.1" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#github-repository-my_first_project"><i class="fa fa-check"></i><b>15.0.1</b> GitHub repository: <code>my_first_project</code></a></li>
+<li class="chapter" data-level="15.0.2" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#adding-code-to-your-github-project"><i class="fa fa-check"></i><b>15.0.2</b> Adding code to your GitHub project</a></li>
+<li class="chapter" data-level="15.0.3" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#summary-9"><i class="fa fa-check"></i><b>15.0.3</b> Summary</a></li>
+<li class="chapter" data-level="15.0.4" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#slides-and-video-10"><i class="fa fa-check"></i><b>15.0.4</b> Slides and Video</a></li>
+<li class="chapter" data-level="15.0.5" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#pushing-code-from-r-to-github-quiz"><i class="fa fa-check"></i><b>15.0.5</b> Pushing Code from R to GitHub quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html"><i class="fa fa-check"></i><b>16</b> Creating Websites with R</a>
+<ul>
+<li class="chapter" data-level="16.0.1" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#create-your-website-repository"><i class="fa fa-check"></i><b>16.0.1</b> Create your website repository</a></li>
+<li class="chapter" data-level="16.0.2" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#sync-files-with-github"><i class="fa fa-check"></i><b>16.0.2</b> Sync files with GitHub</a></li>
+<li class="chapter" data-level="16.0.3" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#one-last-setup-step"><i class="fa fa-check"></i><b>16.0.3</b> One last setup step</a></li>
+<li class="chapter" data-level="16.0.4" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#make-the-website"><i class="fa fa-check"></i><b>16.0.4</b> Make the website</a></li>
+<li class="chapter" data-level="16.0.5" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#publish-the-website"><i class="fa fa-check"></i><b>16.0.5</b> Publish the website</a></li>
+<li class="chapter" data-level="16.0.6" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#customize-the-website"><i class="fa fa-check"></i><b>16.0.6</b> Customize the website</a></li>
+<li class="chapter" data-level="16.0.7" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#change-the-theme"><i class="fa fa-check"></i><b>16.0.7</b> Change the theme</a></li>
+<li class="chapter" data-level="16.0.8" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#adding-a-table-of-contents"><i class="fa fa-check"></i><b>16.0.8</b> Adding a table of contents</a></li>
+<li class="chapter" data-level="16.0.9" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#adding-an-image"><i class="fa fa-check"></i><b>16.0.9</b> Adding an image</a></li>
+<li class="chapter" data-level="16.0.10" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#a-similar-website"><i class="fa fa-check"></i><b>16.0.10</b> A similar website</a></li>
+<li class="chapter" data-level="16.0.11" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#beyond-this-lesson"><i class="fa fa-check"></i><b>16.0.11</b> Beyond this lesson</a></li>
+<li class="chapter" data-level="16.0.12" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#slides-and-video-11"><i class="fa fa-check"></i><b>16.0.12</b> Slides and Video</a></li>
+<li class="chapter" data-level="16.0.13" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#creating-websites-with-r-quiz"><i class="fa fa-check"></i><b>16.0.13</b> Creating Websites with R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="17" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>17</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Untitled</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="lists-and-data-frames" class="section level1" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Lists and Data Frames</h1>
+<p>Now that we’ve covered basic object types and some commands to explore and work with them, we will cover a slightly more complex type of object: lists. Lists have similarities to data frames, which we have introduced briefly in previous lessons. In this lesson, you will learn about the structure of list objects, how to create them, and how to subset them.</p>
+<div id="what-are-lists-in-r" class="section level3" number="10.0.1">
+<h3><span class="header-section-number">10.0.1</span> What are lists in R?</h3>
+<p>Previously, you have learned about basic classes of objects in R. These included character, integer, numeric, logical, and factor objects. In particular, we covered the creation of simple vectors of objects in these classes. These simple vectors are a collection of items all of the same class. In other words, each slot of these simple vectors is a length-1 vector of the same class. The term slot and element are often used interchangeably. They both refer to a particular item within the collection.</p>
+<p>Lists are also a type of vector, but they are more complex than the simple vectors we have learned about so far because each slot in a list can contain objects of different classes. The objects in these slots can be simple vectors, lists, or other types of objects.</p>
+<p>Lists are a general and flexible way to store information, and it turns out that data frames, which you have learned about in previous lessons, are a special cases of lists. As you learn how to create and work with lists in the remainder of this lesson, we will also cover connections to working with data frames.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/10_DQyZ_g9h-MB8yRaen-GFcH9boTwgrF6GLdVUS7Cvk/export/png?id=10_DQyZ_g9h-MB8yRaen-GFcH9boTwgrF6GLdVUS7Cvk&amp;pageid=g3929a325eb_0_0" alt="Vectors and Lists" /></p>
+</div>
+<div id="creating-a-list" class="section level3" number="10.0.2">
+<h3><span class="header-section-number">10.0.2</span> Creating a list</h3>
+<p>The main way to create a list from scratch in R is with the <code>list</code> function. The <code>list</code> function takes as many arguments as you want to give it and creates a list with each of the specified objects. For example, we could conduct a poll in a first grade classroom and ask students to name some numbers, animals, and colors that come to mind. In the example below, we have created a list with three slots to store the responses for a single student. In the first slot, we have a numeric vector containing three numbers. In the second, we have a character vector containing two animal names. In the third, we have a character vector containing six colors. This will create a list with three slots, where the responses in each slot are a different length.</p>
+<p>Within the <code>list</code> function, each of these objects is separated with a comma.</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="lists-and-data-frames.html#cb63-1" aria-hidden="true" tabindex="-1"></a>responses_student1 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">20</span>,<span class="dv">3</span>), <span class="fu">c</span>(<span class="st">&quot;bear&quot;</span>, <span class="st">&quot;giraffe&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;purple&quot;</span>))</span></code></pre></div>
+<p>This means that the <code>length</code> <em>of the list</em> is three (one for the numbers, one for the animal names, and one for the colors), but the lengths of the responses within each list differs for each slot (3 for the numbers, 2 for the animal names, and 6 for the colors).</p>
+<p>When we print this object to the screen, it looks as below. The double square brackets indicate the slot number, or element number. So <code>[[1]]</code> indicates the first slot or first element of the list, and we see that this first element is a length-3 numeric vector. The <code>[[2]]</code> indicates the second element, and we see that it is a length-2 character vector. The <code>[[3]]</code> indicates the third slot, and we see that it is a length-6 character vector. The double bracket notation alludes to one way that we can access certain elements of a list. We will cover this in detail in the next section of this lesson.</p>
+<pre class="text"><code>&gt; responses_student1
+[[1]]
+[1]  4 20  3
+
+[[2]]
+[1] &quot;bear&quot;    &quot;giraffe&quot;
+
+[[3]]
+[1] &quot;red&quot;    &quot;orange&quot; &quot;yellow&quot; &quot;green&quot;  &quot;blue&quot;   &quot;purple&quot;</code></pre>
+<p>Note that to access a <em>single</em> value within a list you can use the following notation: <code>list[[element]][index]</code>. For example, using the list above, <code>responses_student1[[3]][1]</code> would print “red” to the screen, as this is the <em>first</em> value of the <em>third</em> element in the list <code>responses_student1</code>.</p>
+<p>All that said, the information contained in this list would be improved with labels for the three list elements. This is achieved by adding <strong>names</strong> to the list. As we learned about in the Basic Commands lesson, we can do this with the <code>names</code> function.</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="lists-and-data-frames.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(responses_student1) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;numbers&quot;</span>, <span class="st">&quot;animals&quot;</span>, <span class="st">&quot;colors&quot;</span>)</span></code></pre></div>
+<p>Now when we display the object, we can see these labels. The double square brackets have been replaced with <code>$label</code> where <code>label</code> is one of the names that we just entered. Similar to the double bracket notation, the dollar sign notation here indicates another way that we can access certain elements of a list. We will cover this in detail in the next section of this lesson.</p>
+<pre class="text"><code>&gt; responses_student1
+$numbers
+[1]  4 20  3
+
+$animals
+[1] &quot;bear&quot;    &quot;giraffe&quot;
+
+$colors
+[1] &quot;red&quot;    &quot;orange&quot; &quot;yellow&quot; &quot;green&quot;  &quot;blue&quot;   &quot;purple&quot;</code></pre>
+<p>We can also specify the names of the list elements from the start in the <code>list</code> function. Let’s create another list object that contains poll responses for a <em>second</em> student. We can specify the names as argument names in the <code>list</code> function by stating the name of each slot in the list followed by an equals sign and then the values you want in that slot in the list after. Again, each slot is separated by a comma.</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="lists-and-data-frames.html#cb67-1" aria-hidden="true" tabindex="-1"></a>responses_student2 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">numbers =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">animals =</span> <span class="fu">c</span>(<span class="st">&quot;T-rex&quot;</span>, <span class="st">&quot;tiger&quot;</span>, <span class="st">&quot;lion&quot;</span>), <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>))</span></code></pre></div>
+<p>When we display this object, we see that the names have been added automatically.</p>
+<pre class="text"><code>&gt; responses_student2
+$numbers
+[1] 1 2 3 4 5
+
+$animals
+[1] &quot;T-rex&quot; &quot;tiger&quot; &quot;lion&quot; 
+
+$colors
+[1] &quot;red&quot;   &quot;green&quot;</code></pre>
+<p>To highlight the flexibility and complexity of lists, note that lists can be contained within lists! We create a new list object that contains the responses for both students.</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="lists-and-data-frames.html#cb69-1" aria-hidden="true" tabindex="-1"></a>responses_all_students <span class="ot">&lt;-</span> <span class="fu">list</span>(responses_student1, responses_student2)</span></code></pre></div>
+<p>Here we did not specify labels with argument names, so when we print this object, we see the double square bracket notation return:</p>
+<pre class="text"><code>&gt; responses_all_students
+[[1]]
+[[1]]$numbers
+[1]  4 20  3
+
+[[1]]$animals
+[1] &quot;bear&quot;    &quot;giraffe&quot;
+
+[[1]]$colors
+[1] &quot;red&quot;    &quot;orange&quot; &quot;yellow&quot; &quot;green&quot;  &quot;blue&quot;   &quot;purple&quot;
+
+
+[[2]]
+[[2]]$numbers
+[1] 1 2 3 4 5
+
+[[2]]$animals
+[1] &quot;T-rex&quot; &quot;tiger&quot; &quot;lion&quot; 
+
+[[2]]$colors
+[1] &quot;red&quot;   &quot;green&quot;</code></pre>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/10_DQyZ_g9h-MB8yRaen-GFcH9boTwgrF6GLdVUS7Cvk/export/png?id=10_DQyZ_g9h-MB8yRaen-GFcH9boTwgrF6GLdVUS7Cvk&amp;pageid=g3929a325eb_0_89" alt="" />
+<p class="caption">named list of lists</p>
+</div>
+<p>If we had specified argument names to label this list, the resulting object would look as follows:</p>
+<pre class="text"><code>&gt; list(st1 = responses_student1, st2 = responses_student2)
+$st1
+$st1$numbers
+[1]  4 20  3
+
+$st1$animals
+[1] &quot;bear&quot;    &quot;giraffe&quot;
+
+$st1$colors
+[1] &quot;red&quot;    &quot;orange&quot; &quot;yellow&quot; &quot;green&quot;  &quot;blue&quot;   &quot;purple&quot;
+
+
+$st2
+$st2$numbers
+[1] 1 2 3 4 5
+
+$st2$animals
+[1] &quot;T-rex&quot; &quot;tiger&quot; &quot;lion&quot; 
+
+$st2$colors
+[1] &quot;red&quot;   &quot;green&quot;</code></pre>
+</div>
+<div id="lists-and-data-frames-1" class="section level3" number="10.0.3">
+<h3><span class="header-section-number">10.0.3</span> Lists and data frames</h3>
+<p>We mentioned at the start of this lesson that data frames are a special case of lists. In particular, data frames are lists where each element (column) is a simple vector of the same length. In the car information data frame subset below, each column from <code>mpg</code> to <code>carb</code> is a simple vector. They are all either numeric or integer vectors of length 6. Each element (column) in a data frame must be the same length. The car models listed on the left-hand side do not actually form a column in the data frame, but rather, they are the row names of the data frame. This ability to have row names is a special feature of data frames that lists do not have.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/10_DQyZ_g9h-MB8yRaen-GFcH9boTwgrF6GLdVUS7Cvk/export/png?id=10_DQyZ_g9h-MB8yRaen-GFcH9boTwgrF6GLdVUS7Cvk&amp;pageid=g3929a325eb_0_100" alt="mtcars data frame" /></p>
+<p>We can see the relationship between data frames and lists by using the coercion function <code>as.list</code>. We can see the familiar dollar sign notation indicating that the names of the list correspond to the column names of the data frame. We can also see that the simple vectors in each of these slots has length 6.</p>
+<pre class="text"><code>&gt; as.list(head(mtcars))
+$mpg
+[1] 21.0 21.0 22.8 21.4 18.7 18.1
+
+$cyl
+[1] 6 6 4 6 8 6
+
+$disp
+[1] 160 160 108 258 360 225
+
+$hp
+[1] 110 110  93 110 175 105
+
+$drat
+[1] 3.90 3.90 3.85 3.08 3.15 2.76
+
+$wt
+[1] 2.620 2.875 2.320 3.215 3.440 3.460
+
+$qsec
+[1] 16.46 17.02 18.61 19.44 17.02 20.22
+
+$vs
+[1] 0 0 1 1 0 1
+
+$am
+[1] 1 1 1 0 0 0
+
+$gear
+[1] 4 4 4 3 3 3
+
+$carb
+[1] 4 4 1 1 2 1</code></pre>
+<p>Here, when displayed as a list, each column from the data frame is now a different element of the list. This is meant to highlight the fact that data frames and lists are related. All data frames are lists. But, data have the special constraint that each element must contain the same number of items as all the other elements in the data frame and the special ability to have row names. Thus, data frames are less flexible than lists.</p>
+</div>
+<div id="subsetting-lists" class="section level3" number="10.0.4">
+<h3><span class="header-section-number">10.0.4</span> Subsetting lists</h3>
+<p>It is often the case that we want to work with part of the information in an object, but not all of it. As alluded to in the previous section, we can subset lists using double square bracket or dollar sign notation. Because data frames are a special type of list, data frames can also be subset using double bracket or dollar sign notation. In addition to double bracket and dollar sign notation, we will cover single bracket notation for subsetting, and we will discuss the differences between these approaches.</p>
+<div id="double-square-brackets" class="section level4" number="10.0.4.1">
+<h4><span class="header-section-number">10.0.4.1</span> Double square brackets</h4>
+<p>When using double square brackets, either an integer (i.e. 2) or a character string (i.e. “gear”) is specified within the brackets. An integer specifies the index (also referred to as the position) within the list to extract. A character string specifies that the extraction should be done by name. The example below shows how both of these methods can be used to extract the second element of the list <code>l</code>. Note that the extracted objects are character vectors, which we can see with the <code>class</code> function. This is in contrast to the class of <code>l</code> being a list.</p>
+<pre class="text"><code>&gt; ## create list
+&gt; l &lt;- list(a = 1:7, b = c(&quot;foo&quot;, &quot;bar&quot;, &quot;biz&quot;))
+&gt; ## extract by index
+&gt; res1 &lt;- l[[2]]
+&gt; ## extract by character string
+&gt; res2 &lt;- l[[&quot;b&quot;]]
+&gt; res1
+[1] &quot;foo&quot; &quot;bar&quot; &quot;biz&quot;
+&gt; res2
+[1] &quot;foo&quot; &quot;bar&quot; &quot;biz&quot;
+&gt; class(l)
+[1] &quot;list&quot;
+&gt; class(res1)
+[1] &quot;character&quot;
+&gt; class(res2)
+[1] &quot;character&quot;</code></pre>
+<p>This works similarly for data frames. The example below uses the same idea for a subset of the <code>iris</code> data frame object.</p>
+<pre class="text"><code>&gt; iris_subset &lt;- head(iris, 3)
+&gt; iris_subset
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+&gt; iris_subset[[2]]
+[1] 3.5 3.0 3.2
+&gt; iris_subset[[&quot;Sepal.Width&quot;]]
+[1] 3.5 3.0 3.2</code></pre>
+</div>
+<div id="dollar-signs" class="section level4" number="10.0.4.2">
+<h4><span class="header-section-number">10.0.4.2</span> Dollar signs</h4>
+<p>When using dollar sign notation for subsetting, the syntax is <code>object$name</code>, where <code>object</code> is the name of the list/data frame object, and <code>name</code> is the label for the element you want to extract. Here, in contrast to double square bracket notation, we must have names for the elements we want to extract. In the example below, we extract the element named “b” in the list object <code>l</code>, and we extract the “Sepal.Width” column in the <code>iris_subset</code> data frame.</p>
+<pre class="text"><code>&gt; l$b
+[1] &quot;foo&quot; &quot;bar&quot; &quot;biz&quot;
+&gt; iris_subset$Sepal.Width
+[1] 3.5 3.0 3.2</code></pre>
+</div>
+<div id="single-square-brackets" class="section level4" number="10.0.4.3">
+<h4><span class="header-section-number">10.0.4.3</span> Single square brackets</h4>
+<p>When using either double square brackets or dollar signs to extract list/data frame elements, the subsetting is <strong>simplifying</strong> the output. That is, the original object was a list/data frame and the extracted object is simpler than a list - it is a simple vector. The opposite of a subsetting operation that <strong>simplifies</strong> the class of the output is a subsetting observation that <strong>preserves</strong> the class of the output. For lists/data frames this means that the output of the subsetting is also a list/data frame. Class preservation is achieved using single square bracket subsetting. As with double square bracket subsetting, an integer index or a character string can be specified with the brackets.</p>
+<pre class="text"><code>&gt; l[2]
+$b
+[1] &quot;foo&quot; &quot;bar&quot; &quot;biz&quot;
+
+&gt; l[&quot;b&quot;]
+$b
+[1] &quot;foo&quot; &quot;bar&quot; &quot;biz&quot;
+
+&gt; class(l[2])
+[1] &quot;list&quot;
+&gt; class(l[&quot;b&quot;])
+[1] &quot;list&quot;</code></pre>
+<p>Here we can tell from the printed output that the extracted output is a list because we can see the <code>$b</code> printed in the output. We can also verify this with the <code>class</code> function. In the example below, we show the same for the <code>iris_subset</code> data frame.</p>
+<pre class="text"><code>&gt; iris_subset[2]
+  Sepal.Width
+1         3.5
+2         3.0
+3         3.2
+&gt; iris_subset[&quot;Sepal.Width&quot;]
+  Sepal.Width
+1         3.5
+2         3.0
+3         3.2
+&gt; class(iris_subset[2])
+[1] &quot;data.frame&quot;
+&gt; class(iris_subset[&quot;Sepal.Width&quot;])
+[1] &quot;data.frame&quot;</code></pre>
+<p>Here we can tell from the printed output that the extracted output is a list because we can see that it is printed in a column. We can also verify this with the <code>class</code> function.</p>
+</div>
+</div>
+<div id="summary-5" class="section level3" number="10.0.5">
+<h3><span class="header-section-number">10.0.5</span> Summary</h3>
+<p>Lists are a flexible way to store complex data. We have seen how to create lists using the <code>list</code> function in this lesson. As you move through the course, you will learn about ways of getting data and information into R that create list objects automatically.</p>
+<p>Working with subsets of data will be a daily part of your work routine, so familiarity with subsetting operations will be vital. Sometimes when data is acquired, labels will be present, and sometimes it won’t, so it is important to be comfortable with knowing when integer indices can be used to subset. Knowing the difference between class-simplifying and class-preserving subsetting operations is also important so that you know exactly what type of object you are working with. You will gain an appreciation for this as you move through the courses and work on projects.</p>
+</div>
+<div id="slides-and-video-6" class="section level3" number="10.0.6">
+<h3><span class="header-section-number">10.0.6</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://youtu.be/tVEVFLxmi2M" alt="" />
+<p class="caption">Lists</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/10_DQyZ_g9h-MB8yRaen-GFcH9boTwgrF6GLdVUS7Cvk/edit?usp=sharing">Slides</a></li>
+</ul>
+<p>{quiz, id: quiz_06_lists}</p>
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="working-with-logicals-quiz.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lists-and-data-frames-quiz.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

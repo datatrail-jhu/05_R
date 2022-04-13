@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 RStudio Cloud Tour | Untitled</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 RStudio Cloud Tour | Untitled" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 RStudio Cloud Tour | Untitled" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+<meta name="date" content="2022-04-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="what-is-r.html"/>
+<link rel="next" href="r-packages.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>1</b> What is R?</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="what-is-r.html"><a href="what-is-r.html#introduction-to-r"><i class="fa fa-check"></i><b>1.0.1</b> Introduction to R</a></li>
+<li class="chapter" data-level="1.0.2" data-path="what-is-r.html"><a href="what-is-r.html#the-r-programming-language"><i class="fa fa-check"></i><b>1.0.2</b> The R programming language</a></li>
+<li class="chapter" data-level="1.0.3" data-path="what-is-r.html"><a href="what-is-r.html#rstudio"><i class="fa fa-check"></i><b>1.0.3</b> RStudio</a></li>
+<li class="chapter" data-level="1.0.4" data-path="what-is-r.html"><a href="what-is-r.html#rstudio-cloud"><i class="fa fa-check"></i><b>1.0.4</b> RStudio Cloud</a></li>
+<li class="chapter" data-level="1.0.5" data-path="what-is-r.html"><a href="what-is-r.html#basic-history"><i class="fa fa-check"></i><b>1.0.5</b> Basic History</a></li>
+<li class="chapter" data-level="1.0.6" data-path="what-is-r.html"><a href="what-is-r.html#learning-r"><i class="fa fa-check"></i><b>1.0.6</b> Learning R</a></li>
+<li class="chapter" data-level="1.0.7" data-path="what-is-r.html"><a href="what-is-r.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="1.0.8" data-path="what-is-r.html"><a href="what-is-r.html#welcome-to-the-what-is-r-quiz"><i class="fa fa-check"></i><b>1.0.8</b> Welcome to the What is R? quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html"><i class="fa fa-check"></i><b>2</b> RStudio Cloud Tour</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#getting-started-in-rstudio-cloud"><i class="fa fa-check"></i><b>2.0.1</b> Getting Started in RStudio Cloud</a></li>
+<li class="chapter" data-level="2.0.2" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#the-tour"><i class="fa fa-check"></i><b>2.0.2</b> The Tour</a></li>
+<li class="chapter" data-level="2.0.3" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#source-script-editor-panel"><i class="fa fa-check"></i><b>2.0.3</b> Source: script editor panel</a></li>
+<li class="chapter" data-level="2.0.4" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#fileshelpplotspackagesviewer"><i class="fa fa-check"></i><b>2.0.4</b> Files/Help/Plots/Packages/Viewer</a></li>
+<li class="chapter" data-level="2.0.5" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#swirl"><i class="fa fa-check"></i><b>2.0.5</b> Swirl</a></li>
+<li class="chapter" data-level="2.0.6" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#summary"><i class="fa fa-check"></i><b>2.0.6</b> Summary</a></li>
+<li class="chapter" data-level="2.0.7" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="2.0.8" data-path="rstudio-cloud-tour.html"><a href="rstudio-cloud-tour.html#rstudio-cloud-tour-quiz"><i class="fa fa-check"></i><b>2.0.8</b> RStudio Cloud Tour quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>3</b> R Packages</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="r-packages.html"><a href="r-packages.html#what-is-an-r-package"><i class="fa fa-check"></i><b>3.0.1</b> What is an R package?</a></li>
+<li class="chapter" data-level="3.0.2" data-path="r-packages.html"><a href="r-packages.html#what-are-repositories"><i class="fa fa-check"></i><b>3.0.2</b> What are repositories?</a></li>
+<li class="chapter" data-level="3.0.3" data-path="r-packages.html"><a href="r-packages.html#how-do-you-know-what-package-is-right-for-you"><i class="fa fa-check"></i><b>3.0.3</b> How do you know what package is right for you?</a></li>
+<li class="chapter" data-level="3.0.4" data-path="r-packages.html"><a href="r-packages.html#how-do-you-install-packages"><i class="fa fa-check"></i><b>3.0.4</b> How do you install packages?</a></li>
+<li class="chapter" data-level="3.0.5" data-path="r-packages.html"><a href="r-packages.html#loading-packages"><i class="fa fa-check"></i><b>3.0.5</b> Loading packages</a></li>
+<li class="chapter" data-level="3.0.6" data-path="r-packages.html"><a href="r-packages.html#updating-removing-unloading-packages"><i class="fa fa-check"></i><b>3.0.6</b> Updating, removing, unloading packages</a></li>
+<li class="chapter" data-level="3.0.7" data-path="r-packages.html"><a href="r-packages.html#using-the-commands-in-a-function"><i class="fa fa-check"></i><b>3.0.7</b> Using the commands in a function</a></li>
+<li class="chapter" data-level="3.0.8" data-path="r-packages.html"><a href="r-packages.html#summary-1"><i class="fa fa-check"></i><b>3.0.8</b> Summary</a></li>
+<li class="chapter" data-level="3.0.9" data-path="r-packages.html"><a href="r-packages.html#additional-resources"><i class="fa fa-check"></i><b>3.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.0.10" data-path="r-packages.html"><a href="r-packages.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.10</b> Slides and Video</a></li>
+<li class="chapter" data-level="3.0.11" data-path="r-packages.html"><a href="r-packages.html#r-packages-quiz"><i class="fa fa-check"></i><b>3.0.11</b> R Packages Quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>4</b> Objects in R</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="objects-in-r.html"><a href="objects-in-r.html#what-is-an-object"><i class="fa fa-check"></i><b>4.0.1</b> What is an object?</a></li>
+<li class="chapter" data-level="4.0.2" data-path="objects-in-r.html"><a href="objects-in-r.html#storing-objects"><i class="fa fa-check"></i><b>4.0.2</b> Storing objects</a></li>
+<li class="chapter" data-level="4.0.3" data-path="objects-in-r.html"><a href="objects-in-r.html#printing-objects"><i class="fa fa-check"></i><b>4.0.3</b> Printing objects</a></li>
+<li class="chapter" data-level="4.0.4" data-path="objects-in-r.html"><a href="objects-in-r.html#character"><i class="fa fa-check"></i><b>4.0.4</b> Character</a></li>
+<li class="chapter" data-level="4.0.5" data-path="objects-in-r.html"><a href="objects-in-r.html#integer"><i class="fa fa-check"></i><b>4.0.5</b> Integer</a></li>
+<li class="chapter" data-level="4.0.6" data-path="objects-in-r.html"><a href="objects-in-r.html#numeric"><i class="fa fa-check"></i><b>4.0.6</b> Numeric</a></li>
+<li class="chapter" data-level="4.0.7" data-path="objects-in-r.html"><a href="objects-in-r.html#logical"><i class="fa fa-check"></i><b>4.0.7</b> Logical</a></li>
+<li class="chapter" data-level="4.0.8" data-path="objects-in-r.html"><a href="objects-in-r.html#factor"><i class="fa fa-check"></i><b>4.0.8</b> Factor</a></li>
+<li class="chapter" data-level="4.0.9" data-path="objects-in-r.html"><a href="objects-in-r.html#data-frames"><i class="fa fa-check"></i><b>4.0.9</b> Data frames</a></li>
+<li class="chapter" data-level="4.0.10" data-path="objects-in-r.html"><a href="objects-in-r.html#missing-values"><i class="fa fa-check"></i><b>4.0.10</b> Missing values</a></li>
+<li class="chapter" data-level="4.0.11" data-path="objects-in-r.html"><a href="objects-in-r.html#determining-the-class-of-an-object"><i class="fa fa-check"></i><b>4.0.11</b> Determining the class of an object</a></li>
+<li class="chapter" data-level="4.0.12" data-path="objects-in-r.html"><a href="objects-in-r.html#summary-2"><i class="fa fa-check"></i><b>4.0.12</b> Summary</a></li>
+<li class="chapter" data-level="4.0.13" data-path="objects-in-r.html"><a href="objects-in-r.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.13</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="objects-in-r-quiz.html"><a href="objects-in-r-quiz.html"><i class="fa fa-check"></i><b>5</b> Objects in R quiz</a></li>
+<li class="chapter" data-level="6" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html"><i class="fa fa-check"></i><b>6</b> Basic Commands in R</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#functions"><i class="fa fa-check"></i><b>6.0.1</b> Functions</a></li>
+<li class="chapter" data-level="6.0.2" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#what-is-this-object"><i class="fa fa-check"></i><b>6.0.2</b> What is this object?</a></li>
+<li class="chapter" data-level="6.0.3" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#how-big-is-this-object"><i class="fa fa-check"></i><b>6.0.3</b> How big is this object?</a></li>
+<li class="chapter" data-level="6.0.4" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#are-there-named-features-of-this-object"><i class="fa fa-check"></i><b>6.0.4</b> Are there named features of this object?</a></li>
+<li class="chapter" data-level="6.0.5" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#what-does-this-object-look-like"><i class="fa fa-check"></i><b>6.0.5</b> What does this object look like?</a></li>
+<li class="chapter" data-level="6.0.6" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#errors-warnings-and-messages"><i class="fa fa-check"></i><b>6.0.6</b> Errors, Warnings, and Messages</a></li>
+<li class="chapter" data-level="6.0.7" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#summary-3"><i class="fa fa-check"></i><b>6.0.7</b> Summary</a></li>
+<li class="chapter" data-level="6.0.8" data-path="basic-commands-in-r.html"><a href="basic-commands-in-r.html#slides-and-video-4"><i class="fa fa-check"></i><b>6.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="basic-commands-in-r-quiz.html"><a href="basic-commands-in-r-quiz.html"><i class="fa fa-check"></i><b>7</b> Basic Commands in R quiz</a></li>
+<li class="chapter" data-level="8" data-path="working-with-logicals.html"><a href="working-with-logicals.html"><i class="fa fa-check"></i><b>8</b> Working with Logicals</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="working-with-logicals.html"><a href="working-with-logicals.html#logical-operators"><i class="fa fa-check"></i><b>8.0.1</b> Logical operators</a></li>
+<li class="chapter" data-level="8.0.2" data-path="working-with-logicals.html"><a href="working-with-logicals.html#logical-functions"><i class="fa fa-check"></i><b>8.0.2</b> Logical functions</a></li>
+<li class="chapter" data-level="8.0.3" data-path="working-with-logicals.html"><a href="working-with-logicals.html#summary-4"><i class="fa fa-check"></i><b>8.0.3</b> Summary</a></li>
+<li class="chapter" data-level="8.0.4" data-path="working-with-logicals.html"><a href="working-with-logicals.html#slides-and-video-5"><i class="fa fa-check"></i><b>8.0.4</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="working-with-logicals-quiz.html"><a href="working-with-logicals-quiz.html"><i class="fa fa-check"></i><b>9</b> Working with Logicals quiz</a></li>
+<li class="chapter" data-level="10" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html"><i class="fa fa-check"></i><b>10</b> Lists and Data Frames</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#what-are-lists-in-r"><i class="fa fa-check"></i><b>10.0.1</b> What are lists in R?</a></li>
+<li class="chapter" data-level="10.0.2" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#creating-a-list"><i class="fa fa-check"></i><b>10.0.2</b> Creating a list</a></li>
+<li class="chapter" data-level="10.0.3" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#lists-and-data-frames-1"><i class="fa fa-check"></i><b>10.0.3</b> Lists and data frames</a></li>
+<li class="chapter" data-level="10.0.4" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#subsetting-lists"><i class="fa fa-check"></i><b>10.0.4</b> Subsetting lists</a></li>
+<li class="chapter" data-level="10.0.5" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#summary-5"><i class="fa fa-check"></i><b>10.0.5</b> Summary</a></li>
+<li class="chapter" data-level="10.0.6" data-path="lists-and-data-frames.html"><a href="lists-and-data-frames.html#slides-and-video-6"><i class="fa fa-check"></i><b>10.0.6</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lists-and-data-frames-quiz.html"><a href="lists-and-data-frames-quiz.html"><i class="fa fa-check"></i><b>11</b> Lists and Data Frames quiz</a></li>
+<li class="chapter" data-level="12" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html"><i class="fa fa-check"></i><b>12</b> Writing Functions in R</a>
+<ul>
+<li class="chapter" data-level="12.0.1" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#when-to-write-a-function"><i class="fa fa-check"></i><b>12.0.1</b> When to write a function</a></li>
+<li class="chapter" data-level="12.0.2" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#how-will-writing-functions-help-me"><i class="fa fa-check"></i><b>12.0.2</b> How will writing functions help me?</a></li>
+<li class="chapter" data-level="12.0.3" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#how-to-write-a-function"><i class="fa fa-check"></i><b>12.0.3</b> How to write a function</a></li>
+<li class="chapter" data-level="12.0.4" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#commenting-your-function"><i class="fa fa-check"></i><b>12.0.4</b> Commenting your function</a></li>
+<li class="chapter" data-level="12.0.5" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#function-output"><i class="fa fa-check"></i><b>12.0.5</b> Function Output</a></li>
+<li class="chapter" data-level="12.0.6" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#an-example-function-converting-from-celsius-to-fahrenheit"><i class="fa fa-check"></i><b>12.0.6</b> An example function: Converting from Celsius to Fahrenheit</a></li>
+<li class="chapter" data-level="12.0.7" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#functions-with-default-arguments"><i class="fa fa-check"></i><b>12.0.7</b> Functions with default arguments</a></li>
+<li class="chapter" data-level="12.0.8" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#summary-6"><i class="fa fa-check"></i><b>12.0.8</b> Summary</a></li>
+<li class="chapter" data-level="12.0.9" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#additional-resources-1"><i class="fa fa-check"></i><b>12.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="12.0.10" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#slides-and-video-7"><i class="fa fa-check"></i><b>12.0.10</b> Slides and Video</a></li>
+<li class="chapter" data-level="12.0.11" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#writing-functions-in-r-quiz"><i class="fa fa-check"></i><b>12.0.11</b> Writing Functions in R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>13</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="r-markdown.html"><a href="r-markdown.html#what-is-r-markdown"><i class="fa fa-check"></i><b>13.0.1</b> What is R Markdown?</a></li>
+<li class="chapter" data-level="13.0.2" data-path="r-markdown.html"><a href="r-markdown.html#why-use-r-markdown"><i class="fa fa-check"></i><b>13.0.2</b> Why use R Markdown?</a></li>
+<li class="chapter" data-level="13.0.3" data-path="r-markdown.html"><a href="r-markdown.html#getting-started-with-r-markdown"><i class="fa fa-check"></i><b>13.0.3</b> Getting started with R Markdown</a></li>
+<li class="chapter" data-level="13.0.4" data-path="r-markdown.html"><a href="r-markdown.html#knitting-documents"><i class="fa fa-check"></i><b>13.0.4</b> “Knitting” documents</a></li>
+<li class="chapter" data-level="13.0.5" data-path="r-markdown.html"><a href="r-markdown.html#summary-7"><i class="fa fa-check"></i><b>13.0.5</b> Summary</a></li>
+<li class="chapter" data-level="13.0.6" data-path="r-markdown.html"><a href="r-markdown.html#additional-resources-2"><i class="fa fa-check"></i><b>13.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="13.0.7" data-path="r-markdown.html"><a href="r-markdown.html#slides-and-video-8"><i class="fa fa-check"></i><b>13.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="13.0.8" data-path="r-markdown.html"><a href="r-markdown.html#r-markdown-quiz"><i class="fa fa-check"></i><b>13.0.8</b> R Markdown quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html"><i class="fa fa-check"></i><b>14</b> Getting Help in R</a>
+<ul>
+<li class="chapter" data-level="14.0.1" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#r-help"><i class="fa fa-check"></i><b>14.0.1</b> R Help: <code>?</code></a></li>
+<li class="chapter" data-level="14.0.2" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#stack-overflow"><i class="fa fa-check"></i><b>14.0.2</b> Stack Overflow</a></li>
+<li class="chapter" data-level="14.0.3" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#rstudio-community"><i class="fa fa-check"></i><b>14.0.3</b> RStudio Community</a></li>
+<li class="chapter" data-level="14.0.4" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#summary-8"><i class="fa fa-check"></i><b>14.0.4</b> Summary</a></li>
+<li class="chapter" data-level="14.0.5" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#additional-community-resources"><i class="fa fa-check"></i><b>14.0.5</b> Additional Community Resources</a></li>
+<li class="chapter" data-level="14.0.6" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#slides-and-video-9"><i class="fa fa-check"></i><b>14.0.6</b> Slides and Video</a></li>
+<li class="chapter" data-level="14.0.7" data-path="getting-help-in-r.html"><a href="getting-help-in-r.html#getting-help-in-r-quiz"><i class="fa fa-check"></i><b>14.0.7</b> Getting Help in R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html"><i class="fa fa-check"></i><b>15</b> Pushing Code from R to GitHub</a>
+<ul>
+<li class="chapter" data-level="15.0.1" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#github-repository-my_first_project"><i class="fa fa-check"></i><b>15.0.1</b> GitHub repository: <code>my_first_project</code></a></li>
+<li class="chapter" data-level="15.0.2" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#adding-code-to-your-github-project"><i class="fa fa-check"></i><b>15.0.2</b> Adding code to your GitHub project</a></li>
+<li class="chapter" data-level="15.0.3" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#summary-9"><i class="fa fa-check"></i><b>15.0.3</b> Summary</a></li>
+<li class="chapter" data-level="15.0.4" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#slides-and-video-10"><i class="fa fa-check"></i><b>15.0.4</b> Slides and Video</a></li>
+<li class="chapter" data-level="15.0.5" data-path="pushing-code-from-r-to-github.html"><a href="pushing-code-from-r-to-github.html#pushing-code-from-r-to-github-quiz"><i class="fa fa-check"></i><b>15.0.5</b> Pushing Code from R to GitHub quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html"><i class="fa fa-check"></i><b>16</b> Creating Websites with R</a>
+<ul>
+<li class="chapter" data-level="16.0.1" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#create-your-website-repository"><i class="fa fa-check"></i><b>16.0.1</b> Create your website repository</a></li>
+<li class="chapter" data-level="16.0.2" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#sync-files-with-github"><i class="fa fa-check"></i><b>16.0.2</b> Sync files with GitHub</a></li>
+<li class="chapter" data-level="16.0.3" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#one-last-setup-step"><i class="fa fa-check"></i><b>16.0.3</b> One last setup step</a></li>
+<li class="chapter" data-level="16.0.4" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#make-the-website"><i class="fa fa-check"></i><b>16.0.4</b> Make the website</a></li>
+<li class="chapter" data-level="16.0.5" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#publish-the-website"><i class="fa fa-check"></i><b>16.0.5</b> Publish the website</a></li>
+<li class="chapter" data-level="16.0.6" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#customize-the-website"><i class="fa fa-check"></i><b>16.0.6</b> Customize the website</a></li>
+<li class="chapter" data-level="16.0.7" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#change-the-theme"><i class="fa fa-check"></i><b>16.0.7</b> Change the theme</a></li>
+<li class="chapter" data-level="16.0.8" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#adding-a-table-of-contents"><i class="fa fa-check"></i><b>16.0.8</b> Adding a table of contents</a></li>
+<li class="chapter" data-level="16.0.9" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#adding-an-image"><i class="fa fa-check"></i><b>16.0.9</b> Adding an image</a></li>
+<li class="chapter" data-level="16.0.10" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#a-similar-website"><i class="fa fa-check"></i><b>16.0.10</b> A similar website</a></li>
+<li class="chapter" data-level="16.0.11" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#beyond-this-lesson"><i class="fa fa-check"></i><b>16.0.11</b> Beyond this lesson</a></li>
+<li class="chapter" data-level="16.0.12" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#slides-and-video-11"><i class="fa fa-check"></i><b>16.0.12</b> Slides and Video</a></li>
+<li class="chapter" data-level="16.0.13" data-path="creating-websites-with-r.html"><a href="creating-websites-with-r.html#creating-websites-with-r-quiz"><i class="fa fa-check"></i><b>16.0.13</b> Creating Websites with R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="17" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>17</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Untitled</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="rstudio-cloud-tour" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> RStudio Cloud Tour</h1>
+<p>At this point in the course, you’ve been introduced to RStudio Cloud. You know that it’s where you’ll be writing code, and you’ve been briefly introduced to RStudio and RStudio Cloud. You’ve learned how to organize your files within RStudio Cloud for data science projects. And, you have worked with markdown files within RStudio Cloud. While you were introduced to the parts of RStudio previously, we’ll review them in this lesson and then go into a little more depth to get you even more comfortable working in RStudio Cloud.</p>
+<div id="getting-started-in-rstudio-cloud" class="section level3" number="2.0.1">
+<h3><span class="header-section-number">2.0.1</span> Getting Started in RStudio Cloud</h3>
+<p>To get started working in <a href="rstudio.cloud">RStudio Cloud</a>, you’ll want to go to <a href="rstudio.cloud">rstudio.cloud</a> and log in using your RStudio Cloud login. You’ll be logged into your home screen. As discussed previously, to get started working on a new project, you would click on the “New Project” blue icon toward the top right. This will create a new project. However, all your old projects will be listed at left underneath “Spaces.” You can always return to an old project or start a new one.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_0" alt="RStudio Cloud Home Screen - New Project" /></p>
+<p>By starting a new project you’ll be brought to a screen where three spaces are available.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_10" alt="RStudio Cloud Project" /></p>
+<p>However, if you remember from previously, there are four main quadrants when working in RStudio Cloud. To access the fourth space, you’ll have to start a new R Script. To do so, you’ll click on File, hover over New File from the drop-down menu that appears, and then click “R Script” from the drop-down menu.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_16" alt="Open up a new R Script" /></p>
+<p>This will open up a new R Script, which is currently called “Untitled1,” which you can see on the tab at the top left of the quadrant has just appeared.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_24" alt="RStudio Cloud" /></p>
+</div>
+<div id="the-tour" class="section level3" number="2.0.2">
+<h3><span class="header-section-number">2.0.2</span> The Tour</h3>
+<p>Now that RStudio Cloud is opened and you have access to each of four quadrants, we can discuss and review each quadrant’s purpose. We will go through each of the regions and describe some of their main functions, so follow along with each step and make sure you understand the function and how to access each part of RStudio Cloud on your own. But, it would be impossible to cover everything that RStudio can do, so we urge you to explore RStudio Cloud further on your own too!</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_38" alt="RStudio’s quadrants" /></p>
+<div id="the-menu-bar" class="section level4" number="2.0.2.1">
+<h4><span class="header-section-number">2.0.2.1</span> The menu bar</h4>
+<p>In addition to the four main quadrants, there is also a menu bar. The menu bar runs across the top of your screen and should have two rows. The first row should be a fairly standard menu, starting with “File” and “Edit.” Below that, there is a row of icons that are shortcuts for functions that you’ll frequently use.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g31f42765ab_0_6" alt="The commonly used options of the main menu bar" /></p>
+<p>To start, let’s explore the main sections of the menu bar that you will use. The first is the File menu. Here we can open new or saved files, save our current document, or close RStudio. As we saw earlier in this lesson, if you mouse over “New File”, a new menu will appear that suggests the various file formats available to you. R Script and R Markdown files are the most common file types for use, but you can also generate R notebooks, web apps, websites, or slide presentations. If you click on any one of these, a new tab in the “Source” quadrant will open. We’ll spend more time in a future lesson on R Markdown files and their use.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_426" alt="The File menu" /></p>
+<p>The Session menu has some R specific functions, in which you can restart, interrupt or terminate R - these can be helpful if R isn’t behaving or is stuck and you want to stop what it is doing and start from scratch.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g39c9aa57ae_2_0" alt="The Session menu" /></p>
+<p>The Tools menu is a treasure trove of functions for you to explore. For now, you should know that this is where you can go to install new packages (see the next lesson in this course!), set up your version control software (GitHub was discussed in the last course in this series!), and set your options and preferences for how RStudio looks and functions. For now, we will leave this alone, but be sure to explore these menus on your own once you have a bit more experience with RStudio and see what you can change to best suit your preferences!</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g31f42765ab_0_48" alt="The Tools menu" /></p>
+</div>
+<div id="console" class="section level4" number="2.0.2.2">
+<h4><span class="header-section-number">2.0.2.2</span> Console</h4>
+<p>This region should look familiar to you - when you opened R, you were presented with the console. This is where you type and execute commands, and where the output of these commands is displayed.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g31f42765ab_0_59" alt="The console" /></p>
+<p>To execute your first command, at the <code>&gt;</code> prompt, try typing <code>1 + 1</code>. Then, hit enter. You should see the output <code>[1] 2</code> below your command.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_233" alt="Typing into the console and getting an output" /></p>
+</div>
+</div>
+<div id="source-script-editor-panel" class="section level3" number="2.0.3">
+<h3><span class="header-section-number">2.0.3</span> Source: script editor panel</h3>
+<p>However, often you want to write code and save it so that you can open the code again and re-run it later. This saved file with code in it is referred to as a <strong>script</strong>. When you want to write code and save it in a script, you’ll do this in the Source panel.</p>
+<p>To get started in your script file, copy and paste the following into your Source quadrant (top-left).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rstudio-cloud-tour.html#cb1-1" aria-hidden="true" tabindex="-1"></a>example <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>), <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p>To run this code, you <em>can’t</em> just hit enter (as you were able to do in the Console). Hitting enter will just bring your cursor to the next line in the script. Instead, with your cursor in the line of code you want to run, you can click on “Run” at the top right of your script file. This will execute the code in the Console.</p>
+<p><strong>Note</strong> Alternatively, to run code, with your cursor on the line of code you’d like to run, you could <strong>hit ‘ctrl + enter’ to run that line of code</strong>. This will save you <em>a lot</em> of time as you start writing a lot of code and analyzing data. Practice this keyboard shortcut now!</p>
+<p>What this code does is create an object (we’ll define what that is soon!) called ‘example’ that has the numbers 1 through 8 in four different rows and two different columns. To see what this object looks like, we’ll take a look at the environment quadrant of RStudio Cloud.</p>
+<div id="environment-history" class="section level4" number="2.0.3.1">
+<h4><span class="header-section-number">2.0.3.1</span> Environment (&amp; History)</h4>
+<p>To view this object we’ve just created, you’ll first want to ensure that the object was created. In the Environment quadrant, you should see that ‘example’ is now there. The object was created!</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_238" alt="The environment quadrant" /></p>
+<p>Then, just click anywhere on the “example” line, and a new tab on the Source quadrant should appear, showing the matrix you created.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g39ceb1e717_0_0" alt="Your newly made object, opened in a new tab of the source panel" /></p>
+<p>RStudio Cloud also tells you some information about the object in the environment, like whether it is a list or a data frame or if it contains numbers, integers or characters. This is very helpful information to have as some functions only work with certain classes of data. We’ll get into the details of all this later, but for now, knowing that this information is in the Environment tab is enough.</p>
+<p>The quadrant has two other tabs running across the top of it. We’ll just look at the History tab now. Your history tab should look something like this:</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g31f42765ab_0_71" alt="The history tab" /></p>
+<p>Here you will see the commands that we have run in this session of R. If you click on any one of them, you can click “To Console” or “To Source” and this will either rerun the command in the console, or will move the command to the source, respectively.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_249" alt="From History to Source" /></p>
+<p>Do so now for your <code>View(example)</code> object and send it to Source.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g39ceb1e717_0_13" alt="Sending ‘View(example)’ from History to Source" /></p>
+<p>This line of code is now in your Source document. When you save this document, you’ll also have this line of code saved for future use.</p>
+</div>
+<div id="saving-script-files" class="section level4" number="2.0.3.2">
+<h4><span class="header-section-number">2.0.3.2</span> Saving Script Files</h4>
+<p>Now that you’ve created a script with code in it, you likely want to save it. To do so, you’ll want to click on the save icon.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_256" alt="Save Icon" /></p>
+<p>In RStudio Cloud this will open a Save File window.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g39ceb1e717_0_6" alt="Save File Window" /></p>
+<p>In the File Organization Course, you learned that code is saved in a directory called code. So, we’ll first create a “New Folder”.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_262" alt="New Folder" /></p>
+<p>We’ll name this folder “code” by typing it in the box and clicking “OK”.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_267" alt="Create code folder" /></p>
+<p>After creating this new folder, as discussed in a previous lesson, you’ll see along the top that you’re now in the “code” directory. Within this folder, we’ll create another new folder called “raw_code.”</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_276" alt="Create raw_code folder" /></p>
+<p>This is where we’ll save this file as “R_basics.R” by typing that in the File name: box and clicking “Save.”</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_281" alt="Save file by typing file name in “File name:” box" /></p>
+<p>This file name ‘R_basics.R’ will now show up in the tab at the top of the R Source quadrant.</p>
+</div>
+</div>
+<div id="fileshelpplotspackagesviewer" class="section level3" number="2.0.4">
+<h3><span class="header-section-number">2.0.4</span> Files/Help/Plots/Packages/Viewer</h3>
+<div id="files" class="section level4" number="2.0.4.1">
+<h4><span class="header-section-number">2.0.4.1</span> Files</h4>
+<p>You can also see where this file is saved using the fourth and final quadrant in RStudio Cloud that we’ll discuss. In this final quadrant you’ll see five tabs: Files, Plots, Packages, Help, and Viewer.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_286" alt="Files, Plots, Packages, Help, Viewer" /></p>
+<p>In Files, you can see everything in your current working directory. You should now be able to see the code folder you just created.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_291" alt="code directory in Files tab" /></p>
+<p>By clicking on that folder, you should then see the raw_code folder you created.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_296" alt="raw_code folder in Files tab" /></p>
+<p>By clicking on this, you’ll see the script file you just saved!</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g37c1046666_0_300" alt="R_basics.R is saved in code/raw_code/" /></p>
+<p>After you save a file in a folder, if you realize it’s not where you wanted it, you do have the option to move it around. To do so, click on the check box of the file you want to move, and click on the “More” icon to expose options. Click through these to move your file to where you actually wanted it.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g31f42765ab_0_79" alt="The “More”” icon" /></p>
+</div>
+<div id="plots" class="section level4" number="2.0.4.2">
+<h4><span class="header-section-number">2.0.4.2</span> Plots</h4>
+<p>In the Plots tab, if you generate a plot with your code, it will appear here. You can use the arrows to navigate to previously generated plots. The Zoom function will open the plot in a new window, that is much larger than the quadrant. Export is one way to save the plot. (Saving plots will be discussed in more detail in a future lesson.) The broom icon clears all plots from memory.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g31f42765ab_0_83" alt="The plots tab" /></p>
+</div>
+<div id="packages" class="section level4" number="2.0.4.3">
+<h4><span class="header-section-number">2.0.4.3</span> Packages</h4>
+<p>The Packages tab will be explored more in depth in the next lesson on R packages. Here you can see all the packages you have installed, load and unload these packages, and update them.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g31f42765ab_0_92" alt="The packages tab" /></p>
+</div>
+<div id="help" class="section level4" number="2.0.4.4">
+<h4><span class="header-section-number">2.0.4.4</span> Help</h4>
+<p>The Help tab is where you find the documentation for your R packages and various functions. In the upper right of this panel there is a search function for when you have a specific function or package in question. Navigating this tab will be discussed in more detail in a later lesson in this course.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g31f42765ab_0_97" alt="The help tab" /></p>
+</div>
+</div>
+<div id="swirl" class="section level3" number="2.0.5">
+<h3><span class="header-section-number">2.0.5</span> Swirl</h3>
+<p>Throughout the courses in this Course Set, we’ll be using something called <a href="https://swirlstats.com/">Swirl modules</a> to practice the R code learned in many of the lessons. These modules will all be run within RStudio Cloud. To make sure that you’re comfortable using Swirl, we’ll go through the steps on where to go to run Swirl and how to work through a module. This will be important as many of the quizzes accompanying these lessons will require you to use Swirl. Follow the steps in this section of the lesson to get started with your first Swirl module!</p>
+<p>Throughout this Course Set, whenever you’re asked to complete a Swirl module, you’ll always start in the same place: the <a href="http://bit.ly/cbds_projects">RStudio Cloud Cloud-based Data Science Space</a>. Click on <a href="http://bit.ly/cbds_projects">this link now</a>. If prompted, log into your RStudio Cloud account.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g3f1d06ac70_0_0" alt="Cloud-based Data Science on RStudio Cloud" /></p>
+<p>Among the projects listed you’ll see one called “swirl” (You may have to scroll down on the list to see it.). To the right of swirl, you’ll want to click on “Copy”.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g3f1d06ac70_0_5" alt="make a copy of “swirl” project" /></p>
+<p>This project contains <em>all</em> of the swirl modules you’ll be completing throughout the quizzes in this course set. For each module you’re supposed to complete, there will be a quiz question specifying which you’re supposed to complete.</p>
+<p>But for now, let’s just get comfortable with how swirl works.</p>
+<p>Any time you are within this space and supposed to complete a swirl module you’ll start by first loading the swirl package (it has already been installed in that space for you) and running the command <code>swirl()</code>:</p>
+<pre><code>## load package
+library(swirl)
+
+## start swirl
+swirl()</code></pre>
+<p>As a reminder, to run code, with your cursor on the line of code you’d like to run, you can <strong>hit ‘ctrl + enter’ to run that line of code</strong>. Similarly, if there are multiple lines you want to run, you can highlight the lines you want to run and again hit ‘ctrl + enter’ to run those lines of code.</p>
+<p>This will bring up a prompt asking you what swirl should call you. Type your first name as a response here and hit “enter.”</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g3f1d06ac70_0_14" alt="starting swirl" /></p>
+<p>Swirl will often send you some text to read. <em>Always read the text</em> as this text will help explain the background information you need <em>or</em> will provide you with information you need to answer the question. At this point, swirl is explaining that when you see <code>...</code>, that’s when you should press “enter” to continue.</p>
+<p>When you see <code>&gt;</code> or a list of options (like <code>1:</code>, <code>2:</code>, <code>3</code>), that lets you know swirl is looking for something from you! When you see <code>&gt;</code> that’s a prompt letting you know swirl is expecting you to write some code. When you see a list of options, those are the possible answers to a question you’re being asked. In these cases, you’ll want to select the number corresponding to the right answer. For this practice in swirl, select 1, 2, or 3 and press enter.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g3f1d06ac70_0_19" alt="Getting started in swirl" /></p>
+<p>You’ll then be given a number of options that you can use within <code>swirl</code> whenever you see the <code>&gt;</code> prompt. Read the list here, but know that <code>info()</code> gives you this list of options again, <code>main()</code> returns you to swirl’s main menu, and <code>bye()</code> saves your progress but exits swirl.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g3f1d06ac70_0_24" alt="swirl menu options" /></p>
+<p>After this, you will be shown a list of courses. The list will be longer than what you see here, but we’re showing this simple example to demonstrate that if you wanted to start on the course “CBDS Introduction to R”, you would type 1. You’ll be told which course to select throughout the course set.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&amp;pageid=g3f1d06ac70_0_30" alt="Selecting a course" /></p>
+<p>Note that for each quiz question you complete in <code>swirl</code>, upon completion, you’ll receive a code. This code is to be entered as the answer to the quiz question on Leanpub.</p>
+<p>That’s a basic introduction to using <code>swirl</code>. You’ll have lots of quiz questions that require you to use swirl in this Course Set, so be sure to walk through this introduction on RStudio Cloud now and get comfortable navigating within swirl.</p>
+</div>
+<div id="summary" class="section level3" number="2.0.6">
+<h3><span class="header-section-number">2.0.6</span> Summary</h3>
+<p>In this lesson we took a tour of RStudio Cloud. We became familiar with the main menu and its various menus. We looked at the Console, where R code is input and run. We then moved on to the Environment panel that lists all of the objects that have been created within an R session and allows you to view these objects in a new tab in Source. In this same quadrant, there is a History tab, that keeps a record of all commands that have been run. It also presents the option to either rerun the command in the Console, or send the command to Source, to be saved. Source is where you save your R commands. And the bottom right quadrant contains a listing of all the files in your working directory, displays generated plots, lists your installed packages, and supplies help files for when you need some assistance! Take some time to explore RStudio Cloud and get more comfortable navigating swirl on your own!</p>
+</div>
+<div id="slides-and-video-1" class="section level3" number="2.0.7">
+<h3><span class="header-section-number">2.0.7</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://youtu.be/G2cq4bAxMQQ" alt="" />
+<p class="caption">RStudio Cloud Tour</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/edit?usp=sharing">Slides</a></li>
+</ul>
+<p>{quiz, id: quiz_01_rstudio_cloud_tour}</p>
+</div>
+<div id="rstudio-cloud-tour-quiz" class="section level3" number="2.0.8">
+<h3><span class="header-section-number">2.0.8</span> RStudio Cloud Tour quiz</h3>
+<p>{choose-answers: 4, points: 2}
+? How do you see a command you have previously run and save it to source?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>History tab &gt; click on command to highlight &gt; To Source</li>
+<li>History tab &gt; highlight command &gt; To Source</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>Source &gt; Save</li>
+<li>Console &gt; Save as…</li>
+<li>History tab &gt; Save as…</li>
+<li>Console &gt; highlight code &gt; To Source</li>
+<li>Source &gt; highlight code &gt; To Console</li>
+<li>Source &gt; highlight code &gt; ‘ctrl + enter’</li>
+</ol>
+<p>{choose-answers: 4}
+? What is the name of the quadrant in the bottom left corner of RStudio Cloud, in the default layout?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>Console<br />
+</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>Source<br />
+</li>
+<li>Environment<br />
+</li>
+<li>Plots<br />
+</li>
+<li>Help<br />
+</li>
+<li>Files<br />
+</li>
+<li>Packages<br />
+</li>
+<li>History</li>
+</ol>
+<p>{choose-answers: 4, points: 2}
+? Which of the following is <strong>not</strong> one of the options available under the Global Options menu in Tools?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>Versions</li>
+<li>Viewer</li>
+<li>Console</li>
+<li>Source</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>Packages<br />
+</li>
+<li>Appearance<br />
+</li>
+<li>Pane Layout</li>
+<li>R Markdown<br />
+</li>
+<li>Sweave<br />
+</li>
+<li>Spelling</li>
+<li>Git/SVN<br />
+</li>
+<li>Publishing<br />
+</li>
+<li>Terminal<br />
+</li>
+<li>General</li>
+</ol>
+<p>{/quiz}</p>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="what-is-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-packages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
