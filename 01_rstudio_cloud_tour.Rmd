@@ -1,3 +1,13 @@
+---
+title: "RStudio Cloud Tour"
+output: html_document
+date: '2022-04-05'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 # RStudio Cloud Tour
 
 At this point in the course, you've been introduced to RStudio Cloud. You know that it's where you'll be writing code, and you've been briefly introduced to RStudio and RStudio Cloud. You've learned how to organize your files within RStudio Cloud for data science projects. And, you have worked with markdown files within RStudio Cloud. While you were introduced to the parts of RStudio previously, we'll review them in this lesson and then go into a little more depth to get you even more comfortable working in RStudio Cloud.
