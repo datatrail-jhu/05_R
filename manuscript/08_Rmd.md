@@ -105,7 +105,7 @@ In this lesson we introduced you to R Markdown documents, discussing what they a
 * [R Markdown Documentation](https://rmarkdown.rstudio.com/index.html), from RStudio
 * [R Markdown video](https://vimeo.com/178485416), from RStudio
 * [Basic R Markdown cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
-* ["R Markdown cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+* ["R Markdown cheatsheet"](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 
 ### Slides and Video
 
@@ -165,7 +165,7 @@ o) Paste
 o) Combine
 
 {choose-answers: 4, points:2}
-?4 Click on this link to open the ["R Markdown Cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf){target="_blank"}, take a look at the "Dynamic Documents" section. Which type of file is NOT a possible output from an R Markdown document?
+?4 Click on this link to open the ["R Markdown Cheatsheet"](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}, take a look at the "Dynamic Documents" section. Which type of file is NOT a possible output from an R Markdown document?
 
 C) txt
 o) html
@@ -177,7 +177,7 @@ o) markdown document
 o) a html or pdf based slide show
 
 {choose-answers: 4, points:2}
-?4 Click on this link to open the ["R Markdown Cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf){target="_blank"}, take a look at the ".Rmd structure" section. Which type of file is NOT a part of the typical Rmd structure?
+?4 Click on this link to open the ["R Markdown Cheatsheet"](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}, take a look at the ".Rmd structure" section. Which type of file is NOT a part of the typical Rmd structure?
 
 C) html
 C) pdf
@@ -187,7 +187,7 @@ o) code chunks
 
 
 {choose-answers: 4, points:2}
-?5 Click on this link to open the ["R Markdown Cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf){target="_blank"}, take a look at the "Embed code with knitr syntax" section. What option would you use to display code in the output document?
+?5 Click on this link to open the ["R Markdown Cheatsheet"](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}, take a look at the "Embed code with knitr syntax" section. What option would you use to display code in the output document?
 
 C) echo
 o) message
@@ -198,7 +198,7 @@ m) eval
 o) warning
 
 {choose-answers: 4, points:2}
-?5 Click on this link to open the ["R Markdown Cheatsheet"](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf){target="_blank"}, take a look at the "Embed code with knitr syntax" section. What option would you use to run code in a code chunk?
+?5 Click on this link to open the ["R Markdown Cheatsheet"](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}, take a look at the "Embed code with knitr syntax" section. What option would you use to run code in a code chunk?
 
 C) eval
 o) message

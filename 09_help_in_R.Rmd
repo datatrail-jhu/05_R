@@ -107,7 +107,7 @@ In this lesson we discussed documentation and help pages available directly in R
 
 The R community is a welcoming and helpful community. Many people go years as R users before they learn what a rich community there is out there. We're hoping to change that by introducing new users to a number of resources that will help them feel more welcome to the large community of individuals using R! Below is a short list of ways to connect with the R community:
 
-* [R for Data Science Learning Community](https://www.jessemaegan.com/post/r4ds-the-next-iteration/) - a welcoming and helpful community for those new to R and data science
+* [R for Data Science Learning Community](https://medium.com/@kierisi/r4ds-the-next-iteration-d51e0a1b0b82) - a welcoming and helpful community for those new to R and data science
 * [Twitter](https://twitter.com) - Using or searching the hashtag #rstats can be incredibly helpful and can connect you to others who use R
 * [ROpenSci](https://ropensci.org/) - an online community of developers developing tools for open science
 * [R Project Help in R](https://www.r-project.org/help.html)
