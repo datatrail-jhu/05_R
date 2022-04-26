@@ -11,7 +11,7 @@ In a lesson in an earlier course, we discussed some basic guidelines for carryin
 
 ### R Help: `?`
 
-To access documentation directly within RStudio, you can type a question mark followed by the function, dataset, or object within the R Console directly. The output for this documentation will display in the Help window at the bottom-right hand of RStudio. 
+To access documentation directly within RStudio, you can type a question mark followed by the function, dataset, or object within the R Console directly. The output for this documentation will display in the Help window at the bottom-right hand of RStudio.
 
 For example, earlier in this course, you were introduced to the function `summary()` in R. If you later can't remember what this function does, but you can remember the function, you can always type `?summary` in your Console. The following will display in the Help tab:
 
@@ -30,11 +30,11 @@ As you work in R, you'll find that some documentation is more helpful than other
 
 ### Stack Overflow
 
-[Stack Overflow](stackoverflow.com) is an "online community for programmers." Stack Overflow is not just a place for R programmers, but rather, is a place to ask and answer questions about any programming language. That said, Stack Overflow has hundreds of thousands of questions and and answers from R users. 
+[Stack Overflow](stackoverflow.com) is an "online community for programmers." Stack Overflow is not just a place for R programmers, but rather, is a place to ask and answer questions about any programming language. That said, Stack Overflow has hundreds of thousands of questions and and answers from R users.
 
 #### How Stack Overflow works
 
-On Stack Overflow, people (who have logins on the website) can ask questions. Then, others on the site can provide answers. The user who originally posed the question can mark one answer as the "accepted" answer. Any user, however, can up-vote an answer, helping it rise to the top of the answer section. This means that when someone else comes across this question, they come across the best answers first. 
+On Stack Overflow, people (who have logins on the website) can ask questions. Then, others on the site can provide answers. The user who originally posed the question can mark one answer as the "accepted" answer. Any user, however, can up-vote an answer, helping it rise to the top of the answer section. This means that when someone else comes across this question, they come across the best answers first.
 
 Additionally, questions can be tagged with their subject area. For example, a user looking for help coding in R would tag their question with the "r" tag to help direct this question to the right community for answering.
 
@@ -43,7 +43,7 @@ Additionally, questions can be tagged with their subject area. For example, a us
 
 #### Getting Answers
 
-Stack Overflow is a place for specific coding questions and answers. It is *not* a discussion board nor is it a place for polling. This design is intended to help you quickly get an answer. In that spirit, anyone can search questions and answers, regardless of whether they have an account on the site. All that said, before asking a question on Stack Overflow, it's best to check to see if someone else has already asked a similar question. 
+Stack Overflow is a place for specific coding questions and answers. It is *not* a discussion board nor is it a place for polling. This design is intended to help you quickly get an answer. In that spirit, anyone can search questions and answers, regardless of whether they have an account on the site. All that said, before asking a question on Stack Overflow, it's best to check to see if someone else has already asked a similar question.
 
 For example, if you were trying to learn more about how to work with objects in R, you would maybe type "objects in R" into the search bar. The results would look something like this:
 
@@ -84,7 +84,7 @@ By generating a reprex, you'll often figure out the answer to your question in t
 
 #### Providing Help to Others
 
-Stack Overflow allows users with a login to ask **and answer** questions on Stack Overflow. While in the beginning you'll likely just be searching for (and getting) answers to questions, as you become more of an expert, answering others' questions is a great way to help the community! 
+Stack Overflow allows users with a login to ask **and answer** questions on Stack Overflow. While in the beginning you'll likely just be searching for (and getting) answers to questions, as you become more of an expert, answering others' questions is a great way to help the community!
 
 That said, it's probably no surprise that sometimes people can be mean to others on the Internet. The R community does its best to be a welcoming community. Hopefully, you will never run into people who are mean on Stack Overflow, and even more importantly, when you become an expert in R and answer others' questions online, it's important to remember that everyone starts as a beginner. If someone's question isn't perfectly asked or their reprex isn't perfect, let it pass. Be as helpful and kind as you can as you interact with others online.
 
@@ -95,11 +95,11 @@ In addition to Stack Overflow, [RStudio Community](https://community.rstudio.com
 {format: png}
 ![RStudio Community](https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/export/png?id=1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk&pageid=g37af3c0ac8_0_123)
 
-With this interface, in addition to the Topic, you can see the Category (similar to tags in Stack Overflow) and the number of Replies and Views for each topic. You can sort by any of these categories by clicking on the label at the top. Or, you can search specific questions or topics. Clicking on any topic will direct you to a new window where you can sort through the answers for each question. 
+With this interface, in addition to the Topic, you can see the Category (similar to tags in Stack Overflow) and the number of Replies and Views for each topic. You can sort by any of these categories by clicking on the label at the top. Or, you can search specific questions or topics. Clicking on any topic will direct you to a new window where you can sort through the answers for each question.
 
 ### Summary
 
-In this lesson we discussed documentation and help pages available directly in R that can be accessed using a question mark followed by the function or package name in question. We discussed two incredibly helpful online forums: Stack Overflow and RStudio community. And, finally, we highlighted the importance of creating a reprex when asking a question on any of these forums. Knowing where to find help and how to best ask for it is an important skill as you're learning a new programming language! 
+In this lesson we discussed documentation and help pages available directly in R that can be accessed using a question mark followed by the function or package name in question. We discussed two incredibly helpful online forums: Stack Overflow and RStudio community. And, finally, we highlighted the importance of creating a reprex when asking a question on any of these forums. Knowing where to find help and how to best ask for it is an important skill as you're learning a new programming language!
 
 ### Additional Community Resources
 
@@ -116,53 +116,3 @@ The R community is a welcoming and helpful community. Many people go years as R 
 ![Getting Help in R](https://youtu.be/xOww087Vp9g)
 
 * [Slides](https://docs.google.com/presentation/d/1xDXjuZZ8OifFKW3MzKhQL0kI5f3XcCfHn9oHgyhpyMk/edit?usp=sharing)
-   
-{quiz, id: quiz_09_help_in_R}
-   
-### Getting Help in R quiz
-   
-{choose-answers: 4}  
-? When you get stuck in R, what's the first thing you should do?
-
-C) Search for an existing answer on the Internet
-C) Google the error message
-C) Turn to the Internet for help
-o) Create a reprex
-o) Ask a question on Stack Overflow
-o) Ask a question on the RStudio Community
-o) Turn and ask the person next to you who's working
-o) Tweet at a person who may know the answer
-
-{choose-answers: 4}
-? When answering a question on Stack Overflow, what should you avoid?
-
-C) being a jerk
-C) being rude
-C) being condescending
-o) being kind
-o) being helpful
-o) putting yourself in the questioners shoes
-o) being considerate
-
-{choose-answers: 4}
-? What is a reprex?
-
-C) the simplest piece of example code possible that reproduces an issue you're having 
-C) the simplest reproducible example 
-o) the code from your complicated script copy and pasted directly onto Stack Overflow
-o) a way to pattern match used across programming languages
-o) the code from your complicated script copy and pushed to GitHub
-o) where you store all your files for a project on GitHub
-o) a way to create reproducible reports using code chunks and Markdown
-
-{choose-answers: 4}
-? What are the payoffs for taking the time to create a reprex?
-
-C) You answer your own question and/or you show in a simple example what your issue is, allowing others to help.
-C) You make it easier for others to help you solve your problem
-o) StackOverflow & R Community are then required to answer your question and provide you help.
-o) RStudio will automatically be able to fix your issue and tell you where you went wrong
-o) You'll be an expert coder and will never make a mistake again in the future.
-o) By creating a lengthy and confusing reprex, you'll learn a lot about how to code in R.
-
-{/quiz}

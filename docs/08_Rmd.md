@@ -9,9 +9,9 @@ date: '2022-04-06'
 
 We've spent a lot of time getting R and RStudio working, learning about projects and version control - you are practically an expert at this! There is one last major functionality of R/RStudio that we would be remiss to not include in your introduction to R - [R Markdown!](http://rmarkdown.rstudio.com/)
 
-### What is R Markdown? 
+### What is R Markdown?
 
-R Markdown is a type of document that allows you to generate fully reproducible reports. In these documents, text , code, and the results of the code can be easily combined. In fact, these lessons are written using what you've already learned about Markdown and all the R code you've recently mastered! 
+R Markdown is a type of document that allows you to generate fully reproducible reports. In these documents, text , code, and the results of the code can be easily combined. In fact, these lessons are written using what you've already learned about Markdown and all the R code you've recently mastered!
 
 To refresh your memory, this is how we use plain text in Markdown formatting:
 
@@ -27,26 +27,26 @@ R Markdown documents generally take one of two file extensions: .Rmd, .rmd. If a
 
 ### Why use R Markdown?
 
-One of the main benefits is the reproducibility of using R Markdown. Since you can easily combine text and code chunks in one document, what this means for a data science project is that you can easily integrate an introduction about what your project question is and where your data came from and the code that you are running, the results of that code, some pretty plots and figures, and your conclusions all in one document. 
+One of the main benefits is the reproducibility of using R Markdown. Since you can easily combine text and code chunks in one document, what this means for a data science project is that you can easily integrate an introduction about what your project question is and where your data came from and the code that you are running, the results of that code, some pretty plots and figures, and your conclusions all in one document.
 
-Sharing what you did, why you did it and how it turned out becomes so simple - and that person you share it with can re-run your code and *get the exact same answers you got.* That's what we mean about **reproducibility**. 
+Sharing what you did, why you did it and how it turned out becomes so simple - and that person you share it with can re-run your code and *get the exact same answers you got.* That's what we mean about **reproducibility**.
 
 In addition to being reproducible, there will be times that you're working working on a project that takes many weeks or months to complete. In these cases, you want to be able to see what you did a long time ago (and perhaps be reminded exactly *why* you were doing this). By using an R Markdown document, you'll be able to see exactly what you did previously, what code you used AND the results of that code!
 
-Another major benefit to R Markdown is that since it is plain text, it works very well with version control systems, such as git and GitHub. It is easy to track what character changes occur between commits; unlike other formats that aren't plain text. For example, in one version of this lesson, I may have forgotten to bold **this** word. When I catch my mistake, I can make the plain text changes to signal I would like that word bolded, and in the commit, you can see the exact character changes that occurred to now make the word bold. 
+Another major benefit to R Markdown is that since it is plain text, it works very well with version control systems, such as git and GitHub. It is easy to track what character changes occur between commits; unlike other formats that aren't plain text. For example, in one version of this lesson, I may have forgotten to bold **this** word. When I catch my mistake, I can make the plain text changes to signal I would like that word bolded, and in the commit, you can see the exact character changes that occurred to now make the word bold.
 
 Check out [this video](https://vimeo.com/178485416) that the RStudio developers released about R Markdown and what it is!  
 
 ### Getting started with R Markdown
 
-The best way to follow along for the rest of this lesson is to open up [RStudio Cloud](rstudio.cloud), and follow along on your own step-by-step. In the process, you'll get to generate your first R Markdown document! Generating and working with RMarkdown documents is incredibly easy when working within RStudio (or RStudio Cloud). To get started in [RStudio Cloud](rstudio.cloud), go to File > New File > R Markdown.. . 
+The best way to follow along for the rest of this lesson is to open up [RStudio Cloud](rstudio.cloud), and follow along on your own step-by-step. In the process, you'll get to generate your first R Markdown document! Generating and working with RMarkdown documents is incredibly easy when working within RStudio (or RStudio Cloud). To get started in [RStudio Cloud](rstudio.cloud), go to File > New File > R Markdown.. .
 
 {format: png}
 ![R Markdown...](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_20)
 
-If a window pops up specifying that you need to install and update a few packages before using R Markdown, click "Yes" to install those updates. 
+If a window pops up specifying that you need to install and update a few packages before using R Markdown, click "Yes" to install those updates.
 
-At this point, you will be presented with the following window: 
+At this point, you will be presented with the following window:
 
 {format: png}
 ![R Markdown](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_157)
@@ -56,7 +56,7 @@ You'll want to add a Title to this document and put your name in the Author box.
 {format: png}
 ![Title and Author information filled out](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_26)
 
-When you are done entering this information, click OK, and a new .Rmd document will open with a little explanation on R Markdown files. 
+When you are done entering this information, click OK, and a new .Rmd document will open with a little explanation on R Markdown files.
 
 {format: png}
 ![R Markdown document](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_31)
@@ -65,25 +65,25 @@ There are three main sections of an R Markdown document. The first is the **YAML
 
 Also on this page, you can see **text sections**. In this section, text should be written in Markdown. This means that the "## R Markdown" will appear as an H2 header when the document is rendered. and **Knit** will  be bold, as discussed in a previous lesson.
 
-And finally, you will see **code chunks**. These are bounded by the triple backticks. These are pieces of R code, and are referred to as "code chunks". These code in these chunks can run right from within your document - and the output of this code will be included in the document when you Knit it. 
+And finally, you will see **code chunks**. These are bounded by the triple backticks. These are pieces of R code, and are referred to as "code chunks". These code in these chunks can run right from within your document - and the output of this code will be included in the document when you Knit it.
 
-The easiest way to see how each of these sections behave is to produce the HTML! To do so, you'll learn how to knit the document below. 
+The easiest way to see how each of these sections behave is to produce the HTML! To do so, you'll learn how to knit the document below.
 
 ### "Knitting" documents
 
-When you want to preview an R Markdown document and when you are finished with an R Markdown document, you'll want to **"knit"** the plain text and code from your .Rmd into your final document. 
+When you want to preview an R Markdown document and when you are finished with an R Markdown document, you'll want to **"knit"** the plain text and code from your .Rmd into your final document.
 
-To do so with the R Markdown that opened with your R Markdown file, click on the "Knit" button along the top of the source panel. 
+To do so with the R Markdown that opened with your R Markdown file, click on the "Knit" button along the top of the source panel.
 
 {format: png}
 ![Knit](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_39)
 
-When you do so, it will prompt you to save the document. For now, we'll type "test_document" into the box. (However, when you're generating these documents for projects, you'll want to be sure that this document is saved in the appropriate directory, which is likely the `raw_code` directory. Click "Save." 
+When you do so, it will prompt you to save the document. For now, we'll type "test_document" into the box. (However, when you're generating these documents for projects, you'll want to be sure that this document is saved in the appropriate directory, which is likely the `raw_code` directory. Click "Save."
 
 {format: png}
 ![Save .Rmd](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_171)
 
-Upon saving the document, you should see a document like this appear in a new window: 
+Upon saving the document, you should see a document like this appear in a new window:
 
 {format: png}
 ![Knit HTML](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_45)
@@ -119,100 +119,3 @@ In this lesson we introduced you to R Markdown documents, discussing what they a
 ![R Markdown](https://youtu.be/3jO4uRqR6PA)
 
 * [Slides](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/edit?usp=sharing)  
-
-
-{quiz, id: quiz_08_Rmd}
-  
-### R Markdown quiz
-
-{choose-answers: 4}
-?1 When should you use R Markdown documents? 
-
-C) Whenever you're working through a data science project, because R Markdown documents generate fully reproducible reports.
-m) Whenever you're just working with code but not text, because R Markdown can easily display code chunks. 
-m) Whenever you're working with plain text but not code because R Markdown handles Markdown formatting.
-o) Using R Markdown documents should generally be avoided and Markdown should be used instead. 
-o) Whenever you're not working with code or plain text.
-o) When you don't care about reproducibility
-
-?2 How would you strike through some text?  
-
-A) `~~strikethrough~~`   
-b) `--strikethrough--`  
-c) `\strikethrough\`  
-d) None of the above 
-
-{choose-answers:4}
-?2 How would you italicize some text?  
-
-C) `_italicize_`   
-C) `*italicize*`
-o) `--italicize--`  
-o) `\italicize\`  
-o) None of the above 
-
-{choose-answers:4}
-?2 How would you bold some text?  
-
-C) `__bold__`   
-C) `**bold**`
-o) `--bold--`  
-o) `\bold\`  
-o) None of the above 
-
-{choose-answers: 4}
-?3 How do you produce your final document?  
-
-C) Knit  
-o) Crochet   
-o) Sew  
-o) Macrame  
-o) Glue
-o) Paste
-o) Combine
-
-{choose-answers: 4, points:2}
-?4 Click on this link to open the ["R Markdown Cheatsheet"](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}, take a look at the "Dynamic Documents" section. Which type of file is NOT a possible output from an R Markdown document?
-
-C) txt
-o) html
-o) pdf
-o) MS Word
-o) ODT
-o) RTF
-o) markdown document
-o) a html or pdf based slide show
-
-{choose-answers: 4, points:2}
-?4 Click on this link to open the ["R Markdown Cheatsheet"](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}, take a look at the ".Rmd structure" section. Which type of file is NOT a part of the typical Rmd structure?
-
-C) html
-C) pdf
-o) YAML header
-o) text 
-o) code chunks
-
-
-{choose-answers: 4, points:2}
-?5 Click on this link to open the ["R Markdown Cheatsheet"](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}, take a look at the "Embed code with knitr syntax" section. What option would you use to display code in the output document?
-
-C) echo
-o) message
-o) display
-o) highlight
-o) error
-m) eval
-o) warning
-
-{choose-answers: 4, points:2}
-?5 Click on this link to open the ["R Markdown Cheatsheet"](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}, take a look at the "Embed code with knitr syntax" section. What option would you use to run code in a code chunk?
-
-C) eval
-o) message
-o) display
-o) highlight
-o) error
-m) echo
-o) warning
-
-{/quiz}
