@@ -30,7 +30,7 @@ Within the `list` function, each of these objects is separated with a comma.
 responses_student1 <- list(c(4,20,3), c("bear", "giraffe"), c("red", "orange", "yellow", "green", "blue", "purple"))
 ```
 
-This means that the `length` *of the list* is three (one for the numbers, one for the animal names, and one for the colors), but the lengths of the responses within each list differs for each slot (3 for the numbers, 2 for the animal names, and 6 for the colors). 
+This means that the `length` *of the list* is three (one for the numbers, one for the animal names, and one for the colors), but the lengths of the responses within each list differs for each slot (3 for the numbers, 2 for the animal names, and 6 for the colors).
 
 When we print this object to the screen, it looks as below. The double square brackets indicate the slot number, or element number. So `[[1]]` indicates the first slot or first element of the list, and we see that this first element is a length-3 numeric vector. The `[[2]]` indicates the second element, and we see that it is a length-2 character vector. The `[[3]]` indicates the third slot, and we see that it is a length-6 character vector. The double bracket notation alludes to one way that we can access certain elements of a list. We will cover this in detail in the next section of this lesson.
 
@@ -82,7 +82,7 @@ $numbers
 [1] 1 2 3 4 5
 
 $animals
-[1] "T-rex" "tiger" "lion" 
+[1] "T-rex" "tiger" "lion"
 
 $colors
 [1] "red"   "green"
@@ -114,7 +114,7 @@ Here we did not specify labels with argument names, so when we print this object
 [1] 1 2 3 4 5
 
 [[2]]$animals
-[1] "T-rex" "tiger" "lion" 
+[1] "T-rex" "tiger" "lion"
 
 [[2]]$colors
 [1] "red"   "green"
@@ -142,7 +142,7 @@ $st2$numbers
 [1] 1 2 3 4 5
 
 $st2$animals
-[1] "T-rex" "tiger" "lion" 
+[1] "T-rex" "tiger" "lion"
 
 $st2$colors
 [1] "red"   "green"
@@ -301,126 +301,3 @@ Working with subsets of data will be a daily part of your work routine, so famil
 
 
 * [Slides](https://docs.google.com/presentation/d/10_DQyZ_g9h-MB8yRaen-GFcH9boTwgrF6GLdVUS7Cvk/edit?usp=sharing)
-
-
-{quiz, id: quiz_06_lists}
-
-# Lists and Data Frames quiz
-
-{choose-answers: 4}
-?1 Which of the following statement(s) about lists and data frames is/are true?
-
-C) Not all lists are data frames, and all data frames are lists
-C) Not all lists are data frames
-C) All data frames are lists
-o) All lists are data frames, and all data frames are lists
-o) All lists are data frames, and not all data frames are lists
-o) Not all lists are data frames, and not all data frames are lists
-o) Data frames are never lists, and lists are never data frames
-o) Data frames are sometimes lists, but lists are never data frames
-
-{choose-answers: 4}
-?2 The following snapshot of the `iris` data frame shows the first six rows of the 5 column data frame. How can I extract the `Petal.Length` column as a simple vector (as opposed to a single column data frame)?
-
-{format: png}
-![iris dataframe snapshot](https://ndownloader.figshare.com/files/13756790)
-
-C) iris[["Petal.Length"]]
-C) iris$Petal.Length
-o) iris[[Petal.Length]]
-o) iris[Petal.Length]
-o) iris["Petal.Length"]
-o) iris$$Petal.Length
-o) iris&Petal.Length
-o) iris[$Petal.Length]
-o) iris[[Sepal.Length]]
-o) iris[Sepal.Length]
-o) iris["Sepal.Length"]
-o) iris$$Sepal.Length
-o) iris&Sepal.Length
-o) iris[$Sepal.Length]
-o) iris[["Sepal.Length"]]
-o) iris$Sepal.Length
-
-{choose-answers: 4}
-?2 The following snapshot of the `iris` data frame shows the first six rows of the 5 column data frame. How can I extract the `Sepal.Length` column as a simple vector (as opposed to a single column data frame)?
-
-{format: png}
-![iris dataframe snapshot](images/iris.png)
-
-C) iris[["Sepal.Length"]]
-C) iris$Sepal.Length
-o) iris[[Sepal.Length]]
-o) iris[Sepal.Length]
-o) iris["Sepal.Length"]
-o) iris$$Sepal.Length
-o) iris&Sepal.Length
-o) iris[$Sepal.Length]
-o) iris[[Petal.Length]]
-o) iris[Petal.Length]
-o) iris["Petal.Length"]
-o) iris$$Petal.Length
-o) iris&Petal.Length
-o) iris[$Petal.Length]
-o) iris[["Petal.Length"]]
-o) iris$Petal.Length
-
-{choose-answers: 4, points: 2}
-?3 I create a list object `li` with `li <- list(a = 1:3, c("aa", "cc", "dd"))`. How can I extract the second element of the list so that the resulting object is a list?
-
-C) li[2]
-m) li[1]
-o) li[[2]]
-o) li[["aa"]]
-o) li["aa"]
-o) li["dd"]
-o) li[["dd"]]
-o) li[3]
-
-
-{choose-answers: 4, points: 2}
-?3 I create a list object `li` with `li <- list(a = 1:3, c("dd", "aa", "cc"))`. How can I extract the first element of the list so that the resulting object is a list?
-
-C) li[1]
-m) li[2]
-o) li[[2]]
-o) li[["aa"]]
-o) li["aa"]
-o) li["cc"]
-o) li[["dd"]]
-o) li[3]
-
-
-{choose-answers: 4}
-?4 Which of the following statements is TRUE?
-
-C) The number of slots in a list is specified in the `list` function by the number of elements included and separated by commas
-C) The names of each element in the list can be specified within the `list` function to the left of the equals sign.
-C) The length of each element in a data frame must be the same across all elements in the data frame.
-o) Within a list, the length of each list element must be consistent across the list
-o) For a list, each list element must contain the same type of object as the other elements in the list
-o) Lists can only contain one type of object
-o) Simple vectors often contain many different types of objects in a single vector
-o) Elements of a list can only be extracted using integer notation.
-
-{points:3}
-?5 Within the swirl project in the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L06 Lists and Data Frames Q01 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
-
-! /.+(Yj8z|F7bU|PFkR|UyN8|viyA|vlAQ|uOUr|3WSR|Vl1v|UI5Q).+/i
-
-{points:3}
-?6 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L06 Lists and Data Frames Q02 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
-
-! /.+(IDQ0|4VR6|9drJ|xWPx|8N7j|nJ2a|eAUG|8dna|OTEg|50r6).+/i
-
-{points:3}
-?7 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L06 Lists and Data Frames Q03 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
-
-! /.+(7miY|6S67|ryQA|N2jz|l8Ad|HVUH|aauv|tCLp|Leha|NXVe).+/i
-
-{points:3}
-?8 Within the same project: `CBDS Introduction to R`, navigate to the lesson `L06 Lists and Data Frames Q04 Swirl`. Complete this swirl module. Once complete, paste the code provided at the end of the swirl module here.
-
-! /.+(sPZ9|tAdd|c9lQ|dHu6|5cbK|3juq|FT9R|vnMI|dIC5|yNU7).+/i
-
-{/quiz}

@@ -6,7 +6,6 @@ rstudio-cloud
 basic-history
 learning-r
 slides-and-video
-welcome-to-the-what-is-r-quiz
 rstudio-cloud-tour
 getting-started-in-rstudio-cloud
 the-tour
@@ -23,7 +22,6 @@ help
 swirl
 summary
 slides-and-video-1
-rstudio-cloud-tour-quiz
 r-packages
 what-is-an-r-package
 what-are-repositories
@@ -43,7 +41,6 @@ using-the-commands-in-a-function
 summary-1
 additional-resources
 slides-and-video-2
-r-packages-quiz
 objects-in-r
 what-is-an-object
 classes-of-objects
@@ -60,7 +57,6 @@ missing-values
 determining-the-class-of-an-object
 summary-2
 slides-and-video-3
-objects-in-r-quiz
 basic-commands-in-r
 functions
 what-is-this-object
@@ -70,13 +66,11 @@ what-does-this-object-look-like
 errors-warnings-and-messages
 summary-3
 slides-and-video-4
-basic-commands-in-r-quiz
 working-with-logicals
 logical-operators
 logical-functions
 summary-4
 slides-and-video-5
-working-with-logicals-quiz
 lists-and-data-frames
 what-are-lists-in-r
 creating-a-list
@@ -87,7 +81,6 @@ dollar-signs
 single-square-brackets
 summary-5
 slides-and-video-6
-lists-and-data-frames-quiz
 writing-functions-in-r
 when-to-write-a-function
 how-will-writing-functions-help-me
@@ -107,7 +100,6 @@ commenting-your-function-1
 summary-6
 additional-resources-1
 slides-and-video-7
-writing-functions-in-r-quiz
 r-markdown
 what-is-r-markdown
 why-use-r-markdown
@@ -116,7 +108,6 @@ knitting-documents
 summary-7
 additional-resources-2
 slides-and-video-8
-r-markdown-quiz
 getting-help-in-r
 r-help
 stack-overflow
@@ -128,7 +119,6 @@ rstudio-community
 summary-8
 additional-community-resources
 slides-and-video-9
-getting-help-in-r-quiz
 pushing-code-from-r-to-github
 github-repository-my_first_project
 adding-code-to-your-github-project
@@ -137,7 +127,6 @@ adding-an-.rmd-file
 pushing-to-github
 summary-9
 slides-and-video-10
-pushing-code-from-r-to-github-quiz
 creating-websites-with-r
 create-your-website-repository
 sync-files-with-github
@@ -151,5 +140,4 @@ adding-an-image
 a-similar-website
 beyond-this-lesson
 slides-and-video-11
-creating-websites-with-r-quiz
 references
