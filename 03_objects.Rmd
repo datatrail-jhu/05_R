@@ -13,7 +13,7 @@ Now that we've gone over what exactly R is and outlined the package functionalit
 
 ### What is an object?
 
-Simply put, an object in R is something that contains information. In R there are a number of basic **classes** of objects. 
+Simply put, an object in R is something that contains information. In R there are a number of basic **classes** of objects.
 
 #### Classes of objects
 
@@ -25,26 +25,26 @@ Five classes that you'll be working with commonly are:
 - logical (TRUE/FALSE)
 - factor (categorical information)
 
-These classes are the building blocks for creating all sorts of objects in R. 
+These classes are the building blocks for creating all sorts of objects in R.
 
 #### Types of objects
 
-We store these different classes of objects in different ways. The ways this information is stored is referred to as the *type** of object. 
+We store these different classes of objects in different ways. The ways this information is stored is referred to as the *type** of object.
 
-When talking about objects in R, it may be helpful to think of *actual* objects in every day life for comparison. For example, think of three objects: a bucket, a pot you would cook with, and a backpack. These three objects are clearly designed for and carry out different purposes. The bucket may be used to carry water to clean your floor, the pot to cook pasta, and the backpack to carry notebooks, but, we can agree that they are all objects, just different **types* of objects. The water, pasta, and notebooks would be the information contained in the object. In this real-life example, the "class" of the information may be "liquid", "food", and "paper". 
+When talking about objects in R, it may be helpful to think of *actual* objects in every day life for comparison. For example, think of three objects: a bucket, a pot you would cook with, and a backpack. These three objects are clearly designed for and carry out different purposes. The bucket may be used to carry water to clean your floor, the pot to cook pasta, and the backpack to carry notebooks, but, we can agree that they are all objects, just different **types* of objects. The water, pasta, and notebooks would be the information contained in the object. In this real-life example, the "class" of the information may be "liquid", "food", and "paper".
 
 {format: png}
 ![Objects in real-life analogy](https://docs.google.com/presentation/d/1Q47qnIkVzE-JzCEE5Lm54P6yqReg09QJdr7kiFyCbGc/export/png?id=1Q47qnIkVzE-JzCEE5Lm54P6yqReg09QJdr7kiFyCbGc&pageid=g3b0072ef38_0_0)
 
 https://docs.google.com/presentation/d//edit?usp=sharing
 
-That said, each object in this example *could* hold any of the different classes of information. A pot of water could hold liquid to clean your floor, it just not make much sense to do so. In R, as you get more comfortable, you'll see that each type of object can hold any of the classes of information in the object, but there are times where each class makes the most sense. 
+That said, each object in this example *could* hold any of the different classes of information. A pot of water could hold liquid to clean your floor, it just not make much sense to do so. In R, as you get more comfortable, you'll see that each type of object can hold any of the classes of information in the object, but there are times where each class makes the most sense.
 
-Thus, in R,  like in this real-life object example, there are not only different classes of objects, but different types of objects (different ways to store these classes of objects). Each type is used to store information in a slightly different way. 
+Thus, in R,  like in this real-life object example, there are not only different classes of objects, but different types of objects (different ways to store these classes of objects). Each type is used to store information in a slightly different way.
 
-The simplest *type* of object in R is called a **vector**, which is an object that can contain multiple items. Generally, each individual vector can only contain objects of the same class, but a certain type of vector, called a **list**, can contain objects of different classes. You will learn about lists in a later lesson. 
+The simplest *type* of object in R is called a **vector**, which is an object that can contain multiple items. Generally, each individual vector can only contain objects of the same class, but a certain type of vector, called a **list**, can contain objects of different classes. You will learn about lists in a later lesson.
 
-For now, it's not important to understand the details of that last paragraph, but it *is* important to know that there are **different types** of objects and that these objects each hold information of a specific **class**. 
+For now, it's not important to understand the details of that last paragraph, but it *is* important to know that there are **different types** of objects and that these objects each hold information of a specific **class**.
 
 We'll begin this lesson by looking at how to create objects in each of these five basic classes in R.
 
@@ -101,7 +101,7 @@ We can create a character vector named `my_char_vec` with multiple character obj
 my_char_vec <- c("char object 1", "char object 2")
 ```
 
-This character vector contains two different pieces of information. In R, the number of pieces of information in a vector is referred to as that vectors length. Thus, this vector is of length 2. 
+This character vector contains two different pieces of information. In R, the number of pieces of information in a vector is referred to as that vectors length. Thus, this vector is of length 2.
 
 
 ### Integer
@@ -290,113 +290,3 @@ In this lesson, we've discussed that within R information can be assigned to obj
 ![Objects in R](https://youtu.be/w_R66uXAY4I)
 
 * [Slides](https://docs.google.com/presentation/d/1Q47qnIkVzE-JzCEE5Lm54P6yqReg09QJdr7kiFyCbGc/edit?usp=sharing)
-
-
-{quiz, id: quiz_03_objects}
-
-# Objects in R quiz
-
-Running the code in R for each of the questions will help you arrive at the correct answer.
-
-{choose-answers: 4}
-? Suppose I enter the following code in R: `x <- 2`. What is the class of the `x` object?
-
-C) numeric
-o) character
-o) integer
-o) logical
-o) factor
-o) list
-o) data frame
-
-{choose-answers: 4, points: 2}
-? What command can be used to create a logical object `y` containing two `TRUE` values?
-
-C) `y = c(TRUE, TRUE)`
-C) `y <- c(TRUE, TRUE)`
-o) `y = c("TRUE", "TRUE")`
-o) `y = c(1, 1)`
-o) `y is c("TRUE", "TRUE")`
-o) `set y to == "TRUE", "TRUE"`
-
-{choose-answers: 4}
-? In the following data frame, what **class** could be represented by the Species column?
-
-```text
- Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-          5.1         3.5          1.4         0.2  setosa
-          4.9         3.0          1.4         0.2  setosa
-          4.7         3.2          1.3         0.2  setosa
-          4.6         3.1          1.5         0.2  setosa
-          5.0         3.6          1.4         0.2  setosa
-          5.4         3.9          1.7         0.4  setosa
-```
-
-C) factor
-C) character
-o) integer
-o) numeric
-o) logical
-o) list
-o) data frame
-
-{choose-answers: 4, points: 2}
-? What will be the ordering of the levels when the following character object is made into a factor object with `as.factor`? 
-
-```r
-char_vec <- c("medium", "medium", "high", "low", "low")
-```
-
-C) high, low, medium
-o) low, medium, high
-o) low, high, medium
-o) medium, low, high
-o) medium, high, low
-o) high, medium, low
-
-{choose-answers: 4}
-? Which function would you use to determine the class of the object 'x' generated from the code: `x <- 2`
-
-C) class()
-m) c()
-o) object()
-o) as.numeric()
-o) as.data.frame()
-o) as.factor()
-o) function()
-
-{choose-answers: 4, points: 2}
-? Which of the following would NOT generate an object in R of class "numeric"?
-
-C) x <- "9.4"
-C) x <- "6"
-C) x <- "5"
-C) x <- "2L"
-o) x <- c(2L, 5, 6)
-o) x <- c(2, 5, 6)
-o) x <- 9.4
-o) x <- c(2L, 5L, 6)
-o) x <- -9.4
-
-{points:3}
-? Within the swirl project in the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) use the `swirl()` function and navigate to the course: `CBDS Introduction to R`. Then, navigate to the lesson `L03 Objects in R Q01 Swirl`. Complete this swirl module on object assignment. Once complete, paste the code provided at the end of the swirl module here.
-
-! /.+(HNvv|XHJ6|N4dr|V0pb|Qjtj|HwTp|K150|gGdd|sSuA|zjSz).+/i
-
-{points:3}
-? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q02 Swirl`. Complete this swirl module on character type variables. Once complete, paste the code provided at the end of the swirl module here.
-
-! /.+(BKDA|B9sK|FeoP|RQLq|uTKJ|VRjq|z7rT|MxP9|ueZA|bGi5).+/i
-
-{points:3}
-? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q03 Swirl`. Complete this swirl module on numeric variables. Once complete, paste the code provided at the end of the swirl module here.
-
-! /.+(0PJ4|YoLj|6SgV|Tahh|QrNb|PSqV|mIoZ|za5x|REbS|uMxo).+/i
-
-{points:3}
-? Within the same course on swirl: `CBDS Introduction to R`, navigate to the lesson `L03 Objects in R Q04 Swirl`. Complete this swirl module on factors. Once complete, paste the code provided at the end of the swirl module here.
-
-! /.+(lLH8|yYGA|dMTC|YmDF|oSLf|DiCz|I6LO|6wrW|gqw6|goTU).+/i
-
-
-{/quiz}

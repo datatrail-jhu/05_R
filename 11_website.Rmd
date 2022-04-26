@@ -61,7 +61,7 @@ The directory is empty currently. At this point, we can almost start our website
 ```
 touch .nojekyll
 ```
-We haven't discussed the command `touch` or hidden files yet, so now is a great time to explain briefly that touch simply creates an empty file and hidden files are files that start with a period in the file name. 
+We haven't discussed the command `touch` or hidden files yet, so now is a great time to explain briefly that touch simply creates an empty file and hidden files are files that start with a period in the file name.
 
 However, despite being hidden, we *can* check to make sure this file was created by using the command `ls -a` (`ls`, as discussed previously, stands for _list_ and the `-a` option states that we also want to display hidden files). When we run this command, we see the ".nojekyll" file has been created.
 
@@ -80,7 +80,7 @@ git commit -m "This is not a Jekyll website"
 git push
 ```
 
-*Note*: If prompted to set your global configuration on GitHub, provide your email address or GitHub username and password, do so. 
+*Note*: If prompted to set your global configuration on GitHub, provide your email address or GitHub username and password, do so.
 
 {format: png}
 ![touch and ls](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g3c1a412a3a_0_20)
@@ -139,7 +139,7 @@ You can check `JaneEverydayDoe` [files at this point in time](https://github.com
 
 ### Customize the website
 
-Ok, so now we have a website that is publicly available and that we made with R. Isn't that awesome!? Next lets work on customizing our website. This part is super flexible and it really depends on what you want to show. In this example, `JaneEverydayDoe` is going to describe a little about her, her interests, projects, internet work-related profiles, her contact information (her email) and a nice little image that shows her GitHub activity. Take the template below and edit your `index.Rmd` file. Note that everything here is written using Markdown formatting. 
+Ok, so now we have a website that is publicly available and that we made with R. Isn't that awesome!? Next lets work on customizing our website. This part is super flexible and it really depends on what you want to show. In this example, `JaneEverydayDoe` is going to describe a little about her, her interests, projects, internet work-related profiles, her contact information (her email) and a nice little image that shows her GitHub activity. Take the template below and edit your `index.Rmd` file. Note that everything here is written using Markdown formatting.
 
 ```
 ## About
@@ -159,7 +159,7 @@ Summarize your trajectory. You could mention what you've done. Like what you've 
 * List some of your recent projects
 * You could include this website as a project!
 
-## Profiles 
+## Profiles
 
 * [LinkedIn](https://www.linkedin.com/in/yourprofile/)
 * ...
@@ -221,7 +221,7 @@ git push
 
 ### Adding a table of contents
 
-A similar process could be used to add a table of contents. Update your YAML using the code you see here. 
+A similar process could be used to add a table of contents. Update your YAML using the code you see here.
 ```
 ---
 title: "JaneEverydayDoe's website"
@@ -289,7 +289,7 @@ git push
 
 ### A similar website
 
-If you need some inspiration, check out Amy Peterson's website: [amy-peterson.github.io](https://amy-peterson.github.io/). It was made using exactly the same tools. 
+If you need some inspiration, check out Amy Peterson's website: [amy-peterson.github.io](https://amy-peterson.github.io/). It was made using exactly the same tools.
 
 ![Amy's website](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&pageid=g3c1a412a3a_0_49)
 
@@ -312,37 +312,3 @@ You might be interested in going beyond this quick website. For example, you mig
 ![Creating Websites with R](https://youtu.be/phEJ5oI37bs)
 
 * [Slides](https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/edit?usp=sharing)
-
-{quiz, id: quiz_11_website}
-
-### Creating Websites with R quiz
-
-{choose-answers: 4}
-? Which of the following statements is TRUE?
-
-C) We created the index.html file from knitting an R Markdown file
-o) We created a Jekyll website
-o) We manually wrote our index.html file using HTML code
-o) We payed for a custom domain like JaneEverydayDoe.com
-o) We wrote HTML code to generate a website
-o) We learned the basics of HTML
-o) We wrote the CSS code for our website 
-
-{choose-answers: 4}
-? After you made edits to index.Rmd, what were the steps required to see the changes on your website?
-
-C) Knit -> add -> commit -> push
-C) Knit to HTML -> git add -> git commit -> git push
-o) Knit -> clone -> push
-o) commit -> push -> Knit -> add
-o) pull -> commit -> push
-o) Knit -> pull -> commit
-o) pull -> Knit -> commit
-o) push -> pull -> commit -> add
-
-{/quiz}
-
-
-
-
-
