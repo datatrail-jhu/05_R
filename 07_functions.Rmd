@@ -1,7 +1,5 @@
 ---
-title: ''
 output: html_document
-date: '2022-04-06'
 ---
 
 ```{r setup, include=FALSE}
