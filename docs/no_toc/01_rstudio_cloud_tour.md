@@ -1,7 +1,5 @@
 ---
-title: "RStudio Cloud Tour"
 output: html_document
-date: '2022-04-05'
 ---
 
 
