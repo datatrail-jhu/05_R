@@ -208,7 +208,7 @@ The Help tab is where you find the documentation for your R packages and various
 
 Throughout the courses in this Course Set, we'll be using something called [Swirl modules](https://swirlstats.com/) to practice the R code learned in many of the lessons. These modules will all be run within RStudio Cloud. To make sure that you're comfortable using Swirl, we'll go through the steps on where to go to run Swirl and how to work through a module. This will be important as many of the quizzes accompanying these lessons will require you to use Swirl. Follow the steps in this section of the lesson to get started with your first Swirl module!
 
-Throughout this Course Set, whenever you're asked to complete a Swirl module, you'll always start in the same place: the [RStudio Cloud Cloud-based Data Science Space](http://bit.ly/cbds_projects). Click on [this link now](http://bit.ly/cbds_projects). If prompted, log into your RStudio Cloud account.
+Throughout this Course Set, whenever you're asked to complete a Swirl module, you'll always start in the same place: the [RStudio Cloud Cloud-based Data Science Space](https://bit.ly/datatrail-swirl). Click on [this link now](https://bit.ly/datatrail-swirl). If prompted, log into your RStudio Cloud account.
 
 
 {format: png}
@@ -226,6 +226,9 @@ But for now, let's just get comfortable with how swirl works.
 Any time you are within this space and supposed to complete a swirl module you'll start by first loading the swirl package (it has already been installed in that space for you) and running the command `swirl()`:
 
 ```
+## Install swirl package
+install.packages("swirl")
+
 ## load package
 library(swirl)
 
