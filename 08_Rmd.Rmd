@@ -17,14 +17,14 @@ R Markdown is a type of document that allows you to generate fully reproducible 
 
 To refresh your memory, this is how we use plain text in Markdown formatting:
 
-{format: png}
+
 ![Markdown review](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_0)
 
 Throughout this lesson we'll remind you of what you learned in the previous lesson on Markdown and discuss all the new things you'll be able to do with R Markdown documents!
 
 R Markdown documents generally take one of two file extensions: .Rmd, .rmd. If a file ends with either of these two file extensions (ie Project_Analysis.Rmd), then you know it's an R Markdown document. While this type of file is a plain text file,  it can be rendered ("Knit") into HTML pages,  PDFs, Word documents, or slides! We'll get into exactly what that means in just a second!
 
-{format: png}
+
 ![.Rmd to PDF](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_8)
 
 ### Why use R Markdown?
@@ -43,24 +43,24 @@ Check out [this video](https://vimeo.com/178485416) that the RStudio developers 
 
 The best way to follow along for the rest of this lesson is to open up [RStudio Cloud](rstudio.cloud), and follow along on your own step-by-step. In the process, you'll get to generate your first R Markdown document! Generating and working with RMarkdown documents is incredibly easy when working within RStudio (or RStudio Cloud). To get started in [RStudio Cloud](rstudio.cloud), go to File > New File > R Markdown.. .
 
-{format: png}
+
 ![R Markdown...](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_20)
 
 If a window pops up specifying that you need to install and update a few packages before using R Markdown, click "Yes" to install those updates.
 
 At this point, you will be presented with the following window:
 
-{format: png}
+
 ![R Markdown](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_157)
 
 You'll want to add a Title to this document and put your name in the Author box.  
 
-{format: png}
+
 ![Title and Author information filled out](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_26)
 
 When you are done entering this information, click OK, and a new .Rmd document will open with a little explanation on R Markdown files.
 
-{format: png}
+
 ![R Markdown document](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_31)
 
 There are three main sections of an R Markdown document. The first is the **YAML** at the top, bounded by the three dashes. This is where you can specify details like the title, your name, the date, and what kind of document you want output. If you filled in the blanks in the window earlier, these will be filled out for you. The spacing of this section matters, so if you edit anything here and then get an error when you try to Knit your document, it may be worth returning to this section to make sure spacing is as it should be.
@@ -77,17 +77,17 @@ When you want to preview an R Markdown document and when you are finished with a
 
 To do so with the R Markdown that opened with your R Markdown file, click on the "Knit" button along the top of the source panel.
 
-{format: png}
+
 ![Knit](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_39)
 
 When you do so, it will prompt you to save the document. For now, we'll type "test_document" into the box. (However, when you're generating these documents for projects, you'll want to be sure that this document is saved in the appropriate directory, which is likely the `raw_code` directory. Click "Save."
 
-{format: png}
+
 ![Save .Rmd](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_171)
 
 Upon saving the document, you should see a document like this appear in a new window:
 
-{format: png}
+
 ![Knit HTML](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_45)
 
 So here you can see that the content of the header was rendered into a title, followed by your name and the date. The text chunks produced a section header called "R Markdown" which is followed by two paragraphs of text. Following this, you can see the R code `summary(cars)`, importantly, followed by the output of running that code. And further down you will see code that ran to produce a plot, and then that plot. This is one of the huge benefits of R Markdown - rendering the results to code inline.
@@ -96,12 +96,12 @@ Go back to the R Markdown file that produced this HTML and see if you can see ho
 
 Upon Knitting to HTML, an additional file will now be saved in the same directory where you saved your .Rmd file. However, as expected, this file will have the extension .html. If you make changes and re-knit your file, this HTML file will be re-generated and all changes will be saved in this file.
 
-{format: png}
+
 ![Saved HTML file](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_183)
 
 One final note on knitting. In this example, we have Knit to HTML (a format that can be easily viewed in any web browser), but you can also knit to a PDF or Word document (among other options). To Knit to a different output format, click on the arrow to right of the Knit icon to expose a drop-down menu. Select the output document you'd like from this list. The new file type will be generated and saved in the same directory where the .Rmd file is, but with the appropriate extension (i.e. .pdf if you selected "Knit to PDF"). Feel free to play around with how these different file output options look when you Knit!
 
-{format: png}
+
 ![Other file output options when Knitting](https://docs.google.com/presentation/d/1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw/export/png?id=1COQq29mnEWgt1NO0qC8tmurswmaDRJpBzmKhKKmJgiw&pageid=g3b6f614dcf_0_177)
 
 

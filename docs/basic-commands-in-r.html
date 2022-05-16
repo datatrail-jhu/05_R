@@ -391,7 +391,7 @@ function_name(input)</code></pre>
 [25] &quot;Pontiac Firebird&quot;    &quot;Fiat X1-9&quot;           &quot;Porsche 914-2&quot;      
 [28] &quot;Lotus Europa&quot;        &quot;Ford Pantera L&quot;      &quot;Ferrari Dino&quot;       
 [31] &quot;Maserati Bora&quot;       &quot;Volvo 142E&quot;</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM/export/png?id=1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM&amp;pageid=g3778484ff5_0_78" alt="colnames() and rownames() functions" /></p>
 </div>
 <div id="what-does-this-object-look-like" class="section level3" number="5.0.5">
@@ -401,7 +401,7 @@ function_name(input)</code></pre>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="basic-commands-in-r.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mtcars)</span></code></pre></div>
 <p>Recall that in R, the <strong>Console</strong> is where commands can be typed and entered for R to run. When R is ready to accept a command a greater than sign will be displayed. An alternative to calling the <code>print</code> function is to simply type the name of the object in the Console and press enter. In general printing an entire object is not advisable just in case the object is quite large. In this case your screen would overflow with text!</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="basic-commands-in-r.html#cb35-1" aria-hidden="true" tabindex="-1"></a>mtcars</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM/export/png?id=1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM&amp;pageid=g3778484ff5_0_93" alt="printing objects’ contents to the screen" /></p>
 <p>Safer alternatives to printing are the <code>head</code> and <code>tail</code> functions. The <code>head</code> function displays the beginning of an object. By default, it shows the first 6 items. If the object is a vector, <code>head</code> shows the first 6 entries. If the object is a rectangle, such as a matrix or a data frame, <code>head</code> shows the first 6 rows. The <code>tail</code> function is analogous to <code>head</code> but for the end of the object.</p>
 <pre class="text"><code>&gt; head(mtcars)
@@ -421,7 +421,7 @@ Ford Pantera L 15.8   8 351.0 264 4.22 3.170 14.5  0  1    5    4
 Ferrari Dino   19.7   6 145.0 175 3.62 2.770 15.5  0  1    5    6
 Maserati Bora  15.0   8 301.0 335 3.54 3.570 14.6  0  1    5    8
 Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM/export/png?id=1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM&amp;pageid=g3778484ff5_0_98" alt="head() and tail() can be used to see a portion of the data" /></p>
 <p>The <code>summary</code> function computes summary statistics for numeric data and performs tabulations for categorical data, which are called <strong>factors</strong> in R.</p>
 <pre class="text"><code>&gt; summary(iris)
@@ -436,7 +436,7 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
  setosa    :50  
  versicolor:50  
  virginica :50  </code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM/export/png?id=1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM&amp;pageid=g3778484ff5_0_103" alt="The summary() function summarizes data" /></p>
 <p>The <code>unique</code> function shows only the unique elements of an object. For vectors, this returns the set of unique elements. For rectangles such as matrices and data frames, this returns the unique rows. This function is useful if we want to check the coding of our data. If we have sex information, then we expect the result of unique to be two elements. If not, there is likely some data cleaning that must be done. The <code>unique</code> function is also useful for simply exploring the values that a variable can take. In the example below, we can see that in the <code>mtcars</code> data frame, there are only cars with 6, 4, and 8 cylinders. Note that to extract the column corresponding to cylinders, we used a dollar sign followed by the column name: <code>$cyl</code>. This is an example of subsetting that you will learn in later lessons.</p>
 <pre class="text"><code>&gt; unique(mtcars$cyl)
@@ -449,7 +449,7 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 &gt; unique(dat)
   a b
 1 1 2</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM/export/png?id=1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM&amp;pageid=g3778484ff5_0_108" alt="The unique() shows unique elements of an object" /></p>
 </div>
 <div id="errors-warnings-and-messages" class="section level3" number="5.0.6">
@@ -457,15 +457,15 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 <p>In R, there are three types information that R may return to you to your screen to provide you with additional information. These come in the form of <strong>errors, warnings, and messages</strong>. While they will often <em>look</em> similar to one another, it’s important to understand the difference between them.</p>
 <p>The most serious of these messages is an error message. <strong>Errors</strong> indicate that the code you tried to run <strong>did not run successfully</strong>. If you receive an error message, you should carefully look back at your code to see what went wrong. Error messages cannot be ignored as they indicate that there was no way for the code to run. Something has to be fixed before moving forward. For example, the code here produces an error, since <code>mtca</code> is <em>not</em> a data frame or object in R.</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="basic-commands-in-r.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(mtca<span class="sc">$</span>cyl)</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM/export/png?id=1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM&amp;pageid=g451659353d_0_0" alt="errors" /></p>
 <p><strong>Warnings</strong> are generally less serious than error messages. They are generated when the <strong>code executes</strong> (meaning, it runs without producing an error and stopping), <strong>but produces something unexpected</strong>. Warning messages should always be read, and then you, the person writing the code, has the option to decide whether or not the code that has generated the warning needs to be re-written. For example, the log function is only defined for numbers greater than zero. If, in R, you try to take the log of a negative number, you get an output (<code>NaN</code>):</p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="basic-commands-in-r.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
 <p>This output means the code executed (there was no error), but you also get a warning letting you know that NaNs were produced. If you meant to take the log of a negative number, you would leave the code as is. However, if you did not intend to do this, the warning message helps clue you into the fact that you may want to revisit your code.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM/export/png?id=1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM&amp;pageid=g451659353d_0_22" alt="warnings" /></p>
 <p>Last but not least, <strong>messages</strong>, in general, are simply there to <strong>provide you with more information</strong>. They do not indicate that you have done anything wrong. For example, if you were to run a function that creates a directory if it does not yet exist, the function may provide you a message informing you whenever a new directory has been created. This message would just be there to provide you with more information. No further action is generally necessary when a message is provided.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM/export/png?id=1ew_I5lM283x6Xxlywznp-02tvCKcwxcvNMJeFM4gXUM&amp;pageid=g451659353d_0_29" alt="messages" /></p>
 <p>Note that all three are in the same font and same color, so they’ll look similar in your RStudio Cloud console. Over time, you’ll get more comfortable dealing with and understanding the difference between the three. For now, be sure that to remember if you get an error, your code did not execute successfully. Go back and find what caused the error.</p>
 </div>

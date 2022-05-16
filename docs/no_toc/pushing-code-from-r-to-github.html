@@ -331,87 +331,87 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 <p>If you created that project in RStudio Cloud and pushed it to GitHub, go to that project on RStudio Cloud now.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_157" alt="RStudio Cloud project" /></p>
 <p>If you haven’t yet created the <code>my_first_project</code> project on RStudio Cloud and pushed it to GitHub, do that now.</p>
 <p>Before we move on, a quick reminder: you won’t see the folder structure that you created on GitHub. Unfortunately, a folder structure won’t be pushed to GitHub unless the folders contain at least a file. No worries though! We’re about to start populating this project with some code right now! Then, you’ll start to see some of the folders you’ve created!</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_75" alt="my_first_project" /></p>
 </div>
 <div id="adding-code-to-your-github-project" class="section level3" number="11.0.2">
 <h3><span class="header-section-number">11.0.2</span> Adding code to your GitHub project</h3>
 <p>Now that you’ve made your way back to your <code>my_first_project</code> repository, you can go to the “Terminal” in RStudio Cloud. Here, if you haven’t made any changes since the last time you pushed to GitHub, when you type <code>git status</code> you should get a message letting you know that “Your branch is up-to-date.”</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_150" alt="git status" /></p>
 <div id="adding-an-r-script" class="section level4" number="11.0.2.1">
 <h4><span class="header-section-number">11.0.2.1</span> Adding an R script</h4>
 <p>To get started adding some code to this repository, let’s just first create an R Script (.r file), and add some code.</p>
 <p>To do so, in the menu along the top within RStudio Cloud click on File &gt; New File &gt; R Script.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_162" alt="New R Script" /></p>
 <p>This will open a blank file (currently titled “Untitled1”) in the scripting area of RStudio Cloud.</p>
 <p>As this is just an example, add two lines of code to this file:</p>
 <div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="pushing-code-from-r-to-github.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let&#39;s get started</span></span>
 <span id="cb92-2"><a href="pushing-code-from-r-to-github.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mtcars<span class="sc">$</span>mpg)</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_167" alt="R Script in RStudio Cloud" /></p>
 <p>Now that there is some code in that R Script file, let’s save it by going to File &gt; Save As…</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_172" alt="Save As…" /></p>
 <p>We’ll save this file in the code/raw_code directory. Navigate to this directory. Then save the file as “mtcars_code.r” by typing this in the “File name” box at the top of the save File window. Click “Save”. The new file name will show up along the tab at the top in the scripting are of RStudio Cloud.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_177" alt="Save file in code/raw_code" /></p>
 </div>
 <div id="adding-an-.rmd-file" class="section level4" number="11.0.2.2">
 <h4><span class="header-section-number">11.0.2.2</span> Adding an .Rmd file</h4>
 <p>In this course we also learned how to generate R Markdown files (.Rmd). So, we might as well generate one of them now before pushing our changes to GitHub.</p>
 <p>To get started go to File &gt; New File &gt; R Markdown…</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_182" alt="New R Markdown File" /></p>
 <p>In the window that pops up, add the title “mtcars” and your name in the Author box. Click ‘OK’.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_187" alt="Info for Rmd file" /></p>
 <p>Replace the default text you see in the .Rmd document with the text and code you see here in this ‘Untitled1’ .Rmd document.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_191" alt="New Rmd document" /></p>
 <p>Once that’s completed, save your file as “mtcars.Rmd”, again in the code/raw_code directory.</p>
 <p>Tabs for both the .r file and .Rmd file you created in this lesson should now be visible in the scripting area of R Studio Cloud.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_196" alt="Save and knit file" /></p>
 <p>Before we push these changes to GitHub, let’s knit the .Rmd file to an HTML document. To do so, click “Knit” at the top of your .Rmd file tab.</p>
 <p>The rendered HTML document should pop up in a new window.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_202" alt="HTML document" /></p>
 <p>Additionally, there should now be a “mtcars.html” file in the “Files” window of RStudio Cloud along with “mtcars.Rmd” and “mtcars_code.r.”</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_206" alt="Files tab in RStudio Cloud" /></p>
 </div>
 <div id="pushing-to-github" class="section level4" number="11.0.2.3">
 <h4><span class="header-section-number">11.0.2.3</span> Pushing to GitHub</h4>
 <p>If you were to go back to the Terminal and type <code>git status</code> and hit “enter”, the output should indicate that three new files have been created that are not yet being tracked by git.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_213" alt="git status" /></p>
 <p>To add these to GitHub, you’ll want to run:</p>
 <pre><code>git add .
 git commit -m &quot;add mtcars scripts&quot;
 git push</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_221" alt="add, commit, push" /></p>
 <p>In this process, however, git may ask you who you are. It will tell you that you have to configure your GitHub identity, using commands similar to these, but where you replace the email address and username below with the email address used to set up your GitHub account and your GitHub username:</p>
 <pre><code>git config --global user.email jane.everyday.doe@gmail.com
 git config --global user.name janeeverydaydoe</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3bb9271f0d_0_28" alt="git config" /></p>
 <p>One this has been established, you can then rerun:</p>
 <pre><code>git commit -m &quot;add mtcars scripts&quot;</code></pre>
 <p>The output will indicate that those three files have been committed to GitHub.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3bb9271f0d_0_33" alt="git commit" /></p>
 <p>When you then go to run <code>git push</code>, you may be asked for your Username and GitHub password. After entering them, you will get output that indicates that your files have been successfully pushed to GitHub.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_228" alt="input username and password to push" /></p>
 <p>You can now go to your repository on GitHub. You’ll see the commit message you just specified and will find the files you pushed within code/raw_code on your GitHub repository!</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ/export/png?id=1nNKiebsQieBUr645KDfMmbBFr26J2HQ0FAFH8WuSBQQ&amp;pageid=g3ba6176ae9_0_237" alt="code has been pushed to GitHub repository" /></p>
 </div>
 </div>

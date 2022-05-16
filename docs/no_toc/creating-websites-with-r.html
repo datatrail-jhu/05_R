@@ -314,7 +314,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="create-your-website-repository" class="section level3" number="12.0.1">
 <h3><span class="header-section-number">12.0.1</span> Create your website repository</h3>
 <p>GitHub has the nice property that it can automatically host websites for you from a repository. While this can de done for any repository, there is a special case: the <code>yourUsername.github.com</code> repository that makes setting up your own website a little bit simpler. We will start here because it’s the most straightforward case.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_1" alt="Create Repository" /></p>
 <p>We’ll work through an example for someone whose GitHub username is <code>JaneEverydayDoe</code>, but you should follow along and complete each step using your own GitHub account. To get started, first log in to <a href="http://github.com">github.com</a> and create a new repository (that nice green button). While normally for projects you’ll be able to name your repository whatever you want, <em>this</em> new repository for your website <strong>must have a specific name</strong>. The repository <em>must</em> be named either <code>username.github.io</code> <em>or</em> <code>username.github.com</code>, where <em>your</em> GitHub username would replace <code>username</code>. So, in our case, the repo would be named: <code>JaneEverydayDoe.github.io</code>.</p>
 <p><strong>Remember, this repository must be named: <code>username.github.io</code> or <code>usernmae.github.com</code>, with <em>your</em> GitHub username in the place of <code>username</code>.</strong></p>
@@ -324,7 +324,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">12.0.2</span> Sync files with GitHub</h3>
 <p>Now we are going to start putting your website together. We need to keep our files in sync with GitHub, and to do so we will clone the repository RStudio Cloud. That is, we will clone the <code>username/username.github.com</code> repository. For <code>JaneEverydayDoe</code> that would be <code>JaneEverydayDoe/JaneEverydayDoe.github.com</code>. We will do this via the <em>terminal</em> from RStudio Cloud. Once you are in the terminal run the following (but change the username ‘JaneEverydayDoe’ to your GitHub username:</p>
 <pre><code>git clone https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com.git</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g3c1a412a3a_0_0" alt="git clone" /></p>
 <p>We now have completed the necessary GitHub setup!</p>
 </div>
@@ -332,24 +332,24 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">12.0.3</span> One last setup step</h3>
 <p>It’s time to start working on our website! In the terminal access the <code>username.github.com</code> repository using the <code>cd</code> (change directory) command. For <code>JaneEverydayDoe</code> that would be:</p>
 <pre><code>cd janeeverydaydoe.github.com/</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g3c1a412a3a_0_6" alt="cd into directory" /></p>
 <p>The directory is empty currently. At this point, we can almost start our website. There is one more thing we need to do that is rather obscure. Something we haven’t talked about is that GitHub was initially set up for hosting <em>Jekyll</em> static websites and this is still the default. But, we are not using Jekyll and we need to tell GitHub that. To do so we need to create the hidden file <code>.nojekyll</code> and version control it. You can create the file using the <code>touch</code> command in the terminal or from RStudio Cloud using the following command:</p>
 <pre><code>touch .nojekyll</code></pre>
 <p>We haven’t discussed the command <code>touch</code> or hidden files yet, so now is a great time to explain briefly that touch simply creates an empty file and hidden files are files that start with a period in the file name.</p>
 <p>However, despite being hidden, we <em>can</em> check to make sure this file was created by using the command <code>ls -a</code> (<code>ls</code>, as discussed previously, stands for <em>list</em> and the <code>-a</code> option states that we also want to display hidden files). When we run this command, we see the “.nojekyll” file has been created.</p>
 <pre><code>ls -a</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g3c1a412a3a_0_12" alt="touch and ls" /></p>
 <p>Cool, we now have the required <code>.nojekyll</code> file! But, it’s not on GitHub yet. So, we need to version control it. You can do so in the RStudio Cloud terminal window using the following commands:</p>
 <pre><code>git add .nojekyll
 git commit -m &quot;This is not a Jekyll website&quot;
 git push</code></pre>
 <p><em>Note</em>: If prompted to set your global configuration on GitHub, provide your email address or GitHub username and password, do so.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g3c1a412a3a_0_20" alt="touch and ls" /></p>
 <p>Using the <code>JaneEverydayDoe</code> example, you can <a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/a5f889e3c9749720ee0435e95f77d0b4eaeea8d9">see here</a> how the repository should look at this point in the process.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_9" alt="Repo at this point in the process" /></p>
 </div>
 <div id="make-the-website" class="section level3" number="12.0.4">
@@ -357,13 +357,13 @@ git push</code></pre>
 <p>Ok, now we can make the website!</p>
 <p>First, web pages display HTML code. With that knowledge, we are going to take advantage of another nice property of the web. If a directory (say that directory is named <code>hello</code>) contains an <code>index.html</code> file, then that file is displayed on the web browser when someone accesses the website’s home page<code>. In other words,</code>index.html<code>is the default HTML file that is displayed. This means that we need to create an</code>index.html` file. How can we do that from R?</p>
 <p>Well, let’s create a <code>index.Rmd</code> file inside the <code>username.github.com/</code> directory. Here, lets take advantage of the nice RStudio menus. Go to <code>File</code> -&gt; <code>New File</code> -&gt; <code>R Markdown</code>. (<em>Note</em>: If prompted to install packages, click yes to install them)</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_13" alt="New Rmd document" /></p>
 <p>Then ensure <code>Document</code> is selected along the left and <code>HTML</code> is selected for the output format. Click OK.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_17" alt="New R Markdown" /></p>
 <p>Now let’s save it as <code>index.Rmd</code>. go to <code>File</code> -&gt; <code>Save As</code> then type <code>index.Rmd</code> in the file name box, <strong>making sure that it’s saved inside the <code>username.github.com</code> directory</strong>. In <code>JaneEverydayDoe</code>’s case, the relative file path would be <code>janeeverydaydoe.github.com/index.Rmd</code>.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_21" alt="How to Knit" /></p>
 <p>Now click on the <code>knit</code> button and R to create the <code>index.html</code> file!</p>
 </div>
@@ -380,7 +380,7 @@ git commit -m &quot;First version of the website&quot;
 ## Upload the files to GitHub
 git push</code></pre>
 <p>And after a few seconds or a minute or so, you can view your website at <a href="https://username.github.io" class="uri">https://username.github.io</a>. For <code>JaneEverydayDoe</code> that is <a href="https://janeeverydaydoe.github.io/" class="uri">https://janeeverydaydoe.github.io/</a> and it looks like this:</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_25" alt="First website!" /></p>
 <p>You can check <code>JaneEverydayDoe</code> <a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/6ef6468c9fb0dc93ed436b056ddd602e13658377">files at this point in time</a> and compare it against yours.</p>
 </div>
@@ -417,7 +417,7 @@ Summarize your trajectory. You could mention what you&#39;ve done. Like what you
 <pre><code>git add index.*
 git commit -m &quot;Add my initial information&quot;
 git push</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_37" alt="Updated website" /></p>
 <p>Check <code>JaneEverydayDoe</code>’s files at <a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/c0b15cf33e3fe88322d46e9f35def6c485eb0fee">this point in time</a>.</p>
 </div>
@@ -462,7 +462,7 @@ output:
 git commit -m &quot;Add a floating table of contents&quot;
 git push</code></pre>
 <p>Your website should now reflect these changes!</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_45" alt="Website at this point in the process" /></p>
 <p><a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/3caa9cc00e9ea167360b1299763ad3b01b6e9de6">JaneEverydayDoe’s files at this point in time</a>.</p>
 </div>
@@ -481,9 +481,9 @@ Jane.png</code></pre>
 git add index.*
 git commit -m &quot;Add Jane&#39;s image&quot;
 git push</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU/export/png?id=18cfusRGwEtQCD4MKew4S3s7HdK8AuSr_RRPQS6S3KKU&amp;pageid=g38bb68a320_0_49" alt="Website with image added" /></p>
-<p>{format: png}
+<p>
 <a href="https://github.com/JaneEverydayDoe/janeeverydaydoe.github.com/tree/505eaf2049930084526e79a005fc9e8a75f6b143">JaneEverydayDoe’s files at this point in the process</a>.</p>
 </div>
 <div id="a-similar-website" class="section level3" number="12.0.10">

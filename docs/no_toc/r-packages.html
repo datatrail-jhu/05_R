@@ -338,9 +338,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Try doing so in your R console! This command downloads the <code>ggplot2</code> package from CRAN and installs it onto your computer.</p>
 <p>If you want to install multiple packages at once, you can do so by using a character vector (we’ll get back to exactly what that means in a later lesson in this course!), like: <code>install.packages(c("ggplot2", "devtools", "lme4"))</code></p>
 <p>If you want to use RStudio’s graphical interface (meaning you would point-and-click more than you would type into the console) to install packages, go to the Tools menu, and the first option should be “Install packages…” If installing from CRAN, select it as the repository and type the desired packages in the appropriate box.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/export/png?id=1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo&amp;pageid=g326810014c_0_36" alt="You can install through the console interface using the above commands or using the Install Packages menu option" /></p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/export/png?id=1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo&amp;pageid=g326810014c_0_40" alt="Select the appropriate repository and type in your desired packages" /></p>
 </div>
 <div id="installing-from-bioconductor" class="section level4" number="3.0.4.2">
@@ -368,7 +368,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>NOTE:</strong> Unlike when you’re installing a package, when loading a package, you do <em>not</em> have to put the package name in quotes.</p>
 <p>There is an order to loading packages - some packages require other packages to be loaded first. These other packages are known as <strong>dependencies</strong>. When you install a new package, that new package’s manual/help pages will automatically determine what packages this new package is dependent upon and will install those packages as well.</p>
 <p>If you want to load a package using the RStudio interface, in the lower right quadrant there is a tab called “Packages” that lists out all of the packages and a brief description, as well as the version number, of all of the packages you have installed. To load a package just click on the checkbox beside the package name</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/export/png?id=1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo&amp;pageid=g326810014c_0_82" alt="Find the package you want to load from the list of installed packages and check the box to load it" /></p>
 </div>
 <div id="updating-removing-unloading-packages" class="section level3" number="3.0.6">
@@ -384,7 +384,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Like your projects in GitHub, packages are <strong>version controlled</strong>. As updates are made to packages, the version on the package will change and be updated. To see if packages you’ve installed need an update, use the function <code>old.packages()</code>. This will identify all packages that have been updated since you installed them/last updated them.</p>
 <p>To update all packages, use <code>update.packages()</code>. If you only want to update a specific package, just use once again <code>install.packages("packagename")</code></p>
 <p>Within the RStudio interface, still in that Packages tab, you can click “Update,” which will list all of the packages that are not up to date. It gives you the option to update all of your packages, or allows you to select specific packages. If all of your packages are up to date you will get the message “All packages are up to date.”</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/export/png?id=1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo&amp;pageid=g326810014c_0_100" alt="Using the Update menu, you can select all or some of the packages you have installed that you can update" /></p>
 <p>You will want to periodically check in on your packages and check if you’ve fallen out of date - be careful though! Sometimes an update can change the functionality of certain functions, so if you re-run some old code, the command may be changed or perhaps even outright gone and you will need to update your code too!</p>
 </div>
@@ -404,7 +404,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Sometimes, when you are looking at a package that you might want to install, you will see that it requires a certain version of R to run. To know if you can use that package, you need to know what version of R you are running!</p>
 <p>One way to know your R version is to check when you first open R/RStudio - the first thing it outputs in the console tells you what version of R is currently running. If you didn’t pay attention at the beginning, you can type <code>version</code> into the console and it will output information on the R version you are running. Another helpful command is <code>sessionInfo()</code> - it will tell you what version of R you are running along with a listing of all of the packages you have loaded. The output of this command is a great detail to include when posting a question to forums - it tells potential helpers a lot of information about your OS, R, and the packages (plus their version numbers!) that you are using.</p>
 <p>In the output from <code>sessionInfo()</code>, you’ll note that the end of each package’s name has an underscore followed by a series of numbers. Those numbers indicate the packages version. For example, the version of <code>ggplot2</code> installed in this session is version 2.2.1 (read version two point two point 1). This number will change (increase) every time developers make changes to this package.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo/export/png?id=1sVQJJELq39ctr29VXQGLqb5hw5lGzmbVMgI0ehFa_zo&amp;pageid=g3b004ac876_1_0" alt="sessionInfo() shows you packages and versions" /></p>
 </div>
 </div>
