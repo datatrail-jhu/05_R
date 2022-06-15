@@ -254,7 +254,7 @@ You'll then be given a number of options that you can use within `swirl` wheneve
 {format: png}
 ![`swirl` menu options](https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&pageid=g3f1d06ac70_0_24)
 
-After this, you will be shown a list of courses. The list will be longer than what you see here, but we're showing this simple example to demonstrate that if you wanted to start on the course "CBDS Introduction to R", you would type 1. You'll be told which course to select throughout the course set.
+After this, you will be shown a list of courses. The list will be longer than what you see here, but we're showing this simple example to demonstrate that if you wanted to start on the course "DataTrail Introduction to R", you would type 1. You'll be told which course to select throughout the course set.
 
 {format: png}
 ![Selecting a course](https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/export/png?id=17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4&pageid=g3f1d06ac70_0_30)
