@@ -1,6 +1,6 @@
 ---
 title: "05: Introduction to R"
-date: "June, 2022"
+date: "August, 2022"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: book.bib
