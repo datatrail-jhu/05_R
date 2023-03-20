@@ -267,6 +267,6 @@ In this lesson we took a tour of RStudio Cloud. We became familiar with the main
 
 ### Slides and Video
 
-![RStudio Cloud Tour](https://youtu.be/G2cq4bAxMQQ)
+[Automated Videos](https://youtu.be/G2cq4bAxMQQ)
 
 * [Slides](https://docs.google.com/presentation/d/17gq_-4nXwZRznS6OVxCwcZ6uYI_ym5mrO_3oNqqNFk4/edit?usp=sharing)

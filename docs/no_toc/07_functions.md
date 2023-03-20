@@ -309,6 +309,6 @@ In this lesson, we've covered the components of a function in R (name, argument(
 
 ### Slides and Video
 
-![Writing Functions in R](https://youtu.be/Iqm6Q0W8hzA)
+[Automated Videos](https://youtu.be/Iqm6Q0W8hzA)
 
 * [Slides](https://docs.google.com/presentation/d/1Q7pkb4lM8M8MRQzxCCfhXx8ddEi9XeaKSKT82OJAZX8/edit?usp=sharing)
